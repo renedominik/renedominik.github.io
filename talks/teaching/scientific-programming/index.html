@@ -45,9 +45,12 @@
 				    <h1>Linux and scientific programming</h1>
 				    <br>
 				    <p><small>2020</small></p>
-				    <p><small>Dr. Rene Staritzbichler (AG Hildebrand)</small></p>
+				    <p><small>Dr. Rene Staritzbichler (Hildebrand lab)</small></p>
 				  </section>
 				</section>
+
+
+				
 				<section>
 				  <section>
 				    <h2> Linux </h2>
@@ -61,17 +64,19 @@
 				      <li><a href="#/1/7">Exercises </a></li>
 				    </ul>
 				  </section>
+
+				  
 				  <section>
 				    <h2>What is Linux?</h2>
 				    <ul>
 				      <li>Open source operating system written mostly in 'C'</li>
 				      <li>Derived from Unix (Unix: 1969, Linux: 1991)</li>
 				      <li>Targeted to software development</li>
-				      <li>Many highly combinable powerful tools</li>
-				      <li>search engines are your friend, learn to ask the right questions</li>
-				      <li>rtfm :-)  manuals for all commands: 'man CMD'</li>
+				      <li>Many highly combinable and powerful tools</li>
 				    </ul>
 				  </section>
+
+				  
 				  <section>
 				    <h2> The shell (bash)</h2>
 				      <ul>
@@ -86,6 +91,7 @@ $ ls *.pdb     # list all PDB files
 					<li>Copy: mark with mouse , <br> paste: click middle mouse button</li>
 				      </ul>
 				  </section>
+				  
 				  <section>
 				    <h2> Navigation </h2>
 				    <ul>
@@ -98,12 +104,10 @@ $ ls *.pdb     # list all PDB files
 				      <pre><code class="shell" data-trim contenteditable>
 $ cd /home/YOU/course/data/
 				      </code></pre>
-				      <ul>
-					<li> Paths: directories separated by '/' </li>
-				      </ul>
 				      <li> Current location: 'pwd' </li>
 				    </ul>
 				  </section>
+				  
 				  <section>
 				    <h2> Modifying folder structure and content </h2>
 				    <ul>
@@ -161,17 +165,13 @@ $ cd /home/YOU/course/data/
 				    <li> Determine current location </li>
 				    <li> Go to directory course/exercise/unix </li>
 				    <li> Check the content of that directory </li>
-				    <li>  </li>
+				    <li> Type 'sleep 10h' and 'Ctrl-C' it </li>
+				    <li> Create a new directory: 'backup' </li>
+				    <li> Search in browser how to copy data in Linux, copy all PDB files to backup </li>
+				    <li> Get rid of the backup only</li>
 				  </ul>
-				  <pre><code class="shell" data-trim contenteditable>
-					  
-				  </code></pre>
-				    <li>  </li>
-				    <li>  </li>
-				  <li>  </li>
-				  
 				</section>
-
+				
 				</section>
 				<section>
 				  <section>
@@ -180,18 +180,17 @@ $ cd /home/YOU/course/data/
 				      <li> <a href="#/2/1"> Running python </a></li>
 				      <li> <a href="#/2/2"> Libraries </a></li>
 				      <li> <a href="#/2/3"> Data types </a></li>
-				      <li> <a href="#/2/4"> Grouping by identation </a></li>
-				      <li> <a href="#/2/5"> Read and write </a></li>
-				      <li> <a href="#/2/6"> Loops </a></li>
-				      <li> <a href="#/2/7"> Conditions </a></li>
-				      <li> <a href="#/2/8"> Graphics </a></li>
-				      <li> <a href="#/2/9"> Exercises </a></li>
+				      <li> <a href="#/2/6"> Grouping by identation </a></li>
+				      <li> <a href="#/2/7"> Read and write </a></li>
+				      <li> <a href="#/2/8"> Loops </a></li>
+				      <li> <a href="#/2/9"> Conditions </a></li>
+				      <li> <a href="#/2/10"> Exercises </a></li>
 				    </ul>
 				  </section>
 
 				  
 				<section>
-				    <h2> Running python
+				    <h2> Running python </h2>
 				    <ul>
 				      <li> From commandline (Ctrl-d to exit):</li>
 				      <pre><code class="shell" data-trim contenteditable>
@@ -214,10 +213,10 @@ $ cd /home/YOU/course/data/
 				      <li> blank python contains only general basic functionalities </li>
 				      <li> all specific funcitonality needs to be loaded </li>
 				      <pre><code class="shell" data-trim contenteditable>
-					  import os             # e.g. for os.path.isdir
-					  import sys            # e.g. for reading arguments 
-					  import numpy as np    # numerical python
-					  from os import path   # import only submodule path 
+					  import os                         # e.g. for os.path.isdir
+					  import sys                        # e.g. for reading arguments 
+					  import numpy as np                # numerical python
+					  import matplotlib.pyplot as plt   # submodule for nice plots         
 				      </code></pre>
 				    </ul>
 				  </section>
@@ -228,41 +227,120 @@ $ cd /home/YOU/course/data/
 				    <h2> Data types </h2>
 				    <ul>
 				      <li> Variables: strings and numbers </li>
-				      <li> Lists </li>
-				      <li> Dictionary </li>
+				      <pre><code class="shell" data-trim contenteditable>
+				      x = 2.0
+				      y = 3.0
+				      print( x + y )        # sum
+				      
+				      a = "hello "
+				      b = "world"
+				      print( a + b )        # concat
+				      print( a[1:5] )       # substring 
+				      </code></pre>
 				    </ul>
 				  </section>
 
 				  
 			
 				<section>
-				    <h2> Grouping by identation </h2>
+				    <h2> Data types 2 </h2>
 				    <ul>
-				      <li></li>
-				      <li>  </li>
-				      <li>  </li>
+				      <li> Lists </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  l = [ 1, 3.4, "alpha"]
+					  print( l )
+					  print( l[2] )
+					  l.append( 3.2 )
+					  print( l[-1] )
+					  print( l[0:2] )
+					  
+					  l = [0,"day", ["x","@" ] ]    
+					  print( l[2][1] )
+				      </code></pre>
 				    </ul>
 				  </section>
 
+				  
+			
+				<section>
+				    <h2> Data types 3 </h2>
+				    <ul>
+				      <li> Dictionary </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  d = {}
+					  d["beer"] = 3.50
+					  d["hot dog"] = 2.99
+					  
+					  print( d )
+					  print("total: ", 2*d["beer"] + d["hot dog"] )   
+				      </code></pre>
+				    </ul>
+				  </section>
+
+				  
+			
 				  
 			
 				<section>
 				  <h2> Read and write </h2>
+				  <ul>
+<!--				    <li> Read from console </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					name = input( 'enter your name: ')    
+				    </code></pre>  -->
+				    <li> Write to console </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					print( "how extraordinary!", x )    
+				    </code></pre>
+				    <li> Read from file </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					with open( 'file.txt', 'r' ) as f:    
+					    for l in f:
+					        words = l.split()
+				    </code></pre>
+				    <li> Write to file </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					with open( 'file.txt', 'w' ) as w:   
+					    w.write( "x: " + str(x) + "\n")   
+					    print( x , file=w )
+				    </code></pre>
+				  </ul>
+				</section>
+
+				
+				<section>
+				    <h2> Grouping by identation </h2>
 				    <ul>
-				      <li></li>
-				      <li>  </li>
-				      <li>  </li>
+				      <li>Code is grouped by identation</li>
+				      <li>Same context has same (uninterrupted) identation</li>
+				      <li>Identation: 'tab' key </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  with open( 'file.txt', 'w' ) as w:    
+					      w.write( "x: " + str(x) + "\n")   
+					      print( x , file=w )
+				      </code></pre>
 				    </ul>
-				  </section>
+				</section>
 
 				  
 			
 				<section>
 				    <h2> Loops </h2>
 				    <ul>
-				      <li></li>
-				      <li>  </li>
-				      <li>  </li>
+				      <li>for loop through list</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  sum = 0
+ 					  for x in [ 1 , 2 , 3 ]:
+					      sum += x
+					  print( "total:", sum)
+				      </code></pre>
+				      <li>conditional while loop</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  count = 0
+					  while count < 100:
+					      print( "trallalla" )
+					      count += 1
+				      </code></pre>
 				    </ul>
 				  </section>
 
@@ -271,19 +349,24 @@ $ cd /home/YOU/course/data/
 				<section>
 				    <h2> Conditions </h2>
 				    <ul>
-				      <li></li>
-				      <li>  </li>
-				      <li>  </li>
-				    </ul>
-				  </section>
-
-				  
-			
-				<section>
-				    <h2> Graphics </h2>
-				    <ul>
-				      <li></li>
-				      <li>  </li>
+				      <li>if a string contains another one</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  with open( 'protein.pdb' ) as f:
+					      for l in f:
+					          if "ATOM" in l:
+					              x = float( l[30:38] ) # convert string to number       
+					              y = float( l[38:46] )
+					              z = float( l[46:54] )
+				      </code></pre>
+				      <li>if a list contains a certain element </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  types = [ 'CA', 'N', 'C' , 'O' ]  # protein backbone      
+					  with open( 'protein.pdb' ) as f:
+					      for l in f:
+					          atom_type = l[12:16].strip()
+					          if "ATOM" in l and atom_type in types:
+					              print( l )
+				      </code></pre>
 				      <li>  </li>
 				    </ul>
 				  </section>
@@ -293,27 +376,69 @@ $ cd /home/YOU/course/data/
 				<section>
 				    <h2> Exercises </h2>
 				    <ul>
-				      <li>  </li>
-				      <li>  </li>
-				      <li>  </li>
+				      Task: write script calculating the center of mass of a protein
+				      <li> open pdb file </li>
+				      <li> iterate through file </li>
+				      <li> extract atom positions </li>
+				      <li> sum elementwise </li>
+				      <li> devide sum by number of atoms </li>
+				      <li> print center of mass to console </li>
+				      
+				      <li> filter for chain A (position 22 in ATOM lines)</li>
 				    </ul>
-				  </section>
-
-				  
-			</section>
-
-
-
-<!-- #################################################################################### -->
+				</section>
+				
 
 				<section style="text-align: left;">
-					<h1>Thanks!</h1>
+				  <h1>Congratulations!</h1>
+				  <br><br>
+				  Your first script.
+				</section>
+
+			
+				<section>
+				    <h2> Tipps </h2>
+				    <ul>
+				      <li> Use version tracking e.g. git for backup! </li>
+				      <li> Keep it simple! </li>
+				      <li> For most tasks you will find libraries </li>
+				      <li> Search engines are great helpers when coding </li>
+				    </ul>
+				</section>
+
+				
+				</section>
+
+
+
+				<!-- #################################################################################### -->
+
+				<section style="text-align: left;">
+				  <h1>Thanks!</h1>
 				</section>
 
 			</div>
 
 		</div>
 
+
+		<!--
+               <script src="dist/reveal.js"></script>
+                <script src="plugin/notes/notes.js"></script>
+                <script src="plugin/markdown/markdown.js"></script>
+                <script src="plugin/highlight/highlight.js"></script>
+                <script>
+                        // More info about initialization & config:
+                        // - https://revealjs.com/initialization/
+                        // - https://revealjs.com/config/
+                        Reveal.initialize({
+                                hash: true,
+
+                                // Learn about plugins: https://revealjs.com/plugins/
+                                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+                        });
+                </script>
+-->
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
