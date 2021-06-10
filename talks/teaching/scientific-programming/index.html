@@ -361,16 +361,16 @@ $ cd /home/YOU/course/data/
 					<ul>
 						<li> Variables are not known outside identation level</li>
 				      <pre><code class="shell" data-trim contenteditable>
-					  if True:
+				      if True:
 					      a = "cheers"
-                                          print( a)             # variable is not known, ERROR
+				      print( a)              # a is not known, ERROR	
 					</code></pre>
 						<li> declare it outside identation level to access it globally:</li>
 				      <pre><code class="shell" data-trim contenteditable>
 				          a = ""
 					  if True:
 					      a = "cheers"
-                                          print( a)             # variable is known, has value "cheers"
+					  print( a)          # a is known, has value "cheers"                                          
 					</code></pre>
 						
 				    </ul>
