@@ -109,8 +109,15 @@ $ cd /home/YOU/course/data/
 				  </section>
 				  
 				  <section>
-				    <h2> Modifying folder structure and content </h2>
+				    <h2> Modifying  </h2>
 				    <ul>
+				      <li> create a new file (many ways) </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ touch new.txt            # create empty file
+					  $ echo "Hello" > new.txt   # creates file with single line               
+					  $ echo "World" >> new.txt  # append a line
+					  $ gedit new.txt            # opens text editor, file is created when saved
+				      </code></pre>					    
 				      <li> create a new directory: 'mkdir' </li>
 				      <pre><code class="shell" data-trim contenteditable>
 					  $ mkdir NEW
@@ -254,7 +261,7 @@ $ cd /home/YOU/course/data/
 				    <ul>
 				      <li> Variables: strings and numbers </li>
 				      <pre><code class="shell" data-trim contenteditable>
-				      x = 2.0
+				      x = 2.0               # declared and value assigned 
 				      y = 3.0
 				      print( x + y )        # sum
 				      
@@ -263,6 +270,7 @@ $ cd /home/YOU/course/data/
 				      print( a + b )        # concat
 				      print( a[1:5] )       # substring 
 				      </code></pre>
+				      <li> Variables need to be declared before they can be used or modified
 				    </ul>
 				  </section>
 
@@ -348,7 +356,26 @@ $ cd /home/YOU/course/data/
 				    </ul>
 				</section>
 
-				  
+				<section>
+					<h2> Identation and declarationy</h2>
+					<ul>
+						<li> Variables are not known outside identation level</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  if True:
+					      a = "cheers"
+                                          print( a)             # variable is not known, ERROR
+					</code></pre>
+						<li> declare it outside identation level to access it globally:</li>
+				      <pre><code class="shell" data-trim contenteditable>
+				          a = ""
+					  if True:
+					      a = "cheers"
+                                          print( a)             # variable is known, has value "cheers"
+					</code></pre>
+						
+				    </ul>
+				</section>
+						
 			
 				<section>
 				    <h2> Loops </h2>
@@ -401,14 +428,15 @@ $ cd /home/YOU/course/data/
 				<section>
 				    <h2> Exercise </h2>
 				    <ul>
-				      Task: write script calculating the geometric center of a protein
+				      Write script calculating the geometric center
 				      <li> open pdb file </li>
 				      <li> iterate through file </li>
 				      <li> extract atom positions </li>
+					    <li> count atoms </li>
 				      <li> sum elementwise (sum over x, sum over y, ..)</li>
 				      <li> devide sum by number of atoms </li>
 				      <li> print center to console </li>
-				      <li> fix bug: ATOM string may appear not at the begining of the line (use startswith() or [:])</li>
+				      <li> BUG-FIX: ATOM string may appear not at the begining of the line (use startswith() or [:])</li>
 				      <li> extra: filter chain A (position 22 in ATOM lines)</li>
 				    </ul>
 				</section>
