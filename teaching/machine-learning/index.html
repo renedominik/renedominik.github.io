@@ -48,7 +48,6 @@
 				    <p><small>Dr. Rene Staritzbichler</small></p>
 				  </section>
 				
-
 				
 				  <section>
 				    <h2> Machine learning </h2>
@@ -57,21 +56,21 @@
 				      <li><a href="#/3">Basic mathematical principle</a></li>
 				      <li><a href="#/4">Types of machine learning</a></li>
 				      <li><a href="#/4">Linear regression</a></li>
-				      <li><a href="#/5">Artificial neural network</a></li>
-                                      <li><a href="#/6">Remarks on 'Artifical Intelligence'</a></li>
-				      <li><a href="#/7"> </a></li>
+				      <li><a href="#/5">Classification</a></li>
+				      <li><a href="#/6">Artificial neural network</a></li>
+                                      <li><a href="#/7">Remarks on 'Artifical Intelligence'</a></li>
 				    </ul>
 				  </section>
 
+				  
+				  <section>
 				  <section>
 				    <h2>What is machine learning?</h2>
-				    <div style="width:100%;">
-				    <div class="r-stretch" style="float:left;width:60%"> 
 				    <ul>
 				      <li>Aliases: </li>
 				      <ul>
 					<li> 'pattern recognition'</li>
-					<li> 'data evaluation' </li>
+					<li> data evaluation </li>
 				      </ul>
 				      <li>Goals:</li>
 				      <ul>
@@ -84,31 +83,37 @@
 				      <li>continuous: regression</li>
 				      <li>complexity reduction</li>
 				      </ul>
-				      </ul>
-				    </div>
-				    <div class="r-stretch" style="float:left; width:40%">
-				      Classes:<br>
-				      <table style="width:70%;height=40%">
-					<tr>
-					  <th> good </th>
-					  <th> bad </th>
-					</tr>
-					<tr>
-					  <th> alive </th>
-					  <th> dead </th>
-					</tr>
-					<tr>
-					  <th> disease X</th>
-					  <th> not having disease X</th>
-					</tr>
-				      </table>
-				      Continuous data:<br>
-				      <img class="r-stretch" src="img/linear_regression.png">
-				      </div>
-				    </div>
+				    </ul>
 				  </section>
 
 				  
+				  <section>
+				    <h2> Main classes</h2>
+				    
+				    <p> Discrete: classes or categories: </p>
+				    <br>
+				    <table style="width:70%;height=30%">
+				      <tr>
+					<th> good </th>
+					<th> bad </th>
+				      </tr>
+				      <tr>
+					<td> alive </td>
+					<td> dead </td>
+				      </tr>
+				      <tr>
+					<td> disease X</td>
+					<td> not having disease X</td>
+				      </tr>
+				    </table>
+				    <p>
+				      Continuous data:</p>
+				    <img class="r-stretch" src="img/linear_regression.png">
+                                  </section>
+                                  </section>
+
+
+				  <section>
 				  <section>
 				    <h2> Basic mathematical principle </h2>
 				    <ul>
@@ -123,12 +128,84 @@
 				      </code></pre>
 				      <li> Outcome depends on inner parameters </li>
 				      <li> Machine learning is the optimization of inner parameters </li>
-				      <li>  </li>
 				    </ul>
 				  </section>
-				 </section>
-			
 
+				  
+				  <section>
+				    <h2> Learning</h2>
+				    
+				    \[\begin{aligned}
+				    M(\boldsymbol{X}) &amp; = \vec{y}_{pred} \\
+				    \epsilon &amp; = \sum_{i=1}^{n} ( \vec{y}_{pred, i} - \vec{y}_{known, i} )^2
+				    \end{aligned} \]
+
+				    <ul>
+				      <li> <b>X</b>: input data matrix
+					<ul>
+					  <li> columns: features, e.g. age, weight, size, ...</li>
+					  <li> rows: samples, e.g. patients</li>
+					</ul>
+				      <li> \[\[ \vec{y}_{pred} \]\]: calculated output
+					<ul>
+					  <li> continuous: probability</li>
+					  <li> discrete: class</li>
+					</ul>
+				      <li> \[\[ \vec{y}_{known} \]\]: expected reference data </li>
+
+				      <li> n: number of samples, number of samples in reference data set</li>
+				    </ul>
+				  </section>
+				  </section>
+
+
+				  <section>
+				    <section>
+				      <h2> Regression </h2>
+
+				    </section>
+
+				    <section>
+				      <h2> Regression </h2>
+				    </section>
+
+				    <section>
+				      <h2> Steepest descent </h2>
+				    </section>
+				  </section>
+
+				  <section>
+				    <section>
+				      <h2> Classification</h2>
+				    </section>
+
+				    <section>
+				      <h2> Logistic regression </h2>
+				    </section>
+				    </section>
+
+				  <section>
+				    <section>
+				      <h2> Artificial neural network</h2>
+				    </section>
+
+				    <section>
+				      <h2> Perceptron </h2>
+				    </section>
+				  </section>
+
+				  <section>
+				    <section>
+				      <h2> Remarks about 'Artifical Intelligence'</h2>
+				    </section>
+
+				    <section>
+				      <h2> Why you don't qualify as judge</h2>
+				    </section>
+				  </section>
+				      
+
+				  
 				<!-- #################################################################################### -->
 
 				<section style="text-align: left;">
@@ -159,6 +236,7 @@
 -->
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="plugin/math/math.js"></script>
 
 		<script>
 
