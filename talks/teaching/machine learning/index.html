@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lecture: Machine learning introduction</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Rene Staritzbichler">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				  <section>
+				    <h1>Machine learning introduction</h1>
+				    <br>
+				    <p><small>2021</small></p>
+				    <p><small>Dr. Rene Staritzbichler</small></p>
+				  </section>
+				</section>
+
+
+				
+				<section>
+				  <section>
+				    <h2> Linux </h2>
+				    <ul>
+				      <li><a href="#/1/1">What is machine learning?</a></li>
+				      <li><a href="#/1/2">Basic mathematical principle</a></li>
+				      <li><a href="#/1/3">Overview of types of machine learning</a></li>
+				      <li><a href="#/1/4">Linear regression</a></li>
+				      <li><a href="#/1/5">Artificial neural network</a></li>
+                                      <li><a href="#/1/6">Remarks on 'Artifical Intelligence'</a></li>
+				      <li><a href="#/1/7"> </a></li>
+				    </ul>
+				  </section>
+
+				  
+				  <section>
+				    <h2>What is Linux?</h2>
+				    <ul>
+				      <li>Open source operating system written mostly in 'C'</li>
+				      <li>Derived from Unix (Unix: 1969, Linux: 1991)</li>
+				      <li>Targeted to software development</li>
+				      <li>Many highly combinable and powerful tools</li>
+				    </ul>
+				  </section>
+
+				  
+				  <section>
+				    <h2> The shell (bash)</h2>
+				      <ul>
+					<li>Commandline terminal</li>
+					<li>Tools & scripting language</li>
+					<li>Tab expansion</li>
+					<li>Wildcards: </li>
+				      <pre><code class="shell" data-trim contenteditable>
+$ ls *.pdb     # list all PDB files
+				      </code></pre>
+					<li>Ctrl-c: kill current process</li>
+					<li>Copy: mark with mouse , <br> paste: click middle mouse button</li>
+				      </ul>
+				  </section>
+				  
+				  <section>
+				    <h2> Navigation </h2>
+				    <ul>
+				      <li> List content of directory: 'ls'</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ ls /
+					  $ ls -lh         # '-l': detailed output, '-h': human readable, e.g. 4.3GB as file size
+				      </code></pre>
+				      <li> Change directory: 'cd'</li>
+				      <pre><code class="shell" data-trim contenteditable>
+$ cd /home/YOU/course/data/
+				      </code></pre>
+				      <li> Current location: 'pwd' </li>
+				    </ul>
+				  </section>
+				  
+				  <section>
+				    <h2> Modifying  </h2>
+				    <ul>
+				      <li> create a new file (many ways) </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ touch new.txt            # create empty file
+					  $ echo "Hello" > new.txt   # creates file with single line               
+					  $ echo "World" >> new.txt  # append a line
+					  $ gedit new.txt            # opens text editor, file is created when saved
+				      </code></pre>					    
+				      <li> create a new directory: 'mkdir' </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ mkdir NEW
+					  $ mkdir -p NEW/SUB/ONE_MORE/ANOTHER              
+				      </code></pre>
+				      <li> remove a file: 'rm' </li>
+				      <li> remove a directory: 'rm -r' </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ rm rubbish.txt
+					  $ rm -r dir/
+				      </code></pre>
+				  </section>
+
+				<section>
+				  <h2> View & modify files  </h2>
+				  <ul>
+				    <li> Read and search:  'less FILE' </li>
+				    <li> Write only parts: 
+				  <pre><code class="shell" data-trim contenteditable>
+				      $ head -n 12 myfile.txt
+				      $ tail -n 33 myfile.txt | grep ATOM        # write only files containing the string 'ATOM'
+				  </code></pre>
+				    <li> Text editor: gedit  </li>
+				    <li> Programming & text: emacs </li>
+				    <li> Many powerful IDEs for each programming language</li>
+				  </ul>
+				</section>
+				  
+				<section>
+				  <h2> Bash scripting </h2>
+				  <ul>
+				    <li> full programming language  </li>
+				    <li> all linux commands available  </li>
+				  </ul>
+				  <pre><code class="shell" data-trim contenteditable>
+				      for f in *.pdb
+				      do
+				         ls -lh $f
+				         grep ATOM $f > atoms_$f
+				      done
+				  </code></pre>
+				  Nearly the same as one liner:
+				  <pre><code class="shell" data-trim contenteditable>
+				      for f in *.pdb; do grep ATOM $f > atoms_$f; done
+				  </code></pre>
+				</section>
+
+				<section>
+				  <h2> Exercise 1/2 </h2>
+				  <ul>
+				    <li> Login, open terminal  </li>
+				    <li> Determine current location </li>
+				    <li> Go to directory course_MD/day_1/linux/ </li>
+				    <li> Check the content of that directory </li>
+				    <li> Type 'sleep 10h' and 'Ctrl-C' it </li>
+				  </ul>
+				</section>
+
+				<section>
+				  <h2> Exercise 2/2 </h2>
+				  <ul>
+				    <li> Create a new directory: 'backup' </li>
+				    <li> Search in browser how to copy and rename data in Linux </li>
+				    <li> Copy all PDB files to backup folder, rename to have ending .bak </li>
+				    <li> Get rid of the backup</li>
+				    <li> Filter atom lines from PDB files and pipe into new files</li>
+				    <li> Open files in text editor. What do you see? </li>
+				  </ul>
+				</section>
+
+				<section>
+				  <h2> Moving stuff </h2>
+				  <ul>
+				    <li> Copy file or directories </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					cp PATH_OLD/FILE_OLD  PATH_NEW/FILE_NEW   # cp and rename
+					cp PATH_OLD/FILE_OLD  PATH_NEW/.          # cp to same name
+					cp -r DIRECTORY  PATH/.                   # cp recursively all content of directory                    
+				    </code></pre>
+				    <li> Move file or directory </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					mv PATH_OLD/OLD  PATH_NEW/NEW            # move and rename FILE OR DIRECTORY                 
+					mv PATH_OLD/OLD  PATH_NEW/.              # move to new location, keep name
+				    </code></pre>
+				  </ul>
+				</section>
+				
+				</section>
+				<section>
+				  <section>
+				    <h2> Python </h2>
+				    <ul>
+				      <li> <a href="#/2/1"> Running python </a></li>
+				      <li> <a href="#/2/2"> Libraries </a></li>
+				      <li> <a href="#/2/3"> Data types </a></li>
+				      <li> <a href="#/2/6"> Grouping by identation </a></li>
+				      <li> <a href="#/2/7"> Read and write </a></li>
+				      <li> <a href="#/2/8"> Loops </a></li>
+				      <li> <a href="#/2/9"> Conditions </a></li>
+				      <li> <a href="#/2/10"> Exercises </a></li>
+				    </ul>
+				  </section>
+
+				  
+				<section>
+				    <h2> Running python </h2>
+				    <ul>
+				      <li> From commandline (Ctrl-d to exit):</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ python
+					  >>> print( 2 * 3 + 0.3 ) 
+				      </code></pre>
+				      <li> From file: </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  $ python script.py
+					  $ cat script.py
+					  print( 2 * 3 + 0.3 )
+				      </code></pre>
+				  </section>
+
+				  
+			
+				<section>
+				    <h2> Libraries </h2>
+				    <ul>
+				      <li> blank python contains only general basic functionalities </li>
+				      <li> all specific funcitonality needs to be loaded </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  import os                         # e.g. for os.path.isdir
+					  import sys                        # e.g. for reading arguments 
+					  import numpy as np                # numerical python
+					  import matplotlib.pyplot as plt   # submodule for nice plots         
+				      </code></pre>
+				    </ul>
+				  </section>
+
+				  
+			
+				<section>
+				    <h2> Data types 1/3</h2>
+				    <ul>
+				      <li> Variables: strings and numbers </li>
+				      <pre><code class="shell" data-trim contenteditable>
+				      x = 2.0               # declared and value assigned 
+				      y = 3.0
+				      print( x + y )        # sum
+				      
+				      a = "hello "
+				      b = "world"
+				      print( a + b )        # concat
+				      print( a[1:5] )       # substring 
+				      </code></pre>
+				      <li> Variables need to be declared before they can be used or modified
+				    </ul>
+				  </section>
+
+				  
+			
+				<section>
+				    <h2> Data types 2/3 </h2>
+				    <ul>
+				      <li> Lists </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  l = [ 1, 3.4, "alpha"]
+					  print( l )
+					  print( l[2] )
+					  l.append( 3.2 )
+					  print( l[-1] )
+					  print( l[0:2] )
+					  
+					  l = [0,"day", ["x","@" ] ]    
+					  print( l[2][1] )
+				      </code></pre>
+				    </ul>
+				  </section>
+
+				  
+			
+				<section>
+				    <h2> Data types 3/3 </h2>
+				    <ul>
+				      <li> Dictionary </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  d = {}
+					  d["beer"] = 3.50
+					  d["hot dog"] = 2.99
+					  
+					  print( d )
+					  print("total: ", 2*d["beer"] + d["hot dog"] )   
+				      </code></pre>
+				    </ul>
+				  </section>
+
+				  
+			
+				  
+			
+				<section>
+				  <h2> Read and write </h2>
+				  <ul>
+<!--				    <li> Read from console </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					name = input( 'enter your name: ')    
+				    </code></pre>  -->
+				    <li> Write to console </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					print( "how extraordinary!", x )    
+				    </code></pre>
+				    <li> Read from file </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					with open( 'file.txt', 'r' ) as f:    
+					    for l in f:
+					        words = l.split()
+				    </code></pre>
+				    <li> Write to file </li>
+				    <pre><code class="shell" data-trim contenteditable>
+					with open( 'file.txt', 'w' ) as w:   
+					    w.write( "x: " + str(x) + "\n")   
+					    print( x , file=w )
+				    </code></pre>
+				  </ul>
+				</section>
+
+				
+				<section>
+				    <h2> Grouping by identation </h2>
+				    <ul>
+				      <li>Code is grouped by identation</li>
+				      <li>Same context has same (uninterrupted) identation</li>
+				      <li>Identation: 'tab' key </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  with open( 'file.txt', 'w' ) as w:    
+					      w.write( "x: " + str(x) + "\n")   
+					      print( x , file=w )
+				      </code></pre>
+				    </ul>
+				</section>
+
+				<section>
+					<h2> Identation and declaration</h2>
+					<ul>
+						<li> Variables are not known outside identation level:</li>
+				      <pre><code class="shell" data-trim contenteditable>
+				      if True:
+					         a = "cheers"
+				      print( a)              # a is not known, ERROR	
+					</code></pre>
+						<li> Declare it on the identation level you want to use it:</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  a = ""				          
+					  if True:
+					      a = "cheers"
+					  print( a)          # a is known, has value "cheers"                                          
+					</code></pre>
+						
+				    </ul>
+				</section>
+						
+			
+				<section>
+				    <h2> Loops </h2>
+				    <ul>
+				      <li>for loop through list</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  sum = 0
+					  for x in [ 1 , 2 , 3 ]:
+					       sum += x
+					  print( "total:", sum)
+				      </code></pre>
+				      <li>conditional while loop</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  count = 0
+					  while count < 100:
+					      print( "trallalla" )
+					      count += 1
+				      </code></pre>
+				    </ul>
+				  </section>
+
+				  
+			
+				<section>
+				    <h2> Conditions </h2>
+				    <ul>
+				      <li>if a string contains another one</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  with open( 'protein.pdb' ) as f:
+					      for l in f:
+					          if "ATOM" in l:
+					              x = float( l[30:38] ) # convert string to number       
+					              y = float( l[38:46] )
+					              z = float( l[46:54] )
+				      </code></pre>
+				      <li>if a list contains a certain element </li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  types = [ 'CA', 'N', 'C' , 'O' ]  # protein backbone      
+					  with open( 'protein.pdb' ) as f:
+					      for l in f:
+					          atom_type = l[12:16].strip()
+					          if "ATOM" in l and atom_type in types:
+					              print( l )
+				      </code></pre>
+				    </ul>
+				  </section>
+
+				  
+			
+				<section>
+				    <h2> Exercise </h2>
+				    <ul>
+				      Write script calculating the geometric center
+				      <li> open pdb file </li>
+				      <li> iterate through file </li>
+				      <li> extract atom positions </li>
+					    <li> count atoms </li>
+				      <li> sum elementwise (sum over x, sum over y, ..)</li>
+				      <li> devide sum by number of atoms </li>
+				      <li> print center to console </li>
+				      <li> BUG-FIX: ATOM string may appear not at the begining of the line (use startswith() or [:])</li>
+				      <li> extra: filter chain A (position 22 in ATOM lines)</li>
+				    </ul>
+				</section>
+				
+
+				<section style="text-align: left;">
+				  <h1>Congratulations!</h1>
+				  <br><br>
+				  Your first script.
+				</section>
+
+			
+				<section>
+				    <h2> Tips </h2>
+				    <ul>
+				      <li> Use version tracking e.g. git for backup! </li>
+				      <li> Keep it simple! </li>
+				      <li> For most tasks you will find libraries </li>
+				      <li> Search engines are great helpers when coding </li>
+				    </ul>
+				</section>
+
+				
+				</section>
+
+
+
+				<!-- #################################################################################### -->
+
+				<section style="text-align: left;">
+				  <h1>Thanks!</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+
+		<!--
+               <script src="dist/reveal.js"></script>
+                <script src="plugin/notes/notes.js"></script>
+                <script src="plugin/markdown/markdown.js"></script>
+                <script src="plugin/highlight/highlight.js"></script>
+                <script>
+                        // More info about initialization & config:
+                        // - https://revealjs.com/initialization/
+                        // - https://revealjs.com/config/
+                        Reveal.initialize({
+                                hash: true,
+
+                                // Learn about plugins: https://revealjs.com/plugins/
+                                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+                        });
+                </script>
+-->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
+ 				  
