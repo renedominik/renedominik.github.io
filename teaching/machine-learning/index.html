@@ -131,10 +131,10 @@
 				      <pre><code class="shell" data-trim contenteditable>
 					  y = f(x)
 				      </code></pre>
-				      <li> A deterministic relation or law of nature, e.g. \[\begin{math} {\vec{F}} = m \vec{a} \end{math} \] </li>
+				      <li> A deterministic relation or law of nature, e.g. F = ma </li>
 				      <li> A more complex mathematical function</li>
 				      <pre><code class="shell" data-trim contenteditable>
-					  y = f(x,c),  where c are inner parameter 
+					  y = f(x,c),   where c are inner parameter 
 				      </code></pre>
 				      <li> Outcome depends on inner parameters </li>
 				      <li> Machine learning is the optimization of inner parameters </li>
@@ -144,43 +144,73 @@
 				   
 				  <section>
 				    <h2> Learning</h2>
-				    <div style="width:100%">
-				      <div style="float:left;width:50%">
 				    
 				    \[\begin{aligned}
 				    M(\boldsymbol{X}) &amp; = {\vec{y}}_{pred} \\
 				    \epsilon &amp; = \sum_{i=1}^{n} ( {\vec{y}}_{pred, i} - {\vec{y}}_{known, i} )^2 \\
-				    \boldsymbol{X} \in \mathbb{R}^{n \times m},   &amp; \qquad  {\vec{y}}_{pred/known} \in \mathbb{R}^{n \times k}
+				    \boldsymbol{X} &amp; \in \mathbb{R}^{n \times m} \\
+				    {\vec{y}}_{pred/known} &amp; \in \mathbb{R}^{n \times k}
 				    \end{aligned} \]
-				      </div>
-				      <div style="float:left;width:50%">
+				    </section>
+				    
+				  <section>
+				    <h2> Learning, definitions</h2>
 				    <ul>
 				      <li><b>X</b>: input data matrix
 					<ul>
 					  <li> columns: m features, e.g. age, weight, size, ...</li>
 					  <li> rows: n samples, e.g. patients</li>
 					</ul>
-				      <li> $$\vec{y}_{pred}$$: calculated output
-					<ul>
-					  <li> continuous: probability</li>
-					  <li> discrete: class</li>
-					</ul>
-				      <li> \[\[ \vec{y}_{known} \]\]: expected reference data </li>
-
+				      <li> y<sub>pred<sub>: calculated output </li>
+				      <ul>
+					<li> continuous: probability</li>
+					<li> discrete: class</li>
+				      </ul>
+				      <li> y<sub>known</sub>: available reference data </li>
 				      <li> n: number of samples, number of samples in reference data set</li>
+				      <li> k: dimension of output, number of classes or single value for regression</li>
 				    </ul>
-				      </div>
-				    </div>
 				  </section>
 				  </section>
 
 				  <section>
 				    <section>
 				      <h2> Types of learning algorithms</h2>
+				      <p style="float:left;"> Supervised learning</p>
+				      <ul>
+					<li> expected outcome used as reference data <b>X</b></li>
+					<li> training of model to minimize error </li>
+				      </ul>
+				      <p style="float:left;">Unsupervised learning</p>
+				      <ul>
+					<li> no expected outcome <b>X</b></li>
+					<li> instead quantification by distance/similarity: d<sub>ij</sub> = d(x<sub>i</sub>, x<sub>j</sub>)</li>
+					<li> sorting / clustering </li>
+				      </ul>
+				    </section>
+				    
+
+				    <section>
+				      <h2> Unsupervised learning </h2>
+				      <ul>
+					<li> Clustering</li>
+					<li> Hidden Markov Models</li>
+					<li> Principle Component Analysis</li>
+				      </ul>
 				    </section>
 
 				    <section>
-				      <h2> types 2 </h2>
+				      <h2> Supervised learning </h2>
+				      <ul>
+					<li> Descision trees</li>
+					<li> (Logistic) Regression</li>
+					<li> Neural networks</li>
+					<ul>
+					  <li> Convolutional NN</li>
+					  <li> Graph NN </li>
+					  <li> Recurrent NN </li>
+					<li> Support vector machines</li>
+				      </ul>
 				    </section>
 				  </section>
 				 				  
