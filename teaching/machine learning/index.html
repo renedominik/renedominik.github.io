@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lecture: Machine learning introduction</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Rene Staritzbichler">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				  <section>
+				    <h1>Machine learning introduction</h1>
+				    <br>
+				    <p><small>2021</small></p>
+				    <p><small>Dr. Rene Staritzbichler</small></p>
+				  </section>
+				</section>
+
+
+				
+				<section>
+				  <section>
+				    <h2> Linux </h2>
+				    <ul>
+				      <li><a href="#/1/1">What is machine learning?</a></li>
+				      <li><a href="#/1/2">Basic mathematical principle</a></li>
+				      <li><a href="#/1/3">Overview of types of machine learning</a></li>
+				      <li><a href="#/1/4">Linear regression</a></li>
+				      <li><a href="#/1/5">Artificial neural network</a></li>
+                                      <li><a href="#/1/6">Remarks on 'Artifical Intelligence'</a></li>
+				      <li><a href="#/1/7"> </a></li>
+				    </ul>
+				  </section>
+
+				  
+				  <section>
+				    <h2>What is machine learning?</h2>
+				    <ul>
+				      <li></li>
+				    </ul>
+				  </section>
+
+				  
+				  <section>
+				    <h2> Basic mathematical principle </h2>
+				    <ul>
+				      <li> A basic mathematical function</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  y = f(x)
+				      </code></pre>
+				      <li> A deterministic relation or law of nature, e.g. F = ma </li>
+				      <li> A more complex mathematical function</li>
+				      <pre><code class="shell" data-trim contenteditable>
+					  y = f(x,c),  where c are inner parameter 
+				      </code></pre>
+				      <li> Outcome depends on inner parameters </li>
+				      <li> Machine learning is the optimization of inner parameters </li>
+				      <li>  </li>
+				    </ul>
+				  </section>
+				 </section>
+			
+
+				<!-- #################################################################################### -->
+
+				<section style="text-align: left;">
+				  <h1>Thanks!</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+
+		<!--
+               <script src="dist/reveal.js"></script>
+                <script src="plugin/notes/notes.js"></script>
+                <script src="plugin/markdown/markdown.js"></script>
+                <script src="plugin/highlight/highlight.js"></script>
+                <script>
+                        // More info about initialization & config:
+                        // - https://revealjs.com/initialization/
+                        // - https://revealjs.com/config/
+                        Reveal.initialize({
+                                hash: true,
+
+                                // Learn about plugins: https://revealjs.com/plugins/
+                                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+                        });
+                </script>
+-->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
+ 				  
