@@ -66,6 +66,8 @@
 				  <section>
 				  <section>
 				    <h2>What is machine learning?</h2>
+				    <br>
+				    <p> Optimization of mathematical model by usage of data</p>
 				    <ul>
 				      <li>Aliases: </li>
 				      <ul>
@@ -77,10 +79,13 @@
 					<li>understanding data</li>
 					<li>predictions</li>
 				      </ul>
-				      <li>Tasks:</li>
+				  </section>
+
+				  <section>
+				      <h2> Tasks </h2>
 				      <ul>
-				      <li>discrete: classification</li>
-				      <li>continuous: regression</li>
+				      <li>discrete data: classification</li>
+				      <li>continuous data: regression</li>
 				      <li>complexity reduction</li>
 				      </ul>
 				    </ul>
@@ -89,26 +94,31 @@
 				  
 				  <section>
 				    <h2> Main classes</h2>
-				    
-				    <p> Discrete: classes or categories: </p>
-				    <br>
-				    <table style="width:70%;height=30%">
-				      <tr>
-					<th> good </th>
-					<th> bad </th>
-				      </tr>
-				      <tr>
-					<td> alive </td>
-					<td> dead </td>
-				      </tr>
-				      <tr>
-					<td> disease X</td>
-					<td> not having disease X</td>
-				      </tr>
-				    </table>
-				    <p>
-				      Continuous data:</p>
-				    <img class="r-stretch" src="img/linear_regression.png">
+				    <div style="width:100%">
+				      <div style="float:left;width:50%">
+					<p> Discrete: classes or categories: </p>
+					<br>
+					<table style="width:70%;height=30%">
+					  <tr>
+					    <th> good </th>
+					    <th> bad </th>
+					  </tr>
+					  <tr>
+					    <td> alive </td>
+					    <td> dead </td>
+					  </tr>
+					  <tr>
+					    <td> disease X</td>
+					    <td> not having disease X</td>
+					  </tr>
+					</table>
+				      </div>
+				      <div style="float:left;width:50%">
+					<p>
+					  Continuous data:</p>
+					<img class="r-stretch" src="img/linear_regression.png">
+				      </div>
+				    </div>
                                   </section>
                                   </section>
 
@@ -131,22 +141,22 @@
 				    </ul>
 				  </section>
 
-				  
+				   
 				  <section>
 				    <h2> Learning</h2>
 				    
 				    \[\begin{aligned}
-				    M(\boldsymbol{X}) &amp; = \vec{y}_{pred} \\
-				    \epsilon &amp; = \sum_{i=1}^{n} ( \vec{y}_{pred, i} - \vec{y}_{known, i} )^2
+				    M(\boldsymbol{X}) &amp; = {\vec{y}}_{pred} \\
+				    \epsilon &amp; = \sum_{i=1}^{n} ( {\vec{y}}_{pred, i} - {\vec{y}}_{known, i} )^2
 				    \end{aligned} \]
 
 				    <ul>
-				      <li> <b>X</b>: input data matrix
+				      <li> /[ \boldsymbol{X} \in \mathbb{R}^{nxm} \] : input data matrix
 					<ul>
-					  <li> columns: features, e.g. age, weight, size, ...</li>
-					  <li> rows: samples, e.g. patients</li>
+					  <li> columns: m features, e.g. age, weight, size, ...</li>
+					  <li> rows: n samples, e.g. patients</li>
 					</ul>
-				      <li> \[\[ \vec{y}_{pred} \]\]: calculated output
+				      <li> \[\[ \vec{y}_{pred} \in \mathbb{R}^n \]\]: calculated output
 					<ul>
 					  <li> continuous: probability</li>
 					  <li> discrete: class</li>
@@ -158,13 +168,23 @@
 				  </section>
 				  </section>
 
+				  <section>
+				    <section>
+				      <h2> Types of learning algorithms</h2>
+				    </section>
+
+				    <section>
+				      <h2> types 2 </h2>
+				    </section>
+				  </section>
+				 				  
 
 				  <section>
 				    <section>
 				      <h2> Regression </h2>
-
 				    </section>
 
+				    
 				    <section>
 				      <h2> Regression </h2>
 				    </section>
@@ -174,26 +194,36 @@
 				    </section>
 				  </section>
 
+				  
 				  <section>
 				    <section>
 				      <h2> Classification</h2>
 				    </section>
 
+				    
 				    <section>
 				      <h2> Logistic regression </h2>
 				    </section>
-				    </section>
+				  </section>
 
+				  
 				  <section>
 				    <section>
 				      <h2> Artificial neural network</h2>
 				    </section>
 
+				    
 				    <section>
 				      <h2> Perceptron </h2>
 				    </section>
+
+				    
+				    <section>
+				      <h2> Backpropagation </h2>
+				    </section>
 				  </section>
 
+				  
 				  <section>
 				    <section>
 				      <h2> Remarks about 'Artifical Intelligence'</h2>
