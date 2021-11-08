@@ -55,10 +55,10 @@
 				      <li><a href="#/2">What is machine learning?</a></li>
 				      <li><a href="#/3">Basic mathematical principle</a></li>
 				      <li><a href="#/4">Types of machine learning</a></li>
-				      <li><a href="#/4">Linear regression</a></li>
-				      <li><a href="#/5">Classification</a></li>
-				      <li><a href="#/6">Artificial neural network</a></li>
-                                      <li><a href="#/7">Remarks on 'Artifical Intelligence'</a></li>
+				      <li><a href="#/5">Linear regression</a></li>
+				      <li><a href="#/6">Classification</a></li>
+				      <li><a href="#/7">Artificial neural network</a></li>
+                                      <li><a href="#/8">Remarks on 'Artifical Intelligence'</a></li>
 				    </ul>
 				  </section>
 
@@ -69,7 +69,7 @@
 				    <br>
 				    <p> Optimization of mathematical model by usage of data</p>
 				    <ul>
-				      <li>Aliases: </li>
+				      <li>Equivalent: </li>
 				      <ul>
 					<li> 'pattern recognition'</li>
 					<li> data evaluation </li>
@@ -87,6 +87,7 @@
 				      <li>discrete data: classification</li>
 				      <li>continuous data: regression</li>
 				      <li>complexity reduction</li>
+				      <li> encryption </li>
 				      </ul>
 				    </ul>
 				  </section>
@@ -117,7 +118,7 @@
 					    <td> dead </td>
 					  </tr>
 					  <tr>
-					    <td> disease X</td>
+					    <td> <br> having disease X</td>
 					    <td> not having disease X</td>
 					  </tr>
 					</table>
@@ -143,7 +144,7 @@
 				      <li> A deterministic relation or law of nature, e.g. F = ma </li>
 				      <li> A more complex mathematical function</li>
 				      <pre><code class="shell" data-trim contenteditable>
-					  y = f(x,c),   where c are inner parameter 
+					  y = f(x,c),   where c are choosable inner parameter 
 				      </code></pre>
 				      <li> Outcome depends on inner parameters </li>
 				      <li> Machine learning is the optimization of inner parameters </li>
@@ -152,7 +153,7 @@
 
 				   
 				  <section>
-				    <h2> Learning</h2>
+				    <h2> What is learning?</h2>
 				    
 				    \[\begin{aligned}
 				    M(\boldsymbol{X}) &amp; = y_{pred} \\
@@ -193,7 +194,8 @@
 				      <p style="float:left;">Unsupervised learning</p>
 				      <ul>
 					<li> no expected outcome <b>X</b></li>
-					<li> instead quantification by distance/similarity
+					<li> instead quantification by e.g.:
+					  <ul><li> distance / similarity / variance </li></ul>
 				      </ul>
 				    </section>
 				    
@@ -226,16 +228,55 @@
 
 				  <section>
 				    <section>
-				      <h2> Regression </h2>
+				      <h2> Linear regression </h2>
+				      <div style="width:100%;">
+					<div style="float:left;width:50%;">
+					  <ul>
+					    <li>Fit a straight line through your data </li>
+					  </ul>
+					  \[ \[ y = a \cdot x + b \] \]
+					  <ul>
+					    <li>Minimize error </li>
+					  </ul>
+					  \[ \[ \epsilon = \sum_{i=1}^{n} (y^{(i)} - \tilde{y}^{(i)} )^2 \] \]
+					</div>
+					<div style="float:left;width:50%;">
+					  <img src="img/linear_regression_dist.png">
+					  </div>
+				      </div>
 				    </section>
 
 				    
 				    <section>
-				      <h2> Regression </h2>
+				      <h2> Cost function </h2>
+				      <p> Choose function with simple derivatives </p>
+				      <br>
+				    \[\begin{aligned}
+				      h(x) &amp; = y = w_0 + w_1 x_1 + w_2 x_2 + \ldots \\
+				      L &amp; = \frac{1}{2n}\sum_{i=1}^{n} (h(x^{(i)}) - \tilde{y}^{(i)} )^2 
+				    \end{aligned} \]
+
+				      <img src="img/cost_function.png">
 				    </section>
 
 				    <section>
 				      <h2> Steepest descent </h2>
+				      <p> follow the gradient </p>
+				      \[\begin{aligned}
+				      w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} \\
+				      w_j &amp; = w_j - \frac{\alpha}{n} \sum_{i=1}{n} (h(x^{(i)} ) - \tilde{y}^{(i)} ) x_j^{(i)}
+				      \end{aligned} \]
+				      <img src="img/cost_function.png">
+				    </section>
+			
+				    <section>
+				      <h2> Overcoming linearity </h2>
+				      <p> substitution of non-linear terms allows to use linear math</p>
+				      \[\begin{aligned}
+				      y &amp; = w_0 + w_1 x + w_2 x^2 + \ldots \\
+				      x &amp; = x_1, x^2 = x_2, \ldots \\
+				      y &amp; = w_0 + w_1 x_1 + w_2 x_2 + \ldots \\
+				      \end{aligned} \]
 				    </section>
 				  </section>
 
