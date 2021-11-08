@@ -144,7 +144,7 @@
 				      <li> A deterministic relation or law of nature, e.g. F = ma </li>
 				      <li> A more complex mathematical function</li>
 				      <pre><code class="shell" data-trim contenteditable>
-					  y = f(x,c),   where c are choosable inner parameter 
+					  y = f(x,c),   where c are free inner parameters 
 				      </code></pre>
 				      <li> Outcome depends on inner parameters </li>
 				      <li> Machine learning is the optimization of inner parameters </li>
@@ -234,11 +234,11 @@
 					  <ul>
 					    <li>Fit a straight line through your data </li>
 					  </ul>
-					  \[ \[ y = a \cdot x + b \] \]
+					  \[\[ y = a \cdot x + b \]\]
 					  <ul>
 					    <li>Minimize error </li>
 					  </ul>
-					  \[ \[ \epsilon = \sum_{i=1}^{n} (y^{(i)} - \tilde{y}^{(i)} )^2 \] \]
+					   \[ \epsilon = \sum_{i=1}^{n} (y^{(i)} - \tilde{y}^{(i)} )^2 \] 
 					</div>
 					<div style="float:left;width:50%;">
 					  <img src="img/linear_regression_dist.png">
@@ -250,13 +250,13 @@
 				    <section>
 				      <h2> Cost function </h2>
 				      <p> Choose function with simple derivatives </p>
-				      <br>
+				  
 				    \[\begin{aligned}
 				      h(x) &amp; = y = w_0 + w_1 x_1 + w_2 x_2 + \ldots \\
 				      L &amp; = \frac{1}{2n}\sum_{i=1}^{n} (h(x^{(i)}) - \tilde{y}^{(i)} )^2 
 				    \end{aligned} \]
 
-				      <img src="img/cost_function.png">
+				      <img style="width:30%;" src="img/cost_function.png">
 				    </section>
 
 				    <section>
@@ -266,12 +266,13 @@
 				      w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} \\
 				      w_j &amp; = w_j - \frac{\alpha}{n} \sum_{i=1}{n} (h(x^{(i)} ) - \tilde{y}^{(i)} ) x_j^{(i)}
 				      \end{aligned} \]
-				      <img src="img/cost_function.png">
+				      <img style="width:30%;" src="img/cost_function.png">
 				    </section>
 			
 				    <section>
 				      <h2> Overcoming linearity </h2>
-				      <p> substitution of non-linear terms allows to use linear math</p>
+				      <p> substitution of non-linear terms </p>
+				      <p> allows to use linear math</p>
 				      \[\begin{aligned}
 				      y &amp; = w_0 + w_1 x + w_2 x^2 + \ldots \\
 				      x &amp; = x_1, x^2 = x_2, \ldots \\
@@ -284,11 +285,30 @@
 				  <section>
 				    <section>
 				      <h2> Classification</h2>
+				      <ul>
+					<li> separating groups of data points </li>
+					<li> $1^{st} oder: line or plane </li>
+					<li> higher order: non-linear surfaces </li>
+				      <img style="width:80%;" src="img/classification.png">
 				    </section>
 
 				    
 				    <section>
 				      <h2> Logistic regression </h2>
+				      <div style="width:100%;">
+					<div style="float:left;width:50%;">
+					  \[\begin{aligned}
+					  y &amp; = w_0 + w_1 x + w_2 x^2 + \ldots \\
+					  \sigma (z) &amp; = \frac{1}{1+e^{-z}} \\
+					  h(x)  &amp; = \sigma (w_0 + w_1 x + w_2 x^2 + \ldots ) \\
+					  L &amp; = \frac{1}{2n}\sum_{i=1}^{n} (h(x^{(i)}) - \tilde{y}^{(i)} )^2 \\
+					  w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} 					  
+					  \end{aligned} \]
+					</div>
+					<div style="float:left;width:50%;">
+					  <img src="img/logistic_regression.png">
+					</div>
+				      </div>
 				    </section>
 				  </section>
 
@@ -296,16 +316,22 @@
 				  <section>
 				    <section>
 				      <h2> Artificial neural network</h2>
+				      <img src="img/ann.png">
 				    </section>
 
 				    
 				    <section>
 				      <h2> Perceptron </h2>
+				      <img src="img/perceptron.png">
 				    </section>
 
 				    
 				    <section>
-				      <h2> Backpropagation </h2>
+				      <h2> Forward- and backpropagation </h2>
+				      <p style="float:left;">Forward propagation</p>
+				      <ul><li> </li>multi-dimensional logistic regression</ul>
+				      <p style="float:left;">Forward propagation</p>
+				      <ul><li> multi-layer steepest descent</li></ul>				      
 				    </section>
 				  </section>
 
