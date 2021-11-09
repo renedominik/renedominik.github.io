@@ -72,7 +72,7 @@
 				      <li>Equivalent: </li>
 				      <ul>
 					<li> 'pattern recognition'</li>
-					<li> data evaluation </li>
+					<li> 'data mining' (evaluation) </li>
 				      </ul>
 				      <li>Goals:</li>
 				      <ul>
@@ -195,7 +195,7 @@
 				      <ul>
 					<li> no expected outcome <b>X</b></li>
 					<li> instead quantification by e.g.:
-					  <ul><li> distance / similarity / variance </li></ul>
+					  <ul style="list-style-type:none"><li> distance / similarity / variance </li></ul>
 				      </ul>
 				    </section>
 				    
@@ -237,7 +237,7 @@
 					  </ul>
 					  \[ \epsilon = \sum_{i=1}^{n} (y^{(i)} - \tilde{y}^{(i)} )^2 \] 
 					</div>
-					<div style="float:left;width:50%;">
+					<div style="float:left;width:50%;margin-left:1em;">
 					  <img src="img/linear_regression_dist.png">
 					  </div>
 				      </div>
@@ -253,7 +253,7 @@
 				      L &amp; = \frac{1}{2n}\sum_{i=1}^{n} (h(x^{(i)}) - \tilde{y}^{(i)} )^2 
 				    \end{aligned} \]
 
-				      <img style="width:35%;" src="img/cost_function.png">
+				      <img style="width:35%;top-margin:1em;" src="img/cost_function.png">
 				    </section>
 
 				    <section>
@@ -261,7 +261,7 @@
 				      <p> follow the gradient :: backpropagation </p>
 				      \[\begin{aligned}
 				      w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} \\
-				      w_j &amp; = w_j - \frac{\alpha}{n} \sum_{i=1}{n} (h(x^{(i)} ) - \tilde{y}^{(i)} ) x_j^{(i)}
+				      w_j &amp; = w_j - \frac{\alpha}{n} \sum_{i=1}^{n} (h(x^{(i)} ) - \tilde{y}^{(i)} ) x_j^{(i)}
 				      \end{aligned} \]
 				      <img style="width:35%;" src="img/cost_function.png">
 				    </section>
@@ -293,7 +293,7 @@
 				    
 				    <section>
 				      <h2> Logistic regression </h2>
-				      <div style="width:50%;display:flex;justify-content: center;">
+				      <div style="width:50%;">
 					<img src="img/logistic_regression.png">
 				      </div>
 				    </section>
@@ -302,16 +302,16 @@
 				    <section>
 				      <h2> Logistic regression </h2>
 				      <div style="width:100%;">
-					<div style="float:top-right;width:20%;">
+					<div style="float:left;width:80%;">
 					  \[\begin{aligned}
-					  y &amp; = w_0 + w_1 x + w_2 x^2 + \ldots \\
+					  y &amp; = w_0 + w_1 x + w_2 x_2 + \ldots \\
 					  \sigma (z) &amp; = \frac{1}{1+e^{-z}} \\
-					  h(x)  &amp; = \sigma (w_0 + w_1 x + w_2 x^2 + \ldots ) \\
+					  h(x)  &amp; = \sigma (w_0 + w_1 x + w_2 x_2 + \ldots ) \\
 					  L &amp; = \frac{1}{2n}\sum_{i=1}^{n} (h(x^{(i)}) - \tilde{y}^{(i)} )^2 \\
 					  w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} 					  
 					  \end{aligned} \]
 					</div>
-					<div style="float:left;width:50%;">
+					<div style="float:left;width:20%;">
 					  <img src="img/logistic_regression.png">
 					</div>
 				      </div>
@@ -322,15 +322,15 @@
 				  <section>
 				    <section>
 				      <h2> Artificial neural network</h2>
-				      <div style="width:30%;">
-					<img style="height:70%;" src="img/ann.png">
+				      <div style="width:100%;">
+					<img style="height:40%;" src="img/ann.png">
 				      </div>
 				    </section>
 
 				    
 				    <section>
 				      <h2> Perceptron </h2>
-				      <div style="width:30%;">
+				      <div style="height:30%;">
 					<img  src="img/perceptron.png">
 				      </div>
 				    </section>
@@ -341,13 +341,13 @@
 				      <ul>
 				      <p> Forward propagation </p>
 
-				      <ul>
+				      <ul style="list-style-type:circle;">
 					<li> multi-dimensional logistic regression </li>
 				      </ul>
 				      
 				      <p> Backward propagation </p>
 
-				      <ul>
+				      <ul style="list-style-type:circle;">
 					<li> multi-layer steepest descent</li>
 				      </ul>				      
 				    </section>
@@ -356,11 +356,65 @@
 				  
 				  <section>
 				    <section>
-				      <h2> Remarks about 'Artifical Intelligence'</h2>
+				      <h2>'Artifical Intelligence'</h2>
+				      
+				      <ul style="list-style-type:circle;">
+					<li> may computer become concious?</li>
+					<li> can they feel and think in the way we do? </li>
+				      </ul>
 				    </section>
 
 				    <section>
+				      <h2>Alan Turing 1912-54</h2>
+				      
+				      <div style="width:100%;">
+					<div style="float:left;width:80%;">
+					  <ul style="list-style-type:circle;">
+					    <li> pioneer of computer technology</li>
+					    <li> major impact on $2^{nd} worldwar </li>
+					    <li> Turing test: when a human cannot distinguish whether he speaks to a human or a machine, the machine has passed the test ('imitation game')</li>
+					  </ul>
+					</div>
+					<div style="float:left;width:20%;">
+					  <img src="img/alan_turing.png">
+					</div>
+				      </div>
+			
+				    </section>
+
+				    
+				    <section>
 				      <h2> Why you don't qualify as judge</h2>
+				      <ul style="list-style-type:circle;">
+					<li> We notoriously project our hopes and fears onto everything </li>
+					<li> We love to see ourselves in movie characters, pets, fantasy creatures, smileys... </li>
+					<div style="float:center;width:40%;">
+					  <img src="img/star_wars.png">
+					</div>
+				      </ul>
+				    </section>
+				    
+				    
+				    
+				    <section>
+				      <h2> The god code</h2>
+				      <p> Can this snippet create a sentient being?</p>
+				      
+					<div style="float:left;width:20%;">
+					  <img src="img/god_code.png">
+					</div>
+					
+				    </section>
+				  </section>
+				      
+				    <section>
+				      <h2> Cons</h2>
+				      
+				      <ul style="list-style-type:circle;">
+					<li> does that what imitates become itself that what it imitates? </li>
+					<li> on/off proplem </li>
+					<li> $\inf$ replicas </li>
+				      </ul>
 				    </section>
 				  </section>
 				      
