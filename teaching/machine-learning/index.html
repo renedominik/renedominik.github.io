@@ -138,14 +138,10 @@
 				    <h2> Basic mathematical principle </h2>
 				    <ul>
 				      <li> A basic mathematical function</li>
-				      <pre><code class="shell" data-trim contenteditable>
-					  y = f(x)
-				      </code></pre>
+				      $y = f(x)$
 				      <li> A deterministic relation or law of nature, e.g. F = ma </li>
 				      <li> A more complex mathematical function</li>
-				      <pre><code class="shell" data-trim contenteditable>
-					  y = f(x,c),   where c are free inner parameters 
-				      </code></pre>
+				      $y = f(x,c),  \qquad \text{where c are free inner parameters} $
 				      <li> Outcome depends on inner parameters </li>
 				      <li> Machine learning is the optimization of inner parameters </li>
 				    </ul>
@@ -154,17 +150,18 @@
 				   
 				  <section>
 				    <h2> What is learning?</h2>
-				    
+				    <div style="font-size:25pt;padding:1em;">
 				    \[\begin{aligned}
 				    M(\boldsymbol{X}) &amp; = y_{pred} \\
 				    \epsilon &amp; = \sum_{i=1}^{n} ( y_{pred, i} - y_{known, i} )^2 \\
 				    \boldsymbol{X} &amp; \in \mathbb{R}^{n \times m} \\
 				    y_{pred/known} &amp; \in \mathbb{R}^{n \times k}
 				    \end{aligned} \]
+				    </div>
 				    </section>
 				    
 				  <section>
-				    <h2> Learning, definitions</h2>
+				    <h2> Definitions</h2>
 				    <ul>
 				      <li><b>X</b>: input data matrix
 					<ul>
@@ -186,6 +183,7 @@
 				  <section>
 				    <section>
 				      <h2> Types of learning algorithms</h2>
+				      <div style="text-align:left;width:90%;padding:5px;padding-left:2em;">
 				      <p> Supervised learning</p>
 				      <ul>
 					<li> expected outcome used as reference data <b>X</b></li>
@@ -194,9 +192,10 @@
 				      <p>Unsupervised learning</p>
 				      <ul>
 					<li> no expected outcome <b>X</b></li>
-					<li> instead quantification by e.g.:
+					<li> instead quantification by e.g.
 					<li style="list-style-type:none"> distance / similarity / variance </li>
 				      </ul>
+				      </div>
 				    </section>
 				    
 
@@ -230,9 +229,9 @@
 				    <section>
 				      <h2> Linear regression </h2>
 				      <div style="width:100%;">
-					<div style="float:left;width:65%;">
+					<div style="float:left;width:65%;font-size:25pt;">
 					  <ul>
-					    <li>Fit a straight line through your data \[ y = a \cdot x + b \] </li>
+					    <li>Fit a straight line through data \[ y = a \cdot x + b \] </li>
 					    <li>Minimize error </li>
 					  </ul>
 					  \[ \epsilon = \sum_{i=1}^{n} (y^{(i)} - \tilde{y}^{(i)} )^2 \] 
@@ -247,34 +246,43 @@
 				    <section>
 				      <h2> Cost function </h2>
 				      <p> Choose function with simple derivatives </p>
-				  
+				    <div style="font-size:20pt;padding:5px;">
+				    
 				    \[\begin{aligned}
 				      h(x) &amp; = y = w_0 + w_1 x_1 + w_2 x_2 + \ldots \\
 				      L &amp; = \frac{1}{2n}\sum_{i=1}^{n} (h(x^{(i)}) - \tilde{y}^{(i)} )^2 
 				    \end{aligned} \]
-
-				      <img style="width:35%;top-margin:1em;" src="img/cost_function.png">
+				    </div>
+				    <div style="padding:1em;">
+				    <img style="width:35%;top-margin:1em;" src="img/cost_function.png">
+				    </div>
 				    </section>
 
 				    <section>
 				      <h2> Steepest descent </h2>
 				      <p> follow the gradient :: backpropagation </p>
+				      <div style="font-size:20pt;">
 				      \[\begin{aligned}
 				      w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} \\
 				      w_j &amp; = w_j - \frac{\alpha}{n} \sum_{i=1}^{n} (h(x^{(i)} ) - \tilde{y}^{(i)} ) x_j^{(i)}
 				      \end{aligned} \]
-				      <img style="width:35%;" src="img/cost_function.png">
+				      </div>
+				      <div style="padding:8px;">
+					<img style="width:35%;" src="img/cost_function.png">
+					</div>
 				    </section>
 			
 				    <section>
 				      <h2> Overcoming linearity </h2>
 				      <p> substitution of non-linear terms </p>
 				      <p> allows to use linear math</p>
+				      <div style="font-size:22pt;">
 				      \[\begin{aligned}
 				      y &amp; = w_0 + w_1 x + w_2 x^2 + \ldots \\
 				      x &amp; = x_1,\quad x^2 = x_2, \quad \ldots \\
 				      y &amp; = w_0 + w_1 x_1 + w_2 x_2 + \ldots \\
 				      \end{aligned} \]
+				      </div>
 				    </section>
 				  </section>
 
@@ -293,8 +301,9 @@
 				    
 				    <section>
 				      <h2> Logistic regression </h2>
-				      <div style="width:50%;text-align:center;">
-					<img src="img/logistic_regression.png">
+				      <p> Apply sigmoid 'acitivation' function </p>
+				      <div style="width:100%;text-align:center;">
+					<img  style="width:50%;" src="img/logistic_regression.png">
 				      </div>
 				    </section>
 
@@ -302,7 +311,7 @@
 				    <section>
 				      <h2> Logistic regression </h2>
 				      <div style="width:100%;">
-					<div style="float:left;width:80%;">
+					<div style="float:left;width:78%;font-size:22pt;padding-top:5px;">
 					  \[\begin{aligned}
 					  y &amp; = w_0 + w_1 x + w_2 x_2 + \ldots \\
 					  \sigma (z) &amp; = \frac{1}{1+e^{-z}} \\
@@ -311,7 +320,7 @@
 					  w_j &amp; = w_j - \alpha \frac{\partial L}{\partial w_j} 					  
 					  \end{aligned} \]
 					</div>
-					<div style="float:left;width:20%;">
+					<div style="float:left;width:22%;">
 					  <img src="img/logistic_regression.png">
 					</div>
 				      </div>
@@ -321,17 +330,31 @@
 				  
 				  <section>
 				    <section>
-				      <h2> Artificial neural network</h2>
+				      <h2> Artificial neural networks</h2>
 				      <div style="width:100%;">
-					<img style="width:20%;" src="img/ann.png">
+					<img style="width:40%;" src="img/ann.png">
 				      </div>
 				    </section>
 
 				    
 				    <section>
 				      <h2> Perceptron </h2>
-					<div style="display:table-cell;vertical-align:middle;text-align:center;">
-					<img style="width:20%;" src="img/perceptron.png">
+				      <div style="width:100%;">
+					<div style="width:40%;float:left;">
+					<img  src="img/perceptron.png">
+					</div>
+					<div style="width:50%;float:right;color:white;font-size:22px;text-align:left;">
+					  <p> Forward propagation</p>
+					   \[\begin{aligned}
+					    x_{21} &amp; = \sigma ( w_{111}x_{11} + w_{121} x_{12} + w_{131} x_{13} )\\
+					    x_{22} &amp; = \sigma ( w_{112}x_{11} + w_{122} x_{12} + w_{132} x_{13} )\\
+					    x_{23} &amp; = \sigma ( w_{113}x_{11} + w_{123} x_{12} + w_{133} x_{13} )\\
+					    x_{24} &amp; = \sigma ( w_{114}x_{11} + w_{124} x_{12} + w_{134} x_{13} )\\ \\
+					    x_{31} &amp; = \sigma ( w_{211}x_{21} + w_{221} x_{22} + w_{231} x_{23} + w_{241} x_{24}) \\
+					    x_{32} &amp; = \sigma ( w_{212}x_{21} + w_{222} x_{22} + w_{232} x_{23} + w_{242} x_{24}) 
+					   \end{aligned}\]
+					  </p>
+					</div>
 				      </div>
 				    </section>
 
@@ -339,17 +362,17 @@
 				    <section>
 				      <h2> Iterative learning </h2>
 				      <ul>
-				      <p> Forward propagation </p>
-
-				      <ul style="list-style-type:circle;">
-					<li> multi-dimensional logistic regression </li>
-				      </ul>
+					<p style="text-align:left;"> Forward propagation </p>
+					<ul>
+					  <li> multi-dimensional logistic regression </li>
+					</ul>
 				      
-				      <p> Backward propagation </p>
+					<p> Backward propagation </p>
 
-				      <ul style="list-style-type:circle;">
-					<li> multi-layer steepest descent</li>
-				      </ul>				      
+					<ul>
+					  <li style="list-style-type:disc;"> multi-layer steepest descent</li>
+					</ul>
+				      </ul>
 				    </section>
 				  </section>
 
@@ -358,9 +381,9 @@
 				    <section>
 				      <h2>'Artifical Intelligence'</h2>
 				      
-				      <ul style="list-style-type:circle;">
-					<li> may computers become concious?</li>
-					<li> can they feel and think in the way we do? </li>
+				      <ul style="list-style-type:disc;">
+					<li> could computers become concious?</li>
+					<li> could they feel and think the way we do? </li>
 				      </ul>
 				    </section>
 
@@ -369,7 +392,7 @@
 				      
 				      <div style="width:100%;">
 					<div style="float:left;width:70%;">
-					  <ul style="list-style-type:circle;">
+					  <ul style="list-style-type:disc;">
 					    <li> pioneer of computer technology</li>
 					    <li> major impact on $2^{nd}$ worldwar </li>
 					    <li> Turing test ('imitation game'): when a human cannot distinguish whether he speaks to a human or a machine, the machine has passed the test </li>
@@ -385,10 +408,10 @@
 				    
 				    <section>
 				      <h2> Why you don't qualify as judge</h2>
-				      <ul style="list-style-type:circle;">
-					<li> We notoriously project our hopes and fears onto everything </li>
-					<li> We love to see ourselves in movie characters, pets, fantasy creatures, smileys... </li>
-					<li> We are highly biased to 'yes, they can'</li> 
+				      <ul style="list-style-type:disc;">
+					<li> we notoriously project our hopes and fears onto everything </li>
+					<li> we love to identify with movie characters, project our emotions onto pets, fantasy creatures, smileys... </li>
+					<li> we are highly biased to 'yes, they can'</li> 
 					<div style="width:100%">
 					<div style="display:table-cell;vertical-align:middle;text-align:center;">
 					    <img style="width:40%;" src="img/star_wars.png">
@@ -404,7 +427,7 @@
 				      <p> Can this snippet create a sentient being?</p>
 				      
 					<div style="display:table-cell;vertical-align:middle;text-align:center;">
-					  <img style="width:60%;" src="img/god_code.png">
+					  <img style="width:70%;" src="img/god_code.png">
 					</div>
 					
 				    </section>
@@ -412,20 +435,19 @@
 				    <section>
 				      <h2> Cons</h2>
 				      
-				      <ul style="list-style-type:circle;">
-					<li> can the imitation become itself that what it imitates? </li>
-					<li> on/off proplem </li>
+				      <ul style="list-style-type:disc;">
+					<li> could an imitation itself become what it imitates? </li>
+					<li> switching on/off </li>
 					<li> $\infty$ replicas, 100% identical </li>
 				      </ul>
 				    </section>
 				  </section>
 				      
-
 				  
 				<!-- #################################################################################### -->
 
 				<section style="text-align: left;">
-				  <h1>Thanks!</h1>
+				  <h1>Cheers!</h1>
 				</section>
 
 			</div>
