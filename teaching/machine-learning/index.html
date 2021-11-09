@@ -29,6 +29,20 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
+<!--		<style>
+		  table {
+		      border-collapse:collapse;
+		  }
+		  table tr td {
+		      border-right: 2px solid;
+		  }
+		  
+		  table tr td:last-of-type {
+		      border-right: none;
+		  }
+		</style>
+-->
+
 		<!--[if lt IE 9]>
 		<script src="../lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -96,19 +110,11 @@
 				  <section>
 				    <h2> Main classes</h2>
 				    <div style="width:100%">
-				      <style>
-					table tr td {
-					    border-right: 2px solid white;
-					}
-					table tr td:last-of-type {
-					    border-right: none;
-					}
-					</style>
-				      
-				      <div style="float:left;width:50%">
+				    				      
+				      <div style="float:left;width:50%;">
 					<p> Discrete data: </p>
 					<br>
-					<table style="width:70%;height=30%">
+					<table style="width:70%;height=30%;font-size:23pt;">
 					  <tr>
 					    <td> good </td>
 					    <td> bad </td>
@@ -118,7 +124,7 @@
 					    <td> dead </td>
 					  </tr>
 					  <tr>
-					    <td> <br> having disease X</td>
+					    <td> having disease X</td>
 					    <td> not having disease X</td>
 					  </tr>
 					</table>
@@ -158,6 +164,7 @@
 				    y_{pred/known} &amp; \in \mathbb{R}^{n \times k}
 				    \end{aligned} \]
 				    </div>
+				    <p> Learning is the minimization of the error between known and calculated values.</p>
 				    </section>
 				    
 				  <section>
@@ -423,7 +430,7 @@
 				    
 				    
 				    <section>
-				      <h2> The god code</h2>
+				      <h2> The god code?</h2>
 				      <p> Can this snippet create a sentient being?</p>
 				      
 					<div style="display:table-cell;vertical-align:middle;text-align:center;">
