@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Lecture: Machine learning introduction</title>
+		<title>Lecture: Introduction to machine learning</title>
 
 		<meta name="description" content="">
 		<meta name="author" content="Rene Staritzbichler">
@@ -83,15 +83,15 @@
 				    <br>
 				    <p> Optimization of mathematical model by usage of data</p>
 				    <ul>
-				      <li>Equivalent: </li>
+				      <li>Aliases: </li>
 				      <ul>
 					<li> 'pattern recognition'</li>
 					<li> 'data mining' (evaluation) </li>
 				      </ul>
 				      <li>Goals:</li>
 				      <ul>
-					<li>understanding data</li>
-					<li>predictions</li>
+					<li>explain data</li>
+					<li>predict data</li>
 				      </ul>
 				  </section>
 
@@ -101,7 +101,7 @@
 				      <li>discrete data: classification</li>
 				      <li>continuous data: regression</li>
 				      <li>complexity reduction</li>
-				      <li> encryption </li>
+				      <li>encryption </li>
 				      </ul>
 				    </ul>
 				  </section>
@@ -143,13 +143,13 @@
 				  <section>
 				    <h2> Basic mathematical principle </h2>
 				    <ul>
-				      <li> A basic mathematical function</li>
-				      $y = f(x)$
-				      <li> A deterministic relation or law of nature, e.g. F = ma </li>
-				      <li> A more complex mathematical function</li>
-				      $y = f(x,c),  \qquad \text{where c are free inner parameters} $
-				      <li> Outcome depends on inner parameters </li>
-				      <li> Machine learning is the optimization of inner parameters </li>
+				      <li> a basic mathematical function</li>
+				      <p style="color:white;"> $y = f(x)$ </p>
+				      <li> a deterministic relation or law of nature, e.g. F = ma </li>
+				      <li> a more complex mathematical function</li>
+				      <p style="color:white;">$y = f(x,c),  \qquad \text{where c are free inner parameters} $</p>
+				      <li> outcome depends on inner parameters </li>
+				      <li> machine learning is the optimization of inner parameters </li>
 				    </ul>
 				  </section>
 
@@ -164,7 +164,7 @@
 				    y_{pred/known} &amp; \in \mathbb{R}^{n \times k}
 				    \end{aligned} \]
 				    </div>
-				    <p> Learning is the minimization of the error between known and calculated values.</p>
+				    <p> learning is the minimization of the error between known and calculated values.</p>
 				    </section>
 				    
 				  <section>
@@ -220,13 +220,13 @@
 				      <ul>
 					<li> Descision trees</li>
 					<li> (Logistic) Regression</li>
-					<li> Neural networks</li>
+					<li> Neural Networks</li>
 					<ul>
 					  <li> Convolutional NN</li>
 					  <li> Graph NN </li>
 					  <li> Recurrent NN </li>
 					  </ul>
-					<li> Support vector machines</li>
+					<li> Support Vector Machines</li>
 				      </ul>
 				    </section>
 				  </section>
@@ -238,8 +238,8 @@
 				      <div style="width:100%;">
 					<div style="float:left;width:65%;font-size:25pt;">
 					  <ul>
-					    <li>Fit a straight line through data \[ y = a \cdot x + b \] </li>
-					    <li>Minimize error </li>
+					    <li>fit a straight line through data <p> \[ y = a \cdot x + b \] </p> </li>
+					    <li>minimize error </li>
 					  </ul>
 					  \[ \epsilon = \sum_{i=1}^{n} (y^{(i)} - \tilde{y}^{(i)} )^2 \] 
 					</div>
@@ -252,7 +252,7 @@
 				    
 				    <section>
 				      <h2> Cost function </h2>
-				      <p> Choose function with simple derivatives </p>
+				      <p> choose function with simple derivatives </p>
 				    <div style="font-size:20pt;padding:5px;">
 				    
 				    \[\begin{aligned}
@@ -308,10 +308,11 @@
 				    
 				    <section>
 				      <h2> Logistic regression </h2>
-				      <p> Apply sigmoid 'acitivation' function </p>
+				      <p> apply sigmoid 'acitivation' function </p>
 				      <div style="width:100%;text-align:center;">
 					<img  style="width:50%;" src="img/logistic_regression.png">
 				      </div>
+				      <p> otherwise same approach as linear regression</p>
 				    </section>
 
 				    
@@ -345,13 +346,14 @@
 
 				    
 				    <section>
-				      <h2> Perceptron </h2>
+				      <h2> Forward propagation </h2>
 				      <div style="width:100%;">
 					<div style="width:40%;float:left;">
 					<img  src="img/perceptron.png">
 					</div>
 					<div style="width:50%;float:right;color:white;font-size:22px;text-align:left;">
-					  <p> Forward propagation</p>
+					  <!-- <p> Forward propagation</p> -->
+					  <br>
 					   \[\begin{aligned}
 					    x_{21} &amp; = \sigma ( w_{111}x_{11} + w_{121} x_{12} + w_{131} x_{13} )\\
 					    x_{22} &amp; = \sigma ( w_{112}x_{11} + w_{122} x_{12} + w_{132} x_{13} )\\
@@ -371,7 +373,7 @@
 				      <ul>
 					<p style="text-align:left;"> Forward propagation </p>
 					<ul>
-					  <li> multi-dimensional logistic regression </li>
+					  <li style="list-style-type:disc;"> multi-dimensional logistic regression </li>
 					</ul>
 				      
 					<p> Backward propagation </p>
@@ -431,7 +433,7 @@
 				    
 				    <section>
 				      <h2> The god code?</h2>
-				      <p> Can this snippet create a sentient being?</p>
+				      <p> can this snippet create a sentient being?</p>
 				      
 					<div style="display:table-cell;vertical-align:middle;text-align:center;">
 					  <img style="width:70%;" src="img/god_code.png">
@@ -440,7 +442,7 @@
 				    </section>
 						      
 				    <section>
-				      <h2> Cons</h2>
+				      <h2> Considerations</h2>
 				      
 				      <ul style="list-style-type:disc;">
 					<li> could an imitation itself become what it imitates? </li>
