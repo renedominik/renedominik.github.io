@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Statistics</title>
+
+		<meta name="description" content="">
+		<meta name="author" content="Rene Staritzbichler">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal/css/theme/serif.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal/css/print/pdf.css' : '../../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+
+		<!--[if lt IE 9]>
+		<script src="../../reveal/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				  <section>
+				    <h1>Statistics </h1>
+				    <br>
+				     <img style="width:20%;" src="img/questioning_science.jpeg">
+				   				    
+				    <p><small>2021</small></p>
+				    <p><small>René Staritzbichler</small></p>
+				  </section>
+
+				  <section>
+				  <section>
+				    <h2> Art of statistics </h2>
+				    <p> Describe reality by a few numbers </p>
+				    <ul style="width:80%;">
+				      <li> mean / median / mode </li>
+				      <li> range / quantile / standard deviation </li>
+				      <li> confidence / significance </li>
+				      <li> correlation </li> 
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Location </h2>
+			
+				    <ul>
+				      <li> mean: average income </li>
+				      <li> median: income of average person </li>
+				      <ul>
+					<li> median = 50th percentile </li>
+				      </ul>
+				      <li> mode: most common income </li>
+				      <li> normal distribution: mean, median and mode are the same </li>
+				    </ul>
+				  </section>
+				  
+				  <section>
+				    <h2> Spread or width </h2>
+				    <ul>
+				      <li> range (sensitive to extreme values) </li>
+				      <li> inter quartile range</li>
+				      <li> standard deviation (symmetric data) </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Dependencies </h2>
+				    <p style="width:85%;"> Two or more variables </p>
+				    <ul>
+				      <li> Pearson correlation </li>
+				      <li> Spearman rank correlation </li>
+				    </ul>
+				    <p style="width:93%;"> Correlation is no causality! </p>
+				  </section>
+
+				  <section>
+				    <h3> Conclusions and predictions </h3>
+				    <p> Significance: p, t, z, -values </p>
+				    <ul>
+				      <li> z-test: normal distribution with known variance</li>
+				      <li> t-test: normal distribution with unknown variance </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Hypothesises  </h2>
+				    <ul>
+				      <li> Similarity / difference / effect </li>
+				      <li> Nullhypothesis: no significant relation </li>
+				      <li> Alternative hypothesis: significant relation </li>
+				      <li> Test whether Nullhypothesis can be rejected </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Significance </h2>
+				    <ul>
+				      <li> Select significance level, generally $ \alpha = 0.05$ or 0.01 </li>
+				      <li> Perform e.g. t-test (returns p-value) </li>
+				      <li> $p < \alpha:$  reject Nullhypothesis $\Rightarrow$ significant </li>
+						<li> $p \geq \alpha:$ Nullhypothesis not rejected $\Rightarrow$ insignificant </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Student t-test </h2>
+				    <p> Compare mean values of 2 distributions </p>
+				    <ul>
+				      <li> one sample location test: </li>
+				      <li> two sample location test: </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h3> Are Man larger than Women? </h3>
+				    <ul>
+				      <li> Two sample test of independent variables </li>
+				      <li> Nullhypothesis: there are no significant differences in the mean values </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> p-Value </h2>
+				    <img src="img/pvalue.png">
+				  </section>
+								  
+				  </section>
+
+				  <section>
+
+				  <section>
+				    <h2> Distributions </h2>
+				    <ul>
+				      <li> Normal </li>
+				      <li> t-Distribution </li>
+				      <li> Bernoulli </li> 
+				      <li> Binomial </li>
+				      <li> Poisson </li>
+				      <li> Exponential </li>
+				      <li> Logarithmic </li> 
+				    </ul>
+				  </section>
+				  </section>
+								    
+				  
+				  <section>
+				  <section>
+				    <h2> Crowd wisdom </h2>
+				    <div style="width:100%;">
+				      <div style="float:left;width:35%;">
+					<img src="img/jar.png">
+				      </div>
+				      <div style="float:left;width:50%;">
+					<img src="img/beanstats.png">
+				      </div>
+				    </div>
+				  </section>
+
+				  <section>
+				    <h2> Bean distribution </h2>
+				    <img style="width:50%;" src="img/bean1.png">
+				    <img style="width:50%;" src="img/bean2.png">
+				  </section>
+				  </section>
+
+				  <section>
+				  <section>
+				    <h2> Outliers </h2>
+				    <p> Example: income of all citizens</p>
+				    
+				    <ul>
+				      <li> many people with low to moderate income </li>
+				      <li> a few exceedingly rich people </li>
+				      <li> resulting issues: </li>
+				      <ul>
+					<li> mean value is bad descriptor</li>
+					<li> not possible to draw </li>
+				      </ul>
+				    </ul>
+				  </section>
+
+
+				  <section>
+				    <h2> Logaritm </h2>
+				    <ul>
+				      <li> Inverse of exponential function </li>
+				      $y=a^x \; \Rightarrow log_a y = x $
+				      <li> Can show both small values and very large </li>
+				    </ul>
+				  </section>
+
+				  
+				  <section>
+				    <h2> Logaritmic scale </h2>
+				    <ul>
+				      <li> In x or y or both </li>
+				      <li> Can show both small values and very large </li>
+				      <p> Beggars and billionaires </p>
+				    </ul>
+				  </section>
+
+				  </section>
+
+
+				  <section>
+
+				    <section>
+				    <h2> Confusion matrix </h2>
+				    <ul>
+				      <li> too much confusion!</li>
+				    </ul>
+				  </section>
+
+				    <section>
+				    <h2> Measures of trust </h2>
+				    <ul>
+				      <li> Sensitivity </li>
+				      <li> Specificity </li>
+				      <li> Accuracy </li>
+				    </ul>
+				  </section>
+
+				  </section>
+
+				  <section>
+				    <section>
+				      <h2> Biases </h2>
+				      <ul>
+					<li> framing </li>
+					<li> priming </li>
+					<li> rounding </li>
+					<li> social pressure </li>
+				      </ul>
+				    </section>
+
+				    <section>
+				      <h2> Framing</h2>
+				      <p>Wording has significant influence:</p>
+				      <ul>
+					<li> 'giving 16 to 17 yrs old the right to vote': 52%+, 41%-</li>
+					<li> 'reducing the voting age to 16': 37%+, 56%-</li>
+				      </ul>
+				    </section>
+
+				    <section>
+				      <h2> Priming </h2>
+				      <p> Answers depend on previous questions </p>
+				      <ul>
+					<li> 10% of young people feel lonely</li>
+					<li> BBC, after long list of questions: 42%  </li>
+				      </ul>
+				    </section>
+				    
+				    <section>
+				      <h2> Rounding </h2>
+				      <p> In surveys people tend to use round numbers </p>
+				    </section>
+				      
+				  <section>
+				    <h2> Psychology of numbers </h2>
+				    <ul>
+				      <li> 98% survival versus </li>
+				      <li> 2% death rate </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Which sounds better? </h2>
+				    <ul>
+				      <li> Biontech: 20% of german economical growth </li>
+				      <li> Biontech: 5 permille of german GNP</li>
+				    </ul>
+				    <p> both are equivalent (2.5% growth rate)</p>
+				  </section>
+				  
+				  
+				  <section>
+				    <h3> Correlation is not causation </h3>
+				    
+				    <ul>
+				      <li> 99% divorce rate in Maine and per capita consumption of margarine </li>
+				      <li>  95% marriage rate in Kentucky and people drowning after falling out of a fisher boat </li>
+				    </ul>
+				    <p> https://www.tylervigen.com </p>
+				  </section>
+
+
+				  <section>
+				    <h2> Reverse causation </h2>
+				    <ul>
+				      <li> "A nearby Waitrose adds £36,000 to house price" </li>
+				      <li> Moderate drinkers live longer than non-drinkers </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Lurking factors </h2>
+				    <ul>
+				      <li> Being a pope helps living longer?  </li>
+				      <li> Do right handers live longer?  </li>
+				    </ul>
+				  </section>
+				  
+
+				  <SECTION>
+				    <h2> Discrimination or adjustment? </h2>
+				    <img style="width:60%;" src="img/discrimination.png">
+				  </section>
+				  
+				    
+				  </section>
+				  
+				  <section>
+
+				    <section>
+				    <h2> Pitfalls </h2>
+				    <ul>
+				      <li> too few samples </li>
+				      <li> relative vs absolute changes </li>
+				      <li> deceptive representation </li>
+				      <li> confusing representations</li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Too few samples </h2>
+				    <img style="width:40%;" src="img/distributions2.png">
+				    <p> 4 random normal distributions (logscale) </p>
+				    <p> mean: 0, stdev: 1 </p>
+				    <p> 20, 200, 2000, 20000 samples </p>
+				    
+				  </section>
+				  
+				  
+				  <section>
+				    <h2> Relative versus absolute </h2>
+				    <p style="width:100%;text-align:left;"> <u>pit 1:</u> IARC 2015: processed meat group I carcinogen </p>
+				    <p style="width:100%;text-align:left;"> $\Rightarrow$ Daily Record: 'Bacon, ham and sausages have the same cancer risk as cigarettes warn experts' </p>
+				    <p style="width:100%;text-align:left;"> $\Rightarrow$ IARC: confidence that there is an increased risk </p>
+				    <p style="width:100%;text-align:left;"> <u>pit 2:</u> 50g/day: relative: 18% (abs: 6% $\rightarrow$ 7%)</p>
+				    <p style="width:100%;text-align:left;"> $\Rightarrow$ Media used absolute: 6% $\rightarrow$ 24% </p>
+				    
+				  </section>
+
+				  <section>
+				    <h2> Deceptive representation</h2>
+				    <div style="display:inline-block; width:50%">
+					<img src="img/kids.png">
+				      </div>
+				  </section>
+
+				  
+
+
+				  <section>
+				    <h3> Confusing representations </h3>
+				    <div style="width:100%;">
+				      <div style="float:left; width:50%">
+					<img src="img/cake.png">
+				      </div>
+				      <div style="float:left; width:50%;">
+					<img src="img/hospitals.png">
+				      </div>
+				    </div>
+				  </section>
+				  </section>
+				  
+				  <section>
+				    <h2> Reference </h2>
+				    <p> All scans were taken from: </p>
+				    <p> David Spiegelhalter 'The art of statistics' </p>
+				    <img style="width:30%;" src="img/heroin.jpg">
+				  </section>
+				  
+			</div>
+		</div>
+				  
+		<script src="../../reveal/lib/js/head.min.js"></script>
+		<script src="../../reveal/js/reveal.js"></script>
+		<script src="../../reveal/plugin/math/math.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../reveal/plugin/search/search.js', async: true },
+					{ src: '../../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
+ 				  
