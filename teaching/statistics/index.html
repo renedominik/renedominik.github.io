@@ -58,6 +58,7 @@
 				    <ul style="width:80%;">
 				      <li> mean / median / mode </li>
 				      <li> range / quantile / standard deviation </li>
+				      <li> distributions </li>
 				      <li> confidence / significance </li>
 				      <li> correlation </li> 
 				    </ul>
@@ -78,23 +79,74 @@
 				  </section>
 				  
 				  <section>
+				    <h2> How to calculate location </h2>
+			
+				    <ul>
+				      <li> mean: \[   \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i = \frac{1}{n}( x_1 + x_2 + ... + x_n) \] </li>
+				      <li> median: 
+				      <ul> 
+				      <li> sort your population by income </li>
+				      <li> person in the middle (50%) </li>
+				    </ul>
+				  </section>
+				  
+				  <section>
 				    <h2> Spread or width </h2>
 				    <ul>
-				      <li> range (sensitive to extreme values) </li>
-				      <li> inter quartile range</li>
-				      <li> standard deviation (symmetric data) </li>
+				      <li> range:  <p style="color:grey;">unsymmetric data, sensitive to extremes</p> </li>
+				      <li> standard deviation: <p style="color:grey;">symmetric, sensitive</p> </li>
+				      <li> inter quartile range: <p style="color:grey;">unsymmetric, insensitive</p></li>
 				    </ul>
 				  </section>
 
 				  <section>
-				    <h2> Dependencies </h2>
-				    <p style="width:85%;"> Two or more variables </p>
+				    <h2> How to calculate width </h2>
+			
 				    <ul>
-				      <li> Pearson correlation </li>
-				      <li> Spearman rank correlation </li>
+				      <li> standard deviation (represents 68%): \[   \sigma = \sqrt{ \frac{1}{n} \sum_{i=1}^n (\bar{x} - x_i)^2 }  \] </li>
+				      <li> inter quartile range (represents 50%): 
+				      <ul> 
+				      <li> sort your population by income </li>
+				      <li> take person at 25% and person at 75% </li>
 				    </ul>
-				    <p style="width:93%;"> Correlation is no causality! </p>
 				  </section>
+				  
+
+
+				  <section>
+				    <h2> Use of spread </h2>
+				    <ul>
+				      <li> how reliable is the mean/median? </li>
+				      <li> example: error of multiple measurements </li>
+				    </ul>
+				    <img style="width:70%;" src="img/broad_vs_narrow_distribution.png">
+				  </section>
+				  
+				  
+				  <section>
+				    <h2> Normal distribution </h2>
+				    <ul>
+				      <li> symmetric values </li>
+				      <li> infinite measurements </li>
+				      <li> normal: 68% </li>
+				      <li> total surface = total probability = 1 = 100%</li>
+				    </ul>
+				    <div><img style="width:40%;" src="img/normal_distribution.png"></div>
+				  </section>
+				  
+
+				  <section>
+				    <h2> t-distribution </h2>
+				    <ul>
+				      <li> symmetric values </li>
+				      <li> limited measurements </li>
+				    </ul>
+				    <div><img style="width:50%;" src="img/t-distribution.png"></div>
+				  </section>
+				  
+
+		
+
 
 				  <section>
 				    <h3> Conclusions and predictions </h3>
@@ -105,13 +157,24 @@
 				    </ul>
 				  </section>
 
+
+				  <section>
+				    <h2> p-Value </h2>
+				    <ul>
+				    <li> null hypothesis significance test </li>
+				    <li> most common in scientific publications </li>
+				    <li> highly debated, often misused</li>
+				    </ul>
+				    <img src="img/pvalue.png">
+				  </section>
+
 				  <section>
 				    <h2> Hypothesises  </h2>
 				    <ul>
-				      <li> Similarity / difference / effect </li>
-				      <li> Nullhypothesis: no significant relation </li>
-				      <li> Alternative hypothesis: significant relation </li>
-				      <li> Test whether Nullhypothesis can be rejected </li>
+				      <li> similarity / difference / effect </li>
+				      <li> nullhypothesis: no significant relation </li>
+				      <li> alternative hypothesis: significant relation </li>
+				      <li> test whether nullhypothesis can be rejected </li>
 				    </ul>
 				  </section>
 
@@ -132,6 +195,7 @@
 				      <li> one sample location test: </li>
 				      <li> two sample location test: </li>
 				    </ul>
+				     <div><img style="width:50%;" src="img/shifted_normal.png"></div>
 				  </section>
 
 				  <section>
@@ -143,9 +207,26 @@
 				  </section>
 
 				  <section>
-				    <h2> p-Value </h2>
-				    <img src="img/pvalue.png">
+				    <h2> Dependencies </h2>
+				    <p style="width:85%;"> Two or more variables </p>
+				    <ul>
+				      <li> Pearson correlation </li>
+				      <li> Spearman rank correlation </li>
+				    </ul>
+				    <p style="width:93%;"> Correlation is no causality! </p>
 				  </section>
+
+
+				<section>
+				<h2>Correlations</h2>
+				<img style="width:70%;" src="img/correlations.png">
+				</section>
+				
+				<section>
+				<h2>Pearson correlation</h2>
+				<p> \[ r_{xy} = \frac{ \sum_{i=1}^n (x_i - \bar{x}) (y_i - \bar{y}) }{\sigma_x\sigma_y} \] </p>
+				</section>
+
 								  
 				  </section>
 
