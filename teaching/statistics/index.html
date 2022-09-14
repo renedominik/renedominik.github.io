@@ -138,13 +138,21 @@
 				  <section>
 				    <h2> t-distribution </h2>
 				    <ul>
-				      <li> symmetric values </li>
-				      <li> limited measurements </li>
+				      <li> similar to normal distribution </li>
+				      <li> few measurements </li>
 				    </ul>
 				    <div><img style="width:50%;" src="img/t-distribution.png"></div>
 				  </section>
 				  
-
+				 <section>
+				 <h2>Binary distribution</h2>
+				 <ul>
+				 <li> binary: true/false </li>
+				 <li> most problems can be translated into binary question</li>
+				 <li> probability P that event with probability p is observed in k out of n observations</li>
+				 </ul>
+				 <p> \[ P(X=k) =  \binom{n}{k}  \cdot p^k \cdot (1-p)^{n-k}, \quad \binom{n}{k}=\frac{n!}{k!(n-k)!}  \] </p>
+				 </section>
 		
 
 
@@ -171,7 +179,7 @@
 				  <section>
 				    <h2> Hypothesises  </h2>
 				    <ul>
-				      <li> similarity / difference / effect </li>
+				      <li> translate your problem into a black/white question </li>
 				      <li> nullhypothesis: no significant relation </li>
 				      <li> alternative hypothesis: significant relation </li>
 				      <li> test whether nullhypothesis can be rejected </li>
@@ -189,11 +197,19 @@
 				  </section>
 
 				  <section>
-				    <h2> Student t-test </h2>
-				    <p> Compare mean values of 2 distributions </p>
+				    <h2> Significance level </h2>
 				    <ul>
-				      <li> one sample location test: </li>
-				      <li> two sample location test: </li>
+				      <li> The maximum percentage of falsely rejected cases (false positives)</li>
+				      <li> For normal distribution the surface that represents the percentage at tail </li>
+				      <li> Non-normal: $\alpha$-quantile </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> Student t-test </h2>
+				    <ul>
+				      <li> compare two distributions </li>
+				      <li> both with limited number of values </li>
 				    </ul>
 				     <div><img style="width:50%;" src="img/shifted_normal.png"></div>
 				  </section>
