@@ -54,18 +54,18 @@
 				  <section>
 				  <section>
 				    <h2> Art of statistics </h2>
-				    <p> Describe reality by a few numbers </p>
+				    <p> Summarize reality and evaluate reliability </p>
 				    <ul style="width:80%;">
 				      <li> mean / median / mode </li>
 				      <li> range / quantile / standard deviation </li>
+				      <li> significance / confidence </li>
 				      <li> distributions </li>
-				      <li> confidence / significance </li>
 				      <li> correlation </li> 
 				    </ul>
 				  </section>
 
 				  <section>
-				    <h2> Location </h2>
+				    <h2> Summarize populations </h2>
 			
 				    <ul>
 				      <li> mean: average income </li>
@@ -79,7 +79,7 @@
 				  </section>
 				  
 				  <section>
-				    <h2> How to calculate location </h2>
+				    <h2> How to summarize </h2>
 			
 				    <ul>
 				      <li> mean: \[   \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i = \frac{1}{n}( x_1 + x_2 + ... + x_n) \] </li>
@@ -122,6 +122,26 @@
 				    <img style="width:70%;" src="img/broad_vs_narrow_distribution.png">
 				  </section>
 				  
+				  <section>
+				    <h2> Hypotheses  </h2>
+				    <ul>
+				      <li> translate your problem into a black/white question </li>
+				      <li> nullhypothesis: no significant relation </li>
+				      <li> alternative hypothesis: significant relation </li>
+				      <li> test whether nullhypothesis can be rejected </li>
+				    </ul>
+				  </section>
+
+				  <section>
+				    <h2> p-Value </h2>
+				    <ul>
+				    <li> null hypothesis significance test </li>
+				    <li> most common in scientific publications </li>
+				    <li> highly debated, often misused</li>
+				    </ul>
+				    <img src="img/pvalue.png">
+				  </section>
+
 				  
 				  <section>
 				    <h2> Normal distribution </h2>
@@ -139,7 +159,7 @@
 				    <h2> t-distribution </h2>
 				    <ul>
 				      <li> similar to normal distribution </li>
-				      <li> few measurements </li>
+				      <li> for small populations </li>
 				    </ul>
 				    <div><img style="width:50%;" src="img/t-distribution.png"></div>
 				  </section>
@@ -149,10 +169,7 @@
 				 
 				 <div style="width:100%;">
 				 <div style="float:left;width:60%;"> 
-				 <ul>
-				 <li> most problems can be translated into binary question</li>
-				 <li> probability P that event with probability p is observed in k out of n observations</li>
-				 </ul>
+				 <p> Probability P that event with probability p is observed <br> in k out of n observations</p>
 				 </div>
 				 <div style="float:right;width:40%;">
 				 <img src="img/binomial.png"> 
@@ -160,20 +177,48 @@
 				 </div>
 				 <p> \[ P(X=k) =  \binom{n}{k}  \cdot p^k \cdot (1-p)^{n-k}, \quad \binom{n}{k}=\frac{n!}{k!(n-k)!}  \] </p>
 				 </section>
+
+
+				<section>
+				<h2> Multiple choice test</h2>
+				<p> 10 questions with 4 answers each </p>
+				<ul>
+				<li> </li>
+				</ul>
+				 \[\begin{aligned} 
+				 P(X\le 2) = &amp; P(X=0) + P(X=1) + P(X=2) \\
+				 = &amp; 0.056 + 0.188 + 0.282 = 0.526 = 52.6\% 
+				 \end{aligned}\]
+				<p> <img src="img/multiple_choice.png"></p>
+				</section>
+
 		
 				<section>
-				<h2> Example </h2>
+				<h2> Normal to binomial</h2>
 				<p> What is the probability to find 30 out of 100 man having 150-155 cm? </p>
 				<ul>
 				<li> size of men follows normal distribution</li>
-				<li> a range of values is equivalent to probability (ratio of surface)</li>
+				<li> range is equivalent to probability </li>
+				<li> binomial distribution answers it</li>
+				</ul>
+				</section>
+
+				<section>
+				<h2> From observation to significance</h2>
+				<ul>
+				<li> throw die 24x </li>
+				<li> 6 x "3" </li>
+				<li> is the die biased towards "3"? </li>
+				<li> null-hypothesis: it is not <br> => underlying 'true' population $\le 1/6$</li>
+				<li> determine total probability of cases $\ge 1/6$ 
+				<li> binomial test: p = 0.1995 </li>
+				<li> p > 0.05 => no rejection of null hypothesis, no bias</li>
 				</ul>
 				</section>
 
 
 				  <section>
-				    <h3> Conclusions and predictions </h3>
-				    <p> Significance: p, t, z, -values </p>
+				    <h3>Significance </h3>
 				    <ul>
 				      <li> z-test: normal distribution with known variance</li>
 				      <li> t-test: normal distribution with unknown variance </li>
@@ -181,25 +226,6 @@
 				  </section>
 
 
-				  <section>
-				    <h2> p-Value </h2>
-				    <ul>
-				    <li> null hypothesis significance test </li>
-				    <li> most common in scientific publications </li>
-				    <li> highly debated, often misused</li>
-				    </ul>
-				    <img src="img/pvalue.png">
-				  </section>
-
-				  <section>
-				    <h2> Hypothesises  </h2>
-				    <ul>
-				      <li> translate your problem into a black/white question </li>
-				      <li> nullhypothesis: no significant relation </li>
-				      <li> alternative hypothesis: significant relation </li>
-				      <li> test whether nullhypothesis can be rejected </li>
-				    </ul>
-				  </section>
 
 				  <section>
 				    <h2> Significance </h2>
@@ -341,19 +367,22 @@
 
 				    <section>
 				    <h2> Confusion matrix </h2>
-				    <ul>
-				      <li> too much confusion!</li>
-				    </ul>
+				    <div style="width:90%;" > <img src="img/confusion.png"> </div>
 				  </section>
 
 				    <section>
 				    <h2> Measures of trust </h2>
-				    <ul>
-				      <li> Sensitivity </li>
-				      <li> Specificity </li>
-				      <li> Accuracy </li>
-				    </ul>
+				    <div style="width:90%;" > 
+				    <img src="img/sens_spec.png">
+				    <img src="img/acc.png">
+				    </div>
 				  </section>
+
+					<section>
+					<h3> Receiver operating characteristics</h3>
+				    <div style="width:65%;" > <img src="img/roc.png"> </div>
+					</section>
+
 
 				  </section>
 
@@ -544,9 +573,9 @@
 				progress: true,
 				history: true,
 				center: true,
+				//plugins: [ RevealMath.MathJax ],
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: '../../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
