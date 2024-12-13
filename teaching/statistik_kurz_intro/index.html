@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
+    <style>
+        .slides section p, .slides section ul {
+            max-width: 96%;
+	}
+        .slides section h1, .slides section h2, .slides section h3 {
+            max-width: 96%;
+        }
+    </style></head>
 <body>
     <div class="reveal">
         <div class="slides">
@@ -66,8 +73,7 @@
                 <h2>Der positiv prädiktive Wert (PPV)</h2>
                 <p>Der PPV beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
 
-                <p><strong>  \[ PPV = \frac{TP}{ (TP + FP)} \]</strong></p>
-                <p>Hierbei stehen:</p>
+                <p><strong>  \[ PPV = \frac{TP}{ TP + FP} \]</strong></p>
                 <ul>
                     <li><strong>TP</strong> = True Positives (Wahre Positive)</li>
                     <li><strong>FP</strong> = False Positives (Falsch Positive)</li>
