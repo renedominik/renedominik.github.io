@@ -267,7 +267,7 @@ if __name__ == "__main__":
     
     ax.set_aspect('equal', 'box')
     ax.set_xlim(-2*spacing[0], total_cols * spacing[0])
-    ax.set_ylim(-1*spacing[1], (total_rows+1) * spacing[1])
+    ax.set_ylim(-0*spacing[1], (total_rows+1) * spacing[1])
     ax.axis('off')  # Hide axis
 
     plt.savefig( 'icon_matrix_large.png')
