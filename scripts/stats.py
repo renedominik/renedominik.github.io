@@ -248,11 +248,11 @@ if __name__ == "__main__":
     draw_person_icon_matrix(ax, rows=total_rows, cols=total_cols, spacing=spacing, size=0.8, colors=colors)
 
     # Draw dividing lines for the 4 blocks
-    ax.plot([(left_cols-0.5) * spacing[0], (left_cols-0.5) * spacing[0]], [0, (total_rows+0.5) * spacing[1]], color="black", linewidth=3)  # Vertical line
+    ax.plot([(left_cols-0.5) * spacing[0], (left_cols-0.5) * spacing[0]], [0, (total_rows+0.3) * spacing[1]], color="black", linewidth=3)  # Vertical line
     ax.plot([-2*spacing[0], (total_cols-0.5) * spacing[0]], [(total_rows+0.5) * spacing[1] / 2, (total_rows+0.5) * spacing[1] / 2], color="black", linewidth=3)  # Horizontal line
 
     # Draw outer lines for the 4 blocks
-    ax.plot([(-0.5) * spacing[0], (-0.5) * spacing[0]], [-0*spacing[1], (total_rows+0.5) * spacing[1]], color="black", linewidth=3)  # Vertical line
+    ax.plot([(-0.5) * spacing[0], (-0.5) * spacing[0]], [-0*spacing[1], (total_rows+0.3) * spacing[1]], color="black", linewidth=3)  # Vertical line
     ax.plot([-2*spacing[0], (total_cols-0.5) * spacing[0]], [(total_rows - 0.25) * spacing[1], (total_rows - 0.25) * spacing[1]], color="black", linewidth=3)  # Horizontal line
 
     ax.text(total_cols * spacing[0] / 2, total_rows * spacing[1] + 0.6, 'Vorhergesagt', ha='center', va='center', fontsize=16, fontweight='bold')
@@ -270,5 +270,5 @@ if __name__ == "__main__":
     ax.set_ylim(-1*spacing[1], (total_rows+1) * spacing[1])
     ax.axis('off')  # Hide axis
 
-    plt.savefig( 'icon_matrix_small.png')
+    plt.savefig( 'icon_matrix_large.png')
     plt.show()
