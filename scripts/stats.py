@@ -227,8 +227,8 @@ if __name__ == "__main__":
     # Define the number of True Positives, True Negatives, False Positives, and False Negatives
     tp = 10
     tn = 15
-    fp = 5
-    fn = 8
+    fp = 2
+    fn = 3
     
     # Define the dimensions of the matrix
     left_cols = 4
@@ -237,7 +237,7 @@ if __name__ == "__main__":
     # Generate the color matrix based on the counts of TP, TN, FP, and FN
     colors = generate_colors(tp, tn, fp, fn, left_cols, right_cols)
     
-    spacing = (0.6, 1.0)
+    spacing = (0.5, 0.8)
 
     total_rows = len(colors)
     total_cols = max(len(row) for row in colors)
@@ -259,15 +259,15 @@ if __name__ == "__main__":
     ax.text(-1.5, total_rows * spacing[1] / 2, 'Tatsächlich', ha='center', va='center', fontsize=16, fontweight='bold', rotation=90)
 
     ax.text( 0.2 * total_cols * spacing[0] , total_rows * spacing[1] , 'Krank', ha='center', va='center', fontsize=14, fontweight='bold')
-    ax.text(0.7 * total_cols * spacing[0]  , total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=14, fontweight='bold')
+    ax.text(0.75 * total_cols * spacing[0]  , total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=14, fontweight='bold')
 
     ax.text( -1.1 * spacing[0]  , 0.75 * total_rows * spacing[1] , 'Krank', ha='center', va='center', fontsize=14, fontweight='bold', rotation=90)
     ax.text( -1.1 * spacing[0]  , 0.25 * total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=14, fontweight='bold', rotation=90)
 
     
     ax.set_aspect('equal', 'box')
-    ax.set_xlim(-3*spacing[0], total_cols * spacing[0])
-    ax.set_ylim(-2*spacing[1], (total_rows+1) * spacing[1])
+    ax.set_xlim(-2*spacing[0], total_cols * spacing[0])
+    ax.set_ylim(-1*spacing[1], (total_rows+1) * spacing[1])
     ax.axis('off')  # Hide axis
 
     plt.savefig( 'icon_matrix_small.png')
