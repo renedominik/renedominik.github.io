@@ -226,48 +226,51 @@ if __name__ == "__main__":
     
     # Define the number of True Positives, True Negatives, False Positives, and False Negatives
     tp = 10
-    tn = 15
+    tn = 150
     fp = 2
-    fn = 3
+    fn = 30
     
     # Define the dimensions of the matrix
     left_cols = 4
-    right_cols = 4
+    right_cols = 10
     
     # Generate the color matrix based on the counts of TP, TN, FP, and FN
     colors = generate_colors(tp, tn, fp, fn, left_cols, right_cols)
     
-    spacing = (0.5, 0.8)
+    spacing = (0.25, 0.4)
 
     total_rows = len(colors)
     total_cols = max(len(row) for row in colors)
 
+    upper_rows = max( nr_rows( left_cols, tp), nr_rows( right_cols, fn))
+    lower_rows = max( nr_rows( left_cols, fp), nr_rows( right_cols, tn))
+  
   
     fig, ax = plt.subplots(figsize=(total_cols * spacing[0], total_rows * spacing[1]))
     
-    draw_person_icon_matrix(ax, rows=total_rows, cols=total_cols, spacing=spacing, size=0.8, colors=colors)
+    draw_person_icon_matrix(ax, rows=total_rows, cols=total_cols, spacing=spacing, size=0.4, colors=colors)
 
     # Draw dividing lines for the 4 blocks
     ax.plot([(left_cols-0.5) * spacing[0], (left_cols-0.5) * spacing[0]], [0, (total_rows+0.3) * spacing[1]], color="black", linewidth=3)  # Vertical line
-    ax.plot([-2*spacing[0], (total_cols-0.5) * spacing[0]], [(total_rows+0.5) * spacing[1] / 2, (total_rows+0.5) * spacing[1] / 2], color="black", linewidth=3)  # Horizontal line
+    ax.plot([-2*spacing[0], (total_cols-0.5) * spacing[0]], [(lower_rows+0) * spacing[1], (lower_rows+0) * spacing[1]], color="grey", linewidth=3)  # Horizontal line
 
     # Draw outer lines for the 4 blocks
     ax.plot([(-0.5) * spacing[0], (-0.5) * spacing[0]], [-0*spacing[1], (total_rows+0.3) * spacing[1]], color="black", linewidth=3)  # Vertical line
     ax.plot([-2*spacing[0], (total_cols-0.5) * spacing[0]], [(total_rows - 0.25) * spacing[1], (total_rows - 0.25) * spacing[1]], color="black", linewidth=3)  # Horizontal line
 
-    ax.text(total_cols * spacing[0] / 2, total_rows * spacing[1] + 0.6, 'Vorhergesagt', ha='center', va='center', fontsize=16, fontweight='bold')
-    ax.text(-1.5, total_rows * spacing[1] / 2, 'Tatsächlich', ha='center', va='center', fontsize=16, fontweight='bold', rotation=90)
+    ax.text(total_cols * spacing[0] / 2, total_rows * spacing[1] + 0.6, 'Vorhergesagt', ha='center', va='center', fontsize=14, fontweight='bold')
+    ax.text(-2.5 * spacing[0], 0.75 * total_rows * spacing[1] , 'Tatsächlich', ha='center', va='center', fontsize=14, fontweight='bold', rotation=90)
 
-    ax.text( 0.2 * total_cols * spacing[0] , total_rows * spacing[1] , 'Krank', ha='center', va='center', fontsize=14, fontweight='bold')
-    ax.text(0.75 * total_cols * spacing[0]  , total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=14, fontweight='bold')
+    ax.text( 0.12 * total_cols * spacing[0] , total_rows * spacing[1] , 'Krank', ha='center', va='center', fontsize=12, fontweight='bold')
+    ax.text(0.6 * total_cols * spacing[0]  , total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=12, fontweight='bold')
 
-    ax.text( -1.1 * spacing[0]  , 0.75 * total_rows * spacing[1] , 'Krank', ha='center', va='center', fontsize=14, fontweight='bold', rotation=90)
-    ax.text( -1.1 * spacing[0]  , 0.25 * total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=14, fontweight='bold', rotation=90)
+    ax.text( -1.1 * spacing[0]  , 0.91 * total_rows * spacing[1] , 'Krank', ha='center', va='center', fontsize=12, fontweight='bold', rotation=90)
+    ax.text( -1.1 * spacing[0]  , 0.45 * total_rows * spacing[1] , 'Nicht krank', ha='center', va='center', fontsize=12, fontweight='bold', rotation=90)
 
     
     ax.set_aspect('equal', 'box')
     ax.set_xlim(-2*spacing[0], total_cols * spacing[0])
-    ax.set_ylim(-0*spacing[1], (total_rows+1) * spacing[1])
+    ax.set_ylim(-1*spacing[1], (total_rows+1) * spacing[1])
     ax.axis('off')  # Hide axis
 
     plt.savefig( 'icon_matrix_large.png')
