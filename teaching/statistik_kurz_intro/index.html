@@ -14,7 +14,7 @@
             <section>
                 <h1>Kurzeinführung in die Statistik der Labormedizin</h1>
                 <h3>Dr. habil. René Staritzbichler</h3>
-                <p>{new Date().toLocaleDateString()}</p>
+                <p> 12.12.24</p>
             </section>
 
             <!-- Slide 2: Erklärung der Prävalenz -->
@@ -58,6 +58,23 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Slide 6: Formel des positiven prädiktiven Werts -->
+            <section>
+                <h2>Formel des positiven prädiktiven Werts (PPV)</h2>
+                <p>Der positive prädiktive Wert (PPV) beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
+                <p>Die Formel lautet:</p>
+                <p><strong>PPV</strong> = $ \frac{TP}{ (TP + FP)}$</p>
+                <p>Hierbei stehen:</p>
+                <ul>
+                    <li><strong>TP</strong> = True Positives (Wahre Positive)</li>
+                    <li><strong>FP</strong> = False Positives (Falsch Positive)</li>
+                </ul>
+                <p>Ein häufiges Beispiel ist ein diagnostischer Test, bei dem der PPV beschreibt, wie zuverlässig ein positives Ergebnis die tatsächliche Präsenz einer Krankheit widerspiegelt.</p>
+            </section>
+
+
+	    
         </div>
     </div>
 
@@ -65,5 +82,10 @@
     <script>
         Reveal.initialize();
     </script>
+    <script src="plugin/math/math.js"></script>
+<script>
+  Reveal.initialize({ plugins: [RevealMath.KaTeX] });
+</script>
+
 </body>
 </html>
