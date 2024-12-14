@@ -20,38 +20,34 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <!-- Title Slide -->
+
+          <!-- Title Slide -->
             <section>
                 <h1>Kurzeinführung in die Statistik der Labormedizin</h1>
                 <h3>Dr. habil. René Staritzbichler</h3>
                 <p> 12.12.24</p>
             </section>
 
-            <!-- Slide 2: Erklärung der Prävalenz -->
+	    
+	    <section>
+	      <h2> Quiz </h2>
+	      <div>
+		<img src="img/qr.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
+	      </div>
+	    </section>
+	    
+
             <section>
-                <h2>Erklärung der Prävalenz</h2>
-                <p>Prävalenz bezeichnet den Anteil der Individuen in einer Population, die zu einem bestimmten Zeitpunkt an einer bestimmten Krankheit leiden.</p>
-                <p>Sie kann wie folgt berechnet werden:</p>
-                <p><strong>Prävalenz</strong> = Anzahl der erkrankten Individuen / Gesamtzahl der Individuen</p>
-                <p>Ein Beispiel: Wenn in einer Population von 1000 Personen 100 Personen an einer Krankheit leiden, beträgt die Prävalenz:</p>
-                <p><strong>Prävalenz</strong> = 100 / 1000 = 0.1 (10%)</p>
+                <div style="display: flex;">
+                    <div style="flex: 6; padding-right: 10px;">
+                        <img src="img/icon_matrix_small.png" alt="Verteilung von Patienten" style="width: 80%; height: auto;">
+                    </div>
+                    <div style="flex: 4;">
+		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
+                    </div>
+                </div>
             </section>
 
-            <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
-            <section>
-                <h2>Erklärung der bedingten Wahrscheinlichkeit</h2>
-                <p>Die bedingte Wahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass ein Ereignis A eintritt, unter der Voraussetzung, dass ein anderes Ereignis B bereits eingetreten ist.</p>
-                <p>Sie wird wie folgt berechnet:</p>
-                <p><strong>P(A|B)</strong> = P(A ∩ B) / P(B)</p>
-                <p>Beispiel: Die Wahrscheinlichkeit, dass eine Person krank ist (A), gegeben, dass ein positiver Test vorliegt (B), ist eine typische Anwendung der bedingten Wahrscheinlichkeit.</p>
-            </section>
-
-            <!-- Slide 4: Satz von Bayes -->
-            <section>
-                <h2>Satz von Bayes</h2>
-                <p><strong>P(A|B)</strong> = (P(B|A) * P(A)) / P(B)</p>
-                <p>Beispiel: Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
-            </section>
 
             <!-- Slide 5: 60:40 Layout mit Bild und Text -->
             <section>
@@ -69,18 +65,6 @@
                 </div>
             </section>
 
-            <!-- Slide 6: Formel des positiven prädiktiven Werts -->
-            <section>
-                <h2>Der positiv prädiktive Wert (PPV)</h2>
-                <p>Der PPV beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
-
-                <p><strong>  \[ PPV = \frac{TP}{ TP + FP} \]</strong></p>
-                <ul>
-                    <li><strong>TP</strong> = True Positives (Wahre Positive)</li>
-                    <li><strong>FP</strong> = False Positives (Falsch Positive)</li>
-                </ul>
-            </section>
-
             <!-- Slide 5: 60:40 Layout mit Bild und Text -->
             <section>
                 <div style="display: flex;">
@@ -95,6 +79,46 @@
                 </div>
             </section>
 
+            <!-- Slide 2: Erklärung der Prävalenz -->
+            <section>
+                <h2>Erklärung der Prävalenz</h2>
+                <p>Prävalenz bezeichnet den Anteil der Individuen in einer Population, die zu einem bestimmten Zeitpunkt an einer bestimmten Krankheit leiden.</p>
+                <p>Sie kann wie folgt berechnet werden:</p>
+                <p><strong>Prävalenz</strong> = Anzahl der erkrankten Individuen / Gesamtzahl der Individuen</p>
+                <p>Ein Beispiel: Wenn in einer Population von 1000 Personen 100 Personen an einer Krankheit leiden, beträgt die Prävalenz:</p>
+                <p><strong>Prävalenz</strong> = 100 / 1000 = 0.1 (10%)</p>
+            </section>
+
+	    
+            <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
+            <section>
+                <h2>Erklärung der bedingten Wahrscheinlichkeit</h2>
+                <p>Die bedingte Wahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass ein Ereignis A eintritt, unter der Voraussetzung, dass ein anderes Ereignis B bereits eingetreten ist.</p>
+                <p>Sie wird wie folgt berechnet:</p>
+                <p><strong>P(A|B)</strong> = P(A ∩ B) / P(B)</p>
+                <p>Beispiel: Die Wahrscheinlichkeit, dass eine Person krank ist (A), gegeben, dass ein positiver Test vorliegt (B), ist eine typische Anwendung der bedingten Wahrscheinlichkeit.</p>
+            </section>
+
+	    
+            <!-- Slide 4: Satz von Bayes -->
+            <section>
+                <h2>Satz von Bayes</h2>
+                <p><strong>P(A|B)</strong> = (P(B|A) * P(A)) / P(B)</p>
+                <p>Beispiel: Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
+            </section>
+
+
+            <!-- Slide 6: Formel des positiven prädiktiven Werts -->
+            <section>
+                <h2>Der positiv prädiktive Wert (PPV)</h2>
+                <p>Der PPV beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
+
+                <p><strong>  \[ PPV = \frac{TP}{ TP + FP} \]</strong></p>
+                <ul>
+                    <li><strong>TP</strong> = True Positives (Wahre Positive)</li>
+                    <li><strong>FP</strong> = False Positives (Falsch Positive)</li>
+                </ul>
+            </section>
 
 	    
         </div>
