@@ -98,17 +98,19 @@
 	    
             <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
             <section>
-                <h2>Erklärung der bedingten Wahrscheinlichkeit</h2>
+              <h2>Bedingte Wahrscheinlichkeit</h2>
+	      <div style="font-size:24px;">
                 <p>Die bedingte Wahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass ein Ereignis A eintritt, unter der Voraussetzung, dass ein anderes Ereignis B bereits eingetreten ist.</p>
-                <p><strong>P(A|B)</strong> = P(A ∩ B) / P(B)</p>
-                <p>Beispiel: Die Wahrscheinlichkeit, dass eine Person krank ist (A), gegeben, dass ein positiver Test vorliegt (B), ist eine typische Anwendung der bedingten Wahrscheinlichkeit.</p>
+                <!-- <p><strong>P(A|B)</strong> = P(A ∩ B) / P(B)</p> -->
+                <p>Beispiel: Die Wahrscheinlichkeit, dass eine Person krank ist (A), gegeben, dass ein positiver Test vorliegt (B).</p>
+		</div>
             </section>
 
 	    
             <!-- Slide 4: Satz von Bayes -->
             <section>
-                <h2>Satz von Bayes</h2>
-                <p><strong>P(A|B)</strong> = (P(B|A) * P(A)) / P(B)</p>
+                <h2>Wahrscheinlichkeit tatsächlich krank zu sein</h2>
+                <p>\[ P(Krank | Positiver Test) = \frac{P(Positiver Test| Krank) * P(Krank)}{ P(Positiver Test)} = \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit eines positiven Tests}\] </p>
                 <p>Beispiel: Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
             </section>
 
