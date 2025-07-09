@@ -10,5 +10,7 @@ https://renedominik.github.io/teaching/machine-learning
 
 https://renedominik.github.io/teaching/statistik_kurz_intro
 
+https://renedominik.github.io/teaching/statistics
+
 
 René Staritzbichler, 2021
