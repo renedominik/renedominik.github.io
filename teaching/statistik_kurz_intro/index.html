@@ -75,13 +75,42 @@
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
                         <h5>Sensitivität:</h5>
                         <p>\[  \frac{TP}{TP+FN} \]</p>
-                        <h5>Spezifität:</h5>
-                        <p>\[ \frac{TN}{TN+FP} \]</p>
+                        <p>\[ = \frac{Erkannte Kranke}{Tatsächlich Kranke} \]</p>
                     </div>
                 </div>
             </section>
 
             <!-- Slide 5: 60:40 Layout mit Bild und Text -->
+            <section>
+                <div style="display: flex;">
+                    <div style="flex: 6; padding-right: 10px;">
+                        <img src="img/icon_matrix_small.png" alt="Verteilung von Patienten" style="width: 80%; height: auto;">
+                    </div>
+                    <div style="flex: 4;">
+		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
+                        <h5>Spezifität:</h5>
+                        <p>\[  \frac{TN}{TN+FP} \]</p>
+                        <p>\[ = \frac{Erkannte Nichtkranke}{Tatsächliche Nichtkranke} \]</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: 60:40 Layout mit Bild und Text -->
+            <section>
+                <div style="display: flex;">
+                    <div style="flex: 6; padding-right: 10px;">
+                        <img src="img/icon_matrix_large.png" alt="Verteilung von Patienten" style="width: 65%; height: auto;">
+                    </div>
+                    <div style="flex: 4;">
+		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
+                        <p style="font-size: 22px;"><b>Sensitivität</b> und <b>Spezifität</b> sind identisch zu vorigem Beispiel!</p>
+                      <p> Was hat sich geändert?</p>
+                    </div>
+                </div>
+            </section>
+
+
+           <!-- Slide 5: 60:40 Layout mit Bild und Text -->
             <section>
                 <div style="display: flex;">
                     <div style="flex: 6; padding-right: 10px;">
@@ -95,6 +124,35 @@
                     </div>
                 </div>
             </section>
+
+
+
+            <section>
+                <h2>Receiver operator characteristics - ROC</h2>
+                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\  &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
+                <p  style="font-size:28px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
+            </section>
+
+
+
+            <section>
+                <h2>Hypothesentests</h2>
+                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\  &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
+                <p  style="font-size:28px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
+            </section>
+
+
+
+
+	    <section>
+                <h2>p Werte, Signifikanz</h2>
+                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\  &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
+                <p  style="font-size:28px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
+            </section>
+
+
+
+
 
 	    
             <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
@@ -116,6 +174,8 @@
             </section>
 
 
+
+	    
 	    
         </div>
     </div>
@@ -127,3 +187,52 @@
 
 </body>
 </html>
+
+<!--
+    Modul 3.3: Methodenimplementierung und –validierung
+Inhalte* (Theorie), 10 Vorlesungen:
+Lehrziel:
+Die auszubildende Person:
+• schätzt die statistische Sicherheit des Ergebnisses ein,
+• reflektiert den Unterschied zwischen Verifizierung und Validierung von Methoden
+und Verfahren
+
+Inhalte:
+• Diagnostische Genauigkeit, Testgütekriterien
+- Sensitivität
+- Spezifität
+- Positiv prädiktiver und negativ prädiktiver Wert - ROC-Kurve
+- Konfidenzintervalls
+- p-Wert
+• Verifizierung und Validation von Methoden
+- Definition
+- Verfahren
+- Statistische Konzepte - Umsetzung
+
+Lehrziel:
+Die auszubildende Person:
+überprüft bioanalytische Methoden auf ihre Validität, Robustheit und Leistungsfähigkeit und setzt dabei validierte Dokumentationssysteme ein.
+und wendet die Grundlagen der interferenzstatistischen Datenanalyse unter Berücksichtigung der Messwerttheorie an.
+Inhalte:
+Evaluierungskriterien von Analysensystemen - Präzision
+- Richtigkeit
+- Linearität
+- Spezifität und Sensitivität und deren Einflussfaktoren - Prädiktive Werte
+- analytische Grenzen
+- Robustheit
+- Verschleppungseffekte
+- Kapazität eines Analysensystems - Methodenhierarchie
+• Qualifizierung von Geräten
+
+Prüfverfahren in der Analytik
+- Ausgewählte Methoden
+- Grundlagen der interferenzstatistischen Datenanalyse
+- Ausgewählte Parameter [Überblick, Bedeutung, Grenzen] • Dokumentation
+
+Lehrziel:
+Die auszubildende Person:
+• legt Bewertungs- und Entscheidungskriterien für die Befundfreigabe fest.
+Inhalte:
+• Bewertungs- und Entscheidungskriterien für die Befundfreigabe
+  -->
+
