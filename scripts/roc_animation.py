@@ -52,5 +52,7 @@ ani = FuncAnimation(fig, update, frames=len(thresholds), interval=20, blit=True)
 plt.tight_layout()
 plt.show()
 
-from matplotlib.animation import PillowWriter
-ani.save("roc_animation.gif", writer=PillowWriter(fps=10))
+#from matplotlib.animation import PillowWriter
+#ani.save("roc_animation.gif", writer=PillowWriter(fps=10))
+from matplotlib.animation import FFMpegWriter
+ani.save("animation.mp4", writer=FFMpegWriter(fps=10))
