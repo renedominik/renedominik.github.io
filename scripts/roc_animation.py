@@ -3,10 +3,12 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from sklearn.metrics import roc_curve
 
+shift = 1
+
 # Daten vorbereiten
 np.random.seed(0)
 class0 = np.random.normal(0, 1, 1000)
-class1 = np.random.normal(2, 1, 1000)
+class1 = np.random.normal(shift, 1, 1000)
 data = np.concatenate([class0, class1])
 labels = np.concatenate([np.zeros(1000), np.ones(1000)])
 
@@ -21,7 +23,7 @@ fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 
 x = np.linspace(-4, 6, 500)
 y0 = 1/np.sqrt(2 * np.pi) * np.exp(-0.5 * (x - 0)**2)
-y1 = 1/np.sqrt(2 * np.pi) * np.exp(-0.5 * (x - 2)**2)
+y1 = 1/np.sqrt(2 * np.pi) * np.exp(-0.5 * (x - shift)**2)
 
 line0, = ax1.plot(x, y0, label='Class 0', alpha=0.7)
 line1, = ax1.plot(x, y1, label='Class 1', alpha=0.7)
