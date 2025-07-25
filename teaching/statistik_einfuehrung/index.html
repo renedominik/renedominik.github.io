@@ -156,6 +156,44 @@
                 <p  style="font-size:28px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
             </section>
 
+           <!-- Slide 4: Satz von Bayes -->
+            <section data-transition="slide-in fade-out">
+                <h2>Vergleich mit oder ohne Symptomatik</h2>
+                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\  &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
+               <ul style="font-size: 24px;">
+                 <li>Ohne Symptomatik: Prävalenz &approx;0.8&percnt; </li>
+                 <li>Mit Symptomen: Vortestwahrscheinlichkeit 8-30&percnt;  </li>
+                </ul>
+            </section>
+
+           <!-- Slide 4: Satz von Bayes -->
+            <section data-transition="fade">
+                <h2>Berechnung ohne Symptomatik</h2>
+               <ul style="font-size: 24px;">
+                 <li> P(Positiver\, Test| Krank) = Sensitivität = 0,88 </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität &= 1 - 0.93 = 0,07  </li>
+                   <li>
+                       Vortestwahrscheinlichkeit = Prävalenz = 0,008
+                   </li>
+                </ul>
+                <p style="font-size:24px;">\[ \begin{align} P(Positiver\, Test) &= (0,88 &sdot; 0,008) + (0,07 &sdot; 0,992) = 0,07648 \\ P(Krank | Positiver\, Test) &= \frac{ 0,88 &sdot; 0,008}{0,07648} &approx; 9,2 &percnt; \end{align}  \] </p>
+            </section>
+
+                  <!-- Slide 4: Satz von Bayes -->
+            <section data-transition="fade-in slide-out">
+                <h2>Berechnung mit Symptomatik</h2>
+               <ul style="font-size: 24px;">
+                 <li> P(Positiver\, Test| Krank) = Sensitivität = 0,88 </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität &= 1 - 0.93 = 0,07  </li>
+                   <li>
+                       Vortestwahrscheinlichkeit = 0,20
+                   </li>
+                </ul>
+                <p style="font-size:24px;">\[ \begin{align} P(Positiver\, Test) &= (0,88 &sdot; 0,20) + (0,07 &sdot; 0,80) = 0,232 \\ P(Krank | Positiver\, Test) &= \frac{ 0,88 &sdot; 0,20}{0,232} &approx; 75,9 &percnt; \end{align}  \] </p>
+            </section>
+
+
+
             <section>
                 <h2>
                     Die Verteilung der Nichtkranken und Kranken
