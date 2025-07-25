@@ -24,12 +24,12 @@
           <!-- Title Slide -->
             <section>
                 <h2>Kurzeinführung in die Statistik der Labormedizin</h2>
-                <h4>Dr. phil. nat. habil. René Staritzbichler</h4>
+                <h5>Dr. phil. nat. habil. René Staritzbichler</h5>
                 <p> 12.12.24</p>
             </section>
 
             <section>
-                <h2>Was soll das mit der Statistik?</h2>
+                <h3>Was soll das mit der Statistik?</h3>
                 <ul style="font-size: 24px;">
                  <li>Zusammenfassende Beschreibungen </li>
                  <li>Rückschlüsse aus Beobachtungen </li>
@@ -66,7 +66,7 @@
 
             <!-- Slide 2: Erklärung der Prävalenz -->
             <section>
-                <h2>Prävalenz</h2>
+                <h3>Prävalenz</h3>
                 <p>Anteil der Individuen in einer Population, die zu einem bestimmten Zeitpunkt an einer bestimmten Krankheit leiden.</p>
 		<p style="font-size:28px;">\[ p(Krank) = \frac{TP + FN}{TP + FN + FP + TN} \] </p>
 
@@ -153,7 +153,7 @@
               <h3>Thomas Bayes 1701 - 1761</h3>
 	      <div style="font-size:28px;">
             <img src="img/bayes.gif" alt="Verteilung von Patienten" style="width: 25%; height: auto;">
-              <p>Dies ist er wahrscheinlich nicht...</p>
+              <p style="font-size: 20px;">Dies ist er wahrscheinlich nicht...</p>
               <p>Englischer Mathematiker, Philosoph und Pfarrer.</p>
                 <p><strong>P(A|B) &sdot; P(B) = P(B|A) &sdot; P(A) </strong> </p> <!-- = P(A ∩ B) / P(B)</p> -->
 		</div>
@@ -164,7 +164,7 @@
             <section>
                 <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
                 <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\ \\ &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
-                <p  style="font-size:28px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
+                <p  style="font-size:20px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
             </section>
 
            <!-- Slide 4: Satz von Bayes -->
@@ -205,9 +205,9 @@
 
 
             <section>
-                <h2>
+                <h3>
                     Die Verteilung der Nichtkranken und Kranken
-                </h2>
+                </h3>
                 <div style="max-width: 100%; height: auto;">
                     <img src="img/gaussian_confusion.png" alt="Verteilung von Patienten" style="width: 100%; height: auto;">
                 </div>
@@ -224,7 +224,7 @@
             </section>
 
             <section data-transition="fade-in slide-out">
-                <h2>Trennung Krank von Nichtkrank</h2>
+                <h3>Trennung Krank von Nichtkrank</h3>
                 <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
                 <source src="img/roc_animation2.mp4" type="video/mp4">
                 Ihr Browser unterstützt das Video-Tag nicht.
@@ -233,40 +233,40 @@
             </section>
 
 
-            <section>
-                <h2>Rückschliessende Statistik</h2>
+            <section data-transition="slide-in fade-out">
+                <h3>Rückschliessende Statistik</h3>
                 <ul style="font-size: 24px;">
                  <li>Wenige Messungen: Stichproben </li>
                  <li>Rückschlüsse auf dahinterliegende Gesamtheit: Hypothesentests </li>
                  <li>Verlässlichkeit von Rückschlüssen: Konfidenz und Signifikanz</li>
                 </ul>
                 <div style="width: 100%; height: auto;">
-                    <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 20%; height: auto;">
+                    <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 15%; height: auto;">
                 </div>
             </section>
 
-        <section>
-                <h2>Die Logik der Signifikanz</h2>
+        <section data-transition="fade-in slide-out">
+                <h3>Die Logik der Signifikanz</h3>
                 <ul style="font-size: 24px;">
                  <li>Zufällige Aussagen sind nicht signifikant </li>
                  <li>Kann der Zufall ausgeschlossen werden, kann man von Signifikanz ausgehen. </li>
                 </ul>
                 <div style="width: 100%; height: auto;">
-                    <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 20%; height: auto;">
+                    <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 15%; height: auto;">
                 </div>
             </section>
 
 
             <section>
-                <h2>Hypothesentests</h2>
+                <h3>Hypothesentests</h3>
                 <ul style="font-size: 24px;">
                  <li>Ziel: Prüfen, ob ein beobachteter Effekt zufällig oder signifikant ist</li>
                     <li> Elemente:</li>
                     <ul style="font-size: 22px;">
                      <li>Nullhypothese (H<sub>0</sub>) - das Ergebnis ist zufällig</li>
                      <li> Alternativhypothese (H<sub>1</sub> ) - Zufall kann ausgeschlossen werden</li>
-                     <li>p-Wert</li>
-                     <li>Signifikanzniveau (meist 5&percnt; = 0,05)</li>
+                     <li>p-Wert - die Wahrscheinlichkeit eines zufälligen Effekts</li>
+                     <li>Signifikanzniveau (meist 5&percnt; = 0,05) - die vorab festgelegte Zielgröße</li>
                     </ul>
 
                      <li>Beispiele:</li>
@@ -284,9 +284,7 @@
 
 	    <section>
                 <h2>p Werte, Signifikanz, Konfidenzintervalle</h2>
-                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\  &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
-                <p  style="font-size:28px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
-            </section>
+        </section>
 
 
 
