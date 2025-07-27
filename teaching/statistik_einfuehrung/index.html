@@ -236,9 +236,10 @@
             <section data-transition="slide-in fade-out">
                 <h3>Rückschliessende Statistik</h3>
                 <ul style="font-size: 24px;">
-                 <li>Wenige Messungen: Stichproben </li>
-                 <li>Rückschlüsse auf dahinterliegende Gesamtheit: Hypothesentests </li>
-                 <li>Verlässlichkeit von Rückschlüssen: Konfidenz und Signifikanz</li>
+                 <li>Stichproben: Wenige Messungen </li>
+                 <li>Hypothesentests: Rückschlüsse auf dahinterliegende Gesamtheit </li>
+                 <li>Signifikanz: Verlässlichkeit von Rückschlüssen </li>
+                    <li> Konfidenz: Intervall in dem eine Größe (z.B. Mittelwert) mit einer bestimmten Wahrscheinlichkeit liegt</li>
                 </ul>
                 <div style="width: 100%; height: auto;">
                     <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 15%; height: auto;">
@@ -248,8 +249,8 @@
         <section data-transition="fade-in slide-out">
                 <h3>Die Logik der Signifikanz</h3>
                 <ul style="font-size: 24px;">
-                 <li>Zufällige Aussagen sind nicht signifikant </li>
-                 <li>Kann der Zufall ausgeschlossen werden, kann man von Signifikanz ausgehen. </li>
+                 <li>Eine Aussage ist umso aussagekräftiger, je unwahrscheinlicher ihr Gegenteil ist </li>
+                 <li>Gegenstand sind also binäre Entweder-Oder-Fragen </li>
                 </ul>
                 <div style="width: 100%; height: auto;">
                     <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 15%; height: auto;">
@@ -260,12 +261,13 @@
             <section>
                 <h3>Hypothesentests</h3>
                 <ul style="font-size: 24px;">
-                 <li>Ziel: Prüfen, ob ein beobachteter Effekt zufällig oder signifikant ist</li>
+                 <li>Ziel: Prüfen, wie verlässlich ein beobachteter Effekt ist</li>
+                 <li>Damit Ausschluss einer zufälligen Erscheinung</li>
                     <li> Elemente:</li>
                     <ul style="font-size: 22px;">
                         <li> Kenntnis der zugrundeliegenden Verteilung</li>
-                     <li>Nullhypothese (H<sub>0</sub>) - Annahme, dass es kein Effekt gibt </li>
-                     <li> Alternativhypothese (H<sub>1</sub> ) - Annahme, das es einen Effekt gibt</li>
+                     <li>Nullhypothese H<sub>0</sub> - Annahme, dass es kein Effekt gibt </li>
+                     <li> Alternativhypothese H<sub>1</sub>  - Annahme, das es einen Effekt gibt</li>
                      <li>p-Wert - die Wahrscheinlichkeit der Nullhypothese</li>
                      <li>Signifikanzniveau \(\alpha\) (meist 5&percnt; = 0,05) - die vorab festgelegte Zielgröße, der maximal erlaubte p-Wert</li>
                     </ul>
@@ -317,8 +319,9 @@
                         \[ \begin{align}
                         z &= \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{0{,}058 - 0{,}04}{0{,}01/ \sqrt{1}} = 1{,}8 \\
                         p &= 0{,}0359 \; aus \, Tabelle \\
-                        p &= 0{,}0359 < \alpha = 0{,}05 \; Signifikant! \\
-                        & \Rightarrow H_0 \; verwerfen \\
+                        p &= 0{,}0359 < \alpha = 0{,}05 \; \\
+                        & \Rightarrow H_0 \; wird \, verworfen \\
+                        & \Rightarrow Effekt \, ist \, signifikant! \\
                         \end{align} \]
                         <br>
                         <p style="font-size: 26px;"><strong> Troponin ist signifikant erhöht! </strong></p>
@@ -336,11 +339,12 @@
             </section>
 
 	    <section>
-                <h3>Das Problem mit Mittelwerten...</h3>
+                <h3>Das Problem mit Mittelwerten</h3>
             <p>...sie stimmen meistens nicht </p>
                 <ul style="font-size:28px;">
-                    <li> weil die Stichproben zu klein sind</li>
-                    <li> selbst 100 Stichproben noch nicht zu identischen Mittelwerten führen</li>
+                    <li> die Stichproben sind zu klein </li>
+                    <li> selbst Stichproben aus 100 Messungen führen nicht zu eindeutigen Mittelwerten</li>
+                    <li> stattdessen Angabe eines wahrscheinlichen Bereichs</li>
                 </ul>
                	      <div style="font-size:22px;">
                 <img src="img/means.png" alt="Verteilung von Patienten" style="width: 60%; height: auto;">
@@ -349,7 +353,19 @@
 
 
     <section>
-                <h3>Konfidenzintervalle</h3>
+                <div style="display: flex;">
+                    <div style="flex: 6; padding-right: 10px;">
+                        <img src="img/konfidenz.png" alt="Verteilung von Patienten" style="width: 80%; height: auto;">
+                    </div>
+                    <div style="flex: 4;">
+	                    <h4>Konfidenzintervalle:</h4>
+               <ul style="font-size:28px;">
+                    <li> 95&percnt; Konfidenzniveau </li>
+                    <li> 100 Stichproben mit jeweils 30 Messungen</li>
+                    <li> 94 Intervalle überdecken den exakten Erwartungswert &mu;, 6 nicht</li>
+                </ul>
+                     </div>
+                </div>
         </section>
 
 
