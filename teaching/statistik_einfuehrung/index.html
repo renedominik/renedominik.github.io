@@ -41,6 +41,7 @@
 
 	    <section>
 	      <h3> Von der Wahrscheinlichkeit, wirklich krank zu sein </h3>
+            <br>
 	      <div>
 		<img src="img/qr.png" alt="Link zur Umfrage" style="width: 25%; height: auto;">
 	      </div>
@@ -141,6 +142,7 @@
             <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
             <section>
               <h3>Bedingte Wahrscheinlichkeit</h3>
+                <br>
 	      <div style="font-size:28px;">
                 <p>Die bedingte Wahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass ein Ereignis A eintritt, unter der Voraussetzung, dass ein anderes Ereignis B bereits eingetreten ist.</p>
                 <p><strong>P(A|B)</strong> </p> <!-- = P(A ∩ B) / P(B)</p> -->
@@ -163,6 +165,7 @@
             <!-- Slide 4: Satz von Bayes -->
             <section>
                 <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
+                <br>
                 <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\ \\ &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
                 <p  style="font-size:20px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
             </section>
@@ -170,6 +173,7 @@
            <!-- Slide 4: Satz von Bayes -->
             <section data-transition="slide-in fade-out">
                 <h3>Vergleich mit oder ohne Symptomatik</h3>
+                <br>
                <ul style="font-size: 24px;">
                  <li>Ohne Symptomatik: Prävalenz &approx;0,8&percnt; </li>
                  <li>Mit Symptomen: Vortestwahrscheinlichkeit 8-30&percnt;  </li>
@@ -179,6 +183,7 @@
            <!-- Slide 4: Satz von Bayes -->
             <section data-transition="fade">
                 <h3>Berechnung ohne Symptomatik</h3>
+                <br>
                <ul style="font-size: 24px;">
                  <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
                  <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
@@ -192,6 +197,7 @@
                   <!-- Slide 4: Satz von Bayes -->
             <section data-transition="fade-in slide-out">
                 <h3>Berechnung mit Symptomatik</h3>
+                <br>
                <ul style="font-size: 24px;">
                  <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
                  <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
@@ -208,6 +214,7 @@
                 <h3>
                     Die Verteilung der Nichtkranken und Kranken
                 </h3>
+                <br>
                 <div style="max-width: 100%; height: auto;">
                     <img src="img/gaussian_confusion.png" alt="Verteilung von Patienten" style="width: 100%; height: auto;">
                 </div>
@@ -216,6 +223,7 @@
 
             <section data-transition="slide-in fade-out">
                 <h2>Trennung Krank von Nichtkrank</h2>
+                <br>
                 <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
                  <source src="img/roc_animation.mp4" type="video/mp4">
                  Ihr Browser unterstützt das Video-Tag nicht.
@@ -225,6 +233,7 @@
 
             <section data-transition="fade-in slide-out">
                 <h3>Trennung Krank von Nichtkrank</h3>
+                <br>
                 <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
                 <source src="img/roc_animation2.mp4" type="video/mp4">
                 Ihr Browser unterstützt das Video-Tag nicht.
@@ -235,6 +244,7 @@
 
             <section data-transition="slide-in fade-out">
                 <h3>Rückschliessende Statistik</h3>
+                <br>
                 <ul style="font-size: 24px;">
                  <li>Stichproben: Wenige Messungen </li>
                  <li>Hypothesentests: Rückschlüsse auf dahinterliegende Gesamtheit </li>
@@ -248,6 +258,7 @@
 
         <section data-transition="fade-in slide-out">
                 <h3>Die Logik der Signifikanz</h3>
+            <br>
                 <ul style="font-size: 24px;">
                  <li>Eine Aussage ist umso aussagekräftiger, je unwahrscheinlicher ihr Gegenteil ist </li>
                  <li>Gegenstand sind also binäre Entweder-Oder-Fragen </li>
@@ -261,6 +272,7 @@
 
             <section>
                 <h3>Hypothesentests</h3>
+                <br>
                 <ul style="font-size: 24px;">
                  <li>Ziel: Prüfen, wie verlässlich ein beobachteter Effekt ist</li>
                  <li>Damit Ausschluss einer zufälligen Erscheinung</li>
@@ -277,7 +289,8 @@
             </section>
 
             <section>
-                <h3>Verteilungen und ihre Hypothesentests</h3> <br>
+                <h3>Verteilungen und ihre Hypothesentests</h3>
+                <br>
                 <table style="font-size: 22px;">
               <tr>
                 <th><strong>Verteilung</strong></th>
@@ -295,6 +308,7 @@
 
             <section>
                 <h3>Die Normalverteilung und ihre Kerngrößen</h3>
+                <br>
 	      <div style="font-size:22px;">
             <img src="img/p-wert.png" alt="Verteilung von Patienten" style="width: 70%; height: auto;">
                 <p><strong> \[ z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} \] </strong> </p>
@@ -332,6 +346,7 @@
 
             <section>
                 <h3>Einzelparameter sind wie Puzzleteile!</h3>
+                <br>
                 <ul style="font-size:28px;">
                     <li> Erhöhte Werte bedeuten noch keinen Herzinfarkt</li>
                     <li> Normale Werte bedeuten nicht, dass kein Herzinfarkt vorliegt</li>
@@ -342,6 +357,7 @@
 	    <section>
                 <h3>Das Problem mit Mittelwerten</h3>
             <p>...sie stimmen meistens nicht </p>
+            <br>
                 <ul style="font-size:28px;">
                     <li> die Stichproben sind zu klein </li>
                     <li> selbst Stichproben aus 100 Messungen führen nicht zu eindeutigen Mittelwerten</li>
