@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#from scripts.gaussian_confusion import colors
+
 # Zufallsdaten mit definierter Korrelation
 np.random.seed(42)
 x = np.linspace(0, 10, 100)
@@ -40,11 +42,39 @@ plt.tick_params(left=False, bottom=False)
 plt.xticks([])
 plt.yticks([])
 
+ix = 20
+px = x[ix]
+py1 = 2 * px + 5 + noise[ix]
+py2 = -1.5 * px - 0.6 * noise[ix] + 35
+line, = plt.plot( [px,px],[mean_y1,py1], label=r'$y_i - \bar{y}$' , color="blue")
+plt.text(px + 0.1, 0.5 *(py1 + mean_y1), line.get_label(), color=line.get_color(),
+         fontsize=12, va='center', ha='left')
+
+line, = plt.plot( [px,px],[mean_y2,py2], label=r'$x_i - \bar{x}$' , color="red")
+plt.text(px + 0.1, 0.5 *(py2 + mean_y2), line.get_label(), color=line.get_color(),
+         fontsize=12, va='center', ha='left')
+
+
+ix = 10
+px = x[ix]
+py1 = 2 * px + 5 + noise[ix]
+py2 = -1.5 * px - 0.6 * noise[ix] + 35
+line, = plt.plot( [px,px],[mean_y1,mean_y1+std_y1], label=r'$\sigma_y$' , color="blue")
+plt.text(px + 0.1, mean_y1+std_y1-2.5, line.get_label(), color=line.get_color(),
+         fontsize=12, va='center', ha='left')
+
+line, = plt.plot( [px,px],[mean_y2,mean_y2 + std_y2], label=r'$\sigma_x$' , color="red")
+plt.text(px + 0.1, 0.5 *(py2 + mean_y2), line.get_label(), color=line.get_color(),
+         fontsize=12, va='center', ha='left')
+
+
+
+
 # Legende
 #plt.legend(loc='upper left')
 corr_coef = np.corrcoef(y1, y2)[0, 1]
 plt.title(f"Illustration Pearson-Korrelation (r = {corr_coef:.2f})")
 #plt.title("Pearson-Korrelation: r = -0.96")
 plt.tight_layout()
-plt.savefig("pearson.png")
+plt.savefig("pearson2.png")
 plt.show()
