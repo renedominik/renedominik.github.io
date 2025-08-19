@@ -64,8 +64,9 @@
 			 <li><strong>TN</strong> = True Negatives </li>
                        </ul>
                         <br>
+                        <br>
                         <p style="font-size: 24px;">
-                            FN: Fälschlicherweise als negativ (nicht krank) vorhergesagt/klassifiziert, also in Wirklichkeit positiv (krank)
+                            <strong>FN: Fälschlicherweise als negativ</strong> (nicht krank) vorhergesagt/klassifiziert, <br> <strong>aber tatsächlich positiv </strong>(krank)
                         </p>
                     </div>
                 </div>
@@ -77,7 +78,7 @@
                 <p style="font-size:28px;">Anteil der Individuen in einer Population, die zu einem bestimmten Zeitpunkt an einer bestimmten Krankheit leiden.</p>
 		<p style="font-size:28px;">\[ p(Krank) = \frac{TP + FN}{TP + FN + FP + TN} \] </p>
 
-                <p style="font-size:24px;">Ein Beispiel: Wenn in einer Population von 1000 Personen 100 Personen an einer Krankheit leiden, beträgt die Prävalenz:</p>
+                <p style="font-size:24px;">Beispiel: Wenn in einer Population von 1000 Personen 100 Personen an einer Krankheit leiden, beträgt die Prävalenz:</p>
                 <p style="font-size:28px;"><strong>Prävalenz</strong> = 100 / 1000 = 0,1 (10%)</p>
             </section>
 
@@ -172,7 +173,17 @@
 
 
             <!-- Slide 4: Satz von Bayes -->
-            <section>
+            <section data-auto-animate>
+                <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}   \end{align} \] </p>
+            </section>
+            <section data-auto-animate>
+                <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} \\ \\ &= \frac{ \text{Testgenauigkeit} \cdot \text{Prävalenz}}{\text{Wahrscheinlichkeit eines positiven Tests}}  \end{align} \] </p>
+            </section>
+            <section data-auto-animate>
                 <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
                 <br>
                 <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} \\ \\ &= \frac{ \text{Testgenauigkeit} \cdot \text{Prävalenz}}{\text{Wahrscheinlichkeit eines positiven Tests}}  \end{align} \] </p>
@@ -190,33 +201,89 @@
             </section>
 
            <!-- Slide 4: Satz von Bayes -->
-            <section data-transition="fade">
+            <section data-auto-animate data-transition="fade">
                 <h3>Berechnung ohne Symptomatik</h3>
+                <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}
+                    \] </p>
                 <br>
                <ul style="font-size: 24px;">
                  <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
                    <li>
-                       Vortestwahrscheinlichkeit = Prävalenz = 0,008
+                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
                    </li>
+
                 </ul>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\ P(\text{Krank} | \text{Positiver Test}) &= \frac{ 0{,}88 \cdot 0{,}008}{0{,}07648} \approx 9,2 \% \end{align}  \] </p>
+                <br>
             </section>
+            <section data-auto-animate data-transition="fade">
+                <h3>Berechnung ohne Symptomatik</h3>
+                <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}
+                    \] </p>
+                <br>
+               <ul style="font-size: 24px;">
+                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
+                   <li>
+                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
+                   </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
+                </ul>
+                <br>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align}
+                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\
+                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B) \;\; \text{G.d.t.W.}
+                    \end{align} \] </p>
+            </section>
+            <section data-auto-animate data-transition="fade">
+                <h3>Berechnung ohne Symptomatik</h3>
+                <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} = \frac{ 0{,}88 \cdot 0{,}008}{0{,}07648} \approx 9,2 \%
+                    \] </p>
+                <br>
+               <ul style="font-size: 24px;">
+                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
+                   <li>
+                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
+                   </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
+                </ul>
+                <br>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align}
+                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\
+                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B) \;\; \text{G.d.t.W.}
+                    \end{align} \] </p>
+            </section>
+
+
+
 
                   <!-- Slide 4: Satz von Bayes -->
             <section data-transition="fade-in slide-out">
                 <h3>Berechnung mit Symptomatik</h3>
                 <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} = \frac{ 0{,}88 \cdot 0{,}20}{0{,}232} \approx 75{,}9 \%
+                    \] </p>
+                <br>
                <ul style="font-size: 24px;">
                  <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
                    <li>
                        Vortestwahrscheinlichkeit = 0,20
                    </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
                 </ul>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}20) + (0{,}07 \cdot 0{,}80) = 0{,}232 \\ P(\text{Krank} | \text{Positiver Test}) &= \frac{ 0{,}88 \cdot 0{,}20}{0{,}232} \approx 75{,}9 \% \end{align}  \] </p>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align}
+                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}20) + (0{,}07 \cdot 0{,}80) = 0{,}232 \\
+                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B)  \end{align}  \] </p>
             </section>
 
 
