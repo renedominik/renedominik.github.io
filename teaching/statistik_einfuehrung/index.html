@@ -36,7 +36,7 @@
                  <li>Zusammenfassende Beschreibungen </li>
                  <li>Rückschlüsse aus Beobachtungen </li>
                  <li>Verlässlichkeit von Rückschlüssen</li>
-                 <li>Modellierung von Daten, Mustererkennung </li>
+                 <li>Modellierung von Daten, Mustererkennung \(\Rightarrow\) Vorhersagen</li>
                 </ul>
             </section>
 
@@ -63,6 +63,11 @@
 			 <li><strong>FN</strong> = False Negatives </li>
 			 <li><strong>TN</strong> = True Negatives </li>
                        </ul>
+                        <br>
+                        <br>
+                        <p style="font-size: 24px;">
+                            <strong>FN: Fälschlicherweise als negativ</strong> (nicht krank) vorhergesagt/klassifiziert, <br> <strong>aber tatsächlich positiv </strong>(krank)
+                        </p>
                     </div>
                 </div>
             </section>
@@ -73,7 +78,7 @@
                 <p style="font-size:28px;">Anteil der Individuen in einer Population, die zu einem bestimmten Zeitpunkt an einer bestimmten Krankheit leiden.</p>
 		<p style="font-size:28px;">\[ p(Krank) = \frac{TP + FN}{TP + FN + FP + TN} \] </p>
 
-                <p style="font-size:24px;">Ein Beispiel: Wenn in einer Population von 1000 Personen 100 Personen an einer Krankheit leiden, beträgt die Prävalenz:</p>
+                <p style="font-size:24px;">Beispiel: Wenn in einer Population von 1000 Personen 100 Personen an einer Krankheit leiden, beträgt die Prävalenz:</p>
                 <p style="font-size:28px;"><strong>Prävalenz</strong> = 100 / 1000 = 0,1 (10%)</p>
             </section>
 
@@ -86,9 +91,9 @@
                     </div>
                     <div style="flex: 4;">
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br><h4>Sensitivität:</h4>
+                        <br><br><h4>Sensitivität:</h4>
                         <p style="font-size:26px;">\[  \frac{TP}{TP+FN} \]</p>
-                        <p style="font-size:26px;">\[ = \frac{Erkannte \, Kranke}{Tatsächlich \, Kranke} \]</p>
+                        <p style="font-size:26px;">\[ = \frac{\text{Erkannte Kranke}}{\text{Tatsächlich Kranke}} \]</p>
                     </div>
                 </div>
             </section>
@@ -102,9 +107,9 @@
                     </div>
                     <div style="flex: 4;">
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br><h4>Spezifität:</h4>
+                        <br><br><h4>Spezifität:</h4>
                         <p style="font-size:26px;">\[  \frac{TN}{TN+FP} \]</p>
-                        <p style="font-size:26px;">\[ = \frac{Erkannte \, Nichtkranke}{Tatsächliche \, Nichtkranke} \]</p>
+                        <p style="font-size:26px;">\[ = \frac{\text{Erkannte Nichtkranke}}{\text{Tatsächliche Nichtkranke}} \]</p>
                     </div>
                 </div>
             </section>
@@ -165,11 +170,15 @@
 
 
             <!-- Slide 4: Satz von Bayes -->
-            <section>
+            <section data-auto-animate>
                 <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\ \\ &= \frac{ Testgenauigkeit * Vortestwahrscheinlichkeit}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
-                <p  style="font-size:22px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
+                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}   \end{align} \] </p>
+            </section>
+            <section data-auto-animate>
+                <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} \\ \\ &= \frac{ \text{Testgenauigkeit} \cdot \text{Vortestwahrscheinlichkeit}}{\text{Wahrscheinlichkeit eines positiven Tests}}  \end{align} \] </p>
             </section>
 
            <!-- Slide 4: Satz von Bayes -->
@@ -183,33 +192,91 @@
             </section>
 
            <!-- Slide 4: Satz von Bayes -->
-            <section data-transition="fade">
+            <section data-auto-animate data-transition="fade">
                 <h3>Berechnung ohne Symptomatik</h3>
+                <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}
+                    \] </p>
                 <br>
                <ul style="font-size: 24px;">
                  <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
                    <li>
-                       Vortestwahrscheinlichkeit = Prävalenz = 0,008
+                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
                    </li>
+
                 </ul>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(Positiver\, Test) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\ P(Krank | Positiver\, Test) &= \frac{ 0{,}88 \cdot 0{,}008}{0{,}07648} \approx 9,2 \% \end{align}  \] </p>
+                <br>
             </section>
+            <section data-auto-animate data-transition="fade">
+                <h3>Berechnung ohne Symptomatik</h3>
+                <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}
+                    \] </p>
+                <br>
+               <ul style="font-size: 24px;">
+                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
+                   <li>
+                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
+                   </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
+                </ul>
+                <br>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align}
+                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\ \\
+                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B) \\
+                    &= \text{Gesetz der totalen Wahrscheinlichkeit}
+                    \end{align} \] </p>
+            </section>
+            <section data-auto-animate data-transition="fade">
+                <h3>Berechnung ohne Symptomatik</h3>
+                <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} = \frac{ 0{,}88 \cdot 0{,}008}{0{,}07648} \approx 9,2 \%
+                    \] </p>
+                <br>
+               <ul style="font-size: 24px;">
+                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
+                   <li>
+                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
+                   </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
+                </ul>
+                <br>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align}
+                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\ \\
+                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B) \\
+                    &= \text{Gesetz der totalen Wahrscheinlichkeit}
+                    \end{align} \] </p>
+            </section>
+
+
+
 
                   <!-- Slide 4: Satz von Bayes -->
             <section data-transition="fade-in slide-out">
                 <h3>Berechnung mit Symptomatik</h3>
                 <br>
+                <p style="font-size:24px;">\[
+                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} = \frac{ 0{,}88 \cdot 0{,}20}{0{,}232} \approx 75{,}9 \%
+                    \] </p>
+                <br>
                <ul style="font-size: 24px;">
                  <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
                    <li>
                        Vortestwahrscheinlichkeit = 0,20
                    </li>
+                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
                 </ul>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(Positiver\, Test) &= (0{,}88 \cdot 0{,}20) + (0{,}07 \cdot 0{,}80) = 0{,}232 \\ P(Krank | Positiver\, Test) &= \frac{ 0{,}88 \cdot 0{,}20}{0{,}232} \approx 75{,}9 \% \end{align}  \] </p>
+                <br>
+                <p style="font-size:24px;">\[ \begin{align}
+                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}20) + (0{,}07 \cdot 0{,}80) = 0{,}232 \\ \\
+                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B)  \end{align}  \] </p>
             </section>
 
 
@@ -267,6 +334,7 @@
                  <li>Eine Aussage ist umso aussagekräftiger, je unwahrscheinlicher ihr Gegenteil ist </li>
                  <li>Gegenstand sind also binäre Entweder-Oder-Fragen </li>
                     <li> Je signifikanter, desto unwahrscheinlich ist eine zufällige Beobachtung</li>
+                    <li> Je weniger Stichproben, desto größer der Einfluss des Zufalls</li>
                 </ul>
             <br><br>
                 <div style="width: 100%; height: auto;">
@@ -289,7 +357,7 @@
                      <li>p-Wert - die Wahrscheinlichkeit der Nullhypothese</li>
                      <li>Signifikanzniveau \(\alpha\) (meist 5&percnt; = 0,05) - die vorab festgelegte Zielgröße, der maximal erlaubte p-Wert</li>
                     </ul>
-                    <li>Aufgabe: Wiederlegen der Nullypothese (p kleiner Signifikanzniveau)</li>
+                    <li>Aufgabe: Wiederlegen der Nullypothese \(\Rightarrow\) p kleiner Signifikanzniveau</li>
                 </ul>
             </section>
 
@@ -302,10 +370,10 @@
                 <th><strong>Hypothesentest</strong></th>
                 <th><strong>Anmerkungen</strong></th>
               </tr>
-                    <tr><td>Normalverteilung</td><td>z-Test (n&ge; 30), t-Test (n<30)	</td><td>Häufigste Annahme, gute Approximation über CLT</td></tr>
+                    <tr><td>Normalverteilung</td><td>z-Test (n&ge; 30), t-Test (n<30)	</td><td>Häufigste Annahme</td></tr>
                     <tr><td>Binomialverteilung </td><td>	Binomialtest, χ²-Test	</td><td>Für diskrete Daten geeignet</td></tr>
                     <tr><td>Poissonverteilung	</td><td>Poisson-Test</td><td>	Für Ereigniszählungen in Intervallen</td></tr>
-                    <tr><td>Exponentialverteilung	</td><td>Likelihood-Ratio-Test	</td><td>Eher in Spezialfällen, z.B. Wartezeiten</td></tr>
+                    <tr><td>Exponentialverteilung	</td><td>Likelihood-Ratio-Test	</td><td>Eher in Spezialfällen</td></tr>
                     <tr><td>Unbekannte Verteilung	</td><td>Nichtparametrische Tests (z.B. Wilcoxon, U-Test)	</td><td>Für robuste Verfahren ohne Verteilungsannahme</td></tr>
              </table>
             </section>
@@ -341,18 +409,20 @@
                         Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
                         Messungen: \, n &= 1 \\
                         Signifikanzniveau: \, \alpha &= 0{,}05 \\
-                        Nullhypothese: \, \bar{x} &= 0{,}04 ng/ml \\
-                         Alternativhypothese: \,  \bar{x} &> 0{,}04 ng/ml \\
+                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
+                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
                     \end{align} \]
+                        <p style="font-size: 26px;">Einseitiger Test</p>
+                        <p style="font-size: 26px;">\(\bar{x}\) gemessener Mittelwert, <br> \(\mu\) tatsächlicher Mittelwert</p>
                     </div>
                     <div style="flex: 1;">
                     <p style="font-size: 26px;">Da \( \sigma \) bekannt ist, nehmen wir z-Test</p>
                         \[ \begin{align}
                         z &= \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{0{,}058 - 0{,}04}{0{,}01/ \sqrt{1}} = 1{,}8 \\
-                        p &= 0{,}0359 \; aus \, Tabelle \\
+                        p &= 0{,}0359 \; \text{aus Tabelle} \\
                         p &= 0{,}0359 < \alpha = 0{,}05 \; \\
-                        & \Rightarrow H_0 \; wird \, verworfen \\
-                        & \Rightarrow Effekt \, ist \, signifikant! \\
+                        & \Rightarrow H_0 \; \text{wird verworfen} \\
+                        & \Rightarrow \text{Effekt ist signifikant!} \\
                         \end{align} \]
                         <br>
                         <p style="font-size: 26px;"><strong> Troponin ist signifikant erhöht! </strong></p>
@@ -436,7 +506,7 @@
 
 
 <section>
-    <h3> Probleme der Korrelation </h3>
+    <h3> Grenzen der Korrelation </h3>
     <br>
     <div style="centering;font-size:20px;">
     <br>
