@@ -86,7 +86,7 @@
                     </div>
                     <div style="flex: 4;">
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <h4>Sensitivität:</h4>
+                        <br><h4>Sensitivität:</h4>
                         <p style="font-size:26px;">\[  \frac{TP}{TP+FN} \]</p>
                         <p style="font-size:26px;">\[ = \frac{Erkannte \, Kranke}{Tatsächlich \, Kranke} \]</p>
                     </div>
@@ -102,7 +102,7 @@
                     </div>
                     <div style="flex: 4;">
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <h4>Spezifität:</h4>
+                        <br><h4>Spezifität:</h4>
                         <p style="font-size:26px;">\[  \frac{TN}{TN+FP} \]</p>
                         <p style="font-size:26px;">\[ = \frac{Erkannte \, Nichtkranke}{Tatsächliche \, Nichtkranke} \]</p>
                     </div>
@@ -118,7 +118,7 @@
                     </div>
                     <div style="flex: 4;">
 		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <p style="font-size: 24px;"><b>Sensitivität</b> und <b>Spezifität</b> sind identisch zu vorigem Beispiel!</p>
+                        <br><p style="font-size: 24px;"><b>Sensitivität</b> und <b>Spezifität</b> sind identisch zu vorigem Beispiel!</p>
                       <p> Was hat sich geändert?</p>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                     </div>
                     <div style="flex: 4;">
 		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                      <h4>Positiv prädiktiver Wert (PPV):</h4>
+                      <br><h4>Positiv prädiktiver Wert (PPV):</h4>
                       <p style="font-size:26px;">\[  \frac{TP}{TP+FP} \]</p>
                       <p style="font-size: 22px;">Der PPV beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
                     </div>
@@ -168,7 +168,7 @@
             <section>
                 <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\ \\ &= \frac{ Testgenauigkeit * Prävalenz}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
+                <p style="font-size:24px;">\[ \begin{align} P(Krank | Positiver\, Test) &= \frac{P(Positiver\, Test| Krank) * P(Krank)}{ P(Positiver\, Test)} \\ \\ &= \frac{ Testgenauigkeit * Vortestwahrscheinlichkeit}{Wahrscheinlichkeit\, eines\, positiven\, Tests}  \end{align} \] </p>
                 <p  style="font-size:22px;">Die Wahrscheinlichkeit, dass jemand eine bestimmte Krankheit hat (A), basierend auf einem positiven Testergebnis (B), entspricht der Genauigkeit des Tests (Sensitivität) multipliziert mit der Prävalenz und geteilt durch die Wahrscheinlichkeit einen positiven Test zu haben.</p>
             </section>
 
@@ -176,8 +176,8 @@
             <section data-transition="slide-in fade-out">
                 <h3>Vergleich mit oder ohne Symptomatik</h3>
                 <br>
-               <ul style="font-size: 26px;">
-                 <li>Ohne Symptomatik: Prävalenz &approx;0,8&percnt; </li>
+               <ul style="font-size: 28px;">
+                 <li>Ohne Symptomatik: Vortestwahrscheinlichkeit = Prävalenz &approx;0,8&percnt; </li>
                  <li>Mit Symptomen: Vortestwahrscheinlichkeit 8-30&percnt;  </li>
                 </ul>
             </section>
@@ -222,7 +222,7 @@
                 <div style="max-width: 100%; height: auto;">
                     <img src="img/gaussian_confusion.png" alt="Verteilung von Patienten" style="width: 100%; height: auto;">
                 </div>
-                <p style="font-size: 24px;">Die x-Achse stellt einen Laborwert dar. Je weiter die Verteilungen voneinander entfernt sind, dest besser ist der Laborwert geeignet, Kranke zu erkennen.</p>
+                <p style="font-size: 24px;">Die x-Achse stellt einen Laborwert dar. Je weiter die Verteilungen voneinander entfernt sind, desto besser kann der Laborwert krank von nicht-krank unterscheiden.</p>
             </section>
 
             <section data-transition="slide-in fade-out">
