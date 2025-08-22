@@ -285,24 +285,31 @@
 
 
             <section>
-                <h3>
+                <h4>
                     Die Verteilung der Nichtkranken und Kranken
-                </h3>
-                <br>
+                </h4>
+
                 <div style="max-width: 100%; height: auto;">
                     <img src="img/gaussian_confusion.png" alt="Verteilung von Patienten" style="width: 100%; height: auto;">
                 </div>
-                <p style="font-size: 24px;">Die x-Achse stellt einen Laborwert dar. Je weiter die Verteilungen voneinander entfernt sind, dest besser ist der Laborwert geeignet, Kranke zu erkennen.</p>
+                <p style="font-size: 22px;">Die x-Achse stellt einen Laborwert dar. Rechts des Grenzwertes wird alles als positiv kategorisiert, links als negativ. <br>
+                    Je weiter die Verteilungen voneinander entfernt sind, desto besser ist der Laborwert geeignet, krank von nicht-krank zu unterscheiden.
+                </p>
             </section>
 
-            <section data-transition="slide-in fade-out">
-                <h3>Trennung Krank von Nichtkrank</h3>
-                <br>
+            <section data-state="wide" data-transition="slide-in fade-out">
+                <h4>Receiver operating curve - ROC </h4>
+                <h5>Die Suche nach dem idealen Grenzwert </h5>
+
                 <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
                  <source src="img/roc_animation.mp4" type="video/mp4">
                  Ihr Browser unterstützt das Video-Tag nicht.
                 </video>
-                <p style="font-size: 24px;">ROC-Kurve: sortiere Daten nach Laborwert und berechne für jeden Wert die TP- und FP-Raten.</p>
+                <p  style="font-size: 20px;max-width: 100%;">
+                    <strong> Links:</strong> gelb entspricht positiv (krank), blau negativ (nicht-krank).
+                    Das Verhältnis der Flächen rechts und links des Grenzertes (gepunktete Linie) gibt die TP(gelb)- und FP(blau)-Raten. <br>
+                    <strong>Rechts: ROC: </strong> sortiere Laborwerte und zeichne für jeden Laborwert dessen TP- und FP-Raten.
+                </p>
             </section>
 
             <section data-transition="fade-in slide-out">
