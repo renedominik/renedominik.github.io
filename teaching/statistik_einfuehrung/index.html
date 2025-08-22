@@ -293,7 +293,7 @@
                         Neue Bayes Nachtestwahrscheinlichkeit > 55 &percnt;  </li>
                 </ul>
     <p style="font-size:24px;text-align:left;margin-left:230px;">
-       \(\Rightarrow\) Die 2. Testmethode hat die Genauigkeit weniger erhöht <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; als ein konkretes Symptom.
+       \(\Rightarrow\) Die 2. Testmethode hat die Genauigkeit weniger erhöht <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; als ein konkretes Symptom.
     </p>
 
 </section>
@@ -312,7 +312,7 @@
             </section>
 
             <section data-state="wide" data-transition="slide-in fade-out">
-                <h4>Receiver operating curve - ROC </h4>
+                <h4>ROC - Receiver operating curve  </h4>
                 <h5>Die Suche nach dem idealen Grenzwert </h5>
 
                 <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
@@ -327,7 +327,7 @@
             </section>
 
             <section data-transition="fade-in slide-out">
-                <h3>Trennung Krank von Nichtkrank</h3>
+                <h4>Trennung Krank von Nichtkrank</h4>
                 <br>
                 <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
                 <source src="img/roc_animation2.mp4" type="video/mp4">
@@ -339,11 +339,13 @@
 
 
             <section>
-                <h3>Die Normalverteilung und ihre Kerngrößen</h3>
-                <br>
+                <h4>Die Normalverteilung und ihre Kerngrößen</h4>
+
 	      <div style="font-size:22px;">
-            <img src="img/p-wert.png" alt="Verteilung von Patienten" style="width: 70%; height: auto;">
+            <img src="img/p-wert.png" alt="Verteilung von Patienten" style="width: 65%; height: auto;">
                 <p><strong> \[ z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} \] </strong> </p>
+              <p style="font-size:24px;"> p-Wert: Verhältnis der Flächen zu einem bestimmten z-Wert <br> \( \Rightarrow \) die Wahrscheinlichkeit des &quot;Rests&quot;</p>
+
 		</div>
             </section>
 
@@ -458,7 +460,72 @@
             </section>
 
 
-            <section>
+            <section data-auto-animate>
+                <h3>Hypothesentest für Troponin</h3>
+                 <div style="display: flex; font-size: 22px; gap: 2em;">
+                    <div style="flex: 1;font-size: 22px;">
+                    \[ \begin{align}
+                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
+                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
+                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
+                        Messungen: \, n &= 1 \\
+                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
+                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
+                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
+                    \end{align} \]
+                    </div>
+                    <div style="flex: 1;">
+                    </div>
+                  </div>
+            </section>
+            <section data-auto-animate>
+                <h3>Hypothesentest für Troponin</h3>
+                 <div style="display: flex; font-size: 22px; gap: 2em;">
+                    <div style="flex: 1;font-size: 22px;">
+                    \[ \begin{align}
+                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
+                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
+                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
+                        Messungen: \, n &= 1 \\
+                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
+                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
+                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
+                    \end{align} \]
+                        <p style="font-size: 26px;">Einseitiger Test</p>
+                        <p style="font-size: 26px;">\(\bar{x}\) gemessener Mittelwert, <br> \(\mu\) tatsächlicher Mittelwert</p>
+                    </div>
+                    <div style="flex: 1;">
+                    </div>
+                  </div>
+            </section>
+            <section data-auto-animate>
+                <h3>Hypothesentest für Troponin</h3>
+                 <div style="display: flex; font-size: 22px; gap: 2em;">
+                    <div style="flex: 1;font-size: 22px;">
+                    \[ \begin{align}
+                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
+                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
+                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
+                        Messungen: \, n &= 1 \\
+                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
+                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
+                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
+                    \end{align} \]
+                        <p style="font-size: 26px;">Einseitiger Test</p>
+                        <p style="font-size: 26px;">\(\bar{x}\) gemessener Mittelwert, <br> \(\mu\) tatsächlicher Mittelwert</p>
+                    </div>
+                    <div style="flex: 1;">
+                    <p style="font-size: 26px;">Da \( \sigma \) bekannt ist, nehmen wir z-Test</p>
+                        \[ \begin{align}
+                        z &= \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{0{,}058 - 0{,}04}{0{,}01/ \sqrt{1}} = 1{,}8 \\
+
+                        \end{align} \]
+                        <br>
+                        <p style="font-size: 26px;"><strong> </strong></p>
+                    </div>
+                  </div>
+            </section>
+            <section data-auto-animate>
                 <h3>Hypothesentest für Troponin</h3>
                  <div style="display: flex; font-size: 22px; gap: 2em;">
                     <div style="flex: 1;font-size: 22px;">
