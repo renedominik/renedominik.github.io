@@ -91,8 +91,7 @@
                     </div>
                     <div style="flex: 4;">
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br>
-                        <h4>Sensitivität:</h4>
+                        <br><br><h4>Sensitivität:</h4>
                         <p style="font-size:26px;">\[  \frac{TP}{TP+FN} \]</p>
                         <p style="font-size:26px;">\[ = \frac{\text{Erkannte Kranke}}{\text{Tatsächlich Kranke}} \]</p>
                     </div>
@@ -108,8 +107,7 @@
                     </div>
                     <div style="flex: 4;">
 		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br>
-                        <h4>Spezifität:</h4>
+                        <br><br><h4>Spezifität:</h4>
                         <p style="font-size:26px;">\[  \frac{TN}{TN+FP} \]</p>
                         <p style="font-size:26px;">\[ = \frac{\text{Erkannte Nichtkranke}}{\text{Tatsächliche Nichtkranke}} \]</p>
                     </div>
@@ -125,7 +123,7 @@
                     </div>
                     <div style="flex: 4;">
 		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <p style="font-size: 24px;"><b>Sensitivität</b> und <b>Spezifität</b> sind identisch zu vorigem Beispiel!</p>
+                        <br><p style="font-size: 24px;"><b>Sensitivität</b> und <b>Spezifität</b> sind identisch zu vorigem Beispiel!</p>
                       <p> Was hat sich geändert?</p>
                     </div>
                 </div>
@@ -140,8 +138,7 @@
                     </div>
                     <div style="flex: 4;">
 		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br>
-                      <h4>Positiv prädiktiver Wert (PPV):</h4>
+                      <br><h4>Positiv prädiktiver Wert (PPV):</h4>
                       <p style="font-size:26px;">\[  \frac{TP}{TP+FP} \]</p>
                       <p style="font-size: 22px;">Der PPV beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
                     </div>
@@ -181,15 +178,15 @@
             <section data-auto-animate>
                 <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
                 <br>
-                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} \\ \\ &= \frac{ \text{Testgenauigkeit} \cdot \text{Prävalenz}}{\text{Wahrscheinlichkeit eines positiven Tests}}  \end{align} \] </p>
+                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} \\ \\ &= \frac{ \text{Testgenauigkeit} \cdot \text{Vortestwahrscheinlichkeit}}{\text{Wahrscheinlichkeit eines positiven Tests}}  \end{align} \] </p>
             </section>
 
            <!-- Slide 4: Satz von Bayes -->
             <section data-transition="slide-in fade-out">
                 <h3>Vergleich mit oder ohne Symptomatik</h3>
                 <br>
-               <ul style="font-size: 26px;">
-                 <li>Ohne Symptomatik: Prävalenz &approx;0,8&percnt; </li>
+               <ul style="font-size: 28px;">
+                 <li>Ohne Symptomatik: Vortestwahrscheinlichkeit = Prävalenz &approx; 0,8&percnt; </li>
                  <li>Mit Symptomen: Vortestwahrscheinlichkeit 8-30&percnt;  </li>
                 </ul>
             </section>
@@ -282,7 +279,20 @@
                     P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B)  \end{align}  \] </p>
             </section>
 
-
+<section>
+    <h3>Iterative Anwendung von Bayes</h3>
+                <ul style="font-size: 24px;">
+                    <li> Frau, 55 Jahre, asymptomatisch <br>
+                        Vortestwahrscheinlichkeit = Prävalenz = 0,008 </li>
+                    <li> Mammografie: positiv <br>
+                        Sensitivität = 88 &percnt;, Spezifität = 93 &percnt; <br>
+                        Bayes Nachtestwahrscheinlichkeit = 9.2 &percnt;  </li>
+                    <li> Zusätzlich Ultraschall: positiv <br>
+                        Neue Vortestwahrscheinlichkeit = 9.2 &percnt; <br>
+                        Sensitivität = 80 &percnt;, Spezifität = 95 &percnt; <br>
+                        Neue Bayes Nachtestwahrscheinlichkeit > 55 &percnt;  </li>
+                </ul>
+</section>
 
             <section>
                 <h4>
@@ -324,7 +334,8 @@
 
 
             <section data-transition="slide-in fade-out">
-                <h3>Rückschliessende Statistik</h3>
+                <h4> Der Wahrheit auf der Spur </h4>
+                <h3> Rückschliessende Statistik</h3>
                 <br>
                 <ul style="font-size: 24px;">
                  <li>Stichproben: Wenige Messungen </li>
