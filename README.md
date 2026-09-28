@@ -10,6 +10,8 @@ https://renedominik.github.io/teaching/machine-learning
 
 https://renedominik.github.io/teaching/statistik_einfuehrung
 
+https://renedominik.github.io/teaching/physik_in_labormedizin
+
 https://renedominik.github.io/teaching/statistics
 
 
