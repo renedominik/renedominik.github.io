@@ -150,189 +150,597 @@
   </style>
 
   <div class="tree-slide">
-    <svg viewBox="0 -40 1650 880">
+    <svg
+      id="koerpersubstanzen-tree"
+      viewBox="0 0 1650 880"
+    >
 
-      <!-- Körpersubstanzen -> Zellen / Moleküle / Erreger -->
-      <path class="tree-edge"
-            d="M 350 330
-               H 390
-               V 100
-               H 470" />
+      <!-- ===================================================== -->
+      <!-- GESAMTER BAUM                                         -->
+      <!-- ===================================================== -->
 
-      <path class="tree-edge"
-            d="M 390 330
-               H 470" />
+      <g id="tree-all">
 
-      <path class="tree-edge"
-            d="M 390 330
-               V 560
-               H 470" />
+        <!-- =================================================== -->
+        <!-- ROOT                                                -->
+        <!-- =================================================== -->
 
-      <!-- Zellen -> Erythrozyten / Thrombozyten / Leukozyten -->
-      <path class="tree-edge"
-            d="M 650 100
-               H 730
-               V 10
-               H 830" />
+        <g class="tree-node root">
 
-      <path class="tree-edge"
-            d="M 730 100
-               H 830" />
+          <rect
+            x="40"
+            y="270"
+            width="310"
+            height="200">
+          </rect>
 
-      <path class="tree-edge"
-            d="M 730 100
-               V 190
-               H 830" />
+          <text
+            class="title"
+            x="195"
+            y="305">
+            Körpersubstanzen
+          </text>
 
-      <!-- Leukozyten -> Immunsystem -->
-      <path class="tree-edge"
-            d="M 1030 190
-               H 1100
-               V 145
-               H 1180" />
+          <foreignObject
+            x="85"
+            y="330"
+            width="190"
+            height="120">
 
-      <path class="tree-edge"
-            d="M 1100 190
-               V 235
-               H 1180" />
+            <div
+              xmlns="http://www.w3.org/1999/xhtml"
+              class="root-list">
 
-      <!-- Moleküle -->
-      <path class="tree-edge"
-            d="M 670 330
-               H 750
-               V 285
-               H 830" />
+              <ul>
+                <li>Blut</li>
+                <li>Liquor</li>
+                <li>Urin</li>
+                <li>...</li>
+              </ul>
 
-      <path class="tree-edge"
-            d="M 750 330
-               V 375
-               H 830" />
+            </div>
+          </foreignObject>
 
-      <!-- Erreger -->
-      <path class="tree-edge"
-            d="M 670 560
-               H 750
-               V 470
-               H 830" />
-
-      <path class="tree-edge"
-            d="M 750 560
-               H 830" />
-
-      <path class="tree-edge"
-            d="M 750 560
-               V 650
-               H 830" />
-
-      <path class="tree-edge"
-            d="M 750 560
-               V 740
-               H 830" />
+        </g>
 
 
-      <!-- Körpersubstanzen -->
-      <g class="tree-node root">
-        <rect x="40" y="230" width="310" height="200"></rect>
+        <!-- =================================================== -->
+        <!-- ROOT -> HAUPTARME                                   -->
+        <!-- =================================================== -->
 
-        <text class="title" x="195" y="265">
-          Körpersubstanzen
-        </text>
+        <!-- Zellen -->
+        <path
+          id="edge-root-zellen"
+          class="tree-edge"
+          d="
+            M 350 370
+            H 390
+            V 150
+            H 470
+          ">
+        </path>
 
-        <foreignObject x="85" y="290" width="190" height="120">
-          <div xmlns="http://www.w3.org/1999/xhtml" class="root-list">
-            <ul>
-              <li>Blut</li>
-              <li>Liquor</li>
-              <li>Urin</li>
-              <li>...</li>
-            </ul>
-          </div>
-        </foreignObject>
+        <!-- Moleküle -->
+        <path
+          id="edge-root-molekuele"
+          class="tree-edge"
+          d="
+            M 390 370
+            H 470
+          ">
+        </path>
+
+        <!-- Erreger -->
+        <path
+          id="edge-root-erreger"
+          class="tree-edge"
+          d="
+            M 390 370
+            V 590
+            H 470
+          ">
+        </path>
+
+
+        <!-- =================================================== -->
+        <!-- ARM: ZELLEN                                         -->
+        <!-- =================================================== -->
+
+        <g id="branch-zellen">
+
+          <!-- Hauptknoten -->
+          <g class="tree-node main">
+            <rect
+              x="470"
+              y="110"
+              width="180"
+              height="80">
+            </rect>
+
+            <text
+              x="560"
+              y="150">
+              Zellen
+            </text>
+          </g>
+
+
+          <!-- Zellen -> Erythrozyten -->
+          <path
+            class="tree-edge"
+            d="
+              M 650 150
+              H 730
+              V 60
+              H 830
+            ">
+          </path>
+
+          <!-- Zellen -> Thrombozyten -->
+          <path
+            class="tree-edge"
+            d="
+              M 730 150
+              H 830
+            ">
+          </path>
+
+          <!-- Zellen -> Leukozyten -->
+          <path
+            class="tree-edge"
+            d="
+              M 730 150
+              V 240
+              H 830
+            ">
+          </path>
+
+
+          <!-- Erythrozyten -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="25"
+              width="200"
+              height="70">
+            </rect>
+
+            <text
+              x="930"
+              y="60">
+              Erythrozyten
+            </text>
+          </g>
+
+
+          <!-- Thrombozyten -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="115"
+              width="200"
+              height="70">
+            </rect>
+
+            <text
+              x="930"
+              y="150">
+              Thrombozyten
+            </text>
+          </g>
+
+
+          <!-- Leukozyten -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="205"
+              width="200"
+              height="70">
+            </rect>
+
+            <text
+              x="930"
+              y="240">
+              Leukozyten
+            </text>
+          </g>
+
+
+          <!-- Leukozyten -> Angeborenes Immunsystem -->
+          <path
+            class="tree-edge"
+            d="
+              M 1030 240
+              H 1100
+              V 195
+              H 1180
+            ">
+          </path>
+
+          <!-- Leukozyten -> Adaptives Immunsystem -->
+          <path
+            class="tree-edge"
+            d="
+              M 1100 240
+              V 285
+              H 1180
+            ">
+          </path>
+
+
+          <!-- Angeborenes Immunsystem -->
+          <g class="tree-node">
+            <rect
+              x="1180"
+              y="160"
+              width="330"
+              height="70">
+            </rect>
+
+            <text
+              x="1345"
+              y="195">
+              Angeborenes Immunsystem
+            </text>
+          </g>
+
+
+          <!-- Adaptives Immunsystem -->
+          <g class="tree-node">
+            <rect
+              x="1180"
+              y="250"
+              width="300"
+              height="70">
+            </rect>
+
+            <text
+              x="1330"
+              y="285">
+              Adaptives Immunsystem
+            </text>
+          </g>
+
+        </g>
+
+
+        <!-- =================================================== -->
+        <!-- ARM: MOLEKÜLE                                       -->
+        <!-- =================================================== -->
+
+        <g id="branch-molekuele">
+
+          <!-- Hauptknoten -->
+          <g class="tree-node main">
+            <rect
+              x="470"
+              y="330"
+              width="200"
+              height="80">
+            </rect>
+
+            <text
+              x="570"
+              y="370">
+              Moleküle
+            </text>
+          </g>
+
+
+          <!-- Moleküle -> Proteine -->
+          <path
+            class="tree-edge"
+            d="
+              M 670 370
+              H 750
+              V 325
+              H 830
+            ">
+          </path>
+
+          <!-- Moleküle -> Kleine Moleküle -->
+          <path
+            class="tree-edge"
+            d="
+              M 750 370
+              V 415
+              H 830
+            ">
+          </path>
+
+
+          <!-- Proteine -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="290"
+              width="200"
+              height="70">
+            </rect>
+
+            <text
+              x="930"
+              y="325">
+              Proteine
+            </text>
+          </g>
+
+
+          <!-- Kleine Moleküle -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="380"
+              width="240"
+              height="70">
+            </rect>
+
+            <text
+              x="950"
+              y="415">
+              Kleine Moleküle
+            </text>
+          </g>
+
+        </g>
+
+
+        <!-- =================================================== -->
+        <!-- ARM: ERREGER                                        -->
+        <!-- =================================================== -->
+
+        <g id="branch-erreger">
+
+          <!-- Hauptknoten -->
+          <g class="tree-node main">
+            <rect
+              x="470"
+              y="550"
+              width="200"
+              height="80">
+            </rect>
+
+            <text
+              x="570"
+              y="590">
+              Erreger
+            </text>
+          </g>
+
+
+          <!-- Erreger -> Viren -->
+          <path
+            class="tree-edge"
+            d="
+              M 670 590
+              H 750
+              V 500
+              H 830
+            ">
+          </path>
+
+          <!-- Erreger -> Bakterien -->
+          <path
+            class="tree-edge"
+            d="
+              M 750 590
+              H 830
+            ">
+          </path>
+
+          <!-- Erreger -> Pilze -->
+          <path
+            class="tree-edge"
+            d="
+              M 750 590
+              V 680
+              H 830
+            ">
+          </path>
+
+          <!-- Erreger -> Parasiten -->
+          <path
+            class="tree-edge"
+            d="
+              M 750 590
+              V 770
+              H 830
+            ">
+          </path>
+
+
+          <!-- Viren -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="465"
+              width="180"
+              height="70">
+            </rect>
+
+            <text
+              x="920"
+              y="500">
+              Viren
+            </text>
+          </g>
+
+
+          <!-- Bakterien -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="555"
+              width="200"
+              height="70">
+            </rect>
+
+            <text
+              x="930"
+              y="590">
+              Bakterien
+            </text>
+          </g>
+
+
+          <!-- Pilze -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="645"
+              width="160"
+              height="70">
+            </rect>
+
+            <text
+              x="910"
+              y="680">
+              Pilze
+            </text>
+          </g>
+
+
+          <!-- Parasiten -->
+          <g class="tree-node">
+            <rect
+              x="830"
+              y="735"
+              width="210"
+              height="70">
+            </rect>
+
+            <text
+              x="935"
+              y="770">
+              Parasiten
+            </text>
+          </g>
+
+        </g>
+
       </g>
-
-      <!-- Ebene 2 -->
-      <g class="tree-node main">
-        <rect x="470" y="60" width="180" height="80"></rect>
-        <text x="560" y="100">Zellen</text>
-      </g>
-
-      <g class="tree-node main">
-        <rect x="470" y="290" width="200" height="80"></rect>
-        <text x="570" y="330">Moleküle</text>
-      </g>
-
-      <g class="tree-node main">
-        <rect x="470" y="520" width="200" height="80"></rect>
-        <text x="570" y="560">Erreger</text>
-      </g>
-
-      <!-- Zellen -->
-      <g class="tree-node">
-        <rect x="830" y="-25" width="200" height="70"></rect>
-        <text x="930" y="10">Erythrozyten</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="830" y="65" width="200" height="70"></rect>
-        <text x="930" y="100">Thrombozyten</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="830" y="155" width="200" height="70"></rect>
-        <text x="930" y="190">Leukozyten</text>
-      </g>
-
-      <!-- Leukozyten -->
-      <g class="tree-node">
-        <rect x="1180" y="110" width="330" height="70"></rect>
-        <text x="1345" y="145">Angeborenes Immunsystem</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="1180" y="200" width="300" height="70"></rect>
-        <text x="1330" y="235">Adaptives Immunsystem</text>
-      </g>
-
-      <!-- Moleküle -->
-      <g class="tree-node">
-        <rect x="830" y="250" width="200" height="70"></rect>
-        <text x="930" y="285">Proteine</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="830" y="340" width="240" height="70"></rect>
-        <text x="950" y="375">Kleine Moleküle</text>
-      </g>
-
-      <!-- Erreger -->
-      <g class="tree-node">
-        <rect x="830" y="435" width="180" height="70"></rect>
-        <text x="920" y="470">Viren</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="830" y="525" width="200" height="70"></rect>
-        <text x="930" y="560">Bakterien</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="830" y="615" width="160" height="70"></rect>
-        <text x="910" y="650">Pilze</text>
-      </g>
-
-      <g class="tree-node">
-        <rect x="830" y="705" width="210" height="70"></rect>
-        <text x="935" y="740">Parasiten</text>
-      </g>
-
     </svg>
   </div>
+
+
+  <script>
+    (() => {
+
+      /*
+       * =========================================================
+       * ZENTRALE POSITIONIERUNG
+       * =========================================================
+       *
+       * Negative Werte = nach oben
+       * Positive Werte = nach unten
+       */
+
+      const shiftTree      = -40;
+
+      const shiftZellen    = -20;
+      const shiftMolekuele = 0;
+      const shiftErreger   = 20;
+
+
+      /*
+       * =========================================================
+       * GRUPPEN VERSCHIEBEN
+       * =========================================================
+       */
+
+      const tree       = document.getElementById("tree-all");
+      const zellen     = document.getElementById("branch-zellen");
+      const molekuele  = document.getElementById("branch-molekuele");
+      const erreger    = document.getElementById("branch-erreger");
+
+      tree.setAttribute(
+        "transform",
+        `translate(0 ${shiftTree})`
+      );
+
+      zellen.setAttribute(
+        "transform",
+        `translate(0 ${shiftZellen})`
+      );
+
+      molekuele.setAttribute(
+        "transform",
+        `translate(0 ${shiftMolekuele})`
+      );
+
+      erreger.setAttribute(
+        "transform",
+        `translate(0 ${shiftErreger})`
+      );
+
+
+      /*
+       * =========================================================
+       * ROOT-KANTEN AN DIE VERSCHOBENEN ÄSTE ANPASSEN
+       * =========================================================
+       *
+       * Die internen Kanten sind Teil der jeweiligen Gruppe
+       * und verschieben sich automatisch.
+       *
+       * Nur die drei Kanten vom Root zu den Hauptästen müssen
+       * an die neue y-Position des Zielknotens angepasst werden.
+       */
+
+      const baseRootY = 370;
+
+      const baseZellenY   = 150;
+      const baseMolekuelY = 370;
+      const baseErregerY  = 590;
+
+      const edgeZellen =
+        document.getElementById("edge-root-zellen");
+
+      const edgeMolekuele =
+        document.getElementById("edge-root-molekuele");
+
+      const edgeErreger =
+        document.getElementById("edge-root-erreger");
+
+
+      edgeZellen.setAttribute(
+        "d",
+        `
+          M 350 ${baseRootY}
+          H 390
+          V ${baseZellenY + shiftZellen}
+          H 470
+        `
+      );
+
+
+      edgeMolekuele.setAttribute(
+        "d",
+        `
+          M 390 ${baseRootY}
+          V ${baseMolekuelY + shiftMolekuele}
+          H 470
+        `
+      );
+
+
+      edgeErreger.setAttribute(
+        "d",
+        `
+          M 390 ${baseRootY}
+          V ${baseErregerY + shiftErreger}
+          H 470
+        `
+      );
+
+    })();
+  </script>
+
 </section>
 
-  
-	     
 
-	     
+
+	   
 	   
             <section>
                 <div style="display: flex;">
