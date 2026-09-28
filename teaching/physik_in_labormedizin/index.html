@@ -77,11 +77,13 @@
 
 
 
-<section>
-  <style>
+	   <section>
+	     <h3>Gegenstand der Untersuchung</h3>
+	     
+   <style>
     .tree-slide {
       width: 100%;
-      height: 620px;
+      height: 680px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -109,7 +111,7 @@
 
     .tree-node text {
       font-family: Arial, sans-serif;
-      font-size: 23px;
+      font-size: 22px;
       fill: #222;
       text-anchor: middle;
       dominant-baseline: middle;
@@ -126,8 +128,7 @@
   </style>
 
   <div class="tree-slide">
-
-    <svg viewBox="0 0 1500 620">
+    <svg viewBox="0 0 1650 720">
 
       <!-- ===================================================== -->
       <!-- KANTEN -->
@@ -135,55 +136,75 @@
 
       <!-- Körperflüssigkeiten -> Zellen / Moleküle -->
       <path class="tree-edge"
-            d="M 260 310
-               H 330
+            d="M 280 360
+               H 350
                V 180
-               H 410" />
+               H 430" />
 
       <path class="tree-edge"
-            d="M 330 310
-               V 440
-               H 410" />
+            d="M 350 360
+               V 500
+               H 430" />
 
       <!-- Zellen -> Erythrozyten / Thrombozyten / Leukozyten -->
       <path class="tree-edge"
-            d="M 590 180
-               H 660
-               V 80
-               H 750" />
+            d="M 610 180
+               H 690
+               V 90
+               H 780" />
 
       <path class="tree-edge"
-            d="M 660 180
-               H 750" />
+            d="M 690 180
+               H 780" />
 
       <path class="tree-edge"
-            d="M 660 180
-               V 280
-               H 750" />
+            d="M 690 180
+               V 270
+               H 780" />
 
-      <!-- Leukozyten -> angeboren / adaptiv -->
+      <!-- Leukozyten -> Angeborenes / Adaptives Immunsystem -->
       <path class="tree-edge"
-            d="M 950 280
-               H 1020
-               V 235
-               H 1100" />
+            d="M 980 270
+               H 1060
+               V 225
+               H 1140" />
 
       <path class="tree-edge"
-            d="M 1020 280
-               V 325
-               H 1100" />
+            d="M 1060 270
+               V 315
+               H 1140" />
 
-      <!-- Moleküle -> Proteine / Kleine Moleküle -->
+      <!-- Moleküle -> Proteine / Kleine Moleküle / Erreger -->
       <path class="tree-edge"
-            d="M 610 440
-               H 680
+            d="M 630 500
+               H 700
                V 395
                H 780" />
 
       <path class="tree-edge"
-            d="M 680 440
-               V 485
+            d="M 700 500
                H 780" />
+
+      <path class="tree-edge"
+            d="M 700 500
+               V 605
+               H 780" />
+
+      <!-- Erreger -> Viren / Bakterien / Pilze -->
+      <path class="tree-edge"
+            d="M 980 605
+               H 1060
+               V 515
+               H 1140" />
+
+      <path class="tree-edge"
+            d="M 1060 605
+               H 1140" />
+
+      <path class="tree-edge"
+            d="M 1060 605
+               V 695
+               H 1140" />
 
 
       <!-- ===================================================== -->
@@ -192,46 +213,46 @@
 
       <!-- Root -->
       <g class="tree-node root">
-        <rect x="40" y="270" width="220" height="80"></rect>
-        <text x="150" y="310">Körperflüssigkeiten</text>
+        <rect x="60" y="320" width="220" height="80"></rect>
+        <text x="170" y="360">Körperflüssigkeiten</text>
       </g>
 
       <!-- Ebene 2 -->
       <g class="tree-node main">
-        <rect x="410" y="140" width="180" height="80"></rect>
-        <text x="500" y="180">Zellen</text>
+        <rect x="430" y="140" width="180" height="80"></rect>
+        <text x="520" y="180">Zellen</text>
       </g>
 
       <g class="tree-node main">
-        <rect x="410" y="400" width="200" height="80"></rect>
-        <text x="510" y="440">Moleküle</text>
+        <rect x="430" y="460" width="200" height="80"></rect>
+        <text x="530" y="500">Moleküle</text>
       </g>
 
       <!-- Zellen -->
       <g class="tree-node">
-        <rect x="750" y="45" width="200" height="70"></rect>
-        <text x="850" y="80">Erythrozyten</text>
+        <rect x="780" y="55" width="200" height="70"></rect>
+        <text x="880" y="90">Erythrozyten</text>
       </g>
 
       <g class="tree-node">
-        <rect x="750" y="145" width="200" height="70"></rect>
-        <text x="850" y="180">Thrombozyten</text>
+        <rect x="780" y="145" width="200" height="70"></rect>
+        <text x="880" y="180">Thrombozyten</text>
       </g>
 
       <g class="tree-node">
-        <rect x="750" y="245" width="200" height="70"></rect>
-        <text x="850" y="280">Leukozyten</text>
+        <rect x="780" y="235" width="200" height="70"></rect>
+        <text x="880" y="270">Leukozyten</text>
       </g>
 
       <!-- Leukozyten -->
       <g class="tree-node">
-        <rect x="1100" y="200" width="240" height="70"></rect>
-        <text x="1220" y="235">Angeborenes IS</text>
+        <rect x="1140" y="190" width="330" height="70"></rect>
+        <text x="1305" y="225">Angeborenes Immunsystem</text>
       </g>
 
       <g class="tree-node">
-        <rect x="1100" y="290" width="240" height="70"></rect>
-        <text x="1220" y="325">Adaptives IS</text>
+        <rect x="1140" y="280" width="300" height="70"></rect>
+        <text x="1290" y="315">Adaptives Immunsystem</text>
       </g>
 
       <!-- Moleküle -->
@@ -241,15 +262,34 @@
       </g>
 
       <g class="tree-node">
-        <rect x="780" y="450" width="240" height="70"></rect>
-        <text x="900" y="485">Kleine Moleküle</text>
+        <rect x="780" y="465" width="240" height="70"></rect>
+        <text x="900" y="500">Kleine Moleküle</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="780" y="570" width="200" height="70"></rect>
+        <text x="880" y="605">Erreger</text>
+      </g>
+
+      <!-- Erreger -->
+      <g class="tree-node">
+        <rect x="1140" y="480" width="180" height="70"></rect>
+        <text x="1230" y="515">Viren</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="1140" y="570" width="200" height="70"></rect>
+        <text x="1240" y="605">Bakterien</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="1140" y="660" width="160" height="70"></rect>
+        <text x="1220" y="695">Pilze</text>
       </g>
 
     </svg>
-
   </div>
 </section>
-
 
 	   
             <section>
