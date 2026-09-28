@@ -33,14 +33,14 @@
 	    
 
 	    <section>
-	      <h2>Physik in der Medizin</h2>
+	      <h3>Physik in der Medizin</h2>
 	    </section>
 
 
 
 	    <section>
-	      <h2> Was hat er bloß?</h2>
-	      <img style="width:30%;" src="img/krank.png">
+	      <h3> Was fehlt ihm bloss?</h2>
+	      <img style="width:35%;" src="img/krank.png">
 	    </section>
 	    
 	    
@@ -63,6 +63,195 @@
 
 	    
 	    
+           <section>
+                <h3>Labormedizin</h3>
+                <ul style="font-size: 24px;">
+                 <li>Klinische Chemie</li>
+                 <li>Mikrobiologie</li>
+                 <li>Hämatologie</li>
+		 <li>Immunologie</li>
+		 <li>Transfusionsmedizin</li>
+                </ul>
+            </section>
+
+
+
+
+<section>
+  <style>
+    .tree-slide {
+      width: 100%;
+      height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tree-slide svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .tree-edge {
+      stroke: #777;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .tree-node rect {
+      fill: white;
+      stroke: #555;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+
+    .tree-node text {
+      font-family: Arial, sans-serif;
+      font-size: 23px;
+      fill: #222;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+
+    .tree-node.root rect {
+      stroke-width: 3;
+    }
+
+    .tree-node.root text,
+    .tree-node.main text {
+      font-weight: 600;
+    }
+  </style>
+
+  <div class="tree-slide">
+
+    <svg viewBox="0 0 1500 620">
+
+      <!-- ===================================================== -->
+      <!-- KANTEN -->
+      <!-- ===================================================== -->
+
+      <!-- Körperflüssigkeiten -> Zellen / Moleküle -->
+      <path class="tree-edge"
+            d="M 260 310
+               H 330
+               V 180
+               H 410" />
+
+      <path class="tree-edge"
+            d="M 330 310
+               V 440
+               H 410" />
+
+      <!-- Zellen -> Erythrozyten / Thrombozyten / Leukozyten -->
+      <path class="tree-edge"
+            d="M 590 180
+               H 660
+               V 80
+               H 750" />
+
+      <path class="tree-edge"
+            d="M 660 180
+               H 750" />
+
+      <path class="tree-edge"
+            d="M 660 180
+               V 280
+               H 750" />
+
+      <!-- Leukozyten -> angeboren / adaptiv -->
+      <path class="tree-edge"
+            d="M 950 280
+               H 1020
+               V 235
+               H 1100" />
+
+      <path class="tree-edge"
+            d="M 1020 280
+               V 325
+               H 1100" />
+
+      <!-- Moleküle -> Proteine / Kleine Moleküle -->
+      <path class="tree-edge"
+            d="M 610 440
+               H 680
+               V 395
+               H 780" />
+
+      <path class="tree-edge"
+            d="M 680 440
+               V 485
+               H 780" />
+
+
+      <!-- ===================================================== -->
+      <!-- KNOTEN -->
+      <!-- ===================================================== -->
+
+      <!-- Root -->
+      <g class="tree-node root">
+        <rect x="40" y="270" width="220" height="80"></rect>
+        <text x="150" y="310">Körperflüssigkeiten</text>
+      </g>
+
+      <!-- Ebene 2 -->
+      <g class="tree-node main">
+        <rect x="410" y="140" width="180" height="80"></rect>
+        <text x="500" y="180">Zellen</text>
+      </g>
+
+      <g class="tree-node main">
+        <rect x="410" y="400" width="200" height="80"></rect>
+        <text x="510" y="440">Moleküle</text>
+      </g>
+
+      <!-- Zellen -->
+      <g class="tree-node">
+        <rect x="750" y="45" width="200" height="70"></rect>
+        <text x="850" y="80">Erythrozyten</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="750" y="145" width="200" height="70"></rect>
+        <text x="850" y="180">Thrombozyten</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="750" y="245" width="200" height="70"></rect>
+        <text x="850" y="280">Leukozyten</text>
+      </g>
+
+      <!-- Leukozyten -->
+      <g class="tree-node">
+        <rect x="1100" y="200" width="240" height="70"></rect>
+        <text x="1220" y="235">Angeborenes IS</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="1100" y="290" width="240" height="70"></rect>
+        <text x="1220" y="325">Adaptives IS</text>
+      </g>
+
+      <!-- Moleküle -->
+      <g class="tree-node">
+        <rect x="780" y="360" width="200" height="70"></rect>
+        <text x="880" y="395">Proteine</text>
+      </g>
+
+      <g class="tree-node">
+        <rect x="780" y="450" width="240" height="70"></rect>
+        <text x="900" y="485">Kleine Moleküle</text>
+      </g>
+
+    </svg>
+
+  </div>
+</section>
+
+
+	   
             <section>
                 <div style="display: flex;">
                     <div style="flex: 6; padding-right: 10px;">
@@ -87,25 +276,7 @@
 
 
 	    
-            <!-- Slide 2: Erklärung der Prävalenz -->
-
-
-            <!-- Slide 5: 60:40 Layout mit Bild und Text -->
-            <section>
-                <div style="display: flex;">
-                    <div style="flex: 6; padding-right: 10px;">
-                        <img src="img/icon_matrix_small.png" alt="Verteilung von Patienten" style="width: 80%; height: auto;">
-                    </div>
-                    <div style="flex: 4;">
-		       <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br><br><h4>Sensitivität:</h4>
-                        <p style="font-size:26px;">\[  \frac{TP}{TP+FN} \]</p>
-                        <p style="font-size:26px;">\[ = \frac{\text{Erkannte Kranke}}{\text{Tatsächlich Kranke}} \]</p>
-                    </div>
-                </div>
-            </section>
-
-
+ 
             <!-- Slide 5: 60:40 Layout mit Bild und Text -->
             <section>
                 <div style="display: flex;">
@@ -122,49 +293,8 @@
             </section>
 
 
-            <!-- Slide 5: 60:40 Layout mit Bild und Text -->
-            <section>
-                <div style="display: flex;">
-                    <div style="flex: 6; padding-right: 10px;">
-                        <img src="img/icon_matrix_large.png" alt="Verteilung von Patienten" style="width: 65%; height: auto;">
-                    </div>
-                    <div style="flex: 4;">
-		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                        <br><p style="font-size: 24px;"><b>Sensitivität</b> und <b>Spezifität</b> sind identisch zu vorigem Beispiel!</p>
-                      <p> Was hat sich geändert?</p>
-                    </div>
-                </div>
-            </section>
 
-
-           <!-- Slide 5: 60:40 Layout mit Bild und Text -->
-            <section>
-                <div style="display: flex;">
-                    <div style="flex: 6; padding-right: 10px;">
-                        <img src="img/icon_matrix_large.png" alt="Verteilung von Patienten" style="width: 65%; height: auto;">
-                    </div>
-                    <div style="flex: 4;">
-		      <img src="img/logo.png" alt="Verteilung von Patienten" style="width: 50%; height: auto;">
-                      <br><h4>Positiv prädiktiver Wert (PPV):</h4>
-                      <p style="font-size:26px;">\[  \frac{TP}{TP+FP} \]</p>
-                      <p style="font-size: 22px;">Der PPV beschreibt die Wahrscheinlichkeit, dass eine Person mit einem positiven Testergebnis tatsächlich krank ist.</p>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
-            <section>
-              <h3>Bedingte Wahrscheinlichkeit</h3>
-                <br>
-	      <div style="font-size:28px;">
-                <p>Die bedingte Wahrscheinlichkeit beschreibt die Wahrscheinlichkeit, dass ein Ereignis A eintritt, unter der Voraussetzung, dass ein anderes Ereignis B bereits eingetreten ist.</p>
-                <p><strong>P(A|B)</strong> </p> <!-- = P(A ∩ B) / P(B)</p> -->
-                <p>Beispiel: P(Krank|Positiver Test): die Wahrscheinlichkeit, dass eine Person krank ist (A), gegeben, dass ein positiver Test vorliegt (B).</p>
-		</div>
-            </section>
-
-            <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
+             <!-- Slide 3: Erklärung der bedingten Wahrscheinlichkeit -->
             <section>
               <h3>Thomas Bayes 1701 - 1761</h3>
 	      <div style="font-size:28px;">
@@ -175,448 +305,6 @@
 		</div>
             </section>
 
-
-            <!-- Slide 4: Satz von Bayes -->
-            <section data-auto-animate>
-                <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
-                <br>
-                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}   \end{align} \] </p>
-            </section>
-            <section data-auto-animate>
-                <h3>Wahrscheinlichkeit tatsächlich krank zu sein</h3>
-                <br>
-                <p style="font-size:24px;">\[ \begin{align} P(\text{Krank} | \text{Positiver Test}) &= \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} \\ \\ &= \frac{ \text{Testgenauigkeit} \cdot \text{Vortestwahrscheinlichkeit}}{\text{Wahrscheinlichkeit eines positiven Tests}}  \end{align} \] </p>
-            </section>
-
-           <!-- Slide 4: Satz von Bayes -->
-            <section data-transition="slide-in fade-out">
-                <h3>Vergleich mit oder ohne Symptomatik</h3>
-                <br>
-               <ul style="font-size: 28px;">
-                 <li>Ohne Symptomatik: Vortestwahrscheinlichkeit = Prävalenz &approx; 0,8&percnt; </li>
-                 <li>Mit Symptomen: Vortestwahrscheinlichkeit 8-30&percnt;  </li>
-                </ul>
-            </section>
-
-           <!-- Slide 4: Satz von Bayes -->
-            <section data-auto-animate data-transition="fade">
-                <h3>Berechnung ohne Symptomatik</h3>
-                <br>
-                <p style="font-size:24px;">\[
-                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}
-                    \] </p>
-                <br>
-               <ul style="font-size: 24px;">
-                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                   <li>
-                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
-                   </li>
-
-                </ul>
-                <br>
-                <br>
-            </section>
-            <section data-auto-animate data-transition="fade">
-                <h3>Berechnung ohne Symptomatik</h3>
-                <br>
-                <p style="font-size:24px;">\[
-                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})}
-                    \] </p>
-                <br>
-               <ul style="font-size: 24px;">
-                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                   <li>
-                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
-                   </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
-                </ul>
-                <br>
-                <br>
-                <p style="font-size:24px;">\[ \begin{align}
-                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\ \\
-                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B) \\
-                    &= \text{Gesetz der totalen Wahrscheinlichkeit}
-                    \end{align} \] </p>
-            </section>
-            <section data-auto-animate data-transition="fade">
-                <h3>Berechnung ohne Symptomatik</h3>
-                <br>
-                <p style="font-size:24px;">\[
-                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} = \frac{ 0{,}88 \cdot 0{,}008}{0{,}07648} \approx 9,2 \%
-                    \] </p>
-                <br>
-               <ul style="font-size: 24px;">
-                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                   <li>
-                       P(Krank) = Prävalenz = Vortestwahrscheinlichkeit = 0,008
-                   </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
-                </ul>
-                <br>
-                <br>
-                <p style="font-size:24px;">\[ \begin{align}
-                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}008) + (0{,}07 \cdot 0{,}992) = 0{,}07648 \\ \\
-                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B) \\
-                    &= \text{Gesetz der totalen Wahrscheinlichkeit}
-                    \end{align} \] </p>
-            </section>
-
-
-
-
-                  <!-- Slide 4: Satz von Bayes -->
-            <section data-transition="fade-in slide-out">
-                <h3>Berechnung mit Symptomatik</h3>
-                <br>
-                <p style="font-size:24px;">\[
-                    P(\text{Krank} | \text{Positiver Test}) = \frac{P(\text{Positiver Test}| \text{Krank}) \cdot P(\text{Krank})}{ P(\text{Positiver Test})} = \frac{ 0{,}88 \cdot 0{,}20}{0{,}232} \approx 75{,}9 \%
-                    \] </p>
-                <br>
-               <ul style="font-size: 24px;">
-                 <li> P(Positiver Test| Krank) = Sensitivität = 0,88 </li>
-                   <li>
-                       Vortestwahrscheinlichkeit = 0,20
-                   </li>
-                 <li> Falsch-Positiv-Rate = 1 - Spezifität = 1 - 0,93 = 0,07  </li>
-                </ul>
-                <br>
-                <br>
-                <p style="font-size:24px;">\[ \begin{align}
-                    P(\text{Positiver Test}) &= (0{,}88 \cdot 0{,}20) + (0{,}07 \cdot 0{,}80) = 0{,}232 \\ \\
-                    P(A) &= P(A | B) \cdot P(B) + P(A|\neg B) \cdot P(\neg B)  \end{align}  \] </p>
-            </section>
-
-<section>
-    <h3>Iterative Anwendung von Bayes</h3>
-                <ul style="font-size: 24px;">
-                    <li> Frau, 55 Jahre, asymptomatisch <br>
-                        Vortestwahrscheinlichkeit = Prävalenz = 0,008 </li>
-                    <li> Mammografie: positiv <br>
-                        Sensitivität = 88 &percnt;, Spezifität = 93 &percnt; <br>
-                        Bayes Nachtestwahrscheinlichkeit = 9.2 &percnt;  </li>
-                    <li> Zusätzlich Ultraschall: positiv <br>
-                        Neue Vortestwahrscheinlichkeit = 9.2 &percnt; <br>
-                        Sensitivität = 80 &percnt;, Spezifität = 95 &percnt; <br>
-                        Neue Bayes Nachtestwahrscheinlichkeit > 55 &percnt;  </li>
-                </ul>
-    <p style="font-size:24px;text-align:left;margin-left:230px;">
-       \(\Rightarrow\) Die 2. Testmethode hat die Genauigkeit weniger erhöht <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; als ein konkretes Symptom.
-    </p>
-
-</section>
-
-            <section>
-                <h4>
-                    Die Verteilung der Nichtkranken und Kranken
-                </h4>
-
-                <div style="max-width: 100%; height: auto;">
-                    <img src="img/gaussian_confusion.png" alt="Verteilung von Patienten" style="width: 100%; height: auto;">
-                </div>
-                <p style="font-size: 22px;">Die x-Achse stellt einen Laborwert dar. Rechts des Grenzwertes wird alles als positiv kategorisiert, links als negativ. <br>
-                    Je weiter die Verteilungen voneinander entfernt sind, desto besser ist der Laborwert geeignet, krank von nicht-krank zu unterscheiden.
-                </p>
-            </section>
-
-            <section data-state="wide" data-transition="slide-in fade-out">
-                <h4>ROC - Receiver operating curve  </h4>
-                <h5>Die Suche nach dem idealen Grenzwert </h5>
-
-                <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
-                 <source src="img/roc_animation.mp4" type="video/mp4">
-                 Ihr Browser unterstützt das Video-Tag nicht.
-                </video>
-                <p  style="font-size: 20px;max-width: 100%;">
-                    <strong> Links:</strong> gelb entspricht positiv (krank), blau negativ (nicht-krank).
-                    Das Verhältnis der Flächen rechts und links des Grenzwertes (gepunktete Linie) gibt die TP- (gelb) und FP-Raten (blau). <br>
-                    <strong>Rechts: ROC: </strong> sortiere Laborwerte und zeichne für jeden Laborwert dessen TP- und FP-Raten.
-                </p>
-            </section>
-
-            <section data-transition="fade-in slide-out">
-                <h4>Trennung Krank von Nichtkrank</h4>
-                <br>
-                <video autoplay loop muted playsinline controls style="max-width: 100%; height: auto;">
-                <source src="img/roc_animation2.mp4" type="video/mp4">
-                Ihr Browser unterstützt das Video-Tag nicht.
-                </video>
-                <p style="font-size: 0.7em; color: gray;">Je schlechter die Separierbarkeit, desto flacher die ROC-Kurve</p>
-            </section>
-
-
-
-            <section>
-                <h4>Die Normalverteilung und ihre Kerngrößen</h4>
-
-	      <div style="font-size:22px;">
-            <img src="img/p-wert.png" alt="Verteilung von Patienten" style="width: 65%; height: auto;">
-                <p><strong> \[ z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} \] </strong> </p>
-              <p style="font-size:24px;"> p-Wert: Verhältnis der Flächen zu einem bestimmten z-Wert <br> \( \Rightarrow \) die Wahrscheinlichkeit der Nullhypothese</p>
-
-		</div>
-            </section>
-
-            <section>
-                <h3>Johann Carl Friedrich Gauß 1777 - 1855</h3>
- 	      <div style="font-size:22px;">
-            <img src="img/gauss.jpeg" alt="Gauß" style="width: 30%; height: auto;">
-                <p>Deutscher Mathematiker und Physiker </p>
-		</div>
-
-
-            </section>
-
-	    <section>
-                <h3>Das Problem mit Mittelwerten</h3>
-            <p style="font-size:28px;">...sie stimmen meistens nicht </p>
-            <br>
-                <ul style="font-size:24px;">
-                    <li> die Stichproben sind zu klein </li>
-                    <li> selbst Stichproben aus 100 Messungen führen nicht zu eindeutigen Mittelwerten</li>
-                    <li> stattdessen Angabe eines wahrscheinlichen Bereichs</li>
-                </ul>
-               	      <div style="font-size:22px;">
-                <img src="img/means.png" alt="Verteilung von Patienten" style="width: 60%; height: auto;">
-                      </div>
-        </section>
-
-
-    <section>
-                <div style="display: flex;">
-                    <div style="flex: 1; padding-right: 10px;">
-                        <img src="img/konfidenz.png" alt="Konfidenzintervalle" style="width: 70%; height: auto;">
-                    </div>
-                    <div style="flex: 1;">
-                        <br>
-	                    <h4>Konfidenzintervalle:</h4>
-               <ul style="font-size:26px;">
-                    <li> 95&percnt; Konfidenzniveau </li>
-                    <li> 100 Stichproben mit jeweils 30 Messungen</li>
-                    <li> 94 Intervalle überdecken den exakten Erwartungswert &mu;, die anderen 6 nicht</li>
-                </ul>
-                     </div>
-                </div>
-        </section>
-
-
-
-            <section data-transition="slide-in fade-out">
-                <h4> Der Wahrheit auf der Spur </h4>
-                <h3> Rückschliessende Statistik</h3>
-                <br>
-                <ul style="font-size: 24px;">
-                 <li>Stichproben: Wenige Messungen </li>
-                 <li>Hypothesentests: Rückschlüsse auf dahinterliegende Gesamtheit </li>
-                 <li>Signifikanz: Verlässlichkeit von Rückschlüssen </li>
-                    <li> Konfidenz: Intervall in dem eine Größe (z.B. Mittelwert) mit einer bestimmten Wahrscheinlichkeit liegt</li>
-                </ul>
-                <div style="width: 100%; height: auto;">
-                    <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 15%; height: auto;">
-                </div>
-            </section>
-
-        <section data-transition="fade-in slide-out">
-                <h3>Die Logik der Signifikanz</h3>
-            <br>
-                <ul style="font-size: 24px;">
-                 <li>Eine Aussage ist umso aussagekräftiger, je unwahrscheinlicher ihr Gegenteil ist </li>
-                 <li>Gegenstand sind also binäre Entweder-Oder-Fragen </li>
-                    <li> Je signifikanter, desto unwahrscheinlich ist eine zufällige Beobachtung</li>
-                    <li> Je weniger Stichproben, desto größer der Einfluss des Zufalls</li>
-                </ul>
-            <br><br>
-                <div style="width: 100%; height: auto;">
-                    <img src="img/sherlock.png" alt="Verteilung von Patienten" style="width: 15%; height: auto;">
-                </div>
-            </section>
-
-
-            <section>
-                <h3>Hypothesentests</h3>
-                <br>
-                <ul style="font-size: 24px;">
-                 <li>Ziel: Prüfen, wie verlässlich ein beobachteter Effekt ist</li>
-                 <li>Damit Ausschluss einer zufälligen Erscheinung</li>
-                    <li> Elemente:</li>
-                    <ul style="font-size: 22px;">
-                        <li> Kenntnis der zugrundeliegenden Verteilung</li>
-                     <li>Nullhypothese H<sub>0</sub> - Annahme, dass es kein Effekt gibt </li>
-                     <li> Alternativhypothese H<sub>1</sub>  - Annahme, das es einen Effekt gibt</li>
-                     <li>p-Wert - die Wahrscheinlichkeit der Nullhypothese</li>
-                     <li>Signifikanzniveau \(\alpha\) (meist 5&percnt; = 0,05) - die vorab festgelegte Zielgröße, der maximal erlaubte p-Wert</li>
-                    </ul>
-                    <li>Aufgabe: Wiederlegen der Nullypothese \(\Rightarrow\) p kleiner Signifikanzniveau</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Verteilungen und ihre Hypothesentests</h3>
-                <br>
-                <table style="font-size: 22px;">
-              <tr>
-                <th><strong>Verteilung</strong></th>
-                <th><strong>Hypothesentest</strong></th>
-                <th><strong>Anmerkungen</strong></th>
-              </tr>
-                    <tr><td>Normalverteilung</td><td>z-Test (n&ge; 30), t-Test (n<30)	</td><td>Häufigste Annahme</td></tr>
-                    <tr><td>Binomialverteilung </td><td>	Binomialtest, χ²-Test	</td><td>Für diskrete Daten geeignet</td></tr>
-                    <tr><td>Poissonverteilung	</td><td>Poisson-Test</td><td>	Für Ereigniszählungen in Intervallen</td></tr>
-                    <tr><td>Exponentialverteilung	</td><td>Likelihood-Ratio-Test	</td><td>Eher in Spezialfällen</td></tr>
-                    <tr><td>Unbekannte Verteilung	</td><td>Nichtparametrische Tests (z.B. Wilcoxon, U-Test)	</td><td>Für robuste Verfahren ohne Verteilungsannahme</td></tr>
-             </table>
-            </section>
-
-
-            <section data-auto-animate>
-                <h3>Hypothesentest für Troponin</h3>
-                 <div style="display: flex; font-size: 22px; gap: 2em;">
-                    <div style="flex: 1;font-size: 22px;">
-                    \[ \begin{align}
-                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
-                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
-                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
-                        Messungen: \, n &= 1 \\
-                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
-                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
-                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
-                    \end{align} \]
-                    </div>
-                    <div style="flex: 1;">
-                    </div>
-                  </div>
-            </section>
-            <section data-auto-animate>
-                <h3>Hypothesentest für Troponin</h3>
-                 <div style="display: flex; font-size: 22px; gap: 2em;">
-                    <div style="flex: 1;font-size: 22px;">
-                    \[ \begin{align}
-                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
-                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
-                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
-                        Messungen: \, n &= 1 \\
-                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
-                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
-                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
-                    \end{align} \]
-                        <p style="font-size: 26px;">Einseitiger Test</p>
-                        <p style="font-size: 26px;">\(\bar{x}\) gemessener Mittelwert, <br> \(\mu\) tatsächlicher Mittelwert</p>
-                    </div>
-                    <div style="flex: 1;">
-                    </div>
-                  </div>
-            </section>
-            <section data-auto-animate>
-                <h3>Hypothesentest für Troponin</h3>
-                 <div style="display: flex; font-size: 22px; gap: 2em;">
-                    <div style="flex: 1;font-size: 22px;">
-                    \[ \begin{align}
-                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
-                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
-                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
-                        Messungen: \, n &= 1 \\
-                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
-                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
-                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
-                    \end{align} \]
-                        <p style="font-size: 26px;">Einseitiger Test</p>
-                        <p style="font-size: 26px;">\(\bar{x}\) gemessener Mittelwert, <br> \(\mu\) tatsächlicher Mittelwert</p>
-                    </div>
-                    <div style="flex: 1;">
-                    <p style="font-size: 26px;">Da \( \sigma \) bekannt ist, nehmen wir z-Test</p>
-                        \[ \begin{align}
-                        z &= \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{0{,}058 - 0{,}04}{0{,}01/ \sqrt{1}} = 1{,}8 \\
-
-                        \end{align} \]
-                        <br>
-                        <p style="font-size: 26px;"><strong> </strong></p>
-                    </div>
-                  </div>
-            </section>
-            <section data-auto-animate>
-                <h3>Hypothesentest für Troponin</h3>
-                 <div style="display: flex; font-size: 22px; gap: 2em;">
-                    <div style="flex: 1;font-size: 22px;">
-                    \[ \begin{align}
-                        Normwert: \mu_0 &= 0{,}04 ng/ml  \\
-                        Gemessener\, Wert: \, \bar{x} &= 0{,}058 ng/ml  \\
-                        Bekannte \, Streuung: \, \sigma &= 0{,}001 ng/ml \\
-                        Messungen: \, n &= 1 \\
-                        Signifikanzniveau: \, \alpha &= 0{,}05 \\
-                        Nullhypothese: \, \mu &= \mu_0 = 0{,}04 ng/ml \\
-                         Alternativhypothese: \,  \mu &> 0{,}04 ng/ml \\
-                    \end{align} \]
-                        <p style="font-size: 26px;">Einseitiger Test</p>
-                        <p style="font-size: 26px;">\(\bar{x}\) gemessener Mittelwert, <br> \(\mu\) tatsächlicher Mittelwert</p>
-                    </div>
-                    <div style="flex: 1;">
-                    <p style="font-size: 26px;">Da \( \sigma \) bekannt ist, nehmen wir z-Test</p>
-                        \[ \begin{align}
-                        z &= \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}} = \frac{0{,}058 - 0{,}04}{0{,}01/ \sqrt{1}} = 1{,}8 \\
-                        p &= 0{,}0359 \; \text{aus Tabelle} \\
-                        p &= 0{,}0359 < \alpha = 0{,}05 \; \\
-                        & \Rightarrow H_0 \; \text{wird verworfen} \\
-                        & \Rightarrow \text{Effekt ist signifikant!} \\
-                        \end{align} \]
-                        <br>
-                        <p style="font-size: 26px;"><strong> \(\Rightarrow\) Troponin ist signifikant erhöht! </strong></p>
-                    </div>
-                  </div>
-            </section>
-
-            <section>
-                <h3>Einzelparameter sind wie Puzzleteile!</h3>
-                <br>
-                <ul style="font-size:28px;">
-                    <li> Erhöhte Werte bedeuten noch keinen Herzinfarkt</li>
-                    <li> Normale Werte bedeuten nicht, dass kein Herzinfarkt vorliegt</li>
-                    <li> Klinische Gesamtbeurteilung ist entscheidend!</li>
-                </ul>
-            </section>
-
-
-<section data-transition="slide-in fade-out">
-    <h3> Korrelation </h3>
-    <p>Wie stark hängen zwei Größen zusammen?</p>
-    <div style="centering;font-size:20px;">
-        <img src="img/pearson.png" alt="Pearson Korrelation" style="width: 70%; height: auto;">
-  \[  r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}} = \frac{\mathrm{Cov}(x, y)}{\sigma_x \cdot \sigma_y} \]
-    </div>
-</section>
-<section data-transition="fade-in slide-out">
-    <h3> Korrelation </h3>
-    <p>Wie stark hängen zwei Größen zusammen?</p>
-    <div style="centering;font-size:20px;">
-        <img src="img/pearson2.png" alt="Pearson Korrelation" style="width: 70%; height: auto;">
-  \[  r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}} = \frac{\mathrm{Cov}(x, y)}{\sigma_x \cdot \sigma_y} \]
-    </div>
-</section>
-
-            
-<section>
-    <h3> Korrelation ist keine Kausalität</h3>
-    <br>
-    <ul style="font-size:24px;">
-        <li> 99%: Scheidungsrate in Maine (USA) und pro Kopf Verbrauch von Magarine</li>
-        <li> 95%: Hochzeitsrate in Kentucky und Menschen die ertrinken, nachdem sie aus einem Fischerboot gefallen sind</li>
-    </ul>
-    <div style="centering;font-size:24px;">
-    <br>
-    <br>
-    https://www.tylervigen.com
-    </div>
-</section>
-
-
-<section>
-    <h3> Grenzen der Korrelation </h3>
-    <br>
-    <div style="centering;font-size:20px;">
-    <br>
-        <img src="img/Correlation_examples.png" alt="Pearson Korrelation" style="width: 70%; height: auto;">
-  \[  r = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2} \cdot \sqrt{\sum_{i=1}^{n} (y_i - \bar{y})^2}} = \frac{\mathrm{Cov}(x, y)}{\sigma_x \cdot \sigma_y} \]
-    </div>
-
-</section>
 
 <section>
     <h3> Ende gut, alles gut </h3>
@@ -639,52 +327,4 @@
 
 </body>
 </html>
-
-<!--
-    Modul 3.3: Methodenimplementierung und –validierung
-Inhalte* (Theorie), 10 Vorlesungen:
-Lehrziel:
-Die auszubildende Person:
-• schätzt die statistische Sicherheit des Ergebnisses ein,
-• reflektiert den Unterschied zwischen Verifizierung und Validierung von Methoden
-und Verfahren
-
-Inhalte:
-• Diagnostische Genauigkeit, Testgütekriterien
-- Sensitivität
-- Spezifität
-- Positiv prädiktiver und negativ prädiktiver Wert - ROC-Kurve
-- Konfidenzintervalls
-- p-Wert
-• Verifizierung und Validation von Methoden
-- Definition
-- Verfahren
-- Statistische Konzepte - Umsetzung
-
-Lehrziel:
-Die auszubildende Person:
-überprüft bioanalytische Methoden auf ihre Validität, Robustheit und Leistungsfähigkeit und setzt dabei validierte Dokumentationssysteme ein.
-und wendet die Grundlagen der interferenzstatistischen Datenanalyse unter Berücksichtigung der Messwerttheorie an.
-Inhalte:
-Evaluierungskriterien von Analysensystemen - Präzision
-- Richtigkeit
-- Linearität
-- Spezifität und Sensitivität und deren Einflussfaktoren - Prädiktive Werte
-- analytische Grenzen
-- Robustheit
-- Verschleppungseffekte
-- Kapazität eines Analysensystems - Methodenhierarchie
-• Qualifizierung von Geräten
-
-Prüfverfahren in der Analytik
-- Ausgewählte Methoden
-- Grundlagen der interferenzstatistischen Datenanalyse
-- Ausgewählte Parameter [Überblick, Bedeutung, Grenzen] • Dokumentation
-
-Lehrziel:
-Die auszubildende Person:
-• legt Bewertungs- und Entscheidungskriterien für die Befundfreigabe fest.
-Inhalte:
-• Bewertungs- und Entscheidungskriterien für die Befundfreigabe
-  -->
 
