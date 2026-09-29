@@ -808,21 +808,19 @@
 
 	     
 
-	     
+
 <section class="sepsis-diagnostik-slide">
   <style>
     .sepsis-diagnostik-slide {
       box-sizing: border-box;
 
-      /* Breiter als die normale Reveal-Fläche */
       width: 112% !important;
-      height: 108% !important;
+      height: 103% !important;
 
-      /* etwas nach links und oben ziehen */
       margin-left: -6%;
-      margin-top: -4%;
+      margin-top: -0.5%;
 
-      padding: 0.05em 0.45em 0.15em 0.45em;
+      padding: 0.08em 0.45em 0.12em 0.45em;
 
       display: flex !important;
       flex-direction: column;
@@ -830,26 +828,26 @@
     }
 
     .sepsis-diagnostik-slide h2 {
-      margin: 0 0 0.10em 0;
+      margin: 0 0 0.08em 0;
       font-size: 1.30em;
-      line-height: 1.0;
+      line-height: 1.05;
       font-weight: 650;
       text-align: left;
     }
 
     .sepsis-subtitle {
       font-size: 0.47em;
-      line-height: 1.1;
+      line-height: 1.08;
       color: #666;
       text-align: left;
-      margin: 0 0 0.18em 0;
+      margin: 0 0 0.16em 0;
     }
 
     .timeline-arrow {
       position: relative;
       height: 0.18em;
       background: #666;
-      margin: 0.03em 0.75em 0.08em 0.35em;
+      margin: 0.02em 0.75em 0.07em 0.35em;
       flex-shrink: 0;
     }
 
@@ -920,6 +918,13 @@
       font-size: 0.38em;
 
       overflow-wrap: anywhere;
+
+      /* linke und untere Einfassung */
+      border-left-width: 4px;
+      border-left-style: solid;
+
+      border-bottom-width: 6px;
+      border-bottom-style: solid;
     }
 
     .diag-card strong {
@@ -938,36 +943,49 @@
       margin-top: 0.07em;
     }
 
+
+    /* etwas kräftigere / weniger blasse Farben */
+
     .host {
-      background: #eef4fb;
-      border-left: 4px solid #4b79a8;
+      background: #dfeafa;
+      border-left-color: #4b79a8;
+      border-bottom-color: #4b79a8;
     }
 
     .organ {
-      background: #f5f0fb;
-      border-left: 4px solid #8158a5;
+      background: #ebe0f7;
+      border-left-color: #8158a5;
+      border-bottom-color: #8158a5;
     }
 
     .pathogen {
-      background: #eef8f0;
-      border-left: 4px solid #4c8a5a;
+      background: #ddf0e1;
+      border-left-color: #4c8a5a;
+      border-bottom-color: #4c8a5a;
     }
 
     .culture {
-      background: #fff5e9;
-      border-left: 4px solid #c78632;
+      background: #fae8cf;
+      border-left-color: #c78632;
+      border-bottom-color: #c78632;
     }
+
+
+    /* Legende bewusst unten halten */
 
     .bottom-legend {
       display: flex;
       justify-content: center;
       align-items: center;
 
-      gap: 1.15em;
+      gap: 1.35em;
 
-      margin-top: 0.15em;
-      font-size: 0.31em;
-      line-height: 1;
+      margin-top: auto;
+      padding-top: 0.16em;
+      padding-bottom: 0.02em;
+
+      font-size: 0.38em;
+      line-height: 1.05;
 
       flex-shrink: 0;
       white-space: nowrap;
@@ -976,13 +994,20 @@
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 0.27em;
+      gap: 0.34em;
+      font-weight: 500;
     }
 
     .legend-box {
-      width: 0.72em;
-      height: 0.72em;
+      width: 0.85em;
+      height: 0.85em;
       border-radius: 0.10em;
+
+      border-left-width: 3px;
+      border-left-style: solid;
+
+      border-bottom-width: 4px;
+      border-bottom-style: solid;
     }
   </style>
 
@@ -1196,7 +1221,10 @@
     <div class="legend-item">
       <span
         class="legend-box"
-        style="background:#eef4fb;border-left:3px solid #4b79a8;">
+        style="
+          background:#dfeafa;
+          border-left-color:#4b79a8;
+          border-bottom-color:#4b79a8;">
       </span>
       Wirtsantwort
     </div>
@@ -1204,7 +1232,10 @@
     <div class="legend-item">
       <span
         class="legend-box"
-        style="background:#f5f0fb;border-left:3px solid #8158a5;">
+        style="
+          background:#ebe0f7;
+          border-left-color:#8158a5;
+          border-bottom-color:#8158a5;">
       </span>
       Organdysfunktion
     </div>
@@ -1212,7 +1243,10 @@
     <div class="legend-item">
       <span
         class="legend-box"
-        style="background:#eef8f0;border-left:3px solid #4c8a5a;">
+        style="
+          background:#ddf0e1;
+          border-left-color:#4c8a5a;
+          border-bottom-color:#4c8a5a;">
       </span>
       direkter / molekularer Erregernachweis
     </div>
@@ -1220,7 +1254,10 @@
     <div class="legend-item">
       <span
         class="legend-box"
-        style="background:#fff5e9;border-left:3px solid #c78632;">
+        style="
+          background:#fae8cf;
+          border-left-color:#c78632;
+          border-bottom-color:#c78632;">
       </span>
       Kultur / Resistenz
     </div>
@@ -1228,7 +1265,7 @@
   </div>
 
 </section>
-
+	     
 
 
 
