@@ -794,6 +794,367 @@
 	     
 
 
+             <section>
+                <h3>Spuren der Sepsis</h3>
+                <ul style="font-size: 28px;">
+		 <li>Erreger heranzüchten: MIBI</li>
+                 <li>Vermehrung und Aktivierung der Immunzellen: Blutbild </li>
+                 <li>Neurotransmitter: IL-6</li>
+		 <li>Stoffwechselprodukte: Laktat</li>
+		 <li>Entzündungsproteine: CRP</li>
+		</ul>
+	     </section>
+	     
+
+	     
+
+	     
+<section class="sepsis-diagnostik-slide">
+  <style>
+    .sepsis-diagnostik-slide {
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.4em 0.7em 0.35em 0.7em;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .sepsis-diagnostik-slide h2 {
+      margin: 0 0 0.28em 0;
+      font-size: 1.55em;
+      font-weight: 650;
+      text-align: left;
+    }
+
+    .sepsis-subtitle {
+      font-size: 0.62em;
+      color: #666;
+      text-align: left;
+      margin-bottom: 0.5em;
+    }
+
+    .timeline-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr 1.15fr 1.25fr 1.35fr;
+      gap: 0.25em;
+      min-height: 0;
+    }
+
+    .time-column {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .time-header {
+      font-size: 0.68em;
+      font-weight: 700;
+      text-align: center;
+      padding: 0.24em 0.15em;
+      border-bottom: 3px solid #555;
+      margin-bottom: 0.28em;
+    }
+
+    .diag-card {
+      border-radius: 0.28em;
+      padding: 0.34em 0.38em;
+      margin-bottom: 0.24em;
+      text-align: left;
+      line-height: 1.16;
+      font-size: 0.47em;
+      box-sizing: border-box;
+    }
+
+    .diag-card strong {
+      display: block;
+      font-size: 1.12em;
+      margin-bottom: 0.12em;
+    }
+
+    .diag-card .method {
+      font-weight: 600;
+      margin-top: 0.12em;
+    }
+
+    .diag-card .role {
+      margin-top: 0.1em;
+    }
+
+    .host {
+      background: #eef4fb;
+      border-left: 5px solid #4b79a8;
+    }
+
+    .organ {
+      background: #f5f0fb;
+      border-left: 5px solid #8158a5;
+    }
+
+    .pathogen {
+      background: #eef8f0;
+      border-left: 5px solid #4c8a5a;
+    }
+
+    .culture {
+      background: #fff5e9;
+      border-left: 5px solid #c78632;
+    }
+
+    .bottom-legend {
+      display: flex;
+      justify-content: center;
+      gap: 1.6em;
+      margin-top: 0.32em;
+      font-size: 0.42em;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35em;
+    }
+
+    .legend-box {
+      width: 0.8em;
+      height: 0.8em;
+      border-radius: 0.15em;
+    }
+
+    .timeline-arrow {
+      position: relative;
+      height: 0.34em;
+      background: #666;
+      margin: 0.12em 0.9em 0.18em 0.5em;
+    }
+
+    .timeline-arrow::after {
+      content: "";
+      position: absolute;
+      right: -0.75em;
+      top: 50%;
+      transform: translateY(-50%);
+      border-left: 0.8em solid #666;
+      border-top: 0.45em solid transparent;
+      border-bottom: 0.45em solid transparent;
+    }
+
+    .timeline-labels {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr 1.15fr 1.25fr 1.35fr;
+      font-size: 0.42em;
+      margin-bottom: 0.1em;
+      color: #555;
+    }
+
+    .timeline-labels div {
+      text-align: center;
+    }
+  </style>
+
+  <h2>Sepsisdiagnostik im zeitlichen Verlauf</h2>
+
+  <div class="sepsis-subtitle">
+    Wirtsantwort, Organdysfunktion und Erregernachweis erscheinen zu unterschiedlichen Zeitpunkten
+  </div>
+
+  <div class="timeline-arrow"></div>
+
+  <div class="timeline-labels">
+    <div>0–2 h</div>
+    <div>2–6 h</div>
+    <div>6–12 h</div>
+    <div>12–24 h</div>
+    <div>24–48 h+</div>
+  </div>
+
+  <div class="timeline-grid">
+
+    <!-- 0–2 h -->
+    <div class="time-column">
+
+      <div class="diag-card host">
+        <strong>IL-6 / Zytokine</strong>
+        Protein
+        <div class="method">Immunoassay</div>
+        <div class="role">
+          Sehr frühe systemische Immunaktivierung
+        </div>
+      </div>
+
+      <div class="diag-card organ">
+        <strong>Laktat</strong>
+        kleiner Metabolit
+        <div class="method">Blutgasanalyse / enzymatisch</div>
+        <div class="role">
+          Perfusions- und Stoffwechselstörung
+        </div>
+      </div>
+
+      <div class="diag-card host">
+        <strong>Blutbild</strong>
+        Zellen
+        <div class="method">
+          Impedanz / optische Messung / Durchflusszytometrie
+        </div>
+        <div class="role">
+          Leukozytose/-penie, Neutrophilie, Linksverschiebung
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 2–6 h -->
+    <div class="time-column">
+
+      <div class="diag-card host">
+        <strong>Procalcitonin</strong>
+        Protein
+        <div class="method">Immunoassay</div>
+        <div class="role">
+          Systemische bakterielle Infektion, Verlauf
+        </div>
+      </div>
+
+      <div class="diag-card pathogen">
+        <strong>Direkte PCR</strong>
+        mikrobielle DNA / RNA
+        <div class="method">PCR / Multiplex-PCR</div>
+        <div class="role">
+          Schneller Erregernachweis ohne Kultur
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 6–12 h -->
+    <div class="time-column">
+
+      <div class="diag-card host">
+        <strong>CRP</strong>
+        Akute-Phase-Protein
+        <div class="method">
+          Immunoturbidimetrie / Immunoassay
+        </div>
+        <div class="role">
+          Entzündungsmarker, besonders für Verlauf
+        </div>
+      </div>
+
+      <div class="diag-card culture">
+        <strong>Blutkultur: erste Positive</strong>
+        lebende Bakterien / Pilze
+        <div class="method">Kultur</div>
+        <div class="role">
+          Beginn des klassischen direkten Erregernachweises
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 12–24 h -->
+    <div class="time-column">
+
+      <div class="diag-card culture">
+        <strong>Blutkultur</strong>
+        lebende Mikroorganismen
+        <div class="method">Kultur</div>
+        <div class="role">
+          Häufig positiver Erregernachweis
+        </div>
+      </div>
+
+      <div class="diag-card pathogen">
+        <strong>Gramfärbung</strong>
+        Mikroorganismen
+        <div class="method">Mikroskopie</div>
+        <div class="role">
+          Gramtyp und Morphologie
+        </div>
+      </div>
+
+      <div class="diag-card pathogen">
+        <strong>MALDI-TOF</strong>
+        mikrobielle Proteine
+        <div class="method">Massenspektrometrie</div>
+        <div class="role">
+          Schnelle Speziesidentifikation
+        </div>
+      </div>
+
+      <div class="diag-card pathogen">
+        <strong>PCR aus positiver Kultur</strong>
+        DNA / RNA
+        <div class="method">Multiplex-PCR</div>
+        <div class="role">
+          Erreger + ausgewählte Resistenzgene
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 24–48 h+ -->
+    <div class="time-column">
+
+      <div class="diag-card organ">
+        <strong>Organdysfunktion</strong>
+        Kreatinin, Bilirubin, Thrombozyten …
+        <div class="method">
+          Klinische Chemie / Hämatologie
+        </div>
+        <div class="role">
+          Erfassung von Schweregrad und Organbeteiligung
+        </div>
+      </div>
+
+      <div class="diag-card host">
+        <strong>CRP-Maximum</strong>
+        Protein
+        <div class="method">Immunoassay</div>
+        <div class="role">
+          Entzündungsverlauf
+        </div>
+      </div>
+
+      <div class="diag-card culture">
+        <strong>Antibiogramm</strong>
+        lebende Mikroorganismen
+        <div class="method">
+          phänotypische Resistenztestung
+        </div>
+        <div class="role">
+          Gezielte Auswahl des Antibiotikums
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="bottom-legend">
+    <div class="legend-item">
+      <span class="legend-box" style="background:#eef4fb;border-left:4px solid #4b79a8;"></span>
+      Wirtsantwort
+    </div>
+
+    <div class="legend-item">
+      <span class="legend-box" style="background:#f5f0fb;border-left:4px solid #8158a5;"></span>
+      Organdysfunktion
+    </div>
+
+    <div class="legend-item">
+      <span class="legend-box" style="background:#eef8f0;border-left:4px solid #4c8a5a;"></span>
+      molekularer / direkter Erregernachweis
+    </div>
+
+    <div class="legend-item">
+      <span class="legend-box" style="background:#fff5e9;border-left:4px solid #c78632;"></span>
+      Kultur / Resistenz
+    </div>
+  </div>
+</section>
 
 
 
