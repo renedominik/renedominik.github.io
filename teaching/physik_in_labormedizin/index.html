@@ -26,8 +26,8 @@
             <section>
                 <h2>Anwendungen der Physik in der Labormedizin</h2>
                 <p>Prof. Dr. phil. nat. René Staritzbichler</p>
-                <p> 10.10.26</p>
-                <img style="width:30%;" src="img/photon_probe.png">
+                <p> 22.10.26</p>
+                <img style="width:30%;margin-left:-2em;" src="img/photon_probe.png">
             </section>
 
 
@@ -163,6 +163,7 @@
                  <li>Radiologie </li>
                  <li>Pathologie </li>
                  <li>Labormedizin</li>
+                 <li style="margin-top:0.5em;">Behandelnde Ärzt*</li>
                 </ul>
             </section>
 
@@ -178,13 +179,13 @@
            <section>
                 <h3>Labormedizin</h3>
                 <ul style="font-size: 28px;">
-                  <li>Labormedizinische Diagnostik sind Grundlage von ca.<strong> 70% </strong> aller Behandlungsentscheidung</li>
+                  <li>Labormedizinische Diagnostik ist Grundlage von ca.<strong> 70% </strong> aller Behandlungsentscheidungen</li>
 		  <li>Hohe Präzision: Gummibärchen in \(10^9\) Litern (großer See)</li>
                  <li style="margin-top:0.5em;">Hoher Automatisierungsgrad</li>
                  <li>Hoher Grad an Qualitätssicherung</li>
 		 <li style="margin-top:0.5em;">Mehr als 1000 verschiedene Analyten</li>
-		 <li>Mehr als 2000 Proben pro Tag</li>
-		 <li style="margin-top:0.5em;">Blut sowie zahlreiche andere Körperflüssigkeiten, Ausscheidungen und Abstrichmaterialien</li>
+		 <li>Mehr als 2000 Proben pro Tag im Klinikum Detmold</li>
+		 <li style="margin-top:0.5em;">Untersucht werden Blut sowie zahlreiche andere Körperflüssigkeiten, Ausscheidungen und Abstrichmaterialien</li>
                 </ul>
             </section>
 
@@ -224,7 +225,7 @@
   <div class="blood-grid">
 
     <div class="blood-card erythro">
-      <h4>Erythrozyten</h4>
+      <h4>Erythrozyten - Rote Blutkörperchen</h4>
       <ul>
         <li>Transport von Sauerstoff (Hämoglobin)</li>
         <li>Beteiligung am CO₂-Transport</li>
@@ -233,7 +234,7 @@
     </div>
 
     <div class="blood-card leuko">
-      <h4>Leukozyten</h4>
+      <h4>Leukozyten - Weiße Blutkörperchen</h4>
       <ul>
         <li>Erkennung und Abwehr von Krankheitserregern</li>
         <li>Steuerung von Entzündungsreaktionen</li>
@@ -242,7 +243,7 @@
     </div>
 
     <div class="blood-card thrombo">
-      <h4>Thrombozyten</h4>
+      <h4>Thrombozyten - Blutplättchen</h4>
       <ul>
         <li>Primäre Blutstillung (Adhäsion und Aggregation)</li>
         <li>Unterstützung der Blutgerinnung</li>
@@ -251,14 +252,13 @@
     </div>
 
     <div class="blood-card plasma">
-      <h4>Blutplasma</h4>
+      <h4>Blutplasma - Flüssiger Anteil</h4>
       <ul>
         <li>Transport von Nährstoffen, Hormonen und Metaboliten</li>
         <li>Gerinnungsfaktoren und Immunproteine</li>
         <li>Regulation von osmotischem Druck, Volumen und pH</li>
       </ul>
     </div>
-
   </div>
 
 </section>
@@ -760,7 +760,7 @@
     <text
       x="930"
       y="280">
-      Proteine
+      Proteine / Lipide
     </text>
   </g>
 
@@ -795,7 +795,7 @@
     <text
       x="930"
       y="460">
-      DNA/RNA
+      DNA / RNA
     </text>
   </g>
 
@@ -1072,7 +1072,7 @@
 	     </section>
 
              <section>
-	       <h4> Frühe Weichenstellung</h4>
+	       <h4> Verdachtsdiagnose ist eine frühe Weichenstellung</h4>
 	       <img style="width: 120% !important;" src="img/weiche.png">
 <p style="font-size:19pt;"> Mit dem Stellen der Anforderung werden frühzeitig diagnostische Weichen gestellt</p>
 	     </section>
@@ -2789,9 +2789,21 @@
 <script src="src/reveal.js"></script>
 <script src="src/math.js"></script>
 
+
+<style>
+  .reveal .slide-number {
+      left: 8px;
+      right: auto;
+      bottom: 8px;
+      background-color: transparent;
+  }
+</style>
+
 <script>
   Reveal.initialize({
-    plugins: [RevealMath.KaTeX]
+      plugins: [RevealMath.KaTeX],
+      slideNumber: 'c/t',
+      controls: false
   });
 </script>
 
