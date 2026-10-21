@@ -19,527 +19,520 @@
     </style>
 </head>
 <body>
-    <div class="reveal">
-        <div class="slides">
+  <div class="reveal">
+    <div class="slides">
 
-          <!-- Title Slide -->
-            <section>
-                <h2>Anwendungen der Physik in der Labormedizin</h2>
-                <p>Prof. Dr. phil. nat. René Staritzbichler</p>
-                <p> 22.10.26</p>
-                <img style="width:30%;margin-left:-2em;" src="img/photon_probe.png">
-            </section>
+      <!-- Title Slide -->
+      <section>
+        <h2>Anwendungen der Physik in der Labormedizin</h2>
+        <p>Prof. Dr. phil. nat. René Staritzbichler</p>
+        <p> 22.10.26</p>
+        <img style="width:30%;margin-left:-2em;" src="img/photon_probe.png">
+      </section>
+      
+      
+      
+      
+      <section class="vl-slide" data-background-color="#F7F9FB">
+	
+	<div class="vl-header">
+	  <div class="vl-kicker">LEHRVERANSTALTUNGEN</div>
+	  <h2>Vorlesungen</h2>
+	  <div class="vl-rule"></div>
+	</div>
+	
+	<div class="vl-list">
+	  
+	  <div class="vl-card">
+	    <span class="vl-number">01</span>
+	    <span class="vl-title">Anwendungen der Physik in der Labormedizin</span>
+	  </div>
+	  
+	  <div class="vl-card">
+	    <span class="vl-number">02</span>
+	    <span class="vl-title">Raman Spektroskopie als Werkzeug der labormedizinischen Diagnostik</span>
+	  </div>
+	  
+	  <div class="vl-card">
+	    <span class="vl-number">03</span>
+	    <span class="vl-title"><strong>DAISY - </strong> Digitale Alarm und Informationssystem</span>
+	  </div>
+	  
+	</div>
+      </section>
+      
+      <style>
+	/* Gesamtlayout */
+	.reveal .slides section.vl-slide {
+	    box-sizing: border-box;
+	    height: 100%;
+	    padding: 65px 80px;
+	    text-align: left;
+	    font-family: "Aptos", "Helvetica Neue", sans-serif;
+	    color: #203448;
+	}
+	
+	/* Überschrift */
+	.vl-slide .vl-kicker {
+	    font-size: 14px;
+	    font-weight: 600;
+	    letter-spacing: 3px;
+	    color: #398596;
+	    margin-bottom: 16px;
+	}
+	
+	.reveal .vl-slide h2 {
+	    margin: 0;
+	    font-size: 54px;
+	    font-weight: 600;
+	    letter-spacing: -1.5px;
+	    text-transform: none;
+	    color: #203448;
+	}
+	
+	.vl-slide .vl-rule {
+	    width: 80px;
+	    height: 3px;
+	    background: #398596;
+	    margin-top: 22px;
+	    border-radius: 2px;
+	}
+	
+	/* Liste */
+	.vl-slide .vl-list {
+	    display: flex;
+	    flex-direction: column;
+	    gap: 22px;
+	    margin-top: 55px;
+	}
+	
+	/* Umrandete Kästen */
+	.vl-slide .vl-card {
+	    display: flex;
+	    align-items: center;
+	    min-height: 90px;
+	    box-sizing: border-box;
+	    padding: 20px 30px;
+	    
+	    background: #FFFFFF;
+	    border: 1.5px solid #CDD9E1;
+	    border-left: 5px solid #398596;
+	    border-radius: 10px;
+	    
+	    box-shadow: 0 5px 18px rgba(25, 45, 65, 0.035);
+	}
+	
+	/* Nummerierung */
+	.vl-slide .vl-number {
+	    font-size: 22px;
+	    font-weight: 500;
+	    color: #398596;
+	    min-width: 75px;
+	    letter-spacing: 1px;
+	}
+	
+	/* Vorlesungstitel */
+	.vl-slide .vl-title {
+	    font-size: 30px;
+	    font-weight: 500;
+	    color: #203448;
+	    letter-spacing: -0.3px;
+	}
+      </style>
+      
+      
+      
+      <section>
+	<h3> Lernziele</h3>
+	<ul style="font-size: 28px;">
+          <li>Diagnostik anhand einer Krankheit verstehen</li>
+	  <li>Physikalische Methoden:
+	    <ul style="font-size: 26px;">
+	      <li>Klinische Chemie: Photometrie</li>
+	      <li>Blutbild: Impedanz, Durchflusszytometrie</li>
+              <li>Immunoassays: Photometrie, Fluoreszenz oder Chemilumineszenz</li>
+	      <li>Blutgasanalyse: Potentiometrie, Amperometrie</li>
+	      <li>Auftrennung: Chromatographie und Elektrophorese</li>
+	  </ul></li>
+	</ul>
+      </section>
+      
+      
+      
+      <section>
+	<h3>Physik in der Medizin</h3>
+	<img style="height:65%;" src="img/physik.png">
+      </section>
+      
+      
+      
+      <section>
+	<h3>Diagnostik: Suche nach der Ursache</h3>
+	<img style="width:35%;" src="img/krank.png">
+	<p style="font-size: 28px;">Schnupfen?</p>
+      </section>
+      
+      
+      
+      <section>
+        <h3>Diagnostische Fachrichtungen</h3>
+        <ul style="font-size: 28px;">
+          <li>Radiologie </li>
+          <li>Pathologie </li>
+          <li>Labormedizin</li>
+          <!-- <li style="margin-top:0.5em;">Behandelnde Ärzt*</li> -->
+        </ul>
+      </section>
+      
 
+	    
+      <section>
+        <h3>Labormedizin: Hochzeit von Physik und Biochemie</h3> <br>
+	<img style="width:100%;" src="img/hochzeit.png">
+      </section>
 
-
-
-<section class="vl-slide" data-background-color="#F7F9FB">
-
-  <div class="vl-header">
-    <div class="vl-kicker">LEHRVERANSTALTUNGEN</div>
-    <h2>Vorlesungen</h2>
-    <div class="vl-rule"></div>
-  </div>
-
-  <div class="vl-list">
-
-    <div class="vl-card">
-      <span class="vl-number">01</span>
-      <span class="vl-title">Anwendungen der Physik in der Labormedizin</span>
-    </div>
-
-    <div class="vl-card">
-      <span class="vl-number">02</span>
-      <span class="vl-title">Raman Spektroskopie als Werkzeug der labormedizinischen Diagnostik</span>
-    </div>
-
-    <div class="vl-card">
-      <span class="vl-number">03</span>
-      <span class="vl-title"><strong>DAISY - </strong> Digitale Alarm und Informationssystem</span>
-    </div>
-
-  </div>
-</section>
-
-<style>
-/* Gesamtlayout */
-.reveal .slides section.vl-slide {
-  box-sizing: border-box;
-  height: 100%;
-  padding: 65px 80px;
-  text-align: left;
-  font-family: "Aptos", "Helvetica Neue", sans-serif;
-  color: #203448;
-}
-
-/* Überschrift */
-.vl-slide .vl-kicker {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  color: #398596;
-  margin-bottom: 16px;
-}
-
-.reveal .vl-slide h2 {
-  margin: 0;
-  font-size: 54px;
-  font-weight: 600;
-  letter-spacing: -1.5px;
-  text-transform: none;
-  color: #203448;
-}
-
-.vl-slide .vl-rule {
-  width: 80px;
-  height: 3px;
-  background: #398596;
-  margin-top: 22px;
-  border-radius: 2px;
-}
-
-/* Liste */
-.vl-slide .vl-list {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  margin-top: 55px;
-}
-
-/* Umrandete Kästen */
-.vl-slide .vl-card {
-  display: flex;
-  align-items: center;
-  min-height: 90px;
-  box-sizing: border-box;
-  padding: 20px 30px;
-
-  background: #FFFFFF;
-  border: 1.5px solid #CDD9E1;
-  border-left: 5px solid #398596;
-  border-radius: 10px;
-
-  box-shadow: 0 5px 18px rgba(25, 45, 65, 0.035);
-}
-
-/* Nummerierung */
-.vl-slide .vl-number {
-  font-size: 22px;
-  font-weight: 500;
-  color: #398596;
-  min-width: 75px;
-  letter-spacing: 1px;
-}
-
-/* Vorlesungstitel */
-.vl-slide .vl-title {
-  font-size: 30px;
-  font-weight: 500;
-  color: #203448;
-  letter-spacing: -0.3px;
-}
-</style>
-
-
-
-<section>
-  <h3> Lernziele</h3>
-      <ul style="font-size: 28px;">
-        <li>Diagnostik anhand einer Krankheit verstehen</li>
-	<li>Physikalische Methoden:
-      <ul style="font-size: 26px;">
-	<li>Klinische Chemie: Photometrie</li>
-	<li>Blutbild: Impedanz, Durchflusszytometrie</li>
-        <li>Immunoassays: Photometrie, Fluoreszenz oder Chemilumineszenz</li>
-	<li>Blutgasanalyse: Potentiometrie, Amperometrie</li>
-	<li>Auftrennung: Chromatographie und Elektrophorese</li>
-      </ul></li>
-      </ul>
-</section>
+	    
+	    
+      <section>
+        <h3>Labormedizin</h3>
+        <ul style="font-size: 28px;">
+          <li>Labormedizinische Diagnostik ist Grundlage von ca.<strong> 70% </strong> aller Behandlungsentscheidungen</li>
+	  <li>Hohe Präzision: Gummibärchen in \(10^9\) Litern (großer See)</li>
+          <li style="margin-top:0.5em;">Hoher Automatisierungsgrad</li>
+          <li>Hoher Grad an Qualitätssicherung</li>
+	  <li style="margin-top:0.5em;">Mehr als 1000 verschiedene Analyten</li>
+	  <li>Mehr als 2000 Proben pro Tag im Klinikum Detmold</li>
+	  <li style="margin-top:0.5em;">Untersucht werden Blut sowie zahlreiche andere Körperflüssigkeiten, Ausscheidungen und Abstrichmaterialien</li>
+        </ul>
+      </section>
+      
+      
+      <section>
+        <h3>Bereiche der Labormedizin</h3>
+	<div class="twocolumns">
+	  <div>
+            <ul style="font-size: 28px;">
+              <li>Klinische Chemie</li>
+              <li>Hämatologie</li>
+	      <li>Immunologie</li>
+	      <li>Transfusionsmedizin</li>
+              <li>Mikrobiologie</li>
+            </ul>
+	  </div>
+	  <div>
+            <ul style="font-size: 28px; list-style: none; padding: 0; margin: 0;">
+              <li>Molekulare Bestandteile</li>
+              <li>Zelluläre Bestandteile</li>
+	      <li>Immunzellen und Botenstoffe</li>
+	      <li>Konserven und andere Produkte</li>
+              <li>Erreger</li>
+            </ul>
+	  </div>
+	</div>
+      </section>
       
 
 
-	    <section>
-	      <h3>Physik in der Medizin</h3>
-	      <img style="height:65%;" src="img/physik.png">
-	    </section>
 
 
-
-	    <section>
-	      <h3>Diagnostik: Suche nach der Ursache</h3>
-	      <img style="width:35%;" src="img/krank.png">
-	      <p style="font-size: 28px;">Schnupfen?</p>
-	    </section>
+      <section class="blood-slide">
+	
+	<h3>Blutbestandteile und ihre Funktionen</h3>
+	
+	<div class="blood-grid">
+	  
+	  <div class="blood-card erythro">
+	    <h4>Erythrozyten - Rote Blutkörperchen</h4>
+	    <ul>
+              <li>Transport von Sauerstoff (Hämoglobin)</li>
+              <li>Beteiligung am CO₂-Transport</li>
+              <li>Pufferung des Blut-pH-Wertes</li>
+	    </ul>
+	  </div>
+	  
+	  <div class="blood-card leuko">
+	    <h4>Leukozyten - Weiße Blutkörperchen</h4>
+	    <ul>
+              <li>Erkennung und Abwehr von Krankheitserregern</li>
+              <li>Steuerung von Entzündungsreaktionen</li>
+              <li>Spezifische Immunantwort und Immungedächtnis</li>
+	    </ul>
+	  </div>
+	  
+	  <div class="blood-card thrombo">
+	    <h4>Thrombozyten - Blutplättchen</h4>
+	    <ul>
+              <li>Primäre Blutstillung (Adhäsion und Aggregation)</li>
+              <li>Unterstützung der Blutgerinnung</li>
+              <li>Gefäßreparatur und Wundheilung</li>
+	    </ul>
+	  </div>
+	  
+	  <div class="blood-card plasma">
+	    <h4>Blutplasma - Flüssiger Anteil</h4>
+	    <ul>
+              <li>Transport von Nährstoffen, Hormonen und Metaboliten</li>
+              <li>Gerinnungsfaktoren und Immunproteine</li>
+              <li>Regulation von osmotischem Druck, Volumen und pH</li>
+	    </ul>
+	  </div>
+	</div>
+	
+      </section>
+      
+      <style>
+	.reveal .slides section.blood-slide {
+	    box-sizing: border-box;
+	    width: 100%;
+	    padding: 10px 25px;
+	    text-align: left;
+	}
+	
+	/* Einfache Folienüberschrift */
+	.reveal .blood-slide > h3 {
+	    margin: 0 0 35px 0;
+	    font-size: 38px;
+	    font-weight: 600;
+	    text-transform: none;
+	}
+	
+	/* 2x2-Raster */
+	.blood-slide .blood-grid {
+	    display: grid;
+	    grid-template-columns: repeat(2, minmax(0, 1fr));
+	    gap: 22px 26px;
+	}
+	
+	/* Kästen mit hellem HIntergrund*/
+	.blood-slide .blood-card {
+	    box-sizing: border-box;
+	    min-height: 205px;
+	    padding: 20px 24px;
 	    
+	    background: #FFFFFF;
+	    border: 1.5px solid #BBC7D0;
+	    border-left: 5px solid;
+	    border-radius: 10px;
 	    
-	    
-            <section>
-                <h3>Diagnostische Fachrichtungen</h3>
-                <ul style="font-size: 28px;">
-                 <li>Radiologie </li>
-                 <li>Pathologie </li>
-                 <li>Labormedizin</li>
-                 <!-- <li style="margin-top:0.5em;">Behandelnde Ärzt*</li> -->
-                </ul>
-            </section>
+	    box-shadow: 0 5px 18px rgba(25,45,65,0.045);
+	}
+	
+	/* Farbakzente */
+	.blood-slide .erythro { border-left-color: #B85861; }
+	.blood-slide .leuko  { border-left-color: #398596; }
+	.blood-slide .thrombo { border-left-color: #C39445; }
+	.blood-slide .plasma { border-left-color: #7886AB; }
+	
+	/* Überschriften der Kästen */
+	.reveal .blood-slide .blood-card h4 {
+	    margin: 0 0 16px 0;
+	    font-size: 26px;
+	    font-weight: 600;
+	    text-transform: none;
+	}
+	
+	.blood-slide .erythro h4 { color: #B85861; }
+	.blood-slide .leuko h4  { color: #398596; }
+	.blood-slide .thrombo h4 { color: #C39445; }
+	.blood-slide .plasma h4 { color: #7886AB; }
+	
+	/* Stichpunkte */
+	.reveal .blood-slide .blood-card ul {
+	    display: block;
+	    margin: 0;
+	    padding-left: 22px;
+	    width: auto;
+	    font-size: 19px;
+	    line-height: 1.4;
+	}
+	
+	.reveal .blood-slide .blood-card li {
+	    margin-bottom: 10px;
+	    padding-left: 3px;
+	}
+      </style>
+      
+      
 
 
-	    
-            <section>
-              <h3>Labormedizin: Hochzeit von Physik und Biochemie</h3> <br>
-	      <img style="width:100%;" src="img/hochzeit.png">
-            </section>
-
-	    
-	    
-           <section>
-                <h3>Labormedizin</h3>
-                <ul style="font-size: 28px;">
-                  <li>Labormedizinische Diagnostik ist Grundlage von ca.<strong> 70% </strong> aller Behandlungsentscheidungen</li>
-		  <li>Hohe Präzision: Gummibärchen in \(10^9\) Litern (großer See)</li>
-                 <li style="margin-top:0.5em;">Hoher Automatisierungsgrad</li>
-                 <li>Hoher Grad an Qualitätssicherung</li>
-		 <li style="margin-top:0.5em;">Mehr als 1000 verschiedene Analyten</li>
-		 <li>Mehr als 2000 Proben pro Tag im Klinikum Detmold</li>
-		 <li style="margin-top:0.5em;">Untersucht werden Blut sowie zahlreiche andere Körperflüssigkeiten, Ausscheidungen und Abstrichmaterialien</li>
-                </ul>
-            </section>
-
-
-           <section>
-             <h3>Bereiche der Labormedizin</h3>
-	     <div class="twocolumns">
-	       <div>
-                <ul style="font-size: 28px;">
-                 <li>Klinische Chemie</li>
-                 <li>Hämatologie</li>
-		 <li>Immunologie</li>
-		 <li>Transfusionsmedizin</li>
-                 <li>Mikrobiologie</li>
-                </ul>
-	       </div>
-	       <div>
-                <ul style="font-size: 28px; list-style: none; padding: 0; margin: 0;">
-                 <li>Molekulare Bestandteile</li>
-                 <li>Zelluläre Bestandteile</li>
-		 <li>Immunzellen und Botenstoffe</li>
-		 <li>Konserven und andere Produkte</li>
-                 <li>Erreger</li>
-                </ul>
-	       </div>
-	       </div>
-            </section>
-
-
-
-
-
-<section class="blood-slide">
-
-  <h3>Blutbestandteile und ihre Funktionen</h3>
-
-  <div class="blood-grid">
-
-    <div class="blood-card erythro">
-      <h4>Erythrozyten - Rote Blutkörperchen</h4>
-      <ul>
-        <li>Transport von Sauerstoff (Hämoglobin)</li>
-        <li>Beteiligung am CO₂-Transport</li>
-        <li>Pufferung des Blut-pH-Wertes</li>
-      </ul>
-    </div>
-
-    <div class="blood-card leuko">
-      <h4>Leukozyten - Weiße Blutkörperchen</h4>
-      <ul>
-        <li>Erkennung und Abwehr von Krankheitserregern</li>
-        <li>Steuerung von Entzündungsreaktionen</li>
-        <li>Spezifische Immunantwort und Immungedächtnis</li>
-      </ul>
-    </div>
-
-    <div class="blood-card thrombo">
-      <h4>Thrombozyten - Blutplättchen</h4>
-      <ul>
-        <li>Primäre Blutstillung (Adhäsion und Aggregation)</li>
-        <li>Unterstützung der Blutgerinnung</li>
-        <li>Gefäßreparatur und Wundheilung</li>
-      </ul>
-    </div>
-
-    <div class="blood-card plasma">
-      <h4>Blutplasma - Flüssiger Anteil</h4>
-      <ul>
-        <li>Transport von Nährstoffen, Hormonen und Metaboliten</li>
-        <li>Gerinnungsfaktoren und Immunproteine</li>
-        <li>Regulation von osmotischem Druck, Volumen und pH</li>
-      </ul>
-    </div>
-  </div>
-
-</section>
-
-<style>
-.reveal .slides section.blood-slide {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 10px 25px;
-  text-align: left;
-}
-
-/* Einfache Folienüberschrift */
-.reveal .blood-slide > h3 {
-  margin: 0 0 35px 0;
-  font-size: 38px;
-  font-weight: 600;
-  text-transform: none;
-}
-
-/* 2x2-Raster */
-.blood-slide .blood-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px 26px;
-}
-
-/* Kästen mit hellem HIntergrund*/
-.blood-slide .blood-card {
-  box-sizing: border-box;
-  min-height: 205px;
-  padding: 20px 24px;
-
-  background: #FFFFFF;
-  border: 1.5px solid #BBC7D0;
-  border-left: 5px solid;
-  border-radius: 10px;
-
-  box-shadow: 0 5px 18px rgba(25,45,65,0.045);
-}
-
-/* Farbakzente */
-.blood-slide .erythro { border-left-color: #B85861; }
-.blood-slide .leuko  { border-left-color: #398596; }
-.blood-slide .thrombo { border-left-color: #C39445; }
-.blood-slide .plasma { border-left-color: #7886AB; }
-
-/* Überschriften der Kästen */
-.reveal .blood-slide .blood-card h4 {
-  margin: 0 0 16px 0;
-  font-size: 26px;
-  font-weight: 600;
-  text-transform: none;
-}
-
-.blood-slide .erythro h4 { color: #B85861; }
-.blood-slide .leuko h4  { color: #398596; }
-.blood-slide .thrombo h4 { color: #C39445; }
-.blood-slide .plasma h4 { color: #7886AB; }
-
-/* Stichpunkte */
-.reveal .blood-slide .blood-card ul {
-  display: block;
-  margin: 0;
-  padding-left: 22px;
-  width: auto;
-  font-size: 19px;
-  line-height: 1.4;
-}
-
-.reveal .blood-slide .blood-card li {
-  margin-bottom: 10px;
-  padding-left: 3px;
-}
-</style>
-
-
-
-
-
-
-
-
-
-	   
-
-	   <style>
-	     .twocolumns {
-		 display: grid;
-		 grid-template-columns: 1fr 1fr;
-		 gap: 2rem;
-		 text-align: left;
-	     }
-	     .threecolumns {
-		 display: grid;
-		 grid-template-columns: 1fr 1fr 1fr;
-		 gap: 1rem;
-		 text-align: left;
-	     }
-	   </style>
-
-
+      <style>
+	.twocolumns {
+	    display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    gap: 2rem;
+	    text-align: left;
+	}
+	.threecolumns {
+	    display: grid;
+	    grid-template-columns: 1fr 1fr 1fr;
+	    gap: 1rem;
+	    text-align: left;
+	}
+      </style>
+      
+      
 	     
 
 
-<!-- 
+      <!-- 
 	   <section>
 	     <h3>Labormedizinische Untersuchungen</h3>
+	     
+	     <style>
+	       .tree-slide {
+	       width: 100%;
+	       height: 820px;
+	       display: flex;
+	       align-items: center;
+	       justify-content: center;
+	       }
+	       
+	       .tree-slide svg {
+	       width: 100%;
+	       height: 100%;
+	       overflow: visible;
+	       }
+	       
+	       .tree-edge {
+	       stroke: #777;
+	       stroke-width: 2.5;
+	       fill: none;
+	       }
+	       
+	       .tree-node rect {
+	       fill: white;
+	       stroke: #555;
+	       stroke-width: 2;
+	       rx: 10;
+	       ry: 10;
+	       }
+	       
+	       .tree-node text {
+	       font-family: Arial, sans-serif;
+	       font-size: 22px;
+	       fill: #222;
+	       text-anchor: middle;
+	       dominant-baseline: middle;
+	       }
+	       
+	       .tree-node.root rect {
+	       stroke-width: 3;
+	       }
+	       
+	       .tree-node.root .title,
+	       .tree-node.main text {
+	       font-weight: 600;
+	       }
+	       
+	       .root-list {
+	       font-family: Arial, sans-serif;
+	       font-size: 18px;
+	       color: #444;
+	       width: 100%;
+	       height: 100%;
+	       display: flex;
+	       align-items: flex-start;
+	       justify-content: center;
+	       }
+	       
+	       .root-list ul {
+	       margin: 0;
+	       padding-left: 24px;
+	       line-height: 1.5;
+	       }
+	       
+	       .root-list li {
+	       margin: 0;
+	       padding: 0;
+	       }
+	     </style>
+	     
+	     <div class="tree-slide">
+	       <svg
+		 id="koerpersubstanzen-tree"
+		 viewBox="0 0 1650 950"
+		 >
+		 
+		 &lt;!-- ===================================================== --&gt;
+		 &lt;!-- GESAMTER BAUM                                         --&gt;
+		 &lt;!-- ===================================================== --&gt;
+		 
+		 <g id="tree-all">
+		   
+		   &lt;!-- =================================================== --&gt;
+		   &lt;!-- ROOT                                                --&gt;
+		   &lt;!-- =================================================== --&gt;
+		   
+		   <g class="tree-node root">
+		     
+		     <rect
+		       x="40"
+		       y="270"
+		       width="310"
+		       height="200">
+		     </rect>
+		     
+		     <text
+		       class="title"
+		       x="195"
+		       y="305">
+		       Körpersubstanzen
+		     </text>
+		     
+		     <foreignObject
+		       x="85"
+		       y="330"
+		       width="190"
+		       height="120">
+		       
+		       <div
+			 xmlns="http://www.w3.org/1999/xhtml"
+			 class="root-list">
+			 
+			 <ul>
+			   <li>Blut</li>
+			   <li>Liquor</li>
+			   <li>Urin</li>
+			   <li>...</li>
+			 </ul>
+			 
+		       </div>
+		     </foreignObject>
+		     
+		   </g>
+		   
+		   
+		   &lt;!-- =================================================== --&gt;
+		   &lt;!-- ROOT -> HAUPTARME                                   --&gt;
+		   &lt;!-- =================================================== --&gt;
+		   
+		   &lt;!-- Zellen --&gt;
+		   <path
+		     id="edge-root-zellen"
+		     class="tree-edge"
+		     d="
+			M 350 370
+			H 390
+			V 150
+			H 470
+			">
+			</path>
 
-  <style>
-    .tree-slide {
-      width: 100%;
-      height: 820px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .tree-slide svg {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
-
-    .tree-edge {
-      stroke: #777;
-      stroke-width: 2.5;
-      fill: none;
-    }
-
-    .tree-node rect {
-      fill: white;
-      stroke: #555;
-      stroke-width: 2;
-      rx: 10;
-      ry: 10;
-    }
-
-    .tree-node text {
-      font-family: Arial, sans-serif;
-      font-size: 22px;
-      fill: #222;
-      text-anchor: middle;
-      dominant-baseline: middle;
-    }
-
-    .tree-node.root rect {
-      stroke-width: 3;
-    }
-
-    .tree-node.root .title,
-    .tree-node.main text {
-      font-weight: 600;
-    }
-
-    .root-list {
-      font-family: Arial, sans-serif;
-      font-size: 18px;
-      color: #444;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .root-list ul {
-      margin: 0;
-      padding-left: 24px;
-      line-height: 1.5;
-    }
-
-    .root-list li {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-
-  <div class="tree-slide">
-    <svg
-      id="koerpersubstanzen-tree"
-      viewBox="0 0 1650 950"
-    >
-
-      &lt;!-- ===================================================== --&gt;
-      &lt;!-- GESAMTER BAUM                                         --&gt;
-      &lt;!-- ===================================================== --&gt;
-
-      <g id="tree-all">
-
-        &lt;!-- =================================================== --&gt;
-        &lt;!-- ROOT                                                --&gt;
-        &lt;!-- =================================================== --&gt;
-
-        <g class="tree-node root">
-
-          <rect
-            x="40"
-            y="270"
-            width="310"
-            height="200">
-          </rect>
-
-          <text
-            class="title"
-            x="195"
-            y="305">
-            Körpersubstanzen
-          </text>
-
-          <foreignObject
-            x="85"
-            y="330"
-            width="190"
-            height="120">
-
-            <div
-              xmlns="http://www.w3.org/1999/xhtml"
-              class="root-list">
-
-              <ul>
-                <li>Blut</li>
-                <li>Liquor</li>
-                <li>Urin</li>
-                <li>...</li>
-              </ul>
-
-            </div>
-          </foreignObject>
-
-        </g>
-
-
-        &lt;!-- =================================================== --&gt;
-        &lt;!-- ROOT -> HAUPTARME                                   --&gt;
-        &lt;!-- =================================================== --&gt;
-
-        &lt;!-- Zellen --&gt;
-        <path
-          id="edge-root-zellen"
-          class="tree-edge"
-          d="
-            M 350 370
-            H 390
-            V 150
-            H 470
-          ">
-        </path>
-
-        &lt;!-- Moleküle --&gt;
-        <path
-          id="edge-root-molekuele"
-          class="tree-edge"
-          d="
-            M 390 370
-            H 470
-          ">
-        </path>
-
-        &lt;!-- Erreger --&gt;
-        <path
-          id="edge-root-erreger"
-          class="tree-edge"
-          d="
+		     &lt;!-- Moleküle --&gt;
+<path
+  id="edge-root-molekuele"
+  class="tree-edge"
+  d="
+     M 390 370
+     H 470
+     ">
+		   </path>
+		   
+		   &lt;!-- Erreger --&gt;
+		   <path
+		     id="edge-root-erreger"
+		     class="tree-edge"
+		     d="
             M 390 370
             V 590
             H 470
@@ -1081,204 +1074,208 @@
 
 
 
+	   <section>
+	     <h4>Ablauf der Labormedizin</h4>
+	     <p style="font-size: 20pt;">Von der klinischen Fragestellung bis zur Befundung</p>
+	     
+	     <div style="width:146% !important; margin-left:-23%;">
+	       <img src="img/ablauf.png"
+		    alt="Ablauf der Labormedizin">
+	     </div>
+	   </section>
 	   
-
+	   
+	   
            <section>
-	     <h4> Ablauf der Labormedizin</h4>
-		 <p style="font-size: 20pt;"> Von der klinischen Fragestellung bis zur Befundung</p>
-	       <img style="width: 270% !important;" src="img/ablauf.png">
-	     </section>
-
-             <section>
-	       <h4> Verdachtsdiagnose ist eine frühe Weichenstellung</h4>
-	       <img style="width: 120% !important;" src="img/weiche.png">
-<p style="font-size:19pt;"> Mit dem Stellen der Anforderung werden frühzeitig diagnostische Weichen gestellt</p>
-	     </section>
-
-
-	     <section>
-                <h4>Anforderungsformulare</h4>
-		<img style="width:100%;" src="img/anforderung.png">
-                <ul style="font-size: 24px;">
-		 <li>Nur eines von vielen </li>
-		 <li>Kein Arzt kennt alle Parameter</li>
-		</ul>
-	     </section>
-
-
-
-
-<section class="fehler-slide">
-
-  <h3>Fehler</h3>
-
-  <div class="fehler-grid">
-
-    <!-- PRÄANALYTIK -->
-    <div class="fehler-card prae">
-      <h4>Präanalytik <span>46–68 %</span></h4>
-      <ul>
-        <li>Unpassende Anforderungen durch falsche
-            Verdachtsdiagnose oder geringe Erfahrung</li>
-        <li>Inkorrekte Entnahme</li>
-        <li>Probenverwechslungen</li>
-        <li>Überalterte Proben</li>
-      </ul>
-    </div>
-
-    <!-- ANALYTIK -->
-    <div class="fehler-card analytik">
-      <h4>Analytik <span>7–13 %</span></h4>
-      <ul>
-        <li>Geringe Fehlerrate durch hohe
-            Automatisierung und Qualitätssicherung</li>
-      </ul>
-    </div>
-
-    <!-- POSTANALYTIK -->
-    <div class="fehler-card post">
-      <h4>Postanalytik <span>19–47 %</span></h4>
-      <ul>
-        <li>Übersehene Probleme oder falsche Befundung</li>
-        <li>Komplexität (30 Laborwerte pro Tag
-            pro Patient)</li>
-        <li>Zunehmender zeitlicher Druck</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- Breiter, sanft gebogener Prozesspfeil -->
-  <svg class="fehler-arrow"
-       viewBox="0 0 1100 155"
-       preserveAspectRatio="none"
-       aria-hidden="true">
-
-    <path
-      d="M 25,35
-         Q 475,110 940,35
-         L 940,10
-         L 1080,65
-         L 940,120
-         L 940,91
-         Q 475,165 25,89
-         Z"
-      fill="#D1E0E2"
-      stroke="#93B2B9"
-      stroke-width="2"
-      stroke-linejoin="round"/>
-  </svg>
-
-</section>
-
-<style>
-/* Gesamtlayout – kein eigener Folienhintergrund */
-.reveal .slides section.fehler-slide {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px 20px;
-}
-
-/* Drei gleich breite Kästen */
-.fehler-slide .fehler-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-  align-items: stretch;
-  width: 120% !important;
-  margin-left: -2.25em;
-}
-
-/* Allgemeines Kastendesign */
-.fehler-slide .fehler-card {
-  box-sizing: border-box;
-  min-height: 340px;
-  padding: 22px 22px 24px;
-
-  border-radius: 12px;
-  border: 2px solid rgba(40,65,75,0.15);
-
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  text-align: left;
-
-  color: #263B45;
-}
-
-/* Pastellfarbene Hintergründe */
-.fehler-slide .prae {
-  background: #F3D8D1;
-  border-top: 6px solid #BE7775;
-}
-
-.fehler-slide .analytik {
-  background: #DAEBD9;
-  border-top: 6px solid #72A58A;
-}
-
-.fehler-slide .post {
-  background: #DCE4F4;
-  border-top: 6px solid #8399C2;
-}
-
-/* Kastenüberschriften */
-.reveal .fehler-slide .fehler-card h4 {
-  margin: 0 0 21px 0;
-  font-size: 25px;
-  line-height: 1.25;
-  font-weight: 700;
-  text-transform: none;
-  color: #243946;
-}
-
-.fehler-slide .fehler-card h4 span {
-  white-space: nowrap;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-/* Unterpunkte */
-.reveal .fehler-slide .fehler-card ul {
-  display: block;
-  width: auto;
-  margin: 0;
-  padding-left: 23px;
-
-  list-style-type: square;
-  font-size: 19px;
-  line-height: 1.35;
-  color: #30454F;
-}
-
-.reveal .fehler-slide .fehler-card li {
-  margin: 0 0 15px 0;
-  padding-left: 2px;
-}
-
-.fehler-slide .prae li::marker {
-  color: #AF6665;
-}
-
-.fehler-slide .analytik li::marker {
-  color: #629779;
-}
-
-.fehler-slide .post li::marker {
-  color: #748CB9;
-}
-
-/* Prozesspfeil unterhalb der Kästen */
-.fehler-slide .fehler-arrow {
-  display: block;
-  width: 96%;
-  height: 90px;
-  margin: 15px auto 0;
-}
-</style>
-
-
-
-            <section>
+	     <h4> Verdachtsdiagnose ist eine frühe Weichenstellung</h4>
+	     <img style="width: 120% !important;" src="img/weiche.png">
+	     <p style="font-size:19pt;"> Mit dem Stellen der Anforderung werden frühzeitig diagnostische Weichen gestellt</p>
+	   </section>
+	   
+	   
+	   <section>
+             <h4>Anforderungsformulare</h4>
+	     <img style="width:100%;" src="img/anforderung.png">
+             <ul style="font-size: 24px;">
+	       <li>Nur eines von vielen </li>
+	       <li>Kein Arzt kennt alle Parameter</li>
+	     </ul>
+	   </section>
+	   
+	   
+	   
+	   
+	   <section class="fehler-slide">
+	     
+	     <h3>Fehler</h3>
+	     
+	     <div class="fehler-grid">
+	       
+	       <!-- PRÄANALYTIK -->
+	       <div class="fehler-card prae">
+		 <h4>Präanalytik <span>46–68 %</span></h4>
+		 <ul>
+		   <li>Unpassende Anforderungen durch falsche
+		     Verdachtsdiagnose oder geringe Erfahrung</li>
+		   <li>Inkorrekte Entnahme</li>
+		   <li>Probenverwechslungen</li>
+		   <li>Überalterte Proben</li>
+		 </ul>
+	       </div>
+	       
+	       <!-- ANALYTIK -->
+	       <div class="fehler-card analytik">
+		 <h4>Analytik <span>7–13 %</span></h4>
+		 <ul>
+		   <li>Geringe Fehlerrate durch hohe
+		     Automatisierung und Qualitätssicherung</li>
+		 </ul>
+	       </div>
+	       
+	       <!-- POSTANALYTIK -->
+	       <div class="fehler-card post">
+		 <h4>Postanalytik <span>19–47 %</span></h4>
+		 <ul>
+		   <li>Übersehene Probleme oder falsche Befundung</li>
+		   <li>Komplexität (30 Laborwerte pro Tag
+		     pro Patient)</li>
+		   <li>Zunehmender zeitlicher Druck</li>
+		 </ul>
+	       </div>
+	       
+	     </div>
+	     
+	     <!-- Breiter, sanft gebogener Prozesspfeil -->
+	     <svg class="fehler-arrow"
+		  viewBox="0 0 1100 155"
+		  preserveAspectRatio="none"
+		  aria-hidden="true">
+	       
+	       <path
+		 d="M 25,35
+		    Q 475,110 940,35
+		    L 940,10
+		    L 1080,65
+		    L 940,120
+		    L 940,91
+		    Q 475,165 25,89
+		    Z"
+		 fill="#D1E0E2"
+		 stroke="#93B2B9"
+		 stroke-width="2"
+		 stroke-linejoin="round"/>
+	     </svg>
+	     
+	   </section>
+	   
+	   <style>
+	     /* Gesamtlayout – kein eigener Folienhintergrund */
+	     .reveal .slides section.fehler-slide {
+		 box-sizing: border-box;
+		 width: 100%;
+		 padding: 5px 20px;
+	     }
+	     
+	     /* Drei gleich breite Kästen */
+	     .fehler-slide .fehler-grid {
+		 display: grid;
+		 grid-template-columns: repeat(3, minmax(0, 1fr));
+		 gap: 20px;
+		 margin-top: 30px;
+		 align-items: stretch;
+		 width: 120% !important;
+		 margin-left: -2.25em;
+	     }
+	     
+	     /* Allgemeines Kastendesign */
+	     .fehler-slide .fehler-card {
+		 box-sizing: border-box;
+		 min-height: 340px;
+		 padding: 22px 22px 24px;
+		 
+		 border-radius: 12px;
+		 border: 2px solid rgba(40,65,75,0.15);
+		 
+		 box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+		 text-align: left;
+		 
+		 color: #263B45;
+	     }
+	     
+	     /* Pastellfarbene Hintergründe */
+	     .fehler-slide .prae {
+		 background: #F3D8D1;
+		 border-top: 6px solid #BE7775;
+	     }
+	     
+	     .fehler-slide .analytik {
+		 background: #DAEBD9;
+		 border-top: 6px solid #72A58A;
+	     }
+	     
+	     .fehler-slide .post {
+		 background: #DCE4F4;
+		 border-top: 6px solid #8399C2;
+	     }
+	     
+	     /* Kastenüberschriften */
+	     .reveal .fehler-slide .fehler-card h4 {
+		 margin: 0 0 21px 0;
+		 font-size: 25px;
+		 line-height: 1.25;
+		 font-weight: 700;
+		 text-transform: none;
+		 color: #243946;
+	     }
+	     
+	     .fehler-slide .fehler-card h4 span {
+		 white-space: nowrap;
+		 font-size: 22px;
+		 font-weight: 500;
+	     }
+	     
+	     /* Unterpunkte */
+	     .reveal .fehler-slide .fehler-card ul {
+		 display: block;
+		 width: auto;
+		 margin: 0;
+		 padding-left: 23px;
+		 
+		 list-style-type: square;
+		 font-size: 19px;
+		 line-height: 1.35;
+		 color: #30454F;
+	     }
+	     
+	     .reveal .fehler-slide .fehler-card li {
+		 margin: 0 0 15px 0;
+		 padding-left: 2px;
+	     }
+	     
+	     .fehler-slide .prae li::marker {
+		 color: #AF6665;
+	     }
+	     
+	     .fehler-slide .analytik li::marker {
+		 color: #629779;
+	     }
+	     
+	     .fehler-slide .post li::marker {
+		 color: #748CB9;
+	     }
+	     
+	     /* Prozesspfeil unterhalb der Kästen */
+	     .fehler-slide .fehler-arrow {
+		 display: block;
+		 width: 96%;
+		 height: 90px;
+		 margin: 15px auto 0;
+	     }
+	   </style>
+	   
+	   
+	   
+           <section>
                 <h3>Medizinisches Beispiel: Sepsis</h3>
                 <p style="font-size: 28px;">
 		  Vor kurzem geht ein Kollege (Mitte 40) von uns in die Klinik und verstirbt.
@@ -1324,6 +1321,9 @@
 		 <li>Hormone: PCT</li>
 		 <li>Stoffwechselprodukte: Laktat</li>
 		</ul>
+		<div style="width:120% !important;margin-left:-10%;">
+		  <p style="font-size:20pt;">Jede Stunde ohne gezielte Therapie verschlechtert die Überlebenschancen drastisch.</p>
+		</div>
 	     </section>
 	     
             <section>
@@ -1342,281 +1342,281 @@
 
 	     
 	     
-<style>
-.reveal .slides section.sepsis-lab {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 18px 28px;
-  background: #0c1626;
-  color: #e7edf5;
-  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
-  text-align: left;
-}
-
-.sepsis-lab .lab-heading {
-  margin-bottom: 13px;
-}
-
-.sepsis-lab .lab-heading h2 {
-  margin: 0 0 6px;
-  font-size: 31px;
-  font-weight: 650;
-  color: #f4f8ff;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.sepsis-lab .lab-subtitle {
-  font-size: 16px;
-  color: #a5b6c9;
-}
-
-.sepsis-lab .table-frame {
-  overflow: hidden;
-  border: 1px solid #32465b;
-  border-radius: 10px;
-}
-
-.reveal .sepsis-lab table.lab-table {
-  width: 100%;
-  margin: 0;
-  border-collapse: collapse;
-  table-layout: fixed;
-  font-size: 17px;
-  line-height: 1.14;
-  color: #e7edf5;
-}
-
-.sepsis-lab .lab-table th {
-  background: #21364d;
-  padding: 10px 11px;
-  color: #dceaf5;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: left;
-  border-bottom: 2px solid #456079;
-}
-
-.sepsis-lab .lab-table td {
-  padding: 5px 11px;
-  border-bottom: 1px solid #29394b;
-  vertical-align: middle;
-}
-
-.sepsis-lab .lab-table tr:nth-child(odd) td {
-  background: #142338;
-}
-
-.sepsis-lab .lab-table tr:nth-child(even) td {
-  background: #192b40;
-}
-
-.sepsis-lab .lab-table tr:last-child td {
-  border-bottom: none;
-}
-
-.sepsis-lab .lab-table td:first-child {
-  font-weight: 600;
-  border-left: 4px solid var(--group-color);
-}
-
-.sepsis-lab .lab-table tr.group-start td {
-  border-top: 2px solid #496075;
-}
-
-.sepsis-lab .lab-table td:nth-child(2),
-.sepsis-lab .lab-table td:nth-child(3) {
-  white-space: nowrap;
-}
-
-.sepsis-lab .up { color: #f1ae76; font-weight: 700; }
-.sepsis-lab .down { color: #78c8ed; font-weight: 700; }
-
-.sepsis-lab .cytokine { --group-color: #66c9c7; }
-.sepsis-lab .acute   { --group-color: #e4b56c; }
-.sepsis-lab .cells   { --group-color: #87a9ef; }
-.sepsis-lab .coag    { --group-color: #c3a0e5; }
-.sepsis-lab .organ   { --group-color: #df958f; }
-
-.sepsis-lab .lab-footer {
-  margin-top: 12px;
-  color: #a7b8c9;
-  font-size: 13px;
-  line-height: 1.25;
-}
-
-.sepsis-lab .legend {
-  display: flex;
-  gap: 19px;
-  flex-wrap: wrap;
-  margin-bottom: 6px;
-}
-
-.sepsis-lab .legend span {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.sepsis-lab .legend i {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  border-radius: 2px;
-  background: var(--group-color);
-}
-</style>
-
-<section class="sepsis-lab">
-  <div class="lab-heading">
-    <h2>Laborparameter im Verlauf einer Sepsis</h2>
-    <div class="lab-subtitle">
-      Typische Reaktionszeiten ab Beginn eines akuten
-      inflammatorischen Stimulus
-    </div>
-  </div>
-
-  <div class="table-frame">
-    <table class="lab-table">
-      <colgroup>
-        <col style="width:31%">
-        <col style="width:13%">
-        <col style="width:19%">
-        <col style="width:37%">
-      </colgroup>
-      <thead>
-        <tr>
-          <th>Laborparameter</th>
-          <th>Verlauf</th>
-          <th>Erste Reaktion</th>
-          <th>Maximum / volle Ausprägung</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="cytokine">
-          <td>TNF-α</td>
-          <td><span class="up">↑</span></td>
-          <td>0,5–1 h</td>
-          <td>1–3 h</td>
-        </tr>
-        <tr class="cytokine">
-          <td>Interleukin-6 (IL-6)</td>
-          <td><span class="up">↑</span></td>
-          <td>1–2 h</td>
-          <td>3–8 h</td>
-        </tr>
-
-        <tr class="acute group-start">
-          <td>Procalcitonin (PCT)</td>
-          <td><span class="up">↑</span></td>
-          <td>3–6 h</td>
-          <td>12–24 h</td>
-        </tr>
-        <tr class="acute">
-          <td>C-reaktives Protein (CRP)</td>
-          <td><span class="up">↑</span></td>
-          <td>4–8 h</td>
-          <td>36–50 h</td>
-        </tr>
-        <tr class="acute">
-          <td>Serum-Amyloid A (SAA)</td>
-          <td><span class="up">↑</span></td>
-          <td>6–10 h</td>
-          <td>24–48 h</td>
-        </tr>
-
-        <tr class="cells group-start">
-          <td>Leukozyten</td>
-          <td><span class="up">↑</span> / <span class="down">↓</span></td>
-          <td>Erste Stunden</td>
-          <td>Kein festes Maximum; Tage</td>
-        </tr>
-        <tr class="cells">
-          <td>Neutrophile Granulozyten</td>
-          <td><span class="up">↑</span> / <span class="down">↓</span></td>
-          <td>Erste Stunden</td>
-          <td>Kein festes Maximum; Tage</td>
-        </tr>
-        <tr class="cells">
-          <td>Unreife Granulozyten</td>
-          <td><span class="up">↑</span></td>
-          <td>ca. 8–20 h</td>
-          <td>ca. 24–48 h, variabel</td>
-        </tr>
-        <tr class="cells">
-          <td>Lymphozyten</td>
-          <td><span class="down">↓</span></td>
-          <td>Erste 24 h</td>
-          <td>Oft nach 1–2 Tagen deutlich ↓</td>
-        </tr>
-
-        <tr class="coag group-start">
-          <td>Fibrinogen</td>
-          <td><span class="up">↑</span> / <span class="down">↓</span></td>
-          <td>24–48 h</td>
-          <td>Oft nach 2–3 Tagen erhöht</td>
-        </tr>
-        <tr class="coag">
-          <td>Thrombozyten (PLT)</td>
-          <td><span class="down">↓</span></td>
-          <td>Erste Tage</td>
-          <td>Nadir oft Tag 4–5*</td>
-        </tr>
-        <tr class="coag">
-          <td>D-Dimere</td>
-          <td><span class="up">↑</span></td>
-          <td>Früh bei Aktivierung</td>
-          <td>Kein festes Maximum</td>
-        </tr>
-        <tr class="coag">
-          <td>INR / aPTT</td>
-          <td><span class="up">↑</span></td>
-          <td>Stunden bis Tage</td>
-          <td>Kein festes Maximum</td>
-        </tr>
-
-        <tr class="organ group-start">
-          <td>Laktat</td>
-          <td><span class="up">↑</span></td>
-          <td>Minuten bis Stunden</td>
-          <td>Kein festes Maximum</td>
-        </tr>
-        <tr class="organ">
-          <td>Kreatinin</td>
-          <td><span class="up">↑</span></td>
-          <td>24–72 h</td>
-          <td>Abhängig von Nierenschädigung</td>
-        </tr>
-        <tr class="organ">
-          <td>Bilirubin</td>
-          <td><span class="up">↑</span></td>
-          <td>Häufig nach Tagen</td>
-          <td>Kein festes Maximum</td>
-        </tr>
-        <tr class="organ">
-          <td>Albumin</td>
-          <td><span class="down">↓</span></td>
-          <td>Stunden bis 1–2 Tage</td>
-          <td>Kein festes Minimum</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="lab-footer">
-    <div class="legend">
-      <span class="cytokine"><i></i>Zytokine</span>
-      <span class="acute"><i></i>Akute Phase</span>
-      <span class="cells"><i></i>Blutbild</span>
-      <span class="coag"><i></i>Gerinnung</span>
-      <span class="organ"><i></i>Organfunktion</span>
-    </div>
-    Näherungswerte; bei anhaltender Sepsis keine festen Maximalzeiten.
-    * PLT-Nadir bezogen auf Intensivaufnahme, nicht Inflammationsbeginn.
-  </div>
-</section>
-
+	    <style>
+	      .reveal .slides section.sepsis-lab {
+		  box-sizing: border-box;
+		  width: 100%;
+		  height: 100%;
+		  padding: 18px 28px;
+		  background: #0c1626;
+		  color: #e7edf5;
+		  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+		  text-align: left;
+	      }
+	      
+	      .sepsis-lab .lab-heading {
+		  margin-bottom: 13px;
+	      }
+	      
+	      .sepsis-lab .lab-heading h2 {
+		  margin: 0 0 6px;
+		  font-size: 31px;
+		  font-weight: 650;
+		  color: #f4f8ff;
+		  text-transform: none;
+		  letter-spacing: 0;
+	      }
+	      
+	      .sepsis-lab .lab-subtitle {
+		  font-size: 16px;
+		  color: #a5b6c9;
+	      }
+	      
+	      .sepsis-lab .table-frame {
+		  overflow: hidden;
+		  border: 1px solid #32465b;
+		  border-radius: 10px;
+	      }
+	      
+	      .reveal .sepsis-lab table.lab-table {
+		  width: 100%;
+		  margin: 0;
+		  border-collapse: collapse;
+		  table-layout: fixed;
+		  font-size: 17px;
+		  line-height: 1.14;
+		  color: #e7edf5;
+	      }
+	      
+	      .sepsis-lab .lab-table th {
+		  background: #21364d;
+		  padding: 10px 11px;
+		  color: #dceaf5;
+		  font-size: 16px;
+		  font-weight: 700;
+		  text-align: left;
+		  border-bottom: 2px solid #456079;
+	      }
+	      
+	      .sepsis-lab .lab-table td {
+		  padding: 5px 11px;
+		  border-bottom: 1px solid #29394b;
+		  vertical-align: middle;
+	      }
+	      
+	      .sepsis-lab .lab-table tr:nth-child(odd) td {
+		  background: #142338;
+	      }
+	      
+	      .sepsis-lab .lab-table tr:nth-child(even) td {
+		  background: #192b40;
+	      }
+	      
+	      .sepsis-lab .lab-table tr:last-child td {
+		  border-bottom: none;
+	      }
+	      
+	      .sepsis-lab .lab-table td:first-child {
+		  font-weight: 600;
+		  border-left: 4px solid var(--group-color);
+	      }
+	      
+	      .sepsis-lab .lab-table tr.group-start td {
+		  border-top: 2px solid #496075;
+	      }
+	      
+	      .sepsis-lab .lab-table td:nth-child(2),
+	      .sepsis-lab .lab-table td:nth-child(3) {
+		  white-space: nowrap;
+	      }
+	      
+	      .sepsis-lab .up { color: #f1ae76; font-weight: 700; }
+	      .sepsis-lab .down { color: #78c8ed; font-weight: 700; }
+	      
+	      .sepsis-lab .cytokine { --group-color: #66c9c7; }
+	      .sepsis-lab .acute   { --group-color: #e4b56c; }
+	      .sepsis-lab .cells   { --group-color: #87a9ef; }
+	      .sepsis-lab .coag    { --group-color: #c3a0e5; }
+	      .sepsis-lab .organ   { --group-color: #df958f; }
+	      
+	      .sepsis-lab .lab-footer {
+		  margin-top: 12px;
+		  color: #a7b8c9;
+		  font-size: 13px;
+		  line-height: 1.25;
+	      }
+	      
+	      .sepsis-lab .legend {
+		  display: flex;
+		  gap: 19px;
+		  flex-wrap: wrap;
+		  margin-bottom: 6px;
+	      }
+	      
+	      .sepsis-lab .legend span {
+		  display: inline-flex;
+		  align-items: center;
+		  gap: 6px;
+	      }
+	      
+	      .sepsis-lab .legend i {
+		  display: inline-block;
+		  width: 9px;
+		  height: 9px;
+		  border-radius: 2px;
+		  background: var(--group-color);
+	      }
+	    </style>
+	    
+	    <section class="sepsis-lab">
+	      <div class="lab-heading">
+		<h2>Laborparameter im Verlauf einer Sepsis</h2>
+		<div class="lab-subtitle">
+		  Typische Reaktionszeiten ab Beginn eines akuten
+		  inflammatorischen Stimulus
+		</div>
+	      </div>
+	      
+	      <div class="table-frame">
+		<table class="lab-table">
+		  <colgroup>
+		    <col style="width:31%">
+		    <col style="width:13%">
+		    <col style="width:19%">
+		    <col style="width:37%">
+		  </colgroup>
+		  <thead>
+		    <tr>
+		      <th>Laborparameter</th>
+		      <th>Verlauf</th>
+		      <th>Erste Reaktion</th>
+		      <th>Maximum / volle Ausprägung</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr class="cytokine">
+		      <td>TNF-α</td>
+		      <td><span class="up">↑</span></td>
+		      <td>0,5–1 h</td>
+		      <td>1–3 h</td>
+		    </tr>
+		    <tr class="cytokine">
+		      <td>Interleukin-6 (IL-6)</td>
+		      <td><span class="up">↑</span></td>
+		      <td>1–2 h</td>
+		      <td>3–8 h</td>
+		    </tr>
+		    
+		    <tr class="acute group-start">
+		      <td>Procalcitonin (PCT)</td>
+		      <td><span class="up">↑</span></td>
+		      <td>3–6 h</td>
+		      <td>12–24 h</td>
+		    </tr>
+		    <tr class="acute">
+		      <td>C-reaktives Protein (CRP)</td>
+		      <td><span class="up">↑</span></td>
+		      <td>4–8 h</td>
+		      <td>36–50 h</td>
+		    </tr>
+		    <tr class="acute">
+		      <td>Serum-Amyloid A (SAA)</td>
+		      <td><span class="up">↑</span></td>
+		      <td>6–10 h</td>
+		      <td>24–48 h</td>
+		    </tr>
+		    
+		    <tr class="cells group-start">
+		      <td>Leukozyten</td>
+		      <td><span class="up">↑</span> / <span class="down">↓</span></td>
+		      <td>Erste Stunden</td>
+		      <td>Kein festes Maximum; Tage</td>
+		    </tr>
+		    <tr class="cells">
+		      <td>Neutrophile Granulozyten</td>
+		      <td><span class="up">↑</span> / <span class="down">↓</span></td>
+		      <td>Erste Stunden</td>
+		      <td>Kein festes Maximum; Tage</td>
+		    </tr>
+		    <tr class="cells">
+		      <td>Unreife Granulozyten</td>
+		      <td><span class="up">↑</span></td>
+		      <td>ca. 8–20 h</td>
+		      <td>ca. 24–48 h, variabel</td>
+		    </tr>
+		    <tr class="cells">
+		      <td>Lymphozyten</td>
+		      <td><span class="down">↓</span></td>
+		      <td>Erste 24 h</td>
+		      <td>Oft nach 1–2 Tagen deutlich ↓</td>
+		    </tr>
+		    
+		    <tr class="coag group-start">
+		      <td>Fibrinogen</td>
+		      <td><span class="up">↑</span> / <span class="down">↓</span></td>
+		      <td>24–48 h</td>
+		      <td>Oft nach 2–3 Tagen erhöht</td>
+		    </tr>
+		    <tr class="coag">
+		      <td>Thrombozyten (PLT)</td>
+		      <td><span class="down">↓</span></td>
+		      <td>Erste Tage</td>
+		      <td>Nadir oft Tag 4–5*</td>
+		    </tr>
+		    <tr class="coag">
+		      <td>D-Dimere</td>
+		      <td><span class="up">↑</span></td>
+		      <td>Früh bei Aktivierung</td>
+		      <td>Kein festes Maximum</td>
+		    </tr>
+		    <tr class="coag">
+		      <td>INR / aPTT</td>
+		      <td><span class="up">↑</span></td>
+		      <td>Stunden bis Tage</td>
+		      <td>Kein festes Maximum</td>
+		    </tr>
+		    
+		    <tr class="organ group-start">
+		      <td>Laktat</td>
+		      <td><span class="up">↑</span></td>
+		      <td>Minuten bis Stunden</td>
+		      <td>Kein festes Maximum</td>
+		    </tr>
+		    <tr class="organ">
+		      <td>Kreatinin</td>
+		      <td><span class="up">↑</span></td>
+		      <td>24–72 h</td>
+		      <td>Abhängig von Nierenschädigung</td>
+		    </tr>
+		    <tr class="organ">
+		      <td>Bilirubin</td>
+		      <td><span class="up">↑</span></td>
+		      <td>Häufig nach Tagen</td>
+		      <td>Kein festes Maximum</td>
+		    </tr>
+		    <tr class="organ">
+		      <td>Albumin</td>
+		      <td><span class="down">↓</span></td>
+		      <td>Stunden bis 1–2 Tage</td>
+		      <td>Kein festes Minimum</td>
+		    </tr>
+		  </tbody>
+		</table>
+	      </div>
+	      
+	      <div class="lab-footer">
+		<div class="legend">
+		  <span class="cytokine"><i></i>Zytokine</span>
+		  <span class="acute"><i></i>Akute Phase</span>
+		  <span class="cells"><i></i>Blutbild</span>
+		  <span class="coag"><i></i>Gerinnung</span>
+		  <span class="organ"><i></i>Organfunktion</span>
+		</div>
+		Näherungswerte; bei anhaltender Sepsis keine festen Maximalzeiten.
+		* PLT-Nadir bezogen auf Intensivaufnahme, nicht Inflammationsbeginn.
+	      </div>
+	    </section>
+	    
 	     
 
 <!--
@@ -2083,7 +2083,7 @@
 
 
 
-            <section>
+             <section>
                 <h3>Methoden im Detail</h3>
                 <ul style="font-size: 28px;">
 		 <li>Klinische Chemie: Photometrie</li>
@@ -2104,16 +2104,16 @@
 	     </section>
 
 
-            <section>
-              <h3>Klinische Chemie</h3>
-              <ul style="font-size: 28px;">
-		<li>Biochemische Reaktion mit genau einem Analyten</li>
-		<li>Reaktion ändert die Lichtdurchlässigkeit</li>
-                <li>Extinktion ist proportional zur Konzentration</li>
-                <li>Konzentration wird photometrisch bestimmt</li>
-	      </ul>
-	    </section>
-
+             <section>
+               <h3>Klinische Chemie</h3>
+               <ul style="font-size: 28px;">
+		 <li>Biochemische Reaktion mit genau einem Analyten</li>
+		 <li>Reaktion ändert die Lichtdurchlässigkeit</li>
+                 <li>Extinktion ist proportional zur Konzentration</li>
+                 <li>Konzentration wird photometrisch bestimmt</li>
+	       </ul>
+	     </section>
+	     
  
             <section>
               <h3>Photometrie</h3> 
@@ -2142,7 +2142,7 @@
                 <h3>Blutbild</h3>
                 <ul style="font-size: 28px;">
 		 <li>Zelluläre Bestandteile</li>
-		 <li>Kleines Blutbild: Anzahl, Volumen, Varianz</li>
+		 <li>Kleines Blutbild: Anzahl, Volumen und Verteilungsbreite, Hämoglobin</li>
                  <li>Großes Blutbild: Differenzierung verschiedener Leukozyten</li>
      
 		</ul>
@@ -2168,14 +2168,14 @@
 			  width: 65%;
 			  margin: 0 auto;
 			  ">
-
+		
 		<img src="img/rbc_plt_kanal.png"
 		     style="
 			    width: 100%;
 			    display: block;
 			    margin: 0;
 			    ">
-
+		
 		<!-- x-Achse -->
 		<div style="
 			    position: absolute;
@@ -2187,26 +2187,23 @@
 			    ">
 		  Volumen
 		</div>
-
+		
 		<!-- y-Achse -->
 		<div style="
-      position: absolute;
-      left: 2%;
-      top: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg);
-      transform-origin: center;
-      font-size: 0.6em;
-      color: #222;
-      white-space: nowrap;
-  ">
-    Häufigkeit
-  </div>
-
-</div>
-	      
-	      
+			    position: absolute;
+			    left: 2%;
+			    top: 50%;
+			    transform: translate(-50%, -50%) rotate(-90deg);
+			    transform-origin: center;
+			    font-size: 0.6em;
+			    color: #222;
+			    white-space: nowrap;
+			    ">
+		  Häufigkeit
+		</div>	
+	      </div>
 	    </section>
-
+	    
 	    
 	    <section>
 	      <h3>Großes Blutbild: Immunzellen</h3>
@@ -2241,12 +2238,6 @@
 	    </section>
 
 	    
-<!--
-	    <section>
-	      <h3>Durchflusszytometrie</h3>
-	      <img style="width:95%;" src="img/wnr_kanal.png">
-	    </section>
--->
 
 	    <section>
 	      <h3>Unterscheidung von Leukozyten</h3>
@@ -2254,20 +2245,20 @@
 	    </section>
 
 
-<section>
-  <h4> Differenzierung von Inflammationsmustern </h4>
-  <img style="width:85%;"  src="img/inflammation.png">
-
-  <p style="font-size: 26px;"> Wolken im Differentialblutbild</p>
-  <ul style="font-size: 22px; margin-top: -0.5em;">
-    <li> Violett: Lymphozyten  </li>
-    <li> Grün: Monozyten</li>
-    <li> Türkis: Granulozyten</li>
-    <li> Blau: Unreifen Granulozyten</li>
-    <li> Rot: Eosinophile Granulozyten</li>
-  </ul>
-</section>
-
+	    <section>
+	      <h4> Differenzierung von Inflammationsmustern </h4>
+	      <img style="width:85%;"  src="img/inflammation.png">
+	      
+	      <p style="font-size: 26px;"> Wolken im Differentialblutbild</p>
+	      <ul style="font-size: 22px; margin-top: -0.5em;">
+		<li> Violett: Lymphozyten  </li>
+		<li> Grün: Monozyten</li>
+		<li> Türkis: Granulozyten</li>
+		<li> Blau: Unreifen Granulozyten</li>
+		<li> Rot: Eosinophile Granulozyten</li>
+	      </ul>
+	    </section>
+	    
 
 
 
@@ -2284,635 +2275,660 @@
 
 
 
-<section>
+	    <section>
+	      
+	      <h2 style="font-size:1.4em; margin-bottom:0.4em;">
+		Aktivierung von Immunzellen
+	      </h2>
+	      
+	      <div style="
+			  width:96%;
+			  margin:0 auto;
+			  font-size:0.66em;
+			  line-height:1.25;
+			  text-align:left;
+			  ">
+		
+		<p style="margin:0 0 0.45em 0;">
+		  Immunzellen verschiedener <b>Zelltypen</b> und <b>Reifegrade</b>
+		  unterscheiden sich im Muster und in der Expressionsstärke ihrer
+		  Oberflächenrezeptoren (<b>CD-Marker</b>).
+		</p>
+		
+		<p style="margin:0 0 0.65em 0;">
+		  <b>Fluoreszenzmarkierte Antikörper</b> binden spezifisch an diese Marker.
+		  Über die Fluoreszenzsignale können Zellpopulationen in
+		  <b>Scattergrammen</b> unterschieden und Aktivierungszustände erkannt werden.
+		</p>
+		
+		
+		<div style="
+			    width:100%;
+			    box-sizing:border-box;
+			    padding:0.5em 0.8em;
+			    border:2px solid #777;
+			    border-radius:10px;
+			    background:#ffffff;
+			    color:#222;
+			    ">
+		  
+		  <div style="
+			      display:grid;
+			      grid-template-columns: 42% 58%;
+			      column-gap:1em;
+			      row-gap:0.35em;
+			      align-items:center;
+			      font-size:0.94em;
+			      ">
+		    
+		    <div><b>Neutrophile Granulozyten</b></div>
+		    <div>
+		      CD11b <b>↑</b> &nbsp;
+		      CD64 <b>↑</b> &nbsp;
+		      CD62L <b>↓</b>
+		    </div>
+		    
+		    <div><b>Monozyten</b></div>
+		    <div>
+		      CD64 <b>↑</b> &nbsp;
+		      HLA-DR <b>↑</b> &nbsp;
+		      CD80/CD86 <b>↑</b>
+		    </div>
+		    
+		    <div><b>T-Lymphozyten</b></div>
+		    <div>
+		      CD69 <b>↑</b> &nbsp;
+		      CD25 <b>↑</b> &nbsp;
+		      HLA-DR <b>↑</b>
+		    </div>
+		    
+		    <div><b>B-Lymphozyten</b></div>
+		    <div>
+		      CD69 <b>↑</b> &nbsp;
+		      CD80/CD86 <b>↑</b>
+		    </div>
+		    
+		    <div><b>NK-Zellen</b></div>
+		    <div>
+		      CD69 <b>↑</b> &nbsp;
+		      CD107a <b>↑</b>
+		    </div>
+		    
+		  </div>
+		  
+		  <div style="
+			      margin-top:0.45em;
+			      padding-top:0.35em;
+			      border-top:1px solid #bbb;
+			      font-size:0.82em;
+			      color:#555;
+			      ">
+		    ↑ erhöhte Expression &nbsp;&nbsp;&nbsp;
+		    ↓ verminderte Expression bei Aktivierung
+		  </div>
+		  
+		</div>
+		
+	      </div>
+	      
+	    </section>
 
-  <h2 style="font-size:1.4em; margin-bottom:0.4em;">
-    Aktivierung von Immunzellen
-  </h2>
-
-  <div style="
-      width:96%;
-      margin:0 auto;
-      font-size:0.66em;
-      line-height:1.25;
-      text-align:left;
-  ">
-
-    <p style="margin:0 0 0.45em 0;">
-      Immunzellen verschiedener <b>Zelltypen</b> und <b>Reifegrade</b>
-      unterscheiden sich im Muster und in der Expressionsstärke ihrer
-      Oberflächenrezeptoren (<b>CD-Marker</b>).
-    </p>
-
-    <p style="margin:0 0 0.65em 0;">
-      <b>Fluoreszenzmarkierte Antikörper</b> binden spezifisch an diese Marker.
-      Über die Fluoreszenzsignale können Zellpopulationen in
-      <b>Scattergrammen</b> unterschieden und Aktivierungszustände erkannt werden.
-    </p>
 
 
-    <div style="
-        width:100%;
-        box-sizing:border-box;
-        padding:0.5em 0.8em;
-        border:2px solid #777;
-        border-radius:10px;
-        background:#ffffff;
-        color:#222;
-    ">
-
-      <div style="
-          display:grid;
-          grid-template-columns: 42% 58%;
-          column-gap:1em;
-          row-gap:0.35em;
-          align-items:center;
-          font-size:0.94em;
-      ">
-
-        <div><b>Neutrophile Granulozyten</b></div>
-        <div>
-          CD11b <b>↑</b> &nbsp;
-          CD64 <b>↑</b> &nbsp;
-          CD62L <b>↓</b>
-        </div>
-
-        <div><b>Monozyten</b></div>
-        <div>
-          CD64 <b>↑</b> &nbsp;
-          HLA-DR <b>↑</b> &nbsp;
-          CD80/CD86 <b>↑</b>
-        </div>
-
-        <div><b>T-Lymphozyten</b></div>
-        <div>
-          CD69 <b>↑</b> &nbsp;
-          CD25 <b>↑</b> &nbsp;
-          HLA-DR <b>↑</b>
-        </div>
-
-        <div><b>B-Lymphozyten</b></div>
-        <div>
-          CD69 <b>↑</b> &nbsp;
-          CD80/CD86 <b>↑</b>
-        </div>
-
-        <div><b>NK-Zellen</b></div>
-        <div>
-          CD69 <b>↑</b> &nbsp;
-          CD107a <b>↑</b>
-        </div>
-
-      </div>
-
-      <div style="
-          margin-top:0.45em;
-          padding-top:0.35em;
-          border-top:1px solid #bbb;
-          font-size:0.82em;
-          color:#555;
-      ">
-        ↑ erhöhte Expression &nbsp;&nbsp;&nbsp;
-        ↓ verminderte Expression bei Aktivierung
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
+	    <section>
+	      <!-- <h4>Immunstatus Befund</h4> -->
+	      <img style="width:60%; margin-top:0^%;"  src="img/immunstatus.png">
+	    </section>
 	    
-
-
-<section>
-<!-- <h4>Immunstatus Befund</h4> -->
-  <img style="width:60%; margin-top:0^%;"  src="img/immunstatus.png">
-</section>
-
-<section>
-<!-- <h4>Immunstatus Befund</h4> -->
-  <img style="width:88%; margin-top=-10% !important;"  src="img/immunstatus_legende.png">
-</section>
-
-
-
-
-
-<section>
-  <h3> Auftrennung und Sortierung </h3>
-  
-  <img style="width:50%; margin-top:0% !important;"  src="img/daltons.jpeg">
-
-</section>
-
-
-
-
-
-<section class="vergleich-trennverfahren">
-  <style>
-    .vergleich-trennverfahren {
-      width: 112% !important;
-      margin-left: -6%;
-      padding: 0.15em 0.55em 0.25em 0.55em;
-      box-sizing: border-box;
-    }
-
-    .vergleich-trennverfahren h2 {
-      margin: 0 0 0.38em 0;
-      font-size: 1.32em;
-      line-height: 1.05;
-      text-align: left;
-      font-weight: 650;
-      letter-spacing: -0.01em;
-    }
-
-    .vergleich-trennverfahren .subtitle {
-      margin: 0 0 0.55em 0;
-      font-size: 0.42em;
-      color: #666;
-      text-align: left;
-    }
-
-    .vergleich-trennverfahren table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0 0.16em;
-      table-layout: fixed;
-      font-size: 0.50em;
-    }
-
-    .vergleich-trennverfahren th,
-    .vergleich-trennverfahren td {
-      padding: 0.58em 0.72em;
-      vertical-align: middle;
-      text-align: left;
-      border: none;
-    }
-
-    /* linke Kategorien */
-    .vergleich-trennverfahren th:first-child,
-    .vergleich-trennverfahren td:first-child {
-      width: 21%;
-    }
-
-    .vergleich-trennverfahren th:nth-child(2),
-    .vergleich-trennverfahren td:nth-child(2),
-    .vergleich-trennverfahren th:nth-child(3),
-    .vergleich-trennverfahren td:nth-child(3) {
-      width: 39.5%;
-    }
-
-    /* Spaltenüberschriften */
-    .vergleich-trennverfahren thead th {
-      font-size: 1.08em;
-      font-weight: 700;
-      padding-top: 0.68em;
-      padding-bottom: 0.68em;
-    }
-
-    .vergleich-trennverfahren thead th:first-child {
-      background: transparent;
-    }
-
-    .vergleich-trennverfahren .chrom-head {
-      background: #dcebf6;
-      border-radius: 0.35em 0.35em 0 0;
-      border-bottom: 5px solid #4d7fa5;
-    }
-
-    .vergleich-trennverfahren .electro-head {
-      background: #ece3f5;
-      border-radius: 0.35em 0.35em 0 0;
-      border-bottom: 5px solid #7d5aa6;
-    }
-
-    /* Kategorien links */
-    .vergleich-trennverfahren tbody td:first-child {
-      font-weight: 650;
-      color: #444;
-      background: #f4f4f4;
-      border-radius: 0.28em 0 0 0.28em;
-    }
-
-    /* Inhaltsspalten */
-    .vergleich-trennverfahren tbody td:nth-child(2) {
-      background: #f3f8fc;
-      border-left: 4px solid #7aa4c4;
-    }
-
-    .vergleich-trennverfahren tbody td:nth-child(3) {
-      background: #f7f3fb;
-      border-left: 4px solid #a085bf;
-      border-radius: 0 0.28em 0.28em 0;
-    }
-
-    /* leichte Tiefenwirkung */
-    .vergleich-trennverfahren tbody tr {
-      filter: drop-shadow(0 0.06em 0.08em rgba(0,0,0,0.06));
-    }
-
-    .vergleich-trennverfahren strong {
-      font-weight: 700;
-    }
-
-    .vergleich-trennverfahren .emph {
-      font-weight: 700;
-      color: #222;
-    }
-
-    /* kleine Abschlusszeile */
-    .vergleich-trennverfahren .takehome {
-      margin-top: 0.45em;
-      padding: 0.38em 0.6em;
-      font-size: 0.42em;
-      line-height: 1.2;
-      background: #f7f7f7;
-      border-left: 5px solid #777;
-      border-radius: 0.25em;
-      text-align: left;
-    }
-  </style>
-
-  
-  <h2>Chromatographie und Elektrophorese</h2>
-
-  <div class="subtitle">
-    Zwei zentrale Trennprinzipien der Labormedizin
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th class="chrom-head">Chromatographie</th>
-        <th class="electro-head">Elektrophorese</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr>
-        <td>Hauptprinzip</td>
-        <td>
-          Verteilung eines Stoffes zwischen
-          <span class="emph">mobiler</span> und
-          <span class="emph">stationärer Phase</span>
-        </td>
-        <td>
-          Wanderung geladener Moleküle im
-          <span class="emph">elektrischen Feld</span>
-        </td>
-      </tr>
-
-      <tr>
-        <td>Trennkriterien</td>
-        <td>
-          Polarität, Ladung, Größe, Affinität
-        </td>
-        <td>
-          vor allem Ladung und Größe
-        </td>
-      </tr>
-
-      <tr>
-        <td>Typische Analyte</td>
-        <td>
-          kleine Moleküle bis Proteine
-        </td>
-        <td>
-          vor allem Proteine und Nukleinsäuren
-        </td>
-      </tr>
-
-      <tr>
-        <td>Anwendungen</td>
-        <td>
-          HbA1c, Medikamente, Hormone, Metabolite
-        </td>
-        <td>
-          Serumproteine, Paraproteine, Hämoglobinvarianten
-        </td>
-      </tr>
-
-      <tr>
-        <td>Typische Kopplung</td>
-        <td>
-          Massenspektrometrie,
-          z.&nbsp;B. LC-MS/MS oder GC-MS
-        </td>
-        <td>
-          Immunfixation, photometrische Detektion
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="takehome">
-    <strong>Merksatz:</strong>
-    Chromatographie trennt über unterschiedliche Wechselwirkungen mit zwei Phasen;
-    Elektrophorese über unterschiedliche Wanderungsgeschwindigkeiten im elektrischen Feld.
-  </div>
-</section>
-	   	    
-
-<section>
-<!--  <h4>Anwendungen</h4>-->
-  <div style="width:120% !important; margin-left:-2.3em; margin-top:-1em;">
-  <img style="width:30%;" src="img/proteinelektrophorese.png">
-  <img style="width:61%;" src="img/elektrophoresekarten.png">
-  <img style="width:40%;" src="img/blutgruppen.png">
-  <img style="width:50%;" src="img/phgradient.png">
-  </div>
-</section>
-
-<section>
-  <h4>Blutgasanalyse</h4>
-
-  <div class="twocolumns" style="width:120% !important; margin-left:-2em;">
-  <div style="width:90%">
-  <table style="
-	  width: 125% !important;
-          margin-left: -12%;
-	  margin-top: auto;
-	  margin-bottom: auto;
-      border-collapse: collapse;
-      font-size: 0.46em;
-      line-height: 1.08;
-  ">
-    <thead>
-      <tr style="background: rgba(70,110,160,0.18);">
-        <th style="width: 18%; padding: 12px;">Messmodus</th>
-        <th style="width: 22%; padding: 12px;">Was wird untersucht?</th>
-        <!-- <th style="width: 60%; padding: 12px;">Physikalisches Prinzip</th> -->
-      </tr>
-    </thead>
-
-    <tbody>
-
-      <tr>
-        <td style="padding: 6px 8px;">
-          <strong>pH</strong><br>
-          <span style="font-size:0.8em; opacity:0.7;">Potentiometrie</span>
-        </td>
-        <td style="padding: 6px 8px;">
-          Säure-Basen-Status
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          Eine <strong>Glaselektrode</strong> entwickelt abhängig von der
-          H<sup>+</sup>-Aktivität eine elektrische Potentialdifferenz.
-          Die Spannung folgt näherungsweise der <strong>Nernst-Gleichung</strong>.
-        </td>
-	-->
-      </tr>
-
-      <tr style="background: rgba(120,120,120,0.06);">
-        <td style="padding: 6px 8px;">
-          <strong>pCO₂</strong><br>
-          <span style="font-size:0.8em; opacity:0.7;">Severinghaus-Elektrode</span>
-        </td>
-        <td style="padding: 6px 8px;">
-          CO₂-Partialdruck<br>
-          → respiratorische Ventilation
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          CO₂ diffundiert durch eine <strong>gasdurchlässige Membran</strong>
-          und verändert den pH einer Elektrolytlösung.
-          Diese pH-Änderung wird <strong>potentiometrisch</strong> gemessen.
-        </td>
-	-->
-      </tr>
-
-      <tr>
-        <td style="padding: 6px 8px;">
-          <strong>pO₂</strong><br>
-          <span style="font-size:0.8em; opacity:0.7;">Clark-Elektrode</span>
-        </td>
-        <td style="padding: 6px 8px;">
-          O₂-Partialdruck<br>
-          → Oxygenierung
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          Sauerstoff diffundiert durch eine Membran und wird an einer Elektrode
-          <strong>elektrochemisch reduziert</strong>.
-          Der dabei entstehende elektrische Strom ist proportional zum pO₂
-          (<strong>Amperometrie</strong>).
-        </td>
-	-->
-      </tr>
-
-      <tr>
-        <td style="padding: 6px 8px;">
-          <strong>CO-Oximetrie</strong><br>
-          Hb, O₂Hb, COHb, MetHb
-        </td>
-        <td style="padding: 6px 8px;">
-          Hämoglobinkonzentration und
-          verschiedene Hämoglobinformen
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          Die verschiedenen Hb-Formen absorbieren Licht bei unterschiedlichen
-          Wellenlängen verschieden stark. Durch
-          <strong>Mehrwellenlängen-Photometrie</strong> werden ihre
-          Konzentrationen aus dem Absorptionsspektrum bestimmt
-          (<strong>Lambert-Beer-Gesetz</strong>).
-        </td>
-	-->
-      </tr>
-
-      <tr style="background: rgba(120,120,120,0.06);">
-        <td style="padding: 6px 8px;">
-          <strong>Elektrolyte</strong><br>
-          Na⁺, K⁺, Ca²⁺, Cl⁻
-        </td>
-        <td style="padding: 6px 8px;">
-          Elektrolyt- und Ionenhaushalt
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          <strong>Ionenselektive Elektroden (ISE)</strong> besitzen Membranen,
-          die bevorzugt bestimmte Ionen binden bzw. passieren lassen.
-          Das resultierende Membranpotential wird potentiometrisch bestimmt.
-        </td>
-	-->
-      </tr>
-
-
-      <tr style="background: rgba(120,120,120,0.06);">
-        <td style="padding: 6px 8px;">
-          <strong>Metabolite</strong><br>
-          Glucose, Lactat
-        </td>
-        <td style="padding: 6px 8px;">
-          Stoffwechsel und Gewebeperfusion
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          <strong>Enzymatische Biosensoren</strong> wandeln den Analyt
-          enzymatisch um. Dabei entsteht oder verbraucht sich eine
-          elektrochemisch messbare Substanz; der resultierende Strom wird
-          <strong>amperometrisch</strong> bestimmt.
-        </td>
-	-->
-      </tr>
-
-    </tbody>
-  </table>
-
-  </div>
-  <div style="width:112% !important; margin-top:-0.5em;">
-  <img src="img/blutgasanalyse.png" >
-  </div>
-  </div>
-  
-  <div style="
-      margin-top: 18px;
-      font-size: 20pt;
-      opacity: 0.85;
-      text-align: center;
-  ">
-    Zentral sind drei Messprinzipien:<br>
-    <strong>Potentiometrie · Amperometrie · Spektrophotometrie</strong>
-  </div>
-</section>
-
-
-
-
-
-<section>
-    <h4> Mechanismen der Blutgasanalyse </h4>
-    <div style="width:120% !important; margin-top:-0.5em; margin-left:-2.5em;">
-      <img style="width:100%;" src="img/bga.png">
-    </div>
-</section>
-
-
-<section>
-  <h4>CO-Oximetrie: Bestimmung der Konzentrationen</h4>
-
-  <div style="font-size: 16pt;">
-  <p>Lambert-Beer-Gesetz für mehrere Hämoglobin-Derivate:</p>
-
-  \[
-  A(\lambda_i) = d \sum_{j=1}^{4}
-  \varepsilon_j(\lambda_i)c_j
-  \]
-
-  <p> \( \varepsilon_j\) aus bekannten Absorptionsspektren und bekannter Konzentration. <br> Für vier Wellenlängen und vier Hämoglobin-Derivate:</p>
-
-  \[
-  \underbrace{
-  \begin{pmatrix}
-  A_1\\ A_2\\ A_3\\ A_4
-  \end{pmatrix}
-  }_{\text{gemessen}}
-  =
-  d\cdot
-  \underbrace{
-  \begin{pmatrix}
-  \varepsilon_{11} & \varepsilon_{12} & \varepsilon_{13} & \varepsilon_{14}\\
-  \varepsilon_{21} & \varepsilon_{22} & \varepsilon_{23} & \varepsilon_{24}\\
-  \varepsilon_{31} & \varepsilon_{32} & \varepsilon_{33} & \varepsilon_{34}\\
-  \varepsilon_{41} & \varepsilon_{42} & \varepsilon_{43} & \varepsilon_{44}
-  \end{pmatrix}
-  }_{\text{bekannte Koeffizienten}}
-  \underbrace{
-  \begin{pmatrix}
-  c_{\mathrm{O_2Hb}}\\
-  c_{\mathrm{HHb}}\\
-  c_{\mathrm{COHb}}\\
-  c_{\mathrm{MetHb}}
-  \end{pmatrix}
-  }_{\text{gesucht}}
-  \]
-
-  <p>In Matrixschreibweise:</p>
-
-  \[
-  \vec{A} = d\,\mathbf{E}\,\vec{c}
-  \qquad\Rightarrow\qquad
-  \boxed{\vec{c} = \frac{1}{d}\mathbf{E}^{-1}\vec{A}}
-  \]
-
-  <p>
-    Voraussetzung für die spektrale Entmischung: Die Koeffizientenmatrix ist invertierbar.
-  </p>
-  </div>
-</section>
-
+	    <section>
+	      <!-- <h4>Immunstatus Befund</h4> -->
+	      <img style="width:88%; margin-top=-10% !important;"  src="img/immunstatus_legende.png">
+	    </section>
+
+
+
+
+
+	    <section>
+	      <h3> Auftrennung und Sortierung </h3>
+	      
+	      <img style="width:50%; margin-top:0% !important;"  src="img/daltons.jpeg">
+	      
+	    </section>
+
+
+
+
+
+	    <section class="vergleich-trennverfahren">
+	      <style>
+		.vergleich-trennverfahren {
+		    width: 112% !important;
+		    margin-left: -6%;
+		    padding: 0.15em 0.55em 0.25em 0.55em;
+		    box-sizing: border-box;
+		}
+		
+		.vergleich-trennverfahren h2 {
+		    margin: 0 0 0.38em 0;
+		    font-size: 1.32em;
+		    line-height: 1.05;
+		    text-align: left;
+		    font-weight: 650;
+		    letter-spacing: -0.01em;
+		}
+		
+		.vergleich-trennverfahren .subtitle {
+		    margin: 0 0 0.55em 0;
+		    font-size: 0.42em;
+		    color: #666;
+		    text-align: left;
+		}
+		
+		.vergleich-trennverfahren table {
+		    width: 100%;
+		    border-collapse: separate;
+		    border-spacing: 0 0.16em;
+		    table-layout: fixed;
+		    font-size: 0.50em;
+		}
+		
+		.vergleich-trennverfahren th,
+		.vergleich-trennverfahren td {
+		    padding: 0.58em 0.72em;
+		    vertical-align: middle;
+		    text-align: left;
+		    border: none;
+		}
+		
+		/* linke Kategorien */
+		.vergleich-trennverfahren th:first-child,
+		.vergleich-trennverfahren td:first-child {
+		    width: 21%;
+		}
+		
+		.vergleich-trennverfahren th:nth-child(2),
+		.vergleich-trennverfahren td:nth-child(2),
+		.vergleich-trennverfahren th:nth-child(3),
+		.vergleich-trennverfahren td:nth-child(3) {
+		    width: 39.5%;
+		}
+		
+		/* Spaltenüberschriften */
+		.vergleich-trennverfahren thead th {
+		    font-size: 1.08em;
+		    font-weight: 700;
+		    padding-top: 0.68em;
+		    padding-bottom: 0.68em;
+		}
+		
+		.vergleich-trennverfahren thead th:first-child {
+		    background: transparent;
+		}
+		
+		.vergleich-trennverfahren .chrom-head {
+		    background: #dcebf6;
+		    border-radius: 0.35em 0.35em 0 0;
+		    border-bottom: 5px solid #4d7fa5;
+		}
+		
+		.vergleich-trennverfahren .electro-head {
+		    background: #ece3f5;
+		    border-radius: 0.35em 0.35em 0 0;
+		    border-bottom: 5px solid #7d5aa6;
+		}
+		
+		/* Kategorien links */
+		.vergleich-trennverfahren tbody td:first-child {
+		    font-weight: 650;
+		    color: #444;
+		    background: #f4f4f4;
+		    border-radius: 0.28em 0 0 0.28em;
+		}
+		
+		/* Inhaltsspalten */
+		.vergleich-trennverfahren tbody td:nth-child(2) {
+		    background: #f3f8fc;
+		    border-left: 4px solid #7aa4c4;
+		}
+		
+		.vergleich-trennverfahren tbody td:nth-child(3) {
+		    background: #f7f3fb;
+		    border-left: 4px solid #a085bf;
+		    border-radius: 0 0.28em 0.28em 0;
+		}
+		
+		/* leichte Tiefenwirkung */
+		.vergleich-trennverfahren tbody tr {
+		    filter: drop-shadow(0 0.06em 0.08em rgba(0,0,0,0.06));
+		}
+		
+		.vergleich-trennverfahren strong {
+		    font-weight: 700;
+		}
+		
+		.vergleich-trennverfahren .emph {
+		    font-weight: 700;
+		    color: #222;
+		}
+		
+		/* kleine Abschlusszeile */
+		.vergleich-trennverfahren .takehome {
+		    margin-top: 0.45em;
+		    padding: 0.38em 0.6em;
+		    font-size: 0.42em;
+		    line-height: 1.2;
+		    background: #f7f7f7;
+		    border-left: 5px solid #777;
+		    border-radius: 0.25em;
+		    text-align: left;
+		}
+	      </style>
+	      
+	      
+	      <h2>Chromatographie und Elektrophorese</h2>
+	      
+	      <div class="subtitle">
+		Zwei zentrale Trennprinzipien der Labormedizin
+	      </div>
+	      
+	      <table>
+		<thead>
+		  <tr>
+		    <th></th>
+		    <th class="chrom-head">Chromatographie</th>
+		    <th class="electro-head">Elektrophorese</th>
+		  </tr>
+		</thead>
+		
+		<tbody>
+		  <tr>
+		    <td>Hauptprinzip</td>
+		    <td>
+		      Verteilung eines Stoffes zwischen
+		      <span class="emph">mobiler</span> und
+		      <span class="emph">stationärer Phase</span>
+		    </td>
+		    <td>
+		      Wanderung geladener Moleküle im
+		      <span class="emph">elektrischen Feld</span>
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <td>Trennkriterien</td>
+		    <td>
+		      Polarität, Ladung, Größe, Affinität
+		    </td>
+		    <td>
+		      vor allem Ladung und Größe
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <td>Typische Analyte</td>
+		    <td>
+		      kleine Moleküle bis Proteine
+		    </td>
+		    <td>
+		      vor allem Proteine und Nukleinsäuren
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <td>Anwendungen</td>
+		    <td>
+		      HbA1c, Medikamente, Hormone, Metabolite
+		    </td>
+		    <td>
+		      Serumproteine, Paraproteine, Hämoglobinvarianten
+		    </td>
+		  </tr>
+		  
+		  <tr>
+		    <td>Typische Kopplung</td>
+		    <td>
+		      Massenspektrometrie,
+		      z.&nbsp;B. LC-MS/MS oder GC-MS
+		    </td>
+		    <td>
+		      Immunfixation, photometrische Detektion
+		    </td>
+		  </tr>
+		</tbody>
+	      </table>
+	      
+	      <div class="takehome">
+		<strong>Merksatz:</strong>
+		Chromatographie trennt über unterschiedliche Wechselwirkungen mit zwei Phasen;
+		Elektrophorese über unterschiedliche Wanderungsgeschwindigkeiten im elektrischen Feld.
+	      </div>
+	    </section>
+	    
+	    
+	    <section>
+	      <!--  <h4>Anwendungen</h4>-->
+	      <div style="width:120% !important; margin-left:-2.3em; margin-top:-1em;">
+		<img style="width:30%;" src="img/proteinelektrophorese.png">
+		<img style="width:61%;" src="img/elektrophoresekarten.png">
+		<img style="width:40%;" src="img/blutgruppen.png">
+		<img style="width:50%;" src="img/phgradient.png">
+	      </div>
+	    </section>
+	    
+	    <section>
+	      <h4>Blutgasanalyse</h4>
+	      
+	      <div class="twocolumns" style="width:120% !important; margin-left:-2em;">
+		<div style="width:90%">
+		  <table style="
+				width: 125% !important;
+				margin-left: -12%;
+				margin-top: auto;
+				margin-bottom: auto;
+				border-collapse: collapse;
+				font-size: 0.46em;
+				line-height: 1.08;
+				">
+		    <thead>
+		      <tr style="background: rgba(70,110,160,0.18);">
+			<th style="width: 18%; padding: 12px;">Messmodus</th>
+			<th style="width: 22%; padding: 12px;">Was wird untersucht?</th>
+			<!-- <th style="width: 60%; padding: 12px;">Physikalisches Prinzip</th> -->
+		      </tr>
+		    </thead>
+		    
+		    <tbody>
+		      
+		      <tr>
+			<td style="padding: 6px 8px;">
+			  <strong>pH</strong><br>
+			  <span style="font-size:0.8em; opacity:0.7;">Potentiometrie</span>
+			</td>
+			<td style="padding: 6px 8px;">
+			  Säure-Basen-Status
+			</td>
+			<!--
+			    <td style="padding: 6px 8px;">
+			      Eine <strong>Glaselektrode</strong> entwickelt abhängig von der
+			      H<sup>+</sup>-Aktivität eine elektrische Potentialdifferenz.
+			      Die Spannung folgt näherungsweise der <strong>Nernst-Gleichung</strong>.
+			    </td>
+			    -->
+		      </tr>
+		      
+		      <tr style="background: rgba(120,120,120,0.06);">
+			<td style="padding: 6px 8px;">
+			  <strong>pCO₂</strong><br>
+			  <span style="font-size:0.8em; opacity:0.7;">Severinghaus-Elektrode</span>
+			</td>
+			<td style="padding: 6px 8px;">
+			  CO₂-Partialdruck<br>
+			  → respiratorische Ventilation
+			</td>
+			<!--
+			    <td style="padding: 6px 8px;">
+			      CO₂ diffundiert durch eine <strong>gasdurchlässige Membran</strong>
+			      und verändert den pH einer Elektrolytlösung.
+			      Diese pH-Änderung wird <strong>potentiometrisch</strong> gemessen.
+			    </td>
+			    -->
+		      </tr>
+		      
+		      <tr>
+			<td style="padding: 6px 8px;">
+			  <strong>pO₂</strong><br>
+			  <span style="font-size:0.8em; opacity:0.7;">Clark-Elektrode</span>
+			</td>
+			<td style="padding: 6px 8px;">
+			  O₂-Partialdruck<br>
+			  → Oxygenierung
+			</td>
+			<!--
+			    <td style="padding: 6px 8px;">
+			      Sauerstoff diffundiert durch eine Membran und wird an einer Elektrode
+			      <strong>elektrochemisch reduziert</strong>.
+			      Der dabei entstehende elektrische Strom ist proportional zum pO₂
+			      (<strong>Amperometrie</strong>).
+			    </td>
+			    -->
+		      </tr>
+		      
+		      <tr>
+			<td style="padding: 6px 8px;">
+			  <strong>CO-Oximetrie</strong><br>
+			  Hb, O₂Hb, COHb, MetHb
+			</td>
+			<td style="padding: 6px 8px;">
+			  Hämoglobinkonzentration und
+			  verschiedene Hämoglobinformen
+			</td>
+			<!--
+			    <td style="padding: 6px 8px;">
+			      Die verschiedenen Hb-Formen absorbieren Licht bei unterschiedlichen
+			      Wellenlängen verschieden stark. Durch
+			      <strong>Mehrwellenlängen-Photometrie</strong> werden ihre
+			      Konzentrationen aus dem Absorptionsspektrum bestimmt
+			      (<strong>Lambert-Beer-Gesetz</strong>).
+			    </td>
+			    -->
+		      </tr>
+		      
+		      <tr style="background: rgba(120,120,120,0.06);">
+			<td style="padding: 6px 8px;">
+			  <strong>Elektrolyte</strong><br>
+			  Na⁺, K⁺, Ca²⁺, Cl⁻
+			</td>
+			<td style="padding: 6px 8px;">
+			  Elektrolyt- und Ionenhaushalt
+			</td>
+			<!--
+			    <td style="padding: 6px 8px;">
+			      <strong>Ionenselektive Elektroden (ISE)</strong> besitzen Membranen,
+			      die bevorzugt bestimmte Ionen binden bzw. passieren lassen.
+			      Das resultierende Membranpotential wird potentiometrisch bestimmt.
+			    </td>
+			    -->
+		      </tr>
+		      
+		      
+		      <tr style="background: rgba(120,120,120,0.06);">
+			<td style="padding: 6px 8px;">
+			  <strong>Metabolite</strong><br>
+			  Glucose, Lactat
+			</td>
+			<td style="padding: 6px 8px;">
+			  Stoffwechsel und Gewebeperfusion
+			</td>
+			<!--
+			    <td style="padding: 6px 8px;">
+			      <strong>Enzymatische Biosensoren</strong> wandeln den Analyt
+			      enzymatisch um. Dabei entsteht oder verbraucht sich eine
+			      elektrochemisch messbare Substanz; der resultierende Strom wird
+			      <strong>amperometrisch</strong> bestimmt.
+			    </td>
+			    -->
+		      </tr>
+		      
+		    </tbody>
+		  </table>
+		  
+		</div>
+		<div style="width:112% !important; margin-top:-0.5em;">
+		  <img src="img/blutgasanalyse.png" >
+		</div>
+	      </div>
+	      
+	      <div style="
+			  margin-top: 18px;
+			  font-size: 20pt;
+			  opacity: 0.85;
+			  text-align: center;
+			  ">
+		Zentral sind drei Messprinzipien:<br>
+		<strong>Potentiometrie · Amperometrie · Spektrophotometrie</strong>
+	      </div>
+	    </section>
+	    
+	    
+	    
+	    
+	    <style>
+	      .bild {
+		  position: relative;
+		  width: 146%;
+		  margin-left: -19%;
+		  margin-top: -1em;
+		  aspect-ratio: 16 / 9;
+	      }
+	      
+	      .teil {
+		  position: absolute;
+		  inset: 0;
+		  width: 100%;
+		  height: 100%;
+		  object-fit: contain;
+	      }
+	      
+	      .teil:nth-child(1) { clip-path: inset(0 75% 0 0); } /* linke 33% */
+	      .teil:nth-child(2) { clip-path: inset(0 50% 0 0); } /* linke 66% */
+	      .teil:nth-child(3) { clip-path: inset(0 25% 0 0); }       /* ganzes Bild */
+	      .teil:nth-child(4) { clip-path: inset(0 0 0 0); }       /* ganzes Bild */
+	    </style>
+	    
+	    
+	    <section>
+	      <div class="bild">
+		<img class="teil fragment" src="img/bga.png"
+		     alt="Blutgasanalyse">
+		<img class="teil fragment" src="img/bga.png" alt="">
+		<img class="teil fragment" src="img/bga.png" alt="">
+		<img class="teil fragment" src="img/bga.png" alt="">
+	      </div>
+	    </section>
+	    
+	    
+	    
+	    
+	    <section>
+	      <h4>CO-Oximetrie: Bestimmung der Konzentrationen</h4>
+	      
+	      <div style="font-size: 16pt;">
+		<p>Lambert-Beer-Gesetz für mehrere Hämoglobin-Derivate:</p>
+		
+		\[
+		A(\lambda_i) = d \sum_{j=1}^{4}
+		\varepsilon_j(\lambda_i)c_j
+		\]
+		
+		<p> \( \varepsilon_j\) aus bekannten Absorptionsspektren und bekannter Konzentration. <br> Für vier Wellenlängen und vier Hämoglobin-Derivate:</p>
+		
+		\[
+		\underbrace{
+		\begin{pmatrix}
+		A_1\\ A_2\\ A_3\\ A_4
+		\end{pmatrix}
+		}_{\text{gemessen}}
+		=
+		d\cdot
+		\underbrace{
+		\begin{pmatrix}
+		\varepsilon_{11} & \varepsilon_{12} & \varepsilon_{13} & \varepsilon_{14}\\
+		\varepsilon_{21} & \varepsilon_{22} & \varepsilon_{23} & \varepsilon_{24}\\
+		\varepsilon_{31} & \varepsilon_{32} & \varepsilon_{33} & \varepsilon_{34}\\
+		\varepsilon_{41} & \varepsilon_{42} & \varepsilon_{43} & \varepsilon_{44}
+		\end{pmatrix}
+		}_{\text{bekannte Koeffizienten}}
+		\underbrace{
+		\begin{pmatrix}
+		c_{\mathrm{O_2Hb}}\\
+		c_{\mathrm{HHb}}\\
+		c_{\mathrm{COHb}}\\
+		c_{\mathrm{MetHb}}
+		\end{pmatrix}
+		}_{\text{gesucht}}
+		\]
+		
+		<p>In Matrixschreibweise:</p>
+		
+		\[
+		\vec{A} = d\,\mathbf{E}\,\vec{c}
+		\qquad\Rightarrow\qquad
+		\boxed{\vec{c} = \frac{1}{d}\mathbf{E}^{-1}\vec{A}}
+		\]
+		
+		<p>
+		  Voraussetzung für die spektrale Entmischung: Die Koeffizientenmatrix ist invertierbar.
+		</p>
+	      </div>
+	    </section>
+	    
             <section>
-                <h3>Zusammenfassung</h3>
-                <ul style="font-size: 28px;">
+              <h3>Zusammenfassung</h3>
+              <ul style="font-size: 28px;">
 		 <li>Klinische Chemie: Photometrie</li>
 		 <li>Blutbild: Impedanz, Durchflusszytometrie</li>
                  <li>Immunoassays: Photometrie, Fluoreszenz oder Chemilumineszenz</li>
 		 <li>Blutgasanalyse: Potentiometrie, Amperometrie</li>
 		 <li>Auftrennung: Chromatographie und Elektrophorese</li>
-		</ul>
+	      </ul>
 
-		<br><br>
+	      <br><br>
 		
-		<h5 style="padding-top:20px"> Ausblick folgender Vorlesungen</h5>
-                <ul style="font-size: 28px;">
-		  <li>DAISY - digitales Alarm und Informationssystem</li>
-                 <li>Raman-, IR-, UV/VIS-Spektroskopie</li>
-		 <li>Massenspektrometrie</li>
-                 <li>Kernspinresonanzspektroskopie</li>
-		</ul>		
-	     </section>
-
-
-
-
-<section>
-    <h3> Ende gut, alles gut </h3>
-    <br>
-    <img style="width:30%;" src="../statistics/img/heroin.jpg">
-    <p style="font-size:24px;">Jeder macht mal Fehler...</p>
-</section>
-
+	      <h5 style="padding-top:20px"> Ausblick folgender Vorlesungen</h5>
+              <ul style="font-size: 28px;">
+		<li>DAISY - digitales Alarm und Informationssystem</li>
+                <li>Raman-, IR-, UV/VIS-Spektroskopie</li>
+		<li>Massenspektrometrie</li>
+                <li>Kernspinresonanzspektroskopie</li>
+	      </ul>		
+	    </section>
+	    
+	    
+	    
+	    
+	    <section>
+	      <h3> Ende gut, alles gut </h3>
+	      <br>
+	      <img style="width:30%;" src="../statistics/img/heroin.jpg">
+	      <p style="font-size:24px;">Jeder macht mal Fehler...</p>
+	    </section>
 
 	    
 	    
-        </div>
+	    
     </div>
-<!--
-<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-<script src="https://unpkg.com/reveal.js/dist/plugin/math.js"></script>
--->
-<script src="src/reveal.js"></script>
-<script src="src/math.js"></script>
+  </div>
+  <!--
+      <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+      <script src="https://unpkg.com/reveal.js/dist/plugin/math.js"></script>
+      -->
+  <script src="src/reveal.js"></script>
+  <script src="src/math.js"></script>
 
 
-<style>
-  .reveal .slide-number {
-      left: 8px;
-      right: auto;
-      bottom: 8px;
-      background-color: transparent;
-  }
-</style>
-
-<script>
-  Reveal.initialize({
-      plugins: [RevealMath.KaTeX],
-      slideNumber: 'c/t',
-      controls: false
-  });
-</script>
-
-
-<script>
-  Reveal.initialize();
-</script>
-
+  <style>
+    .reveal .slide-number {
+	left: 8px;
+	right: auto;
+	bottom: 8px;
+	background-color: transparent;
+    }
+  </style>
+  
+  <script>
+    Reveal.initialize({
+	plugins: [RevealMath.KaTeX],
+	slideNumber: 'c/t',
+	controls: false
+    });
+  </script>
+  
+  
+  <script>
+    Reveal.initialize();
+  </script>
+  
 </body>
 </html>
 
