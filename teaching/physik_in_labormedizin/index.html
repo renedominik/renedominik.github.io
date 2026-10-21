@@ -1289,8 +1289,9 @@
              <section>
                 <h3>Sepsis</h3>
                 <ul style="font-size: 28px;">
+		  <li>Ursache kann eine Kleinigkeit sein (Biss, Schnitt)</li>
 		 <li>Ausbreitende Infektion (meist Bakterien, seltener Viren, Pilze, Parasiten)</li>
-                 <li style="margin-bottom: 0.5em;">Eskalierende Immunantwort </li>
+                 <li style="margin-bottom: 0.5em;">Eskalierende Immunantwort die zum Multiorganversagen führt </li>
                  <li>Ca. 240.000 Fälle pro Jahr in Deutschland</li>
 		 <li>85.000 - 140.000 Todesfälle</li>
 		 <li>Überlebenswahrscheinlichkeit ca. 68%</li>
@@ -2618,11 +2619,13 @@
 	   	    
 
 <section>
-  <h4>Anwendungen</h4>
-  <img style="width:40%;" src="img/proteinelektrophorese.png">
-  <img style="width:40%;" src="img/proteinelektrophorese.png">
-  <img style="width:40%;" src="img/proteinelektrophorese.png">
-  <img style="width:40%;" src="img/proteinelektrophorese.png">
+<!--  <h4>Anwendungen</h4>-->
+  <div style="width:120% !important; margin-left:-2.3em; margin-top:-1em;">
+  <img style="width:30%;" src="img/proteinelektrophorese.png">
+  <img style="width:61%;" src="img/elektrophoresekarten.png">
+  <img style="width:40%;" src="img/blutgruppen.png">
+  <img style="width:50%;" src="img/phgradient.png">
+  </div>
 </section>
 
 <section>
@@ -2703,23 +2706,6 @@
 	-->
       </tr>
 
-      <tr style="background: rgba(120,120,120,0.06);">
-        <td style="padding: 6px 8px;">
-          <strong>Elektrolyte</strong><br>
-          Na⁺, K⁺, Ca²⁺, Cl⁻
-        </td>
-        <td style="padding: 6px 8px;">
-          Elektrolyt- und Ionenhaushalt
-        </td>
-	<!--
-        <td style="padding: 6px 8px;">
-          <strong>Ionenselektive Elektroden (ISE)</strong> besitzen Membranen,
-          die bevorzugt bestimmte Ionen binden bzw. passieren lassen.
-          Das resultierende Membranpotential wird potentiometrisch bestimmt.
-        </td>
-	-->
-      </tr>
-
       <tr>
         <td style="padding: 6px 8px;">
           <strong>CO-Oximetrie</strong><br>
@@ -2739,6 +2725,24 @@
         </td>
 	-->
       </tr>
+
+      <tr style="background: rgba(120,120,120,0.06);">
+        <td style="padding: 6px 8px;">
+          <strong>Elektrolyte</strong><br>
+          Na⁺, K⁺, Ca²⁺, Cl⁻
+        </td>
+        <td style="padding: 6px 8px;">
+          Elektrolyt- und Ionenhaushalt
+        </td>
+	<!--
+        <td style="padding: 6px 8px;">
+          <strong>Ionenselektive Elektroden (ISE)</strong> besitzen Membranen,
+          die bevorzugt bestimmte Ionen binden bzw. passieren lassen.
+          Das resultierende Membranpotential wird potentiometrisch bestimmt.
+        </td>
+	-->
+      </tr>
+
 
       <tr style="background: rgba(120,120,120,0.06);">
         <td style="padding: 6px 8px;">
@@ -2783,13 +2787,65 @@
 
 
 <section>
-    <h3> Mechanismen der Blutgasanalyse </h3>
-
-    <img style="width:100%;" src="img/bga.png">
+    <h4> Mechanismen der Blutgasanalyse </h4>
+    <div style="width:120% !important; margin-top:-0.5em; margin-left:-2.5em;">
+      <img style="width:100%;" src="img/bga.png">
+    </div>
 </section>
 
 
+<section>
+  <h4>CO-Oximetrie: Bestimmung der Konzentrationen</h4>
 
+  <div style="font-size: 16pt;">
+  <p>Lambert-Beer-Gesetz für mehrere Hämoglobin-Derivate:</p>
+
+  \[
+  A(\lambda_i) = d \sum_{j=1}^{4}
+  \varepsilon_j(\lambda_i)c_j
+  \]
+
+  <p> \( \varepsilon_j\) aus bekannten Absorptionsspektren und bekannter Konzentration. <br> Für vier Wellenlängen und vier Hämoglobin-Derivate:</p>
+
+  \[
+  \underbrace{
+  \begin{pmatrix}
+  A_1\\ A_2\\ A_3\\ A_4
+  \end{pmatrix}
+  }_{\text{gemessen}}
+  =
+  d\cdot
+  \underbrace{
+  \begin{pmatrix}
+  \varepsilon_{11} & \varepsilon_{12} & \varepsilon_{13} & \varepsilon_{14}\\
+  \varepsilon_{21} & \varepsilon_{22} & \varepsilon_{23} & \varepsilon_{24}\\
+  \varepsilon_{31} & \varepsilon_{32} & \varepsilon_{33} & \varepsilon_{34}\\
+  \varepsilon_{41} & \varepsilon_{42} & \varepsilon_{43} & \varepsilon_{44}
+  \end{pmatrix}
+  }_{\text{bekannte Koeffizienten}}
+  \underbrace{
+  \begin{pmatrix}
+  c_{\mathrm{O_2Hb}}\\
+  c_{\mathrm{HHb}}\\
+  c_{\mathrm{COHb}}\\
+  c_{\mathrm{MetHb}}
+  \end{pmatrix}
+  }_{\text{gesucht}}
+  \]
+
+  <p>In Matrixschreibweise:</p>
+
+  \[
+  \vec{A} = d\,\mathbf{E}\,\vec{c}
+  \qquad\Rightarrow\qquad
+  \boxed{\vec{c} = \frac{1}{d}\mathbf{E}^{-1}\vec{A}}
+  \]
+
+  <p>
+    Voraussetzung für die spektrale Entmischung: Die Koeffizientenmatrix ist invertierbar.
+  </p>
+  </div>
+</section>
 
             <section>
                 <h3>Zusammenfassung</h3>
