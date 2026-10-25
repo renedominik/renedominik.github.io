@@ -1,0 +1,40 @@
+.slides section p, .slides section ul {
+    max-width: 96%;
+}
+.slides section h1, .slides section h2, .slides section h3 {
+    max-width: 105%;
+}
+
+.bildwechsel {
+    display: grid;
+    place-items: center;
+}
+
+.bildwechsel img {
+    grid-area: 1 / 1;
+    max-width: 100%;
+    max-height: 70vh;
+}
+
+.deck-logo {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    width: 150px;
+    height: auto;
+    z-index: 1000;
+}
+
+.zeilen {
+    display: grid;
+    grid-template-columns: 1fr 2em 1fr;
+    gap: 0.3em;
+    align-items: center;
+}
+
+.reveal .slide-number {
+    left: 8px;
+    right: auto;
+    bottom: 8px;
+    background-color: transparent;
+}

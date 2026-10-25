@@ -1,0 +1,815 @@
+.slides section p, .slides section ul {
+    max-width: 96%;
+}
+.slides section h1, .slides section h2, .slides section h3 {
+    max-width: 105%;
+}
+
+/* Gesamtlayout */
+.reveal .slides section.vl-slide {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 65px 80px;
+    text-align: left;
+    font-family: "Aptos", "Helvetica Neue", sans-serif;
+    color: #203448;
+}
+
+/* Überschrift */
+.vl-slide .vl-kicker {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #398596;
+    margin-bottom: 16px;
+}
+
+.reveal .vl-slide h2 {
+    margin: 0;
+    font-size: 54px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    text-transform: none;
+    color: #203448;
+}
+
+.vl-slide .vl-rule {
+    width: 80px;
+    height: 3px;
+    background: #398596;
+    margin-top: 22px;
+    border-radius: 2px;
+}
+
+/* Liste */
+.vl-slide .vl-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 55px;
+}
+
+/* Umrandete Kästen */
+.vl-slide .vl-card {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+    box-sizing: border-box;
+    padding: 20px 30px;
+
+    background: #FFFFFF;
+    border: 1.5px solid #CDD9E1;
+    border-left: 5px solid #398596;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 18px rgba(25, 45, 65, 0.035);
+}
+
+/* Nummerierung */
+.vl-slide .vl-number {
+    font-size: 22px;
+    font-weight: 500;
+    color: #398596;
+    min-width: 75px;
+    letter-spacing: 1px;
+}
+
+/* Vorlesungstitel */
+.vl-slide .vl-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #203448;
+    letter-spacing: -0.3px;
+}
+
+.reveal .slides section.blood-slide {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 25px;
+    text-align: left;
+}
+
+/* Einfache Folienüberschrift */
+.reveal .blood-slide > h3 {
+    margin: 0 0 35px 0;
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+/* 2x2-Raster */
+.blood-slide .blood-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 26px;
+}
+
+/* Kästen mit hellem HIntergrund*/
+.blood-slide .blood-card {
+    box-sizing: border-box;
+    min-height: 205px;
+    padding: 20px 24px;
+
+    background: #FFFFFF;
+    border: 1.5px solid #BBC7D0;
+    border-left: 5px solid;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 18px rgba(25,45,65,0.045);
+}
+
+/* Farbakzente */
+.blood-slide .erythro { border-left-color: #B85861; }
+.blood-slide .leuko  { border-left-color: #398596; }
+.blood-slide .thrombo { border-left-color: #C39445; }
+.blood-slide .plasma { border-left-color: #7886AB; }
+
+/* Überschriften der Kästen */
+.reveal .blood-slide .blood-card h4 {
+    margin: 0 0 16px 0;
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.blood-slide .erythro h4 { color: #B85861; }
+.blood-slide .leuko h4  { color: #398596; }
+.blood-slide .thrombo h4 { color: #C39445; }
+.blood-slide .plasma h4 { color: #7886AB; }
+
+/* Stichpunkte */
+.reveal .blood-slide .blood-card ul {
+    display: block;
+    margin: 0;
+    padding-left: 22px;
+    width: auto;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.reveal .blood-slide .blood-card li {
+    margin-bottom: 10px;
+    padding-left: 3px;
+}
+
+.twocolumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+}
+.threecolumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    text-align: left;
+}
+
+/* Gesamtlayout – kein eigener Folienhintergrund */
+.reveal .slides section.fehler-slide {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+/* Drei gleich breite Kästen */
+.fehler-slide .fehler-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    align-items: stretch;
+    width: 120% !important;
+    margin-left: -2.25em;
+}
+
+/* Allgemeines Kastendesign */
+.fehler-slide .fehler-card {
+    box-sizing: border-box;
+    min-height: 340px;
+    padding: 22px 22px 24px;
+
+    border-radius: 12px;
+    border: 2px solid rgba(40,65,75,0.15);
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    text-align: left;
+
+    color: #263B45;
+}
+
+/* Pastellfarbene Hintergründe */
+.fehler-slide .prae {
+    background: #F3D8D1;
+    border-top: 6px solid #BE7775;
+}
+
+.fehler-slide .analytik {
+    background: #DAEBD9;
+    border-top: 6px solid #72A58A;
+}
+
+.fehler-slide .post {
+    background: #DCE4F4;
+    border-top: 6px solid #8399C2;
+}
+
+/* Kastenüberschriften */
+.reveal .fehler-slide .fehler-card h4 {
+    margin: 0 0 21px 0;
+    font-size: 25px;
+    line-height: 1.25;
+    font-weight: 700;
+    text-transform: none;
+    color: #243946;
+}
+
+.fehler-slide .fehler-card h4 span {
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Unterpunkte */
+.reveal .fehler-slide .fehler-card ul {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding-left: 23px;
+
+    list-style-type: square;
+    font-size: 19px;
+    line-height: 1.35;
+    color: #30454F;
+}
+
+.reveal .fehler-slide .fehler-card li {
+    margin: 0 0 15px 0;
+    padding-left: 2px;
+}
+
+.fehler-slide .prae li::marker {
+    color: #AF6665;
+}
+
+.fehler-slide .analytik li::marker {
+    color: #629779;
+}
+
+.fehler-slide .post li::marker {
+    color: #748CB9;
+}
+
+/* Prozesspfeil unterhalb der Kästen */
+.fehler-slide .fehler-arrow {
+    display: block;
+    width: 96%;
+    height: 90px;
+    margin: 15px auto 0;
+}
+
+.reveal .slides section.sepsis-lab {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 18px 28px;
+    background: #0c1626;
+    color: #e7edf5;
+    font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+    text-align: left;
+}
+
+.sepsis-lab .lab-heading {
+    margin-bottom: 13px;
+}
+
+.sepsis-lab .lab-heading h2 {
+    margin: 0 0 6px;
+    font-size: 31px;
+    font-weight: 650;
+    color: #f4f8ff;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.sepsis-lab .lab-subtitle {
+    font-size: 16px;
+    color: #a5b6c9;
+}
+
+.sepsis-lab .table-frame {
+    overflow: hidden;
+    border: 1px solid #32465b;
+    border-radius: 10px;
+}
+
+.reveal .sepsis-lab table.lab-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 17px;
+    line-height: 1.14;
+    color: #e7edf5;
+}
+
+.sepsis-lab .lab-table th {
+    background: #21364d;
+    padding: 10px 11px;
+    color: #dceaf5;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    border-bottom: 2px solid #456079;
+}
+
+.sepsis-lab .lab-table td {
+    padding: 5px 11px;
+    border-bottom: 1px solid #29394b;
+    vertical-align: middle;
+}
+
+.sepsis-lab .lab-table tr:nth-child(odd) td {
+    background: #142338;
+}
+
+.sepsis-lab .lab-table tr:nth-child(even) td {
+    background: #192b40;
+}
+
+.sepsis-lab .lab-table tr:last-child td {
+    border-bottom: none;
+}
+
+.sepsis-lab .lab-table td:first-child {
+    font-weight: 600;
+    border-left: 4px solid var(--group-color);
+}
+
+.sepsis-lab .lab-table tr.group-start td {
+    border-top: 2px solid #496075;
+}
+
+.sepsis-lab .lab-table td:nth-child(2),
+.sepsis-lab .lab-table td:nth-child(3) {
+    white-space: nowrap;
+}
+
+.sepsis-lab .up { color: #f1ae76; font-weight: 700; }
+.sepsis-lab .down { color: #78c8ed; font-weight: 700; }
+
+.sepsis-lab .cytokine { --group-color: #66c9c7; }
+.sepsis-lab .acute   { --group-color: #e4b56c; }
+.sepsis-lab .cells   { --group-color: #87a9ef; }
+.sepsis-lab .coag    { --group-color: #c3a0e5; }
+.sepsis-lab .organ   { --group-color: #df958f; }
+
+.sepsis-lab .lab-footer {
+    margin-top: 12px;
+    color: #a7b8c9;
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+.sepsis-lab .legend {
+    display: flex;
+    gap: 19px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.sepsis-lab .legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sepsis-lab .legend i {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    background: var(--group-color);
+}
+
+.vergleich-trennverfahren {
+    width: 112% !important;
+    margin-left: -6%;
+    padding: 0.15em 0.55em 0.25em 0.55em;
+    box-sizing: border-box;
+}
+
+.vergleich-trennverfahren h2 {
+    margin: 0 0 0.38em 0;
+    font-size: 1.32em;
+    line-height: 1.05;
+    text-align: left;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+}
+
+.vergleich-trennverfahren .subtitle {
+    margin: 0 0 0.55em 0;
+    font-size: 0.42em;
+    color: #666;
+    text-align: left;
+}
+
+.vergleich-trennverfahren table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.16em;
+    table-layout: fixed;
+    font-size: 0.50em;
+}
+
+.vergleich-trennverfahren th,
+.vergleich-trennverfahren td {
+    padding: 0.58em 0.72em;
+    vertical-align: middle;
+    text-align: left;
+    border: none;
+}
+
+/* linke Kategorien */
+.vergleich-trennverfahren th:first-child,
+.vergleich-trennverfahren td:first-child {
+    width: 21%;
+}
+
+.vergleich-trennverfahren th:nth-child(2),
+.vergleich-trennverfahren td:nth-child(2),
+.vergleich-trennverfahren th:nth-child(3),
+.vergleich-trennverfahren td:nth-child(3) {
+    width: 39.5%;
+}
+
+/* Spaltenüberschriften */
+.vergleich-trennverfahren thead th {
+    font-size: 1.08em;
+    font-weight: 700;
+    padding-top: 0.68em;
+    padding-bottom: 0.68em;
+}
+
+.vergleich-trennverfahren thead th:first-child {
+    background: transparent;
+}
+
+.vergleich-trennverfahren .chrom-head {
+    background: #dcebf6;
+    border-radius: 0.35em 0.35em 0 0;
+    border-bottom: 5px solid #4d7fa5;
+}
+
+.vergleich-trennverfahren .electro-head {
+    background: #ece3f5;
+    border-radius: 0.35em 0.35em 0 0;
+    border-bottom: 5px solid #7d5aa6;
+}
+
+/* Kategorien links */
+.vergleich-trennverfahren tbody td:first-child {
+    font-weight: 650;
+    color: #444;
+    background: #f4f4f4;
+    border-radius: 0.28em 0 0 0.28em;
+}
+
+/* Inhaltsspalten */
+.vergleich-trennverfahren tbody td:nth-child(2) {
+    background: #f3f8fc;
+    border-left: 4px solid #7aa4c4;
+}
+
+.vergleich-trennverfahren tbody td:nth-child(3) {
+    background: #f7f3fb;
+    border-left: 4px solid #a085bf;
+    border-radius: 0 0.28em 0.28em 0;
+}
+
+/* leichte Tiefenwirkung */
+.vergleich-trennverfahren tbody tr {
+    filter: drop-shadow(0 0.06em 0.08em rgba(0,0,0,0.06));
+}
+
+.vergleich-trennverfahren strong {
+    font-weight: 700;
+}
+
+.vergleich-trennverfahren .emph {
+    font-weight: 700;
+    color: #222;
+}
+
+/* kleine Abschlusszeile */
+.vergleich-trennverfahren .takehome {
+    margin-top: 0.45em;
+    padding: 0.38em 0.6em;
+    font-size: 0.42em;
+    line-height: 1.2;
+    background: #f7f7f7;
+    border-left: 5px solid #777;
+    border-radius: 0.25em;
+    text-align: left;
+}
+
+.bild {
+    position: relative;
+    width: 146%;
+    margin-left: -19%;
+    margin-top: -1em;
+    aspect-ratio: 16 / 9;
+}
+
+.teil {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.teil:nth-child(1) { clip-path: inset(0 75% 0 0); } /* linke 33% */
+.teil:nth-child(2) { clip-path: inset(0 50% 0 0); } /* linke 66% */
+.teil:nth-child(3) { clip-path: inset(0 25% 0 0); }       /* ganzes Bild */
+.teil:nth-child(4) { clip-path: inset(0 0 0 0); }       /* ganzes Bild */
+
+.reveal .slide-number {
+    left: 8px;
+    right: auto;
+    bottom: 8px;
+    background-color: transparent;
+}
+
+/* Diese Regeln standen in HTML-Kommentaren und bleiben inaktiv. */
+@media not all {
+    .tree-slide {
+        width: 100%;
+        height: 820px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tree-slide svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+
+    .tree-edge {
+        stroke: #777;
+        stroke-width: 2.5;
+        fill: none;
+    }
+
+    .tree-node rect {
+        fill: white;
+        stroke: #555;
+        stroke-width: 2;
+        rx: 10;
+        ry: 10;
+    }
+
+    .tree-node text {
+        font-family: Arial, sans-serif;
+        font-size: 22px;
+        fill: #222;
+        text-anchor: middle;
+        dominant-baseline: middle;
+    }
+
+    .tree-node.root rect {
+        stroke-width: 3;
+    }
+
+    .tree-node.root .title,
+    .tree-node.main text {
+        font-weight: 600;
+    }
+
+    .root-list {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        color: #444;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .root-list ul {
+        margin: 0;
+        padding-left: 24px;
+        line-height: 1.5;
+    }
+
+    .root-list li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sepsis-diagnostik-slide {
+        box-sizing: border-box;
+
+        width: 112% !important;
+        height: 103% !important;
+
+        margin-left: -6%;
+        margin-top: 1.5%;
+
+        padding: 0.08em 0.45em 0.12em 0.45em;
+
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .sepsis-diagnostik-slide h2 {
+        margin: 0 0 0.08em 0;
+        font-size: 1.30em;
+        line-height: 1.05;
+        font-weight: 650;
+        text-align: left;
+    }
+
+    .sepsis-subtitle {
+        font-size: 0.47em;
+        line-height: 1.08;
+        color: #666;
+        text-align: left;
+        margin: 0 0 0.35em 0;
+    }
+
+    .timeline-arrow {
+        position: relative;
+        height: 0.18em;
+        background: #666;
+        margin: 0.02em 0.75em 0.18em 0.35em;
+        flex-shrink: 0;
+    }
+
+    .timeline-arrow::after {
+        content: "";
+        position: absolute;
+        right: -0.58em;
+        top: 50%;
+        transform: translateY(-50%);
+        border-left: 0.65em solid #666;
+        border-top: 0.31em solid transparent;
+        border-bottom: 0.31em solid transparent;
+    }
+
+    .timeline-labels {
+        display: grid;
+        grid-template-columns:
+        0.95fr
+        1.02fr
+        1.10fr
+        1.28fr
+        1.30fr;
+
+        font-size: 0.34em;
+        line-height: 1;
+        margin: 0 0 0.28em 0;
+        color: #555;
+        flex-shrink: 0;
+    }
+
+    .timeline-labels div {
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .timeline-grid {
+        flex: 1;
+        min-height: 0;
+
+        display: grid;
+        grid-template-columns:
+        0.95fr
+        1.02fr
+        1.10fr
+        1.28fr
+        1.30fr;
+
+        gap: 0.16em;
+        align-items: start;
+    }
+
+    .time-column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.13em;
+        min-width: 0;
+    }
+
+    .diag-card {
+        box-sizing: border-box;
+        border-radius: 0.20em;
+
+        padding: 0.23em 0.28em;
+        margin: 0;
+
+        text-align: left;
+        line-height: 1.08;
+        font-size: 0.38em;
+
+        overflow-wrap: anywhere;
+
+        /* linke und untere Einfassung */
+        border-left-width: 4px;
+        border-left-style: solid;
+
+        border-bottom-width: 6px;
+        border-bottom-style: solid;
+    }
+
+    .diag-card strong {
+        display: block;
+        font-size: 1.10em;
+        line-height: 1.04;
+        margin-bottom: 0.08em;
+    }
+
+    .diag-card .method {
+        font-weight: 600;
+        margin-top: 0.08em;
+    }
+
+    .diag-card .role {
+        margin-top: 0.07em;
+    }
+
+    /* etwas kräftigere / weniger blasse Farben */
+
+    .host {
+        background: #dfeafa;
+        border-left-color: #4b79a8;
+        border-bottom-color: #4b79a8;
+    }
+
+    .organ {
+        background: #ebe0f7;
+        border-left-color: #8158a5;
+        border-bottom-color: #8158a5;
+    }
+
+    .pathogen {
+        background: #ddf0e1;
+        border-left-color: #4c8a5a;
+        border-bottom-color: #4c8a5a;
+    }
+
+    .culture {
+        background: #fae8cf;
+        border-left-color: #c78632;
+        border-bottom-color: #c78632;
+    }
+
+    /* Legende bewusst unten halten */
+
+    .bottom-legend {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1.35em;
+
+        margin-top: 0.15 em;
+        padding-top: -1.0em;
+        padding-bottom: 0.02em;
+
+        font-size: 0.42em;
+        line-height: 1.05;
+
+        flex-shrink: 0;
+        white-space: nowrap;
+
+        /* Legende deutlich nach oben verschieben */
+        transform: translateY(-3.0em);
+
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.34em;
+        font-weight: 500;
+    }
+
+    .legend-box {
+        width: 0.85em;
+        height: 0.85em;
+        border-radius: 0.10em;
+
+        border-left-width: 3px;
+        border-left-style: solid;
+
+        border-bottom-width: 4px;
+        border-bottom-style: solid;
+    }
+
+}

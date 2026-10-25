@@ -1,0 +1,6 @@
+.slides section p, .slides section ul {
+    max-width: 96%;
+}
+.slides section h1, .slides section h2, .slides section h3 {
+    max-width: 105%;
+}

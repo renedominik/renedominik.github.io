@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spektroskopische Diagnostik in der Labormedizin</title>
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/moon.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="../../reveal/css/theme/serif.css" id="theme"> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <img class="deck-logo" src="img/weisser_vogel.png" alt="Logo">
+
+
+  
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section>
+        <h2>Spektroskopische Diagnostik in der Labormedizin</h2>
+        <p>Prof. Dr. phil. nat. René Staritzbichler</p>
+        <p> 29.10.26</p>
+        <img style="width:30%;margin-left:-2em;" src="img/photon_probe.png">
+      </section>
+      
+      
+            
+      
+      
+      <section>
+	<h3> Lernziele</h3>
+	<ul style="font-size: 28px;">
+          <li>Spektroskopie als neuartiger Ansatz der Diagnostik kennenlernen</li>
+	  <li>Spektroskopische Methoden:
+	    <ul style="font-size: 26px;">
+	      <li>Raman</li>
+	      <li>Infrarot</li>
+	      <li>UV/VIS</li>
+	      <li>Massenspektrometrie</li>
+	      <li>NMR</li>
+	      <li></li>
+	  </ul></li>
+	  <li>Anwendungen der Ramanspektroskopie
+	    <ul style="font-size: 26px;">
+	      <li>Personalisierte Laborwerte</li>
+	      <li>Bildgebung</li>
+	      <li>Probenverwechslungen</li>
+	      <li>Probenüberalterung</li>
+	      <li>Krankheitserkennung</li>
+	    </ul>
+	  </li>
+	</ul>
+      </section>
+      
+      
+      
+      <section>
+	<h3>Klassische Labormedizin</h3>
+	<img style="width:100%;" src="img/puzzle.png">
+	<div class="bildwechsel">
+	  <img class="fragment fade out" style="width:30%;" src="img/sack1.png">
+	  <img class="fragment" style="width:30%;" src="img/sack2.png">
+	</div>
+      </section>
+      
+       
+      <section>
+	<h3>Gibt es einen direkteren Nachweis einer Krankheit?</h3>
+	<img style="width:100%;" src="img/vogelperspektive.png">
+      </section>
+      
+      
+      
+      <section  data-show-logo>
+        <h3>Spektroskopie </h3>
+        <ul style="font-size: 28px;">
+          <li>Optische Spektroskopie
+	    <ul style="font-size: 28px;">
+              <li> Raman, Infrarot, UV-VIS</li>
+	    </ul>
+	  </li>
+          <li>Massenspektrometrie </li>
+          <li>Kernspinresonanz</li>
+        </ul>
+
+	<h4 style="margin-top:2em;"> Breitband-Diagnostik: </h4>
+	<div class="zeilen" style="font-size: 28px;">
+	  <span>Biochemie</span> <span>&rArr;</span> <span>Physik</span>
+	  <span>Ein Test, ein Wert</span> <span>&rArr;</span> <span>Gesamte Probe</span>
+	  <span> <img style="width:25%;" src="img/puzzleteile.png"></span> <span>&rArr;</span> <span><img style="width:25%;" src="img/sepsis.png"> </span>
+	</div>
+      </section>
+      
+
+      <section  data-show-logo>
+        <h3>Optische Spektroskopie </h3>
+        <ul style="font-size: 28px;">
+          <li>Absorptionsspektroskopie
+	    <ul style="font-size: 28px;">
+              <li> Infrarot</li>
+	      <li>UV-VIS</li>
+	    </ul>
+	  </li>
+          <li>Inelastische Streuung
+	    <ul style="font-size: 28px;">
+              <li> Raman</li>
+	    </ul>
+	  </li>
+        </ul>
+
+	<p class="fragment" style="margin-top:1em;font-size: 28px;"> Sowohl Raman- als auch Infrarot-Spektroskopie beschreiben<br> molekulare Schwingungen </p>
+      </section>
+      
+
+      <section  data-show-logo>
+        <h3>Absorptions-Spektroskopie </h3>
+	<img style="width:100%;margin-top:-0.25em;" src="img/absorption.png">
+      </section>
+	
+      <section  data-show-logo>
+        <h3>Inelastische Streuung </h3>
+	<img style="width:100%;margin-top:-0.25em;" src="img/inelastische_streuung.png">
+      </section>
+	
+
+	    
+	    
+	    
+    </div>
+  </div>
+  <!--
+      <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+      <script src="https://unpkg.com/reveal.js/dist/plugin/math.js"></script>
+      -->
+  <script src="src/reveal.js"></script>
+  <script src="src/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+	plugins: [RevealMath.KaTeX],
+	slideNumber: 'c/t',
+	controls: false
+    });
+  </script>
+
+  
+  <script>
+    const logo = document.querySelector('.deck-logo');
+
+    function updateLogo(event) {
+	logo.hidden = !event.currentSlide.hasAttribute('data-show-logo');
+    }
+
+    Reveal.on('ready', updateLogo);
+    Reveal.on('slidechanged', updateLogo);
+  </script>
+
+  
+  <script>
+    Reveal.initialize();
+  </script>
+
+
+  
+</body>
+</html>
+
