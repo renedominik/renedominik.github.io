@@ -38,3 +38,27 @@
     bottom: 8px;
     background-color: transparent;
 }
+
+
+
+.buchstaben {
+    list-style-type: lower-alpha;
+}
+
+
+.reveal .slides section .image-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.reveal .slides section .image-row img {
+  display: block;
+  width: 0;
+  flex: 1 1 0;
+  height: 300px;
+  object-fit: contain;
+  margin: 0;
+}

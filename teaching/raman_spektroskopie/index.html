@@ -36,16 +36,16 @@
 	<h3> Lernziele</h3>
 	<ul style="font-size: 28px;">
           <li>Spektroskopie als neuartiger Ansatz der Diagnostik kennenlernen</li>
-	  <li>Spektroskopische Methoden:
+	  <li class="fragment">Spektroskopische Methoden:
 	    <ul style="font-size: 26px;">
 	      <li>Raman</li>
 	      <li>Infrarot</li>
 	      <li>UV/VIS</li>
 	      <li>Massenspektrometrie</li>
 	      <li>NMR</li>
-	      <li></li>
+	      
 	  </ul></li>
-	  <li>Anwendungen der Ramanspektroskopie
+	  <li class="fragment">Anwendungen der Ramanspektroskopie
 	    <ul style="font-size: 26px;">
 	      <li>Personalisierte Laborwerte</li>
 	      <li>Bildgebung</li>
@@ -88,11 +88,13 @@
           <li>Kernspinresonanz</li>
         </ul>
 
+	<div class="fragment">
 	<h4 style="margin-top:2em;"> Breitband-Diagnostik: </h4>
 	<div class="zeilen" style="font-size: 28px;">
 	  <span>Biochemie</span> <span>&rArr;</span> <span>Physik</span>
 	  <span>Ein Test, ein Wert</span> <span>&rArr;</span> <span>Gesamte Probe</span>
 	  <span> <img style="width:25%;" src="img/puzzleteile.png"></span> <span>&rArr;</span> <span><img style="width:25%;" src="img/sepsis.png"> </span>
+	</div>
 	</div>
       </section>
       
@@ -123,11 +125,180 @@
       </section>
 	
       <section  data-show-logo>
+        <h3>Absorptions-Spektroskopie </h3>
+	<img style="width:70%;margin-top:-0.25em;" src="img/ir_h2o_spektrum.png">
+      </section>
+	
+      <section  data-show-logo>
+        <h4>ATR - Attenuated Total Reflection (abgeschwächte Totalreflexion)</h4>
+	<img style="width:40%;margin-top:0.15em;" src="img/atr.png">
+	
+	<ul style="font-size: 20px; line-height: 1.4;">
+	  <li>IR-Licht wird in einem Kristall mit hohem Brechungsindex
+	    mehrfach totalreflektiert.</li>
+	  <li>An den Reflexionsflächen dringt ein evaneszentes
+	    elektromagnetisches Feld in die Probe ein.</li>
+	  <li>Eindringtiefe: ca. 0,5–3 µm,
+	    abhängig von Wellenlänge, Einfallswinkel und Brechungsindizes.</li>
+	  <li>Absorption durch Molekülschwingungen schwächt
+	    das reflektierte IR-Licht wellenzahlabhängig ab.</li>
+	  <li>Geeignet für Flüssigkeiten, Feststoffe und Gele;
+	    meist kaum Probenvorbereitung erforderlich.</li>
+	  <li>Kurze Eindringtiefe reduziert Probleme durch starke
+	    Absorption (z. B. Wasser).</li>
+	  <li>Wichtig: guter Kontakt zwischen Probe und Kristall.</li>
+	</ul>
+	
+      </section>
+	
+      <section  data-show-logo>
         <h3>Inelastische Streuung </h3>
 	<img style="width:100%;margin-top:-0.25em;" src="img/inelastische_streuung.png">
       </section>
 	
+      <section  data-show-logo>
+        <h3>Infrared- versus Raman-Spektroskopie </h3>
+	<img style="width:100%;margin-top:-0.25em;" src="img/raman_infrarot.gif">
+      </section>
+	
 
+      <section  data-show-logo>
+        <h3>Komplementäre Spektren </h3>
+	<div>
+	<img style="width:50%;margin-top:1.1em;" src="img/aromat_spektrum.png">
+	</div>
+	<ol class="buchstaben" style="font-size: 28px;">
+          <li> Raman</li>
+          <li> Infrarot</li>
+	</ol>
+      </section>
+
+
+
+
+<section>
+  <h3>Raman- vs. IR-Spektroskopie: Anwendbarkeit</h3>
+
+  <table style="
+    width: 100%;
+    font-size: 21px;
+    line-height: 1.25;
+    border-collapse: collapse;
+    text-align: left;
+  ">
+    <thead>
+      <tr>
+        <th style="width: 21%;">Aspekt</th>
+        <th style="width: 39.5%;">Raman</th>
+        <th style="width: 39.5%;">IR / FTIR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bindungen</td>
+        <td>Besonders symmetrische, schwach polare Bindungen; z. B. C–C, S–S</td>
+        <td>Besonders polare Bindungen; z. B. C=O, O–H, C≡N</td>
+      </tr>
+      <tr>
+        <td>Strukturanalyse</td>
+        <td>Molekulare Fingerabdrücke, Kristallgitter und Polymorphie</td>
+        <td>Gut charakterisierter Fingerprint-Bereich; umfangreiche Datenbanken</td>
+      </tr>
+      <tr>
+        <td>Wässrige Proben</td>
+        <td>Gut geeignet; relativ geringe Störung durch Wasser</td>
+        <td>Starke Wasserabsorption; durch ATR teilweise kompensierbar</td>
+      </tr>
+      <tr>
+        <td>Probenarten</td>
+        <td>Feststoffe, Flüssigkeiten, Gele, Filme und Kristalle</td>
+        <td>Besonders geeignet für Flüssigkeiten mit ATR-IR</td>
+      </tr>
+      <tr>
+        <td>Prozessmessung</td>
+        <td>Glasfasersonden, Messung durch Fenster; auch bei hohen Drücken/Temperaturen</td>
+        <td>ATR-Eintauchsonden und Durchflusszellen; gut für Lösungsphasen</td>
+      </tr>
+      <tr>
+        <td>Signalstärke</td>
+        <td>Schwache Streusignale; geringe Konzentrationen oft schwierig</td>
+        <td>Häufig starke Absorption; gut für quantitative Analysen</td>
+      </tr>
+      <tr>
+        <td>Störfaktoren</td>
+        <td>Fluoreszenz kann Raman-Signale überlagern; mögliche Lasererwärmung</td>
+        <td>Keine Fluoreszenzstörung; Wasserabsorption und Signalsättigung möglich</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+      <section  data-show-logo>
+ 	<h3>Massenspektrometrie</h3>
+	<img style="width:75%;" src="img/massenspektrometer.png">
+	<ol class="buchstaben" style="font-size: 28px;">
+          <li> EI: Elektronenionisation</li>
+          <li> ESI: Elektronensprayionisation</li>
+          <li> MALDI: Laserionisation</li>
+	  <li> CI: Chemische Ionisation</li>
+	</ol>
+      </section>
+
+
+      <section  data-show-logo>
+ 	<h3>LC-MS Massenspektrometrie</h3>
+	<img style="width:75%;" src="img/lc-ms.png">
+      </section>
+
+
+      <section  data-show-logo>
+	<h3>Massenspektrometrie in der Labormedizin</h3>
+	<ul style="font-size:22pt;">
+	  <li><strong>Klinische Chemie:</strong> Steroidhormone, Vitamine und Metabolite</li>
+	  <li><strong>Therapeutisches Drug-Monitoring:</strong> Medikamentenspiegel zur Dosisanpassung</li>
+	  <li><strong>Toxikologie:</strong> Nachweis von Medikamenten, Drogen und Giftstoffen</li>
+	  <li><strong>Neugeborenen-Screening:</strong> Hinweise auf angeborene Stoffwechselstörungen</li>
+	  <li><strong>Mikrobiologie:</strong> MALDI-TOF-MS zur Identifizierung von Bakterien und Pilzen</li>
+	</ul>
+	<aside class="notes">
+	  LC-MS/MS eignet sich besonders für die spezifische Messung kleiner Moleküle;
+	  MALDI-TOF-MS wird häufig zur Identifizierung von Mikroorganismen eingesetzt.
+	</aside>
+      </section>
+
+      
+      <section  data-show-logo>
+	<h3>NMR</h3>
+	<img style="width:100%;" src="img/vogelperspektive.png">
+      </section>
+      
+      <section  data-show-logo>
+	<h3>InflamSPEC</h3>
+	<img style="width:100%;" src="img/vogelperspektive.png">
+      </section>
+      
+
+      <section  data-show-logo>
+	<h3>Online Folien</h3>
+	<div class="image-row">
+	  <img style="width:20%;" src="img/qr_physik.png">
+	  <img style="width:20%;" src="img/qr_raman.png">
+	  <img style="width:20%;" src="img/qr_daisy.png">
+	</div>
+      </section>
+      
+
+      
+
+
+
+      
+	
+<style>
+  .reveal ol.buchstaben {
+    list-style-type: lower-alpha;
+  }
+</style>
 	    
 	    
 	    
