@@ -13,16 +13,22 @@
 </head>
 <body>
 
-  <img class="deck-logo" src="img/weisser_vogel.png" alt="Logo">
-
-
+  
   
   <div class="reveal">
+
+    <div class="logo-balken klg-logo">
+      <img  src="img/klg.png" alt="LogoKLG">
+    </div>
+    <img class="deck-logo vogel-logo" src="img/weisser_vogel.png" alt="VogelLogo">
+
+    
     <div class="slides">
 
+      
       <!-- Title Slide -->
-      <section>
-        <h2>Spektroskopische Diagnostik in der Labormedizin</h2>
+      <section class="show-klg-logo">
+        <h2 style="margin-top:1.5em;">Spektroskopische Diagnostik in der Labormedizin</h2>
         <p>Prof. Dr. phil. nat. René Staritzbichler</p>
         <p> 29.10.26</p>
         <img style="width:30%;margin-left:-2em;" src="img/photon_probe.png">
@@ -76,7 +82,7 @@
       
       
       
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Spektroskopie </h3>
         <ul style="font-size: 28px;">
           <li>Optische Spektroskopie
@@ -99,13 +105,18 @@
       </section>
       
 
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Optische Spektroskopie </h3>
         <ul style="font-size: 28px;">
           <li>Absorptionsspektroskopie
 	    <ul style="font-size: 28px;">
               <li> Infrarot</li>
 	      <li>UV-VIS</li>
+	    </ul>
+	  </li>
+	  <li>Emissionsspektroskopie
+	    <ul style="font-size:20pt;">
+	      <li>Fluoreszenz</li>
 	    </ul>
 	  </li>
           <li>Inelastische Streuung
@@ -119,17 +130,17 @@
       </section>
       
 
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Absorptions-Spektroskopie </h3>
 	<img style="width:100%;margin-top:-0.25em;" src="img/absorption.png">
       </section>
 	
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Absorptions-Spektroskopie </h3>
 	<img style="width:70%;margin-top:-0.25em;" src="img/ir_h2o_spektrum.png">
       </section>
 	
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h4>ATR - Attenuated Total Reflection (abgeschwächte Totalreflexion)</h4>
 	<img style="width:40%;margin-top:0.15em;" src="img/atr.png">
 	
@@ -151,18 +162,18 @@
 	
       </section>
 	
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Inelastische Streuung </h3>
 	<img style="width:100%;margin-top:-0.25em;" src="img/inelastische_streuung.png">
       </section>
 	
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Infrared- versus Raman-Spektroskopie </h3>
 	<img style="width:100%;margin-top:-0.25em;" src="img/raman_infrarot.gif">
       </section>
 	
 
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
         <h3>Komplementäre Spektren </h3>
 	<div>
 	<img style="width:50%;margin-top:1.1em;" src="img/aromat_spektrum.png">
@@ -176,64 +187,66 @@
 
 
 
-<section>
-  <h3>Raman- vs. IR-Spektroskopie: Anwendbarkeit</h3>
+      <section class="show-vogel-logo">
+	<h3>Raman- vs. IR-Spektroskopie: Anwendbarkeit</h3>
 
-  <table style="
-    width: 100%;
-    font-size: 21px;
-    line-height: 1.25;
-    border-collapse: collapse;
-    text-align: left;
-  ">
-    <thead>
-      <tr>
-        <th style="width: 21%;">Aspekt</th>
-        <th style="width: 39.5%;">Raman</th>
-        <th style="width: 39.5%;">IR / FTIR</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Bindungen</td>
-        <td>Besonders symmetrische, schwach polare Bindungen; z. B. C–C, S–S</td>
-        <td>Besonders polare Bindungen; z. B. C=O, O–H, C≡N</td>
-      </tr>
-      <tr>
-        <td>Strukturanalyse</td>
-        <td>Molekulare Fingerabdrücke, Kristallgitter und Polymorphie</td>
-        <td>Gut charakterisierter Fingerprint-Bereich; umfangreiche Datenbanken</td>
-      </tr>
-      <tr>
-        <td>Wässrige Proben</td>
-        <td>Gut geeignet; relativ geringe Störung durch Wasser</td>
-        <td>Starke Wasserabsorption; durch ATR teilweise kompensierbar</td>
-      </tr>
-      <tr>
-        <td>Probenarten</td>
-        <td>Feststoffe, Flüssigkeiten, Gele, Filme und Kristalle</td>
-        <td>Besonders geeignet für Flüssigkeiten mit ATR-IR</td>
-      </tr>
-      <tr>
-        <td>Prozessmessung</td>
-        <td>Glasfasersonden, Messung durch Fenster; auch bei hohen Drücken/Temperaturen</td>
-        <td>ATR-Eintauchsonden und Durchflusszellen; gut für Lösungsphasen</td>
-      </tr>
-      <tr>
-        <td>Signalstärke</td>
-        <td>Schwache Streusignale; geringe Konzentrationen oft schwierig</td>
-        <td>Häufig starke Absorption; gut für quantitative Analysen</td>
-      </tr>
-      <tr>
-        <td>Störfaktoren</td>
-        <td>Fluoreszenz kann Raman-Signale überlagern; mögliche Lasererwärmung</td>
-        <td>Keine Fluoreszenzstörung; Wasserabsorption und Signalsättigung möglich</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+	<table style="
+		      width: 100%;
+		      font-size: 21px;
+		      line-height: 1.25;
+		      border-collapse: collapse;
+		      text-align: left;
+		      ">
+	  <thead>
+	    <tr>
+              <th style="width: 21%;">Aspekt</th>
+              <th style="width: 39.5%;">Raman</th>
+              <th style="width: 39.5%;">IR / FTIR</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+              <td>Bindungen</td>
+              <td>Besonders symmetrische, schwach polare Bindungen; z. B. C–C, S–S</td>
+              <td>Besonders polare Bindungen; z. B. C=O, O–H, C≡N</td>
+	    </tr>
+	    <tr>
+              <td>Strukturanalyse</td>
+              <td>Molekulare Fingerabdrücke, Kristallgitter und Polymorphie</td>
+              <td>Gut charakterisierter Fingerprint-Bereich; umfangreiche Datenbanken</td>
+	    </tr>
+	    <tr>
+              <td>Wässrige Proben</td>
+              <td>Gut geeignet; relativ geringe Störung durch Wasser</td>
+              <td>Starke Wasserabsorption; durch ATR teilweise kompensierbar</td>
+	    </tr>
+	    <tr>
+              <td>Probenarten</td>
+              <td>Feststoffe, Flüssigkeiten, Gele, Filme und Kristalle</td>
+              <td>Besonders geeignet für Flüssigkeiten mit ATR-IR</td>
+	    </tr>
+	    <tr>
+              <td>Prozessmessung</td>
+              <td>Glasfasersonden, Messung durch Fenster; auch bei hohen Drücken/Temperaturen</td>
+              <td>ATR-Eintauchsonden und Durchflusszellen; gut für Lösungsphasen</td>
+	    </tr>
+	    <tr>
+              <td>Signalstärke</td>
+              <td>Schwache Streusignale; geringe Konzentrationen oft schwierig</td>
+              <td>Häufig starke Absorption; gut für quantitative Analysen</td>
+	    </tr>
+	    <tr>
+              <td>Störfaktoren</td>
+              <td>Fluoreszenz kann Raman-Signale überlagern; mögliche Lasererwärmung</td>
+              <td>Keine Fluoreszenzstörung; Wasserabsorption und Signalsättigung möglich</td>
+	    </tr>
+	  </tbody>
+	</table>
+      </section>
 
-      <section  data-show-logo>
+
+      
+      <section  class="show-vogel-logo">
  	<h3>Massenspektrometrie</h3>
 	<img style="width:75%;" src="img/massenspektrometer.png">
 	<ol class="buchstaben" style="font-size: 28px;">
@@ -245,13 +258,13 @@
       </section>
 
 
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
  	<h3>LC-MS Massenspektrometrie</h3>
 	<img style="width:75%;" src="img/lc-ms.png">
       </section>
 
 
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
 	<h3>Massenspektrometrie in der Labormedizin</h3>
 	<ul style="font-size:22pt;">
 	  <li><strong>Klinische Chemie:</strong> <br>Steroidhormone, Vitamine und Metabolite</li>
@@ -267,35 +280,307 @@
       </section>
 
       
-      <section  data-show-logo>
+      <section  class="show-vogel-logo">
 	<h3>NMR</h3>
 	<img style="width:100%;" src="img/nmr.png">
       </section>
 
-      <section  data-show-logo>
-	<h3>Vergleich Spektroskopien</h3>
-	<img style="width:100%;" src="img/vergleich.png">
+
+
+      <section class="methodenvergleich" class="show-vogel-logo">
+	<style>
+	  .reveal .methodenvergleich h3 {
+	      font-size: 32px;
+	      margin-bottom: 20px;
+	  }
+
+	  .reveal .methodenvergleich table {
+	      width: 100%;
+	      table-layout: fixed;
+	      border-collapse: collapse;
+	      font-size: 17px;
+	      line-height: 1.2;
+	      margin: 0;
+	  }
+
+	  .reveal .methodenvergleich th,
+	  .reveal .methodenvergleich td {
+	      padding: 9px 7px;
+	      text-align: left;
+	      vertical-align: middle;
+	      border: 1px solid #aaa;
+	      overflow-wrap: break-word;
+	  }
+
+	  .reveal .methodenvergleich .hinweis {
+	      font-size: 15px;
+	      margin-top: 15px;
+	      text-align: left;
+	  }
+
+	  .reveal .methodenvergleich table tbody tr:last-child td {
+	      border-bottom: 1px solid #aaa;
+	  }
+
+	</style>
+
+	<h3>Spektroskopische Methoden in der Labormedizin</h3>
+
+	<table>
+	  <colgroup>
+	    <col style="width: 11%;">
+	    <col style="width: 18%;">
+	    <col style="width: 14%;">
+	    <col style="width: 13%;">
+	    <col style="width: 23%;">
+	    <col style="width: 21%;">
+	  </colgroup>
+	  <thead>
+	    <tr>
+              <th>Methode</th>
+              <th>Proben-<br>vorbereitung</th>
+              <th>Kosten<br>(Gerät / Test)</th>
+              <th>Messdauer</th>
+              <th>Diagnostischer Informationsgehalt</th>
+              <th>Signalqualität / Störungen</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+              <td>UV-VIS</td>
+              <td>Gering; automatisierte Reagenzzugabe</td>
+              <td>Mittel–hoch / gering</td>
+              <td>Sekunden bis Minuten</td>
+              <td>Gezielte Quantifizierung einzelner Analyte; sehr gut etabliert</td>
+              <td>Hohe Präzision / Störungen durch Hämolyse, Lipämie, Ikterus</td>
+	    </tr>
+	    <tr>
+              <td>IR<br>(FTIR)</td>
+              <td>Sehr gering bei ATR; ggf. Trocknung</td>
+              <td>Mittel / gering</td>
+              <td>Sekunden bis Minuten</td>
+              <td>Molekularer Fingerabdruck; in komplexen Proben begrenzte Spezifität</td>
+              <td>Starke Signale / Wasserabsorption und Bandenüberlagerung</td>
+	    </tr>
+	    <tr>
+              <td>Raman</td>
+              <td>Gering; oft direkte Messung möglich</td>
+              <td>Mittel–hoch / gering</td>
+              <td>Sekunden bis Minuten, teils länger</td>
+              <td>Molekularer Fingerabdruck; diagnostische Klassifikation möglich, noch wenig Routinevalidierung</td>
+              <td>Schwaches Signal / Fluoreszenz und Hintergrundrauschen</td>
+	    </tr>
+	    <tr>
+              <td>LC-MS/MS</td>
+              <td>Mittel–hoch; Extraktion, interne Standards, LC</td>
+              <td>Hoch / mittel–hoch</td>
+              <td>Mehrere Minuten je Probe</td>
+              <td>Sehr spezifische und sensitive Quantifizierung; mehrere Analyte gleichzeitig</td>
+              <td>Sehr hohe Empfindlichkeit / Matrixeffekte, Ionensuppression</td>
+	    </tr>
+	    <tr>
+              <td>NMR</td>
+              <td>Gering–mittel; Puffer und Referenz</td>
+              <td>Sehr hoch / gering–mittel</td>
+              <td>Minuten bis mehrere 10 Minuten</td>
+              <td>Breites, quantitatives Metabolitenprofil; geringe Spurenempfindlichkeit</td>
+              <td>Sehr reproduzierbar / geringe Sensitivität, Signalüberlagerung</td>
+	    </tr>
+	  </tbody>
+	</table>
+
+	<p class="hinweis">
+	  Angaben sind typische Größenordnungen. Messdauer ohne
+	  Probenlogistik und meist ohne Vorbereitung.
+	  Kosten und analytische Leistung sind methodenabhängig.
+	</p>
+      </section>
+
+
+     
+      <section  class="show-vogel-logo">
+	<img style="width:100%;" src="img/inflamspec.png">
+      </section>
+      
+
+
+
+      <section class="inflamspec-slide"  class="show-vogel-logo">
+	<style>
+	  .reveal .inflamspec-slide {
+	      text-align: left;
+	      font-family: Arial, sans-serif;
+	      box-sizing: border-box;
+	      padding: 12px 24px;
+	  }
+	  .inflamspec-slide h3 {
+	      font-size: 33px;
+	      margin: 0 0 6px;
+	      text-align: center;
+	  }
+	  .inflamspec-slide .subtitle {
+	      font-size: 18px;
+	      text-align: center;
+	      color: #64748b;
+	      margin-bottom: 20px;
+	  }
+	  .inflamspec-slide .top-grid,
+	  .inflamspec-slide .wp-grid {
+	      display: grid;
+	      grid-template-columns: 1fr 1fr;
+	      gap: 14px;
+	  }
+	  .inflamspec-slide .top-grid {
+	      margin-bottom: 20px;
+	  }
+	  .inflamspec-slide .panel {
+	      padding: 15px 18px;
+	      border: 1px solid #cbd5e1;
+	      border-radius: 9px;
+	      background: #f8fafc;
+	      box-sizing: border-box;
+	  }
+	  .inflamspec-slide .panel h4 {
+	      font-size: 21px;
+	      color: #1e3a5f;
+	      margin: 0 0 9px;
+	  }
+	  .inflamspec-slide .panel p {
+	      font-size: 18px;
+	      line-height: 1.3;
+	      margin: 0;
+	  }
+	  .inflamspec-slide .wp-grid .panel {
+	      min-height: 120px;
+	  }
+	  .inflamspec-slide .status {
+	      margin-top: 18px;
+	      padding-top: 12px;
+	      border-top: 1px solid #94a3b8;
+	      font-size: 17px;
+	      line-height: 1.3;
+	  }
+	</style>
+
+	<h3>InflamSpec – Spektroskopische Diagnostik von Inflammation</h3>
+	<div class="subtitle">
+	  Interdisziplinärer Verbund an der  Universität Bielefeld und  Klinikum Lippe 
+	</div>
+
+	<div class="top-grid">
+	  <div class="panel">
+	    <h4>Zielsetzung</h4>
+	    <p>
+	      Molekulare Veränderungen bei Inflammation
+	      spektroskopisch erfassen und als ergänzende
+	      diagnostische Informationen nutzbar machen.
+	    </p>
+	  </div>
+
+	  <div class="panel">
+	    <h4>Methoden und Infrastruktur</h4>
+	    <p>
+	      Raman-, IR- und Massenspektrometrie;
+	      Serum, Vollblut und Blutausstriche;
+	      automatisierte Messungen, Statistik und
+	      maschinelles Lernen.
+	    </p>
+	  </div>
+	</div>
+
+	<div class="wp-grid">
+	  <div class="panel">
+	    <h4>WP1 – Klinische Inflammation / Sepsis</h4>
+	    <p>
+	      Spektroskopische Untersuchung klinischer Proben;
+	      Verknüpfung mit Laborwerten und Diagnosen
+	      über DAISY.
+	    </p>
+	  </div>
+
+	  <div class="panel">
+	    <h4>WP2 – Mikroplastik</h4>
+	    <p>
+	      Nachweis und Differenzierung von Mikro- und
+	      Nanoplastik; Untersuchung möglicher
+	      Zusammenhänge mit Inflammation.
+	    </p>
+	  </div>
+
+	  <div class="panel">
+	    <h4>WP3 – Blutzellen</h4>
+	    <p>
+	      Korrelation morphologischer und
+	      spektroskopischer Veränderungen von
+	      Erythrozyten und Leukozyten.
+	    </p>
+	  </div>
+
+	  <div class="panel">
+	    <h4>WP4 – Experimentelle Inflammation</h4>
+	    <p>
+	      Ex-vivo-Mitogenstimulation;
+	      zeitabhängige Spektren und Vergleich
+	      mit klassischen Entzündungsmarkern.
+	    </p>
+	  </div>
+	</div>
+
+	<div class="status">
+	  <strong>Projektstand (10/2026):</strong>
+	  Mess- und Dateninfrastruktur etabliert;
+	  über 1.000 Serumproben mittels Raman untersucht;
+	  erste IR-, Mikroplastik- und Mitogenergebnisse.
+	  Nächster Schritt: reproduzierbare Signaturen und
+	  klinisch validierte Klassifikationsverfahren.
+	</div>
       </section>
 
       
-      <section  data-show-logo>
-	<h3>InflamSPEC</h3>
-	<img style="width:100%;" src="img/vogelperspektive.png">
-      </section>
-      
-
-      <section  data-show-logo>
+ 
+      <section  class="show-vogel-logo">
 	<h3>Strategie</h3>
+	<img style="width:100%;" src="img/strategie.png">
+      </section>
+
+
+       <section>
+	<h2>Anwendungen der Raman-Spektroskopie</h2>
+	<img style="width:40%;" src="img/witec.png">
+      </section>
+      
+       <section>
+	<h3>Präanalytische Fehler</h3>
+	<img style="width:100%;" src="img/praeanalytik.png">
+      </section>
+      
+       <section>
+	<h3>Zielsetzungen</h3>
+	<img style="width:100%;" src="img/zielsetzungen.png">
+      </section>
+      
+ 
+
+      <section>
+	<h3>Anwendung</h3>
+	<img style="width:100%;" src="img/anwendung.png">
+      </section>
+
+
+      
+     <section>
+	<h3>Parallele Diagnostik</h3>
+	<img style="width:100%;" src="img/parallel.png">
+	<p style="font-size:28pt;margin-top:1em;">Erkannte Probleme können direkt zu Nachforderungen führen und weitere Diagnosezyklen vermeiden​</p>
       </section>
       
 
-
-
-
-
-
       
-      <section  data-show-logo>
+
+
+
+
+      <section  class="show-vogel-logo">
 	<h3>Online Folien</h3>
 	<div class="grid">
 	  <span>Physik</span>
@@ -306,9 +591,9 @@
 	  <img style="width:50%;" src="img/qr_daisy.png">
 	</div>
 	<ul style="list-style:none;font-size:20pt;margin-top:2em;">
-	  <li> https://renedominik.github.io/teaching/physik_in_labormedizin/ </li>
-	  <li> https://renedominik.github.io/teaching/raman_spektroskopie/ </li>
-	  <li> https://renedominik.github.io/teaching/daisy/ </li>
+	  <li> https://renedominik.github.io/lehre/physik_labormedizin/ </li>
+	  <li> https://renedominik.github.io/lehre/raman_spektroskopie/ </li>
+	  <li> https://renedominik.github.io/lehre/daisy/ </li>
 
 	  </ul>
       </section>
@@ -341,16 +626,6 @@
   </script>
 
   
-  <script>
-    const logo = document.querySelector('.deck-logo');
-
-    function updateLogo(event) {
-	logo.hidden = !event.currentSlide.hasAttribute('data-show-logo');
-    }
-
-    Reveal.on('ready', updateLogo);
-    Reveal.on('slidechanged', updateLogo);
-  </script>
 
   
   <script>

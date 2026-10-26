@@ -16,13 +16,42 @@
     max-height: 70vh;
 }
 
-.deck-logo {
+.reveal .deck-logo {
+    display: none;
     position: fixed;
     top: 20px;
     right: 24px;
     width: 150px;
     height: auto;
     z-index: 1000;
+}
+
+.reveal .logo-balken {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 24px;
+  background: #fff;
+  z-index: 1000;
+  justify-content: flex-end;
+}
+
+.reveal .logo-balken img {
+  display: block;
+  width: 650px;
+  height: auto;
+  margin: 0;
+}
+
+.reveal:has(section.show-klg-logo.present) .logo-balken.klg-logo {
+  display: flex;
+}
+
+.reveal:has(.slides section.show-vogel-logo.present) .vogel-logo {
+  display: block;
 }
 
 .zeilen {
@@ -88,3 +117,4 @@
 .grid > img {
   object-fit: contain;
 }
+
