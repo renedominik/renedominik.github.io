@@ -74,7 +74,7 @@
 .grid > img {
   box-sizing: border-box;
   flex: 0 0 calc((100% - 2rem) / 3); /* 3 Spalten */
-  height: 180px;
+  height: 150px;
   margin: 0;
 }
 
