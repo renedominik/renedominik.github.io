@@ -20,7 +20,7 @@
     <div class="logo-balken klg-logo">
       <img  src="img/klg.png" alt="LogoKLG">
     </div>
-    <img class="deck-logo vogel-logo" src="img/weisser_vogel.png" alt="VogelLogo">
+
 
     
     <div class="slides">
@@ -29,8 +29,9 @@
       <!-- Title Slide -->
       <section class="show-klg-logo">
         <h2 style="margin-top:1.5em;">Spektroskopische Diagnostik in der Labormedizin</h2>
+	
         <p>Prof. Dr. phil. nat. René Staritzbichler</p>
-        <p> 29.10.26</p>
+        <p> 29.10.2026</p>
         <img style="width:30%;margin-left:-2em;" src="img/photon_probe.png">
       </section>
       
@@ -537,22 +538,218 @@
       </section>
 
       
- 
+
+      
       <section  class="show-vogel-logo">
 	<h3>Strategie</h3>
+	<div class="subtitle">
+	  Ziel ist es jede Probe, die ins Labor kommt, spektroskopisch zu untersuchen
+	</div>
+
 	<img style="width:100%;" src="img/strategie.png">
       </section>
 
+      
 
+      
        <section>
 	<h2>Anwendungen der Raman-Spektroskopie</h2>
 	<img style="width:40%;" src="img/witec.png">
       </section>
+
+
+       
+       
+      <section>
+	<h3>Geschichtliches</h3>
+	<div>
+	  <img style="height:200px;" src="img/raman.jpeg">
+	  <img style="height:200px;" src="img/smekal.jpg">
+	</div>
+	 <ul style="font-size: 20px;">
+	   <li> 1923: Vorhergesagt von Adolf Smekal
+	   </li>
+	   <li> 1928: Nachweis durch C.V. Raman
+	   </li>
+	   <li style="margin-top:0.5em;"> Etablierte Technik </li>
+	   <li>Zahlreiche Anwendungen: Flughafensicherheit</li>
+	   <li>Blutproben sind wesentlich komplexer</li>
+	 </ul>
+      </section>
+
+
+     
+
       
        <section>
+	 <h3>Klinikum Detmold</h3>
+	 <div class="twocolumns">
+           <div>
+	     <img src="img/mikroskop_platte.jpeg">
+	   </div>
+           <div>
+	     <ul style="font-size: 28px;">
+               <li> Konfokales Raman-Mikroskop
+		 <ul style="font-size: 20px;">
+		   <li> Gutes Signal-zu-Rausch Verhältnis
+		   </li>
+		   <li> 2D Scans
+		   </li>
+		 </ul>
+	       </li> 
+	       <li> Integration im Labor
+		 <ul style="font-size: 20px;">
+		   <li> Beliebig viele Proben
+		   </li>
+		   <li> Durchmischte Kohorte
+		   </li>
+		 </ul>
+	       </li> 
+               <li> Halbautomatisierung
+		 <ul style="font-size: 20px;">
+		   <li> Pipettierung von 96'er Platten
+		   </li>
+		   <li> Raman Scan der 96'er Platten
+		   </li>
+		   <li> Automatisierte Datenpipeline
+		   </li>
+		 </ul>
+	       </li>
+	       <li> <strong> DAISY </strong>
+		 <ul style="font-size: 20px;">
+		   <li> Klinische Daten
+		   </li>
+		   <li> Automatische Aliquotierung von Sepsisproben
+		   </li>
+		 </ul>
+	       </li>
+	     </ul>
+
+	   </div>
+	 </div>	   
+      </section>
+
+
+       
+       <section>
+	<h3>Spektren</h3>
+	 <div class="twocolumns">
+           <div>
+	     <img style="width:62%;" src="img/absorb.gif">
+	     <img src="img/rohspektrum.png">
+	   </div>
+           <div>
+	     <img src="img/transition.png">
+	     <p  style="font-size:20pt;"> Schwingungsfrequenz ist charakteristisch für Bindungstyp</p>
+	   </div>
+	 </div>
+       </section>
+
+       <section>
+	<h3>Bildgebung</h3>
+	 <div class="twocolumns">
+           <div>
+	     <img style="width:70%;" src="img/granulozyt2D.png">
+	     
+	   </div>
+           <div>
+	     <img style="width:60%;margin-left:1em;" src="img/granul_spec.png">
+	     <ul  style="font-size:17pt;margin-top:0.5em;">
+	       <li> Jeder Punkt ist ein Spektrum </li>
+	       <li> Färbung mit verschiedenen Fenstern</li>
+	       <li> Die offensichtlichste Information ist nicht notwendigerweise die relevante</li>
+	     </ul>
+	   </div>
+	 </div>
+       </section>
+
+       
+       <section>
+	 <h3>Datenvorbereitung</h3>
+	 <img style="width:45%;" src="img/roh.png">
+	 <img style="width:45%;" src="img/rein.png">
+	 <ul style="font-size: 20px;">
+	   <li> Zuschneiden
+	   </li>
+	   <li> Frequenzanpassung
+	   </li>
+	   <li> Fluoreszenzhintergrund Entfernung (Asymetric Least Squares)
+	   </li>
+	   <li> Mittelung (4x4 Einzelspektren á 5s) / Kosmische Peaks Entfernung
+	   </li>
+	   <li> Glättung
+	   </li>
+	 </ul>
+       </section>
+
+       
+       <section>
+	 <h3>Wissen aus Daten generieren</h3>
+	 <div class="bildwechsel">
+	   <img  style="width:40%;" src="img/ml1.png">
+	   <img class="fragment" style="width:40%;" src="img/ml2.png">
+	 </div>
+	 <ul style="font-size: 20px;">
+	   <li> 1 Fragestellung &rArr 1 Prädiktor
+	   </li>
+	   <li> Eingabe: Spektren
+	   </li>
+	   <li> Ausgabe: Vorhersage (Referenzdaten)
+	   </li>
+	   <li> 
+	   </li>
+	   <li> 
+	   </li>
+	 </ul>
+       </section>
+
+       <section class="bild-folie">
+	 <h3>Maschinelles Lernen</h3>
+	 <div class="twocolumns">
+	   <div>
+	     <img  style="width:90%;" src="img/regression.png"> 
+	     <p style="font-size:20px;"> Lineare Regression</p>
+	     <ul style="font-size:20px;">
+	       <li> \(f(x) = a\cdot x + b\)
+	       </li>
+	       <li> \( \epsilon = \sum_i ( f(x_i) - y_i )^2 \)
+	       </li>
+	       <li> Bestimme a und b, so dass \( \epsilon  \) minimal wird
+	       </li>
+	     </ul>
+	   </div>
+	   <div class="bildwechsel">
+	     <img class="fragment"  style="width:60%;" src="img/marylin.png">
+	   </div>
+	 </div>
+       </section>
+
+       <section>
+	 <h3>Künstliche Neuronale Netze</h3>
+	 <div class="bildwechsel">
+	   <img  style="width:100%;" src="img/ann1.png">
+	   <img class="fragment fade out" style="width:100%;" src="img/ann2.png">
+	   <img class="fragment fade out" style="width:100%;" src="img/ann3.png">
+	   <img class="fragment fade out" style="width:100%;" src="img/ann4.png">
+	 </div>
+       </section>
+
+
+       
+
+      <section>
+	<h3>Personalisierte Medizin</h3>
+	<img style="width:100%;" src="img/personalisiert.png">
+      </section>
+
+       
+       
+       
+      <section>
 	<h3>Präanalytische Fehler</h3>
 	<img style="width:100%;" src="img/praeanalytik.png">
       </section>
+
       
        <section>
 	<h3>Zielsetzungen</h3>
@@ -560,12 +757,10 @@
       </section>
       
  
-
       <section>
 	<h3>Anwendung</h3>
 	<img style="width:100%;" src="img/anwendung.png">
       </section>
-
 
       
      <section>

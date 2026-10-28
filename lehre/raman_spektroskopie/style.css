@@ -118,3 +118,56 @@
   object-fit: contain;
 }
 
+.subtitle {
+    font-size: 18px;
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.twocolumns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.twocolumns > div:nth-child(2) {
+  text-align: right;
+}
+
+.twocolumns .bildwechsel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+.twocolumns img {
+  display: block;
+  height: auto;
+}
+
+@media (max-width: 700px) {
+  .twocolumns {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.reveal .slides section.bild-folie {
+  position: relative;
+}
+
+.reveal .slides section.bild-folie img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reveal .slides section.bild-folie .festes-bild {
+  position: absolute;
+  top: 200px;
+  right: 0px;
+  width: 150px;
+  margin: 0;
+}
