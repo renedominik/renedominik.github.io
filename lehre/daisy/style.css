@@ -18,9 +18,9 @@
 
 .deck-logo {
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 24px;
-    width: 150px;
+    width: 180px;
     height: auto;
     z-index: 1000;
 }
@@ -86,4 +86,34 @@
 
 .reveal:has(section.show-klg-logo.present) .logo-balken.klg-logo {
   display: flex;
+}
+
+.reveal:has(.slides section.show-daisy-logo.present) .daisy-logo {
+  display: block;
+}
+
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.grid > span,
+.grid > img {
+  box-sizing: border-box;
+  flex: 0 0 calc((100% - 2rem) / 3); /* 3 Spalten */
+  height: 150px;
+  margin: 0;
+}
+
+.grid > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.grid > img {
+  object-fit: contain;
 }

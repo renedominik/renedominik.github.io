@@ -20,6 +20,7 @@
     <div class="logo-balken klg-logo">
       <img  src="img/klg.png" alt="LogoKLG">
     </div>
+    <img class="deck-logo daisy-logo" src="img/daisy_logo.png" alt="DAISY-Logo">
 
        
     <div class="slides">
@@ -32,8 +33,719 @@
         <p>Prof. Dr. phil. nat. René Staritzbichler, 5.11.2026</p>
         <img style="width:20%;margin-left:0em;" src="img/ml_probe.png">
       </section>
+
+
+
+      <section class="show-daisy-logo">
+	<h3> Extrem robust: Random Forest</h3>
+	<img src="img/random_forest.png" style="width:70%">
+      </section>
+	
+      
+
+
+
+<section class="rf-method show-daisy-logo">
+<style>
+.reveal .slides section.rf-method {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 30px 42px;
+  background: #0c1626;
+  color: #e7edf5;
+  text-align: left;
+}
+
+.rf-method h3 {
+  font-size: 36px;
+  margin: 0 0 14px;
+  color: #f4f8ff;
+  text-transform: none;
+}
+
+.rf-method .subtitle {
+  font-size: 20px;
+  color: #a8b9cc;
+  margin-bottom: 30px;
+}
+
+.rf-method .cards {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.rf-method .card {
+  flex: 1;
+  padding: 23px 25px;
+  border-radius: 17px;
+  background: #172538;
+  border: 2px solid;
+}
+
+.rf-method .bootstrap {
+  border-color: #4c9ce4;
+}
+
+.rf-method .features {
+  border-color: #64b98b;
+}
+
+.rf-method .card h4 {
+  font-size: 24px;
+  margin: 0 0 23px;
+  text-transform: none;
+}
+
+.rf-method .bootstrap h4 { color: #7bbcff; }
+.rf-method .features h4 { color: #83d9a5; }
+
+.rf-method .card ul {
+  margin: 0;
+  padding-left: 26px;
+  font-size: 23px;
+  line-height: 1.45;
+}
+
+.rf-method .card li {
+  margin-bottom: 18px;
+}
+
+.rf-method .example {
+  margin-top: 24px;
+  padding: 15px 18px;
+  border-radius: 10px;
+  background: #23354b;
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.rf-method .conclusion {
+  margin-top: 28px;
+  padding: 19px 26px;
+  border-radius: 12px;
+  background: #243b49;
+  border-left: 5px solid #e4a34a;
+  font-size: 23px;
+  color: #f2f5f9;
+}
+</style>
+
+<h3>Random Forest – Zufall als Prinzip</h3>
+<div class="subtitle">
+  Warum entstehen viele unterschiedliche Entscheidungsbäume?
+</div>
+
+<div class="cards">
+
+  <div class="card bootstrap">
+    <h4>1. Bootstrap – zufällige Stichproben</h4>
+    <ul>
+      <li>Für jeden Baum werden Trainingsfälle
+          <strong>zufällig ausgewählt</strong>.</li>
+      <li>Mit Zurücklegen: Ein Fall kann
+          <strong>mehrfach oder gar nicht</strong>
+          vorkommen.</li>
+    </ul>
+    <div class="example">
+      Beispiel: Aus den Fällen 1, 2, 3, 4
+      wird die Stichprobe <strong>1, 2, 2, 4</strong>.
+    </div>
+  </div>
+
+  <div class="card features">
+    <h4>2. Zufällige Merkmale (Features)</h4>
+    <ul>
+      <li>Bei jeder Verzweigung wird nur
+          eine <strong>zufällige Auswahl</strong>
+          der Merkmale betrachtet.</li>
+      <li>Der Baum wählt daraus die
+          <strong>beste Trennung</strong>.</li>
+    </ul>
+    <div class="example">
+      Beispiel: Nur <strong>Alter und CRP</strong>
+      statt aller verfügbaren Laborwerte.
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="conclusion">
+  <strong>Ergebnis:</strong>
+  Viele unterschiedliche Bäume, deren
+  Vorhersagen gemeinsam ausgewertet werden.
+</div>
+
+</section>
+
+
+
+
+
+<section class="xgb-vs-rf">
+<style>
+.reveal .slides section.xgb-vs-rf {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 14px 24px;
+  background: #0c1626;
+  color: #e7edf5;
+  text-align: left;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+
+.xgb-vs-rf h3 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 650;
+  color: #f4f8ff;
+  text-transform: none;
+}
+
+.xgb-vs-rf .subtitle {
+  font-size: 15px;
+  line-height: 1.2;
+  color: #a9b8c9;
+  margin-bottom: 12px;
+}
+
+.xgb-vs-rf .top-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.xgb-vs-rf .card {
+  flex: 1;
+  min-width: 0;
+  background: #172538;
+  border-radius: 13px;
+  padding: 12px 16px;
+  border: 2px solid;
+  box-sizing: border-box;
+}
+
+.xgb-vs-rf .rf {
+  border-color: #64b98b;
+}
+
+.xgb-vs-rf .xgb {
+  border-color: #f0a44b;
+}
+
+.xgb-vs-rf .card h4 {
+  margin: 0 0 9px;
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 650;
+  text-transform: none;
+}
+
+.xgb-vs-rf .rf h4 { color: #84d7a3; }
+.xgb-vs-rf .xgb h4 { color: #ffc56a; }
+
+.xgb-vs-rf .card ul {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.22;
+}
+
+.xgb-vs-rf .card li {
+  margin-bottom: 6px;
+}
+
+.xgb-vs-rf .card .tag {
+  display: inline-block;
+  margin-top: 3px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.xgb-vs-rf .rf .tag {
+  background: rgba(100,185,139,0.18);
+  color: #9be3b5;
+}
+
+.xgb-vs-rf .xgb .tag {
+  background: rgba(240,164,75,0.16);
+  color: #ffd08b;
+}
+
+.xgb-vs-rf .compare-box {
+  background: #142031;
+  border: 2px solid #30465f;
+  border-radius: 13px;
+  padding: 10px 14px;
+}
+
+.xgb-vs-rf .compare-box h4 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  line-height: 1.15;
+  color: #dbe7f5;
+  font-weight: 650;
+  text-transform: none;
+}
+
+.xgb-vs-rf .compare-grid {
+  display: grid;
+  grid-template-columns: 2.1fr 1.4fr 1.4fr;
+  gap: 5px 7px;
+  align-items: stretch;
+  font-size: 14px;
+  line-height: 1.17;
+}
+
+.xgb-vs-rf .cell {
+  padding: 6px 9px;
+  border-radius: 7px;
+}
+
+.xgb-vs-rf .head {
+  background: #243549;
+  color: #f0f4fa;
+  font-weight: 650;
+}
+
+.xgb-vs-rf .left {
+  background: #1c2a3b;
+  color: #d5deea;
+  font-weight: 600;
+}
+
+.xgb-vs-rf .rf-cell {
+  background: rgba(100,185,139,0.14);
+  color: #e8f5ec;
+}
+
+.xgb-vs-rf .xgb-cell {
+  background: rgba(240,164,75,0.14);
+  color: #fff4e6;
+}
+
+.xgb-vs-rf .footer-note {
+  margin-top: 10px;
+  padding: 9px 13px;
+  border-radius: 10px;
+  background: #213646;
+  border-left: 4px solid #77b6ff;
+  font-size: 16px;
+  line-height: 1.24;
+  color: #edf3fa;
+}
+</style>
+
+<h3>XGBoost im Vergleich zum Random Forest</h3>
+
+<div class="subtitle">
+  Beide nutzen viele Entscheidungsbäume – aber sie werden auf
+  unterschiedliche Weise kombiniert.
+</div>
+
+<div class="top-row">
+
+  <div class="card rf">
+    <h4>Random Forest</h4>
+    <ul>
+      <li>Viele Bäume werden
+          <strong>unabhängig voneinander</strong> trainiert.</li>
+      <li>Jeder Baum sieht zufällige Daten
+          und zufällige Merkmale.</li>
+      <li>Am Ende entscheidet die
+          <strong>Abstimmung</strong> aller Bäume.</li>
+      <li>Robust, einfach, oft sehr guter Standard.</li>
+    </ul>
+    <div class="tag">Prinzip: Bagging</div>
+  </div>
+
+  <div class="card xgb">
+    <h4>XGBoost</h4>
+    <ul>
+      <li>Die Bäume werden
+          <strong>nacheinander</strong> aufgebaut.</li>
+      <li>Jeder neue Baum konzentriert sich auf die
+          <strong>Fehler der vorherigen</strong>.</li>
+      <li>Die Vorhersage wird Schritt für Schritt verbessert.</li>
+      <li>Oft genauer, aber meist empfindlicher
+          gegenüber Einstellungen.</li>
+    </ul>
+    <div class="tag">Prinzip: Boosting</div>
+  </div>
+
+</div>
+
+<div class="compare-box">
+  <h4>Kurzvergleich</h4>
+
+  <div class="compare-grid">
+    <div class="cell head">Aspekt</div>
+    <div class="cell head">Random Forest</div>
+    <div class="cell head">XGBoost</div>
+
+    <div class="cell left">Training der Bäume</div>
+    <div class="cell rf-cell">parallel / unabhängig</div>
+    <div class="cell xgb-cell">
+      sequentiell / aufeinander aufbauend
+    </div>
+
+    <div class="cell left">Grundidee</div>
+    <div class="cell rf-cell">
+      Mittelung vieler unterschiedlicher Bäume
+    </div>
+    <div class="cell xgb-cell">
+      schrittweises Korrigieren der Fehler
+    </div>
+
+    <div class="cell left">Typische Stärke</div>
+    <div class="cell rf-cell">robust und unkompliziert</div>
+    <div class="cell xgb-cell">
+      oft sehr hohe Vorhersageleistung
+    </div>
+
+    <div class="cell left">Typischer Nachteil</div>
+    <div class="cell rf-cell">
+      nicht immer maximal genau
+    </div>
+    <div class="cell xgb-cell">
+      mehr Tuning nötig, Overfitting-Risiko
+    </div>
+  </div>
+</div>
+
+<div class="footer-note">
+  <strong>Merksatz:</strong>
+  Random Forest = <strong>viele unabhängige Meinungen</strong>.
+  XGBoost = <strong>eine Folge von Bäumen, die Fehler
+  gezielt verbessert</strong>.
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="nn-compare">
+<style>
+.reveal .slides section.nn-compare {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 18px 26px;
+  background: #0c1626;
+  color: #e7edf5;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  text-align: left;
+}
+
+.nn-compare h3 {
+  margin: 0 0 6px;
+  font-size: 27px;
+  font-weight: 650;
+  color: #f4f8ff;
+  text-transform: none;
+}
+
+.nn-compare .subtitle {
+  font-size: 15px;
+  color: #a9b8c9;
+  margin-bottom: 18px;
+}
+
+.nn-compare .nn-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.6fr 1.35fr 1.65fr 1.55fr;
+  gap: 7px;
+  margin-bottom: 7px;
+  align-items: stretch;
+}
+
+.nn-compare .nn-head > div {
+  padding: 10px 12px;
+  background: #26384e;
+  color: #e9f2ff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.nn-compare .nn-row > div {
+  background: #172538;
+  padding: 11px 12px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  line-height: 1.24;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.nn-compare .nn-row strong {
+  color: #f4f7fc;
+  font-weight: 650;
+}
+
+.nn-compare .nn-row .model {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 4px solid var(--accent);
+  background: #1c2c40;
+  padding-left: 15px;
+}
+
+.nn-compare .model .name {
+  color: var(--accent);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.nn-compare .model .full {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #aebdd0;
+}
+
+.nn-compare .mlp {
+  --accent: #bd9bf4;
+}
+
+.nn-compare .cnn {
+  --accent: #7bbcff;
+}
+
+.nn-compare .rnn {
+  --accent: #ffc178;
+}
+
+.nn-compare .transformer {
+  --accent: #70d6d0;
+}
+
+.nn-compare .gnn {
+  --accent: #83d9a5;
+}
+
+.nn-compare .nn-note {
+  margin-top: 17px;
+  padding: 12px 17px;
+  border-radius: 11px;
+  background: #213646;
+  border-left: 4px solid #77b6ff;
+  font-size: 16px;
+  line-height: 1.35;
+  color: #edf3fa;
+}
+
+.nn-compare .nn-note strong {
+  color: #ffffff;
+}
+</style>
+
+<h3>Neuronale Netze – Architekturen im Vergleich</h3>
+
+<div class="subtitle">
+  Gleiche Grundidee – unterschiedliche Verarbeitung und Verknüpfung von Informationen
+</div>
+
+<div class="nn-grid nn-head">
+  <div>Modell</div>
+  <div>Funktionsprinzip</div>
+  <div>Geeignete Daten</div>
+  <div>Anwendungen / Beispiele</div>
+  <div>Stärken und Grenzen</div>
+</div>
+
+<div class="nn-grid nn-row mlp">
+  <div class="model">
+    <span class="name">MLP</span>
+    <span class="full">Multi-Layer Perceptron</span>
+  </div>
+  <div>
+    <strong>Vollständig verbundene Schichten</strong>
+    verknüpfen die Eingabemerkmale.
+  </div>
+  <div>
+    Tabellen, feste Merkmalsvektoren
+  </div>
+  <div>
+    Risikovorhersage aus Alter, Geschlecht
+    und Laborwerten
+  </div>
+  <div>
+    Einfach und flexibel;<br>
+    berücksichtigt keine Datenstruktur explizit
+  </div>
+</div>
+
+<div class="nn-grid nn-row cnn">
+  <div class="model">
+    <span class="name">CNN</span>
+    <span class="full">Convolutional Neural Network</span>
+  </div>
+  <div>
+    <strong>Filter</strong> erkennen lokale
+    Muster und Strukturen.
+  </div>
+  <div>
+    Bilder, Spektren, räumlich geordnete Daten
+  </div>
+  <div>
+    Mikroskopische Bilder, Raman- und
+    IR-Spektren
+  </div>
+  <div>
+    Sehr gut für lokale Muster;<br>
+    globale Beziehungen weniger direkt
+  </div>
+</div>
+
+<div class="nn-grid nn-row rnn">
+  <div class="model">
+    <span class="name">RNN</span>
+    <span class="full">Recurrent Neural Network</span>
+  </div>
+  <div>
+    <strong>Rückkopplung:</strong> Informationen
+    früherer Schritte beeinflussen spätere.
+  </div>
+  <div>
+    Zeitreihen, geordnete Sequenzen
+  </div>
+  <div>
+    Zeitliche Verläufe von Kreatinin,
+    Laktat oder Entzündungsmarkern
+  </div>
+  <div>
+    Berücksichtigt die Reihenfolge;<br>
+    lange Abhängigkeiten oft schwierig
+  </div>
+</div>
+
+<div class="nn-grid nn-row transformer">
+  <div class="model">
+    <span class="name" style="font-size:20px;">
+      Transformer
+    </span>
+    <span class="full">Attention-basiert</span>
+  </div>
+  <div>
+    <strong>Attention:</strong> relevante
+    Beziehungen zwischen Elementen
+    werden gewichtet.
+  </div>
+  <div>
+    Texte, lange Sequenzen,
+    Zeitreihen
+  </div>
+  <div>
+    Klinische Texte, Arztbriefe,
+    komplexe Laborwertverläufe
+  </div>
+  <div>
+    Erfasst weitreichende Beziehungen;<br>
+    oft hoher Daten- und Rechenbedarf
+  </div>
+</div>
+
+<div class="nn-grid nn-row gnn">
+  <div class="model">
+    <span class="name">GNN</span>
+    <span class="full">Graph Neural Network</span>
+  </div>
+  <div>
+    <strong>Message Passing:</strong> Knoten
+    tauschen Informationen entlang
+    ihrer Verbindungen aus.
+  </div>
+  <div>
+    Netzwerke aus Knoten
+    und Kanten
+  </div>
+  <div>
+    Proteininteraktionen,
+    molekulare Netzwerke,
+    medizinische Wissensgraphen
+  </div>
+  <div>
+    Nutzt explizite Beziehungen;<br>
+    sinnvoller Graph erforderlich
+  </div>
+</div>
+
+<div class="nn-note">
+  <strong>Merksatz:</strong>
+  MLP = Merkmalskombination &nbsp;·&nbsp;
+  CNN = lokale Muster &nbsp;·&nbsp;
+  RNN = zeitliche Abfolge &nbsp;·&nbsp;
+  Transformer = Attention &nbsp;·&nbsp;
+  GNN = Beziehungen im Netzwerk
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
       
+   
+      <section>
+	<h3>Nierenversagen</h3>
+	<img style="width:100%;" src="img/kreatinin_grenzbedingungen.png">
+      </section>
+
+
+
+
+      <section  class="show-daisy-logo">
+	<h3>Online Folien</h3>
+	<div class="grid">
+	  <span>Physik</span>
+	  <span>Raman</span>
+	  <span>DAISY</span> 
+	  <img style="width:50%;" src="img/qr_physik.png">
+	  <img style="width:50%;" src="img/qr_raman.png">
+	  <img style="width:50%;" src="img/qr_daisy.png">
+	</div>
+	<ul style="list-style:none;font-size:20pt;margin-top:2em;">
+	  <li> https://renedominik.github.io/lehre/physik_labormedizin/ </li>
+	  <li> https://renedominik.github.io/lehre/raman_spektroskopie/ </li>
+	  <li> https://renedominik.github.io/lehre/daisy/ </li>
+
+	  <li style="margin-top:0.5em;">PDF generieren:</li>
+	  <li> https://renedominik.github.io/lehre/daisy/?print-pdf </li>
+	  <li> Strg-P: Querformat, als PDF speichern</li>
+	</ul>
+      </section>
+      
+
+   
             
    	    
 	    
