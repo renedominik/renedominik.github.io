@@ -1,0 +1,94 @@
+
+/* KDIGO / AKIN */
+.reveal .slides section.aki-rules {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 22px 30px 30px;
+  color: var(--text, #e7edf5);
+  background: transparent;
+  text-align: left;
+}
+
+.aki-rules h3 {
+  margin: 0 0 7px;
+  font-size: 30px;
+  color: var(--heading, #f4f8ff);
+  text-transform: none;
+}
+
+.aki-rules .aki-subtitle {
+  margin: 0 0 17px;
+  font-size: 16px;
+  color: var(--muted, #a9b8c9);
+}
+
+.aki-rules .aki-diagnosis {
+  padding: 13px 17px;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--blue, #7bbcff);
+  border-top: 1px solid var(--line, #34485f);
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.aki-rules .aki-label {
+  color: var(--blue, #7bbcff);
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.aki-rules .aki-table-header,
+.aki-rules .aki-stage {
+  display: grid;
+  grid-template-columns: 125px 1.28fr 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.aki-rules .aki-table-header {
+  padding: 8px 11px;
+  border-bottom: 1px solid var(--line, #34485f);
+  color: var(--muted, #a9b8c9);
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.aki-rules .aki-stage {
+  min-height: 89px;
+  padding: 11px;
+  border-bottom: 1px solid var(--line, #34485f);
+  font-size: 18px;
+  line-height: 1.32;
+}
+
+.aki-rules .aki-level {
+  padding-left: 11px;
+  border-left: 4px solid var(--level-color);
+  color: var(--level-color);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.aki-rules .aki-stage--1 {
+  --level-color: #83d9a5;
+}
+
+.aki-rules .aki-stage--2 {
+  --level-color: #ffc178;
+}
+
+.aki-rules .aki-stage--3 {
+  --level-color: #ff9b91;
+}
+
+.aki-rules .aki-notes {
+  margin-top: 15px;
+  font-size: 15px;
+  line-height: 1.3;
+  color: var(--muted, #a9b8c9);
+}
+
+.aki-rules strong {
+  color: #f4f8ff;
+}

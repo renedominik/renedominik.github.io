@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAISY</title>
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/moon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/moon.css">
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="../../reveal/css/theme/serif.css" id="theme"> -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
@@ -25,324 +24,444 @@
        
     <div class="slides">
 
+      
       <!-- Title Slide -->
       <section class="show-klg-logo">
-        <h2 style="margin-top:1.5em;">DAISY</h2>
+        <h2 class="deck-title">DAISY</h2>
 	<h3>Digitales Alarm- und Informationssystem</h3>
 	<h4>Algorithmik in die Klinik bringen</h4>
         <p>Prof. Dr. phil. nat. René Staritzbichler, 5.11.2026</p>
-        <img style="width:20%;margin-left:0em;" src="img/ml_probe.png">
+        <img class="title-illustration" src="img/ml_probe.png">
       </section>
 
 
 
-      <section class="show-daisy-logo">
-	<h3> Extrem robust: Random Forest</h3>
-	<img src="img/random_forest.png" style="width:70%">
+      
+      <section class="show-daisy-logo learning-goals-slide">
+	<h3> Lernziele</h3>
+	<ul>
+	  <li>Maschinelles Lernen
+	    <ul>
+	      <li> Entscheidungsbäume </li>
+	      <li> Neuronale Netze </li>
+	    </ul>
+	  </li>
+	  <li> DAISY - Digitales Alarm und Informationssystem
+	    <ul>
+	      <li> Aufbau </li>
+	      <li> Integration in Klinik </li>
+	    </ul>
+	  </li>
+	  <li> Algorithmen zur Erkennung kritischer Gesundheitszustände
+	    <ul>
+	      <li> Sepsis </li>
+	      <li> Probenverwechslung </li>
+	      <li> Nierenversagen</li>
+	      <li> Elektrolytentgleisung</li>
+	      <li> Leberfibrose</li>
+	      <li> Überwachung von Blutkulturen</li>
+	    </ul>
+	  </li>
+	</ul>
       </section>
-	
+
+
+
       
 
+<section class="nn-slide" data-transition="fade">
 
-
-<section class="rf-method show-daisy-logo">
-<style>
-.reveal .slides section.rf-method {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 30px 42px;
-  background: #0c1626;
-  color: #e7edf5;
-  text-align: left;
-}
-
-.rf-method h3 {
-  font-size: 36px;
-  margin: 0 0 14px;
-  color: #f4f8ff;
-  text-transform: none;
-}
-
-.rf-method .subtitle {
-  font-size: 20px;
-  color: #a8b9cc;
-  margin-bottom: 30px;
-}
-
-.rf-method .cards {
-  display: flex;
-  gap: 24px;
-  align-items: stretch;
-}
-
-.rf-method .card {
-  flex: 1;
-  padding: 23px 25px;
-  border-radius: 17px;
-  background: #172538;
-  border: 2px solid;
-}
-
-.rf-method .bootstrap {
-  border-color: #4c9ce4;
-}
-
-.rf-method .features {
-  border-color: #64b98b;
-}
-
-.rf-method .card h4 {
-  font-size: 24px;
-  margin: 0 0 23px;
-  text-transform: none;
-}
-
-.rf-method .bootstrap h4 { color: #7bbcff; }
-.rf-method .features h4 { color: #83d9a5; }
-
-.rf-method .card ul {
-  margin: 0;
-  padding-left: 26px;
-  font-size: 23px;
-  line-height: 1.45;
-}
-
-.rf-method .card li {
-  margin-bottom: 18px;
-}
-
-.rf-method .example {
-  margin-top: 24px;
-  padding: 15px 18px;
-  border-radius: 10px;
-  background: #23354b;
-  font-size: 19px;
-  line-height: 1.45;
-}
-
-.rf-method .conclusion {
-  margin-top: 28px;
-  padding: 19px 26px;
-  border-radius: 12px;
-  background: #243b49;
-  border-left: 5px solid #e4a34a;
-  font-size: 23px;
-  color: #f2f5f9;
-}
-</style>
-
-<h3>Random Forest – Zufall als Prinzip</h3>
-<div class="subtitle">
-  Warum entstehen viele unterschiedliche Entscheidungsbäume?
-</div>
-
-<div class="cards">
-
-  <div class="card bootstrap">
-    <h4>1. Bootstrap – zufällige Stichproben</h4>
-    <ul>
-      <li>Für jeden Baum werden Trainingsfälle
-          <strong>zufällig ausgewählt</strong>.</li>
-      <li>Mit Zurücklegen: Ein Fall kann
-          <strong>mehrfach oder gar nicht</strong>
-          vorkommen.</li>
-    </ul>
-    <div class="example">
-      Beispiel: Aus den Fällen 1, 2, 3, 4
-      wird die Stichprobe <strong>1, 2, 2, 4</strong>.
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">
+        Maschinelles Lernen · Überblick
+      </div>
+      <h2 class="nn-title">
+        Lernformen, Aufgaben und Methoden
+      </h2>
+      <p class="nn-subtitle">
+        Was ist vorgegeben, was wird gelernt
+        und welche Verfahren werden eingesetzt?
+      </p>
     </div>
   </div>
 
-  <div class="card features">
-    <h4>2. Zufällige Merkmale (Features)</h4>
-    <ul>
-      <li>Bei jeder Verzweigung wird nur
-          eine <strong>zufällige Auswahl</strong>
-          der Merkmale betrachtet.</li>
-      <li>Der Baum wählt daraus die
-          <strong>beste Trennung</strong>.</li>
-    </ul>
-    <div class="example">
-      Beispiel: Nur <strong>Alter und CRP</strong>
-      statt aller verfügbaren Laborwerte.
+  <div class="nn-stage">
+
+    <div class="nn-visual">
+      <svg viewBox="0 0 800 440"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Übersicht der Lernformen">
+
+        <!-- Maschinelles Lernen -->
+        <rect x="261" y="9" width="278" height="49"
+              rx="10" fill="#aec4d8"
+              fill-opacity=".09"
+              stroke="#7189a4" stroke-width="1.5"/>
+
+        <text x="400" y="39"
+              fill="#f4f8ff" font-size="21"
+              font-weight="700" text-anchor="middle">
+          Maschinelles Lernen
+        </text>
+
+        <!-- Verbindungen -->
+        <g stroke="#7489a3" stroke-width="2.5"
+           fill="none" stroke-linejoin="round">
+          <path d="M400 58 V77 H158 V95"/>
+          <path d="M400 77 H452 V95"/>
+          <path d="M452 77 H695 V95"/>
+        </g>
+
+        <!-- Überwachtes Lernen -->
+        <rect x="20" y="95" width="276" height="60"
+              rx="10" fill="#7bbcff" fill-opacity=".10"
+              stroke="#7bbcff" stroke-width="2"/>
+
+        <text x="158" y="123" fill="#9dceff"
+              font-size="20" font-weight="700"
+              text-anchor="middle">Überwachtes Lernen</text>
+
+        <text x="158" y="143" fill="#c0d2e7"
+              font-size="15" text-anchor="middle">
+          Zielwerte bekannt
+        </text>
+
+        <!-- Unüberwachtes Lernen -->
+        <rect x="314" y="95" width="276" height="60"
+              rx="10" fill="#83d9a5" fill-opacity=".10"
+              stroke="#83d9a5" stroke-width="2"/>
+
+        <text x="452" y="123" fill="#9ce8ba"
+              font-size="20" font-weight="700"
+              text-anchor="middle">Unüberwachtes Lernen</text>
+
+        <text x="452" y="143" fill="#c0d2e7"
+              font-size="15" text-anchor="middle">
+          ohne Zielwerte
+        </text>
+
+        <!-- Bestärkendes Lernen -->
+        <rect x="608" y="95" width="174" height="60"
+              rx="10" fill="#ffc178" fill-opacity=".10"
+              stroke="#ffc178" stroke-width="2"/>
+
+        <text x="695" y="121" fill="#ffd59c"
+              font-size="18" font-weight="700"
+              text-anchor="middle">Bestärkendes</text>
+
+        <text x="695" y="141" fill="#ffd59c"
+              font-size="18" font-weight="700"
+              text-anchor="middle">Lernen</text>
+
+        <!-- Klassifikation und Regression -->
+        <g stroke="#7bbcff" stroke-width="2"
+           fill="none">
+          <path d="M158 155 V174 H86 V191"/>
+          <path d="M158 174 H230 V191"/>
+        </g>
+
+        <rect x="20" y="191" width="132" height="78"
+              rx="9" stroke="#7bbcff"
+              fill="#7bbcff" fill-opacity=".035"/>
+
+        <text x="86" y="220" fill="#f1f6fc"
+              font-size="18" font-weight="700"
+              text-anchor="middle">Klassifikation</text>
+        <text x="86" y="243" fill="#a9bdd2"
+              font-size="15" text-anchor="middle">Kategorie</text>
+        <text x="86" y="261" fill="#a9bdd2"
+              font-size="14" text-anchor="middle">
+          z. B. Sepsis ja/nein
+        </text>
+
+        <rect x="164" y="191" width="132" height="78"
+              rx="9" stroke="#7bbcff"
+              fill="#7bbcff" fill-opacity=".035"/>
+
+        <text x="230" y="220" fill="#f1f6fc"
+              font-size="18" font-weight="700"
+              text-anchor="middle">Regression</text>
+        <text x="230" y="243" fill="#a9bdd2"
+              font-size="15" text-anchor="middle">Zahlenwert</text>
+        <text x="230" y="261" fill="#a9bdd2"
+              font-size="14" text-anchor="middle">
+          z. B. Laborwert
+        </text>
+
+        <!-- Modelle für beide Aufgaben -->
+        <g stroke="#7bbcff" stroke-width="2"
+           fill="none">
+          <path d="M86 269 V287 H158 V301"/>
+          <path d="M230 269 V287 H158"/>
+        </g>
+
+        <rect x="20" y="301" width="276" height="119"
+              rx="9" stroke="#426c98"
+              fill="#7bbcff" fill-opacity=".045"/>
+
+        <text x="158" y="328" fill="#9dceff"
+              font-size="17" font-weight="700"
+              text-anchor="middle">
+          Typische Modelle für beide
+        </text>
+        <text x="158" y="353" fill="#e0ebf7"
+              font-size="17" text-anchor="middle">
+          Entscheidungsbäume
+        </text>
+        <text x="158" y="376" fill="#e0ebf7"
+              font-size="16" text-anchor="middle">
+          Random Forest · XGBoost
+        </text>
+        <text x="158" y="399" fill="#e0ebf7"
+              font-size="17" text-anchor="middle">
+          Neuronale Netze
+        </text>
+
+        <!-- Clustering und PCA -->
+        <g stroke="#83d9a5" stroke-width="2"
+           fill="none">
+          <path d="M452 155 V174 H380 V191"/>
+          <path d="M452 174 H524 V191"/>
+        </g>
+
+        <rect x="314" y="191" width="132" height="78"
+              rx="9" stroke="#83d9a5"
+              fill="#83d9a5" fill-opacity=".035"/>
+
+        <text x="380" y="220" fill="#f1f6fc"
+              font-size="18" font-weight="700"
+              text-anchor="middle">Clustering</text>
+        <text x="380" y="243" fill="#a9bdd2"
+              font-size="15" text-anchor="middle">
+          Gruppen finden
+        </text>
+        <text x="380" y="261" fill="#a9bdd2"
+              font-size="14" text-anchor="middle">
+          z. B. k-Means
+        </text>
+
+        <rect x="458" y="191" width="132" height="78"
+              rx="9" stroke="#83d9a5"
+              fill="#83d9a5" fill-opacity=".035"/>
+
+        <text x="524" y="220" fill="#f1f6fc"
+              font-size="18" font-weight="700"
+              text-anchor="middle">PCA</text>
+        <text x="524" y="243" fill="#a9bdd2"
+              font-size="15" text-anchor="middle">
+          Hauptkomponenten
+        </text>
+        <text x="524" y="261" fill="#a9bdd2"
+              font-size="14" text-anchor="middle">
+          Daten verdichten
+        </text>
+
+        <g stroke="#83d9a5" stroke-width="2"
+           fill="none">
+          <path d="M380 269 V287 H452 V301"/>
+          <path d="M524 269 V287 H452"/>
+        </g>
+
+        <rect x="314" y="301" width="276" height="119"
+              rx="9" stroke="#448466"
+              fill="#83d9a5" fill-opacity=".04"/>
+
+        <text x="452" y="329" fill="#9ce8ba"
+              font-size="17" font-weight="700"
+              text-anchor="middle">
+          Erkennt unbekannte Struktur
+        </text>
+        <text x="452" y="356" fill="#e0ebf7"
+              font-size="16" text-anchor="middle">
+          Clustering: ähnliche Fälle
+        </text>
+        <text x="452" y="383" fill="#e0ebf7"
+              font-size="16" text-anchor="middle">
+          PCA: Hauptachsen
+        </text>
+        <text x="452" y="404" fill="#a9bdd2"
+              font-size="14" text-anchor="middle">
+          der Datenvariation
+        </text>
+
+        <!-- Bestärkendes Lernen -->
+        <path d="M695 155 V191"
+              stroke="#ffc178" stroke-width="2"/>
+
+        <rect x="608" y="191" width="174" height="78"
+              rx="9" stroke="#ffc178"
+              fill="#ffc178" fill-opacity=".035"/>
+
+        <text x="695" y="220" fill="#f1f6fc"
+              font-size="18" font-weight="700"
+              text-anchor="middle">
+          Agent handelt
+        </text>
+        <text x="695" y="244" fill="#a9bdd2"
+              font-size="15" text-anchor="middle">
+          Aktion → Belohnung
+        </text>
+
+        <path d="M695 269 V301"
+              stroke="#ffc178" stroke-width="2"/>
+
+        <rect x="608" y="301" width="174" height="119"
+              rx="9" stroke="#98754b"
+              fill="#ffc178" fill-opacity=".04"/>
+
+        <text x="695" y="344" fill="#ffd59c"
+              font-size="18" font-weight="700"
+              text-anchor="middle">
+          Lernt eine
+        </text>
+        <text x="695" y="369" fill="#ffd59c"
+              font-size="18" font-weight="700"
+              text-anchor="middle">
+          Strategie
+        </text>
+        <text x="695" y="391" fill="#a9bdd2"
+              font-size="14" text-anchor="middle">
+          durch Rückmeldung
+        </text>
+
+      </svg>
     </div>
+
+    <!-- Erklärungen rechts -->
+    <div class="nn-explain">
+      <h3>Die drei Lernformen</h3>
+
+      <div class="nn-steps">
+
+        <div class="nn-step">
+          <span class="num">1</span>
+          <p>
+            <strong>Überwacht:</strong>
+            Bekannte Zielwerte.
+            <strong>Klassifikation</strong> sagt Klassen voraus,
+            <strong>Regression</strong> Zahlenwerte.
+          </p>
+        </div>
+
+        <div class="nn-step">
+          <span class="num">2</span>
+          <p>
+            <strong>Unüberwacht:</strong>
+            Keine Zielvariable.
+            <strong>Clustering</strong> findet Gruppen,
+            <strong>PCA</strong> verdichtet Merkmale.
+          </p>
+        </div>
+
+        <div class="nn-step">
+          <span class="num">3</span>
+          <p>
+            <strong>Bestärkend:</strong>
+            Ein Agent optimiert sein Verhalten
+            anhand von Belohnungen.
+          </p>
+        </div>
+
+      </div>
+
+      <p class="nn-small">
+        Weitere Lernformen: teilüberwacht
+        und selbstüberwacht.
+      </p>
+    </div>
+
   </div>
 
-</div>
-
-
-
-<div class="conclusion">
-  <strong>Ergebnis:</strong>
-  Viele unterschiedliche Bäume, deren
-  Vorhersagen gemeinsam ausgewertet werden.
-</div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Merksatz</span>
+    <p>
+      <strong>Lernform</strong> ≠
+      <strong>Aufgabe</strong> ≠
+      <strong>Methode</strong>:
+      Bäume und neuronale Netze eignen sich für
+      Klassifikation <em>und</em> Regression.
+    </p>
+  </div>
 
 </section>
+
+
+      
+      <section>
+	<h3> Heiteres Beruferaten - Entscheidungsbäume à la 70'er</h3>
+	<p class="was-bin-ich-caption"> Welches Schweinderl hätten's denn gern?
+	  337 Sendungen 1955 - 1989 </p>
+	<img class="figure-width-85" src="img/was_bin_ich.png">	
+      </section>
+
+
+
+      
+      <section class="show-daisy-logo">
+	<h3> Extrem robust: Random Forest</h3>
+	<img class="rf-illustration" src="img/random_forest.png">
+      </section>
+	
+
+
+      
+      <section class="rf-method show-daisy-logo">
+	<h3>Random Forest – Zufallswälder</h3>
+	<div class="subtitle">
+	  Warum entstehen viele unterschiedliche Entscheidungsbäume?
+	</div>
+
+	<div class="cards">
+
+	  <div class="card bootstrap">
+	    <h4>1. Bootstrap – zufällige Stichproben</h4>
+	    <ul>
+	      <li>Für jeden Baum werden Trainingsfälle
+		<strong>zufällig ausgewählt</strong>.</li>
+	      <li>Mit Zurücklegen: Ein Fall kann
+		<strong>mehrfach oder gar nicht</strong>
+		vorkommen.</li>
+	    </ul>
+	    <div class="example">
+	      Beispiel: Aus den Fällen 1, 2, 3, 4
+	      wird die Stichprobe <strong>1, 2, 2, 4</strong>.
+	    </div>
+	  </div>
+
+	  <div class="card features">
+	    <h4>2. Zufällige Merkmale (Features)</h4>
+	    <ul>
+	      <li>Bei jeder Verzweigung wird nur
+		eine <strong>zufällige Auswahl</strong>
+		der Merkmale betrachtet.</li>
+	      <li>Der Baum wählt daraus die
+		<strong>beste Trennung</strong>.</li>
+	    </ul>
+	    <div class="example">
+	      Beispiel: Nur <strong>Alter und CRP</strong>
+	      statt aller verfügbaren Laborwerte.
+	    </div>
+	  </div>
+
+	</div>
+
+
+
+	<div class="conclusion">
+	  <strong>Ergebnis:</strong>
+	  Viele unterschiedliche Bäume, deren
+	  Vorhersagen gemeinsam ausgewertet werden.
+	</div>
+
+      </section>
 
 
 
 
 
 <section class="xgb-vs-rf">
-<style>
-.reveal .slides section.xgb-vs-rf {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 14px 24px;
-  background: #0c1626;
-  color: #e7edf5;
-  text-align: left;
-  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
-}
-
-.xgb-vs-rf h3 {
-  margin: 0 0 5px;
-  font-size: 27px;
-  line-height: 1.15;
-  font-weight: 650;
-  color: #f4f8ff;
-  text-transform: none;
-}
-
-.xgb-vs-rf .subtitle {
-  font-size: 15px;
-  line-height: 1.2;
-  color: #a9b8c9;
-  margin-bottom: 12px;
-}
-
-.xgb-vs-rf .top-row {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 12px;
-}
-
-.xgb-vs-rf .card {
-  flex: 1;
-  min-width: 0;
-  background: #172538;
-  border-radius: 13px;
-  padding: 12px 16px;
-  border: 2px solid;
-  box-sizing: border-box;
-}
-
-.xgb-vs-rf .rf {
-  border-color: #64b98b;
-}
-
-.xgb-vs-rf .xgb {
-  border-color: #f0a44b;
-}
-
-.xgb-vs-rf .card h4 {
-  margin: 0 0 9px;
-  font-size: 21px;
-  line-height: 1.15;
-  font-weight: 650;
-  text-transform: none;
-}
-
-.xgb-vs-rf .rf h4 { color: #84d7a3; }
-.xgb-vs-rf .xgb h4 { color: #ffc56a; }
-
-.xgb-vs-rf .card ul {
-  margin: 0;
-  padding-left: 20px;
-  font-size: 16px;
-  line-height: 1.22;
-}
-
-.xgb-vs-rf .card li {
-  margin-bottom: 6px;
-}
-
-.xgb-vs-rf .card .tag {
-  display: inline-block;
-  margin-top: 3px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.xgb-vs-rf .rf .tag {
-  background: rgba(100,185,139,0.18);
-  color: #9be3b5;
-}
-
-.xgb-vs-rf .xgb .tag {
-  background: rgba(240,164,75,0.16);
-  color: #ffd08b;
-}
-
-.xgb-vs-rf .compare-box {
-  background: #142031;
-  border: 2px solid #30465f;
-  border-radius: 13px;
-  padding: 10px 14px;
-}
-
-.xgb-vs-rf .compare-box h4 {
-  margin: 0 0 8px;
-  font-size: 19px;
-  line-height: 1.15;
-  color: #dbe7f5;
-  font-weight: 650;
-  text-transform: none;
-}
-
-.xgb-vs-rf .compare-grid {
-  display: grid;
-  grid-template-columns: 2.1fr 1.4fr 1.4fr;
-  gap: 5px 7px;
-  align-items: stretch;
-  font-size: 14px;
-  line-height: 1.17;
-}
-
-.xgb-vs-rf .cell {
-  padding: 6px 9px;
-  border-radius: 7px;
-}
-
-.xgb-vs-rf .head {
-  background: #243549;
-  color: #f0f4fa;
-  font-weight: 650;
-}
-
-.xgb-vs-rf .left {
-  background: #1c2a3b;
-  color: #d5deea;
-  font-weight: 600;
-}
-
-.xgb-vs-rf .rf-cell {
-  background: rgba(100,185,139,0.14);
-  color: #e8f5ec;
-}
-
-.xgb-vs-rf .xgb-cell {
-  background: rgba(240,164,75,0.14);
-  color: #fff4e6;
-}
-
-.xgb-vs-rf .footer-note {
-  margin-top: 10px;
-  padding: 9px 13px;
-  border-radius: 10px;
-  background: #213646;
-  border-left: 4px solid #77b6ff;
-  font-size: 16px;
-  line-height: 1.24;
-  color: #edf3fa;
-}
-</style>
-
 <h3>XGBoost im Vergleich zum Random Forest</h3>
 
 <div class="subtitle">
@@ -438,123 +557,6 @@
 
 
 <section class="nn-compare">
-<style>
-.reveal .slides section.nn-compare {
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 18px 26px;
-  background: #0c1626;
-  color: #e7edf5;
-  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
-  text-align: left;
-}
-
-.nn-compare h3 {
-  margin: 0 0 6px;
-  font-size: 27px;
-  font-weight: 650;
-  color: #f4f8ff;
-  text-transform: none;
-}
-
-.nn-compare .subtitle {
-  font-size: 15px;
-  color: #a9b8c9;
-  margin-bottom: 18px;
-}
-
-.nn-compare .nn-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.6fr 1.35fr 1.65fr 1.55fr;
-  gap: 7px;
-  margin-bottom: 7px;
-  align-items: stretch;
-}
-
-.nn-compare .nn-head > div {
-  padding: 10px 12px;
-  background: #26384e;
-  color: #e9f2ff;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 650;
-}
-
-.nn-compare .nn-row > div {
-  background: #172538;
-  padding: 11px 12px;
-  border-radius: 8px;
-  font-size: 14.5px;
-  line-height: 1.24;
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-
-.nn-compare .nn-row strong {
-  color: #f4f7fc;
-  font-weight: 650;
-}
-
-.nn-compare .nn-row .model {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-left: 4px solid var(--accent);
-  background: #1c2c40;
-  padding-left: 15px;
-}
-
-.nn-compare .model .name {
-  color: var(--accent);
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.nn-compare .model .full {
-  margin-top: 5px;
-  font-size: 12px;
-  line-height: 1.2;
-  color: #aebdd0;
-}
-
-.nn-compare .mlp {
-  --accent: #bd9bf4;
-}
-
-.nn-compare .cnn {
-  --accent: #7bbcff;
-}
-
-.nn-compare .rnn {
-  --accent: #ffc178;
-}
-
-.nn-compare .transformer {
-  --accent: #70d6d0;
-}
-
-.nn-compare .gnn {
-  --accent: #83d9a5;
-}
-
-.nn-compare .nn-note {
-  margin-top: 17px;
-  padding: 12px 17px;
-  border-radius: 11px;
-  background: #213646;
-  border-left: 4px solid #77b6ff;
-  font-size: 16px;
-  line-height: 1.35;
-  color: #edf3fa;
-}
-
-.nn-compare .nn-note strong {
-  color: #ffffff;
-}
-</style>
-
 <h3>Neuronale Netze – Architekturen im Vergleich</h3>
 
 <div class="subtitle">
@@ -637,7 +639,7 @@
 
 <div class="nn-grid nn-row transformer">
   <div class="model">
-    <span class="name" style="font-size:20px;">
+    <span class="name">
       Transformer
     </span>
     <span class="full">Attention-basiert</span>
@@ -697,6 +699,465 @@
 
 </section>
 
+<!-- Architektur-Folien: nach der Vergleichsübersicht -->
+<section class="nn-slide nn-mlp" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Grundlagen</div>
+      <h2 class="nn-title">MLP — Merkmale verknüpfen</h2>
+      <p class="nn-subtitle">Multi-Layer Perceptron · vollständig verbundene neuronale Schichten</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
+<defs>
+  <marker id="tip-mlp-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
+  <marker id="tip-mlp-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c2a3fa"/></marker>
+  <marker id="tip-mlp-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#73baff"/></marker>
+  <marker id="tip-mlp-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ffc17a"/></marker>
+  <marker id="tip-mlp-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#75ded9"/></marker>
+  <marker id="tip-mlp-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8ee1a8"/></marker>
+</defs>
+<text class="v-label" x="118" y="43" text-anchor="middle">Eingaben</text>
+<text class="v-label" x="420" y="43" text-anchor="middle">Verborgene Schichten</text>
+<text class="v-label" x="695" y="43" text-anchor="middle">Ausgabe</text>
+<line x1="182" y1="102" x2="323" y2="75" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="102" x2="323" y2="145" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="102" x2="323" y2="215" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="102" x2="323" y2="285" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="102" x2="323" y2="355" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="178" x2="323" y2="75" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="178" x2="323" y2="145" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="178" x2="323" y2="215" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="178" x2="323" y2="285" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="178" x2="323" y2="355" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="254" x2="323" y2="75" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="254" x2="323" y2="145" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="254" x2="323" y2="215" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="254" x2="323" y2="285" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="254" x2="323" y2="355" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="330" x2="323" y2="75" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="330" x2="323" y2="145" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="330" x2="323" y2="215" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="182" y1="330" x2="323" y2="285" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="182" y1="330" x2="323" y2="355" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="75" x2="488" y2="115" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="75" x2="488" y2="185" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="75" x2="488" y2="255" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="75" x2="488" y2="325" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="145" x2="488" y2="115" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="145" x2="488" y2="185" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="145" x2="488" y2="255" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="145" x2="488" y2="325" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="215" x2="488" y2="115" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="215" x2="488" y2="185" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="215" x2="488" y2="255" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="215" x2="488" y2="325" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="285" x2="488" y2="115" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="285" x2="488" y2="185" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="285" x2="488" y2="255" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="285" x2="488" y2="325" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="355" x2="488" y2="115" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="355" x2="488" y2="185" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="357" y1="355" x2="488" y2="255" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.35"/>
+<line x1="357" y1="355" x2="488" y2="325" stroke="#a78bfa" stroke-width="1.25" stroke-opacity="0.2"/>
+<line x1="522" y1="115" x2="680" y2="220" stroke="#c2a3fa" stroke-width="1.45" stroke-opacity="0.22"/>
+<line x1="522" y1="185" x2="680" y2="220" stroke="#c2a3fa" stroke-width="1.45" stroke-opacity="0.47"/>
+<line x1="522" y1="255" x2="680" y2="220" stroke="#c2a3fa" stroke-width="1.45" stroke-opacity="0.47"/>
+<line x1="522" y1="325" x2="680" y2="220" stroke="#c2a3fa" stroke-width="1.45" stroke-opacity="0.22"/>
+<text class="v-mini" x="125" y="108" text-anchor="end">Alter</text>
+<circle cx="165" cy="102" r="17" fill="#20334a" stroke="#9cb5cb" stroke-width="2"/>
+<text class="v-mini" x="125" y="184" text-anchor="end">CRP</text>
+<circle cx="165" cy="178" r="17" fill="#20334a" stroke="#9cb5cb" stroke-width="2"/>
+<text class="v-mini" x="125" y="260" text-anchor="end">Krea</text>
+<circle cx="165" cy="254" r="17" fill="#20334a" stroke="#9cb5cb" stroke-width="2"/>
+<text class="v-mini" x="125" y="336" text-anchor="end">Laktat</text>
+<circle cx="165" cy="330" r="17" fill="#20334a" stroke="#9cb5cb" stroke-width="2"/>
+<circle cx="340" cy="75" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="335" cy="70" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="340" cy="145" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="335" cy="140" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="340" cy="215" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="335" cy="210" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="340" cy="285" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="335" cy="280" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="340" cy="355" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="335" cy="350" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="505" cy="115" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="500" cy="110" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="505" cy="185" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="500" cy="180" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="505" cy="255" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="500" cy="250" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="505" cy="325" r="17" fill="#312c4e" stroke="#c2a3fa" stroke-width="2.5"/>
+<circle cx="500" cy="320" r="3" fill="#dcccff" stroke="#dcccff" stroke-width="0.5"/>
+<circle cx="680" cy="220" r="24" fill="#473968" stroke="#c2a3fa" stroke-width="3"/>
+<line x1="705" y1="220" x2="734" y2="220" stroke="#c2a3fa" stroke-width="3" stroke-opacity="1" marker-end="url(#tip-mlp-v)"/>
+<rect x="735" y="181" width="62" height="78" rx="13" fill="#3c315c" stroke="#b69af0" stroke-width="2"/>
+<text class="v-mini" x="766" y="213" text-anchor="middle">Risiko</text>
+<text class="v-label" x="766" y="233" text-anchor="middle">↑</text>
+<text class="v-sub" x="165" y="410" text-anchor="middle">Merkmale</text>
+<text class="v-sub" x="421" y="410" text-anchor="middle">gelernte Kombinationen</text>
+<text class="v-sub" x="694" y="410" text-anchor="middle">Prognose</text>
+</svg></div>
+    <div class="nn-explain">
+      <h3>So funktioniert es</h3>
+      <div class="nn-steps"><div class="nn-step"><span class="num">1</span><p><strong>Alle Eingabewerte</strong> werden gemeinsam betrachtet.</p></div>
+<div class="nn-step"><span class="num">2</span><p>Jede Schicht bildet neue <strong>Kombinationen</strong> der Merkmale.</p></div>
+<div class="nn-step"><span class="num">3</span><p>Beim Training werden die <strong>Gewichte</strong> der Verbindungen angepasst.</p></div></div>
+      <p class="nn-small">Nichtlineare Aktivierungen erlauben auch komplexe Zusammenhänge.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Aus Alter, Kreatinin, CRP und Laktat wird ein Risikoscore berechnet.</p>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="nn-slide nn-train" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Training</div>
+      <h2 class="nn-title">Forward- und Backpropagation</h2>
+      <p class="nn-subtitle">Vorhersage berechnen · Fehler messen · Gewichte verbessern</p>
+    </div>
+  </div>
+
+  <div class="nn-stage">
+    <div class="nn-visual">
+      <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Vorwärtsberechnung von Eingaben über verborgene Neuronen zur Vorhersage und Cost-Funktion, dann Rückwärtsberechnung der Ableitungen">
+        <defs>
+          <marker id="fwp-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#73baff"/></marker>
+          <marker id="bp-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#ffc17a"/></marker>
+          <marker id="muted-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#a9bdd2"/></marker>
+        </defs>
+        <text x="30" y="30" class="train-label-forward">FORWARD  →</text>
+        <path d="M200 23 H728" fill="none" stroke="#73baff" stroke-width="2.7" stroke-opacity="0.75" marker-end="url(#fwp-head)"/>
+
+        <text x="96" y="100" text-anchor="middle" class="v-label">Eingaben</text>
+        <text x="310" y="100" text-anchor="middle" class="v-label">Schichten</text>
+        <text x="537" y="100" text-anchor="middle" class="v-label">Prognose</text>
+        <text x="703" y="100" text-anchor="middle" class="v-label">Cost</text>
+
+        <g fill="none" stroke="#77baff" stroke-width="2" opacity="0.32">
+          <line x1="117" y1="170" x2="289" y2="159"/>
+          <line x1="117" y1="170" x2="289" y2="245"/>
+          <line x1="117" y1="170" x2="289" y2="330"/>
+          <line x1="117" y1="255" x2="289" y2="159"/>
+          <line x1="117" y1="255" x2="289" y2="245"/>
+          <line x1="117" y1="255" x2="289" y2="330"/>
+          <line x1="117" y1="340" x2="289" y2="159"/>
+          <line x1="117" y1="340" x2="289" y2="245"/>
+          <line x1="117" y1="340" x2="289" y2="330"/>
+          <line x1="333" y1="159" x2="512" y2="247"/>
+          <line x1="333" y1="245" x2="512" y2="247"/>
+          <line x1="333" y1="330" x2="512" y2="247"/>
+        </g>
+        <g fill="none" stroke="#73baff" stroke-width="3" stroke-opacity="0.95">
+          <line x1="333" y1="245" x2="506" y2="247" marker-end="url(#fwp-head)"/>
+          <path d="M561 247 H647" marker-end="url(#fwp-head)"/>
+        </g>
+        <g>
+          <circle cx="96" cy="170" r="23" fill="#1d3a52" stroke="#73baff" stroke-width="2.8"/>
+          <circle cx="96" cy="255" r="23" fill="#1d3a52" stroke="#73baff" stroke-width="2.8"/>
+          <circle cx="96" cy="340" r="23" fill="#1d3a52" stroke="#73baff" stroke-width="2.8"/>
+          <text x="96" y="176" text-anchor="middle" class="v-label">x₁</text>
+          <text x="96" y="261" text-anchor="middle" class="v-label">x₂</text>
+          <text x="96" y="346" text-anchor="middle" class="v-label">x₃</text>
+          <circle cx="311" cy="159" r="23" fill="#3b365d" stroke="#c2a3fa" stroke-width="2.8"/>
+          <circle cx="311" cy="245" r="23" fill="#3b365d" stroke="#c2a3fa" stroke-width="2.8"/>
+          <circle cx="311" cy="330" r="23" fill="#3b365d" stroke="#c2a3fa" stroke-width="2.8"/>
+          <text x="311" y="165" text-anchor="middle" class="v-label">h₁</text>
+          <text x="311" y="251" text-anchor="middle" class="v-label">h₂</text>
+          <text x="311" y="336" text-anchor="middle" class="v-label">h₃</text>
+          <circle cx="536" cy="247" r="29" fill="#164c52" stroke="#75ded9" stroke-width="3"/>
+          <text x="536" y="254" text-anchor="middle" class="v-label svg-text-24">ŷ</text>
+        </g>
+
+        <rect x="651" y="202" width="112" height="89" rx="16" fill="#40352c" stroke="#ffc17a" stroke-width="2.8"/>
+        <text x="707" y="238" text-anchor="middle" class="v-label svg-text-22">L</text>
+        <text x="707" y="264" text-anchor="middle" class="v-sub">Fehler</text>
+        <text x="707" y="144" text-anchor="middle" class="v-mini">Zielwert y</text>
+        <line x1="707" y1="153" x2="707" y2="190" fill="none" stroke="#a9bdd2" stroke-width="2.5" marker-end="url(#muted-head)"/>
+
+        <path d="M707 297 V389 H103" fill="none" stroke="#ffc17a" stroke-width="3.2" stroke-linejoin="round" marker-end="url(#bp-head)"/>
+        <text x="406" y="376" text-anchor="middle" class="train-label-back">← BACKPROP: Gradienten / Ableitungen</text>
+        <text x="405" y="418" text-anchor="middle" class="v-sub">Rückwärts mit der Kettenregel</text>
+      </svg>
+    </div>
+
+    <div class="nn-explain train-explain-grid">
+      <div class="train-steps-col">
+        <h3>Training in 3 Schritten</h3>
+        <div class="nn-steps">
+          <div class="nn-step"><span class="num">1</span><p><strong>Forward:</strong> Eingaben x und Gewichte w erzeugen die Vorhersage ŷ.</p></div>
+          <div class="nn-step"><span class="num">2</span><p><strong>Cost:</strong> L misst die Abweichung zwischen Vorhersage ŷ und Zielwert y.</p></div>
+          <div class="nn-step"><span class="num">3</span><p><strong>Backprop:</strong> Die Kettenregel liefert ∂L/∂w. Damit werden die Gewichte aktualisiert.</p></div>
+        </div>
+      </div>
+
+      <div class="train-defs-col">
+        <h3>Funktionen &amp; Begriffe</h3>
+        <div class="train-compact-row">
+          <b>Gewichtete Summe:</b> z = Σᵢ wᵢxᵢ + b
+          <span>x: Eingaben · w: Gewichte · b: Bias</span>
+        </div>
+        <div class="train-compact-row">
+          <b>Aktivierung:</b> a = f(z)
+          <span>f: Aktivierungsfunktion · am Ausgang: ŷ = f(z)</span>
+        </div>
+        <div class="train-activation-grid">
+          <span><b>ReLU:</b> max(0, z)</span>
+          <span><b>Sigmoid:</b> 1/(1+e<sup>−z</sup>)</span>
+          <span><b>tanh:</b> tanh(z)</span>
+          <span><b>Linear:</b> z</span>
+        </div>
+        <div class="train-compact-row">
+          <b>Cost:</b> L = ½ (ŷ − y)²
+          <span>Quadratische Abweichung vom Zielwert</span>
+        </div>
+        <div class="train-compact-row">
+          <b>Gradient:</b> ∂L/∂w
+          <span>f′(z): Aktivierungsableitung · η: Lernrate</span>
+        </div>
+        <div class="train-compact-note">
+          Die Formel unten gilt für ein einzelnes Neuron. Bei mehreren Schichten wird die Kettenregel wiederholt angewandt.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nn-footer train-footer">
+    <span class="nn-ex-label">Ableitung &amp; Update</span>
+    <div class="train-equations">
+      <span>∂L/∂w = (ŷ − y) · f′(z) · x</span>
+      <span>w<sub>neu</sub> = w − η · ∂L/∂w</span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="nn-slide nn-overfit" data-transition="fade">
+
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">
+        Neuronale Netze · Trainingskontrolle
+      </div>
+      <h2 class="nn-title">
+        Trainings- und Validierungsfehler
+      </h2>
+      <p class="nn-subtitle">
+        Daten trennen · Fehler beobachten · Overfitting erkennen
+      </p>
+    </div>
+  </div>
+
+  <div class="nn-stage">
+
+    <!-- Grafik: Datenaufteilung und Fehlerkurven -->
+    <div class="nn-visual">
+      <svg viewBox="0 0 780 490"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Datenaufteilung und Verlauf von Trainings- und Validierungsfehler">
+
+        <text class="v-label" x="35" y="34">
+          1. Daten aufteilen
+        </text>
+
+        <!-- Datenaufteilung -->
+        <rect x="36" y="54" width="494" height="52"
+              rx="8" fill="#7bbcff"/>
+        <rect x="534" y="54" width="103" height="52"
+              rx="8" fill="#ffc178"/>
+        <rect x="641" y="54" width="103" height="52"
+              rx="8" fill="#b4c3d6"/>
+
+        <g fill="#102033" font-size="20"
+           font-weight="700" text-anchor="middle">
+          <text x="283" y="87">70 % Training</text>
+          <text x="586" y="87">15 % Val.</text>
+          <text x="692" y="87">15 % Test</text>
+        </g>
+
+        <g class="v-mini" text-anchor="middle">
+          <text x="283" y="133">Gewichte lernen</text>
+          <text x="586" y="133">Stopp</text>
+          <text x="692" y="133">Endtest</text>
+        </g>
+
+        <!-- Diagramm -->
+        <text class="v-label" x="36" y="186">
+          2. Fehler im Verlauf der Epochen
+        </text>
+
+        <!-- Legende -->
+        <path d="M 412 179 H 447"
+              stroke="#7bbcff"
+              stroke-width="5"
+              stroke-linecap="round"/>
+        <text class="v-mini" x="454" y="185">
+          Training
+        </text>
+
+        <path d="M 585 179 H 620"
+              stroke="#ffc178"
+              stroke-width="5"
+              stroke-linecap="round"/>
+        <text class="v-mini" x="627" y="185">
+          Validierung
+        </text>
+
+        <!-- Overfitting-Bereich -->
+        <rect x="383" y="213"
+              width="358" height="218"
+              rx="8"
+              fill="#ffc178"
+              fill-opacity="0.065"/>
+
+        <!-- Gitternetz -->
+        <g stroke="#334960" stroke-width="1.4">
+          <path d="M 74 281 H 741"/>
+          <path d="M 74 352 H 741"/>
+        </g>
+
+        <!-- Achsen -->
+        <path d="M 74 209 V 431 H 741"
+              fill="none"
+              stroke="#a9bdd2"
+              stroke-width="2.4"/>
+
+        <text class="v-mini" x="75" y="206">
+          Fehler (Loss)
+        </text>
+
+        <text class="v-mini" x="644" y="468">
+          Epochen →
+        </text>
+
+        <!-- Trainingsfehler -->
+        <path
+          d="M 90 240
+             C 180 337, 258 395, 383 409
+             S 597 424, 726 426"
+          fill="none"
+          stroke="#7bbcff"
+          stroke-width="5"
+          stroke-linecap="round"/>
+
+        <!-- Validierungsfehler -->
+        <path
+          d="M 90 257
+             C 168 321, 288 383, 383 376
+             C 473 376, 581 310, 726 248"
+          fill="none"
+          stroke="#ffc178"
+          stroke-width="5"
+          stroke-linecap="round"/>
+
+        <!-- Early Stopping -->
+        <line x1="383" y1="212"
+              x2="383" y2="431"
+              stroke="#83d9a5"
+              stroke-width="3"
+              stroke-dasharray="8 7"/>
+
+        <circle cx="383" cy="376" r="9"
+                fill="#83d9a5"
+                stroke="#172538"
+                stroke-width="3"/>
+
+        <text x="402" y="244"
+              fill="#83d9a5"
+              font-size="20"
+              font-weight="700">
+          Early Stopping
+        </text>
+
+        <text x="575" y="239"
+              fill="#ffc178"
+              font-size="21"
+              font-weight="700">
+          Overfitting
+        </text>
+
+      </svg>
+    </div>
+
+    <!-- Rechte Seite: Erklärungen -->
+    <div class="nn-explain">
+
+      <h3>3 getrennte Aufgaben</h3>
+
+      <div class="nn-steps">
+
+        <div class="nn-step">
+          <span class="num">1</span>
+          <p>
+            <strong>Training:</strong>
+            Die Gewichte werden mit 70 % der
+            Daten angepasst.
+          </p>
+        </div>
+
+        <div class="nn-step">
+          <span class="num">2</span>
+          <p>
+            <strong>Validierung:</strong>
+            Den Fehler nach jeder Epoche messen.
+            Bei erneutem Anstieg stoppen.
+          </p>
+        </div>
+
+        <div class="nn-step">
+          <span class="num">3</span>
+          <p>
+            <strong>Test:</strong>
+            Das fertige Modell einmalig mit
+            bisher ungenutzten Daten bewerten.
+          </p>
+        </div>
+
+      </div>
+
+      <p class="nn-small">
+        70 / 15 / 15 ist ein Beispiel.
+        Die Testdaten bleiben bei Modellwahl
+        und Early Stopping unberührt.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Gemeinsame Fußzeile -->
+  <div class="nn-footer">
+    <span class="nn-ex-label">Merksatz</span>
+    <p>
+      <strong>Overfitting:</strong>
+      Trainingsfehler sinkt weiter,
+      Validierungsfehler steigt.
+      <strong>
+        Stoppen am Minimum der Validierung.
+      </strong>
+    </p>
+  </div>
+
+</section>
 
 
 
@@ -707,21 +1168,957 @@
 
 
 
+<section class="nn-slide nn-cnn" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Grundlagen</div>
+      <h2 class="nn-title">CNN — lokale Muster erkennen</h2>
+      <p class="nn-subtitle">Convolutional Neural Network · Faltungsfilter für räumlich geordnete Daten</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
+<defs>
+  <marker id="tip-cnn-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
+  <marker id="tip-cnn-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c2a3fa"/></marker>
+  <marker id="tip-cnn-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#73baff"/></marker>
+  <marker id="tip-cnn-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ffc17a"/></marker>
+  <marker id="tip-cnn-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#75ded9"/></marker>
+  <marker id="tip-cnn-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8ee1a8"/></marker>
+</defs>
+<text class="v-label" x="191" y="40" text-anchor="middle">1D-Spektrum</text>
+<text class="v-label" x="472" y="40" text-anchor="middle">Faltungsfilter</text>
+<text class="v-label" x="660" y="40" text-anchor="middle">Merkmalskarten</text>
+<rect x="31" y="68" width="355" height="310" rx="15" fill="#101d2e" stroke="#34495f" stroke-width="1.5"/>
+<line x1="64" y1="120" x2="354" y2="120" stroke="#3f5169" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="64" y1="180" x2="354" y2="180" stroke="#3f5169" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="64" y1="240" x2="354" y2="240" stroke="#3f5169" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="64" y1="300" x2="354" y2="300" stroke="#3f5169" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="64" y1="329" x2="358" y2="329" stroke="#748aa2" stroke-width="1.8" stroke-opacity="1" marker-end="url(#tip-cnn-s)"/>
+<line x1="64" y1="330" x2="64" y2="91" stroke="#748aa2" stroke-width="1.7" stroke-opacity="1"/>
+<path d="M65.0,283.1 L66.2,282.4 L67.4,281.8 L68.6,281.2 L69.8,280.6 L71.0,280.1 L72.2,279.7 L73.4,279.4 L74.6,279.1 L75.8,279.0 L77.0,278.9 L78.2,279.0 L79.4,279.2 L80.6,279.4 L81.8,279.8 L83.0,280.2 L84.2,280.7 L85.4,281.3 L86.6,281.9 L87.8,282.5 L89.0,283.1 L90.2,283.7 L91.4,284.3 L92.6,284.8 L93.8,285.2 L95.0,285.5 L96.2,285.5 L97.4,285.3 L98.6,284.8 L99.8,284.0 L101.0,282.7 L102.2,280.9 L103.4,278.5 L104.6,275.6 L105.8,272.2 L107.0,268.3 L108.2,264.0 L109.4,259.5 L110.6,254.9 L111.8,250.6 L113.0,246.7 L114.2,243.5 L115.4,241.1 L116.6,239.8 L117.8,239.6 L119.0,240.4 L120.2,242.3 L121.4,245.0 L122.6,248.3 L123.8,252.1 L125.0,256.0 L126.2,260.0 L127.4,263.8 L128.6,267.3 L129.8,270.5 L131.0,273.3 L132.2,275.7 L133.4,277.8 L134.6,279.5 L135.8,281.0 L137.0,282.2 L138.2,283.3 L139.4,284.2 L140.6,284.9 L141.8,285.6 L143.0,286.1 L144.2,286.5 L145.4,286.9 L146.6,287.1 L147.8,287.2 L149.0,287.2 L150.2,287.1 L151.4,286.9 L152.6,286.6 L153.8,286.2 L155.0,285.7 L156.2,285.2 L157.4,284.6 L158.6,283.9 L159.8,283.3 L161.0,282.6 L162.2,281.9 L163.4,281.1 L164.6,280.3 L165.8,279.4 L167.0,278.2 L168.2,276.8 L169.4,274.8 L170.6,272.1 L171.8,268.4 L173.0,263.4 L174.2,257.1 L175.4,249.1 L176.6,239.6 L177.8,228.8 L179.0,217.1 L180.2,205.1 L181.4,193.8 L182.6,184.0 L183.8,176.7 L185.0,172.6 L186.2,172.1 L187.4,175.3 L188.6,182.0 L189.8,191.6 L191.0,203.1 L192.2,215.7 L193.4,228.5 L194.6,240.5 L195.8,251.3 L197.0,260.4 L198.2,267.8 L199.4,273.4 L200.6,277.4 L201.8,280.2 L203.0,281.9 L204.2,282.8 L205.4,283.1 L206.6,283.0 L207.8,282.7 L209.0,282.2 L210.2,281.7 L211.4,281.2 L212.6,280.6 L213.8,280.1 L215.0,279.7 L216.2,279.4 L217.4,279.1 L218.6,279.0 L219.8,278.9 L221.0,278.9 L222.2,279.0 L223.4,279.2 L224.6,279.4 L225.8,279.7 L227.0,280.0 L228.2,280.3 L229.4,280.5 L230.6,280.6 L231.8,280.6 L233.0,280.4 L234.2,279.9 L235.4,279.1 L236.6,278.0 L237.8,276.4 L239.0,274.3 L240.2,271.8 L241.4,268.7 L242.6,265.1 L243.8,261.1 L245.0,256.6 L246.2,251.7 L247.4,246.6 L248.6,241.3 L249.8,236.0 L251.0,231.0 L252.2,226.3 L253.4,222.0 L254.6,218.5 L255.8,215.7 L257.0,213.9 L258.2,212.9 L259.4,213.0 L260.6,214.1 L261.8,216.0 L263.0,218.8 L264.2,222.4 L265.4,226.5 L266.6,231.0 L267.8,235.9 L269.0,240.9 L270.2,245.9 L271.4,250.8 L272.6,255.4 L273.8,259.9 L275.0,263.9 L276.2,267.6 L277.4,270.9 L278.6,273.9 L279.8,276.5 L281.0,278.7 L282.2,280.5 L283.4,282.0 L284.6,282.9 L285.8,283.2 L287.0,282.1 L288.2,278.9 L289.4,272.2 L290.6,260.8 L291.8,243.6 L293.0,220.7 L294.2,193.9 L295.4,167.0 L296.6,145.2 L297.8,133.3 L299.0,134.1 L300.2,147.3 L301.4,169.6 L302.6,195.9 L303.8,221.4 L305.0,242.7 L306.2,258.3 L307.4,268.3 L308.6,274.1 L309.8,277.1 L311.0,278.3 L312.2,278.8 L313.4,278.9 L314.6,278.9 L315.8,279.0 L317.0,279.1 L318.2,279.3 L319.4,279.6 L320.6,280.0 L321.8,280.5 L323.0,281.0 L324.2,281.6 L325.4,282.3 L326.6,282.9 L327.8,283.6 L329.0,284.2 L330.2,284.8 L331.4,285.4 L332.6,285.9 L333.8,286.3 L335.0,286.7 L336.2,286.9 L337.4,287.1 L338.6,287.2 L339.8,287.2 L341.0,287.0 L342.2,286.8 L343.4,286.5 L344.6,286.0 L345.8,285.6 L347.0,285.0 L348.2,284.4 L349.4,283.8 L350.6,283.1 L351.8,282.5 L353.0,281.8" fill="none" stroke="#73baff" stroke-width="4" stroke-linejoin="round"/>
+<rect x="172" y="92" width="64" height="238" rx="9" fill="#73baff18" stroke="#73baff" stroke-width="2"/>
+<line x1="174" y1="99" x2="234" y2="99" stroke="#73baff" stroke-width="2.5" stroke-opacity="1"/>
+<text class="v-mini" x="204" y="87" text-anchor="middle">Fenster</text>
+<text class="v-sub" x="208" y="357" text-anchor="middle">Wellenzahl →</text>
+<line x1="390" y1="224" x2="420" y2="224" stroke="#9eb4ce" stroke-width="3" stroke-opacity="1" marker-end="url(#tip-cnn-s)"/>
+<rect x="429" y="156" width="91" height="132" rx="12" fill="#1d334c" stroke="#73baff" stroke-width="2"/>
+<rect x="442" y="240" width="9" height="23" rx="3" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="456" y="206" width="9" height="57" rx="3" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="470" y="176" width="9" height="87" rx="3" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="484" y="214" width="9" height="49" rx="3" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="498" y="233" width="9" height="30" rx="3" fill="#73baff" stroke="none" stroke-width="0"/>
+<text class="v-mini" x="475" y="312" text-anchor="middle">gleitet</text>
+<text class="v-mini" x="475" y="331" text-anchor="middle">über Daten</text>
+<line x1="525" y1="224" x2="554" y2="224" stroke="#9eb4ce" stroke-width="3" stroke-opacity="1" marker-end="url(#tip-cnn-s)"/>
+<rect x="565" y="106" width="206" height="246" rx="15" fill="#1a3047" stroke="#526982" stroke-width="1.5"/>
+<rect x="579.0" y="128" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<rect x="602.1" y="128" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="625.2" y="128" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="648.3" y="128" width="19" height="29" rx="4" fill="#b0dafa" stroke="none" stroke-width="0"/>
+<rect x="671.4" y="128" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="694.5" y="128" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<rect x="717.6" y="128" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="740.7" y="128" width="19" height="29" rx="4" fill="#4c8dbb" stroke="none" stroke-width="0"/>
+<rect x="579.0" y="171" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<rect x="602.1" y="171" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="625.2" y="171" width="19" height="29" rx="4" fill="#b0dafa" stroke="none" stroke-width="0"/>
+<rect x="648.3" y="171" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="671.4" y="171" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<rect x="694.5" y="171" width="19" height="29" rx="4" fill="#4c8dbb" stroke="none" stroke-width="0"/>
+<rect x="717.6" y="171" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="740.7" y="171" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="579.0" y="214" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="602.1" y="214" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="625.2" y="214" width="19" height="29" rx="4" fill="#4c8dbb" stroke="none" stroke-width="0"/>
+<rect x="648.3" y="214" width="19" height="29" rx="4" fill="#b0dafa" stroke="none" stroke-width="0"/>
+<rect x="671.4" y="214" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="694.5" y="214" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<rect x="717.6" y="214" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="740.7" y="214" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="579.0" y="257" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<rect x="602.1" y="257" width="19" height="29" rx="4" fill="#4c8dbb" stroke="none" stroke-width="0"/>
+<rect x="625.2" y="257" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="648.3" y="257" width="19" height="29" rx="4" fill="#427fab" stroke="none" stroke-width="0"/>
+<rect x="671.4" y="257" width="19" height="29" rx="4" fill="#b0dafa" stroke="none" stroke-width="0"/>
+<rect x="694.5" y="257" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="717.6" y="257" width="19" height="29" rx="4" fill="#73baff" stroke="none" stroke-width="0"/>
+<rect x="740.7" y="257" width="19" height="29" rx="4" fill="#355a78" stroke="none" stroke-width="0"/>
+<text class="v-sub" x="668" y="388" text-anchor="middle">Erkannte lokale Muster</text>
+<text class="v-sub" x="191" y="406" text-anchor="middle">z. B. Raman-Peaks</text>
+</svg></div>
+    <div class="nn-explain">
+      <h3>So funktioniert es</h3>
+      <div class="nn-steps"><div class="nn-step"><span class="num">1</span><p>Ein kleiner <strong>Filter</strong> wandert über die Eingabe.</p></div>
+<div class="nn-step"><span class="num">2</span><p>Er reagiert auf <strong>lokale Muster</strong> wie Peaks oder Kanten.</p></div>
+<div class="nn-step"><span class="num">3</span><p>Viele Filter erzeugen <strong>Merkmalskarten</strong> für die Vorhersage.</p></div></div>
+      <p class="nn-small">Dieselbe Filterregel wird an verschiedenen Positionen verwendet.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Ein 1D-CNN erkennt charakteristische Muster in Raman-Spektren.</p>
+  </div>
+</section>
+
+<section class="nn-slide nn-rnn" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Grundlagen</div>
+      <h2 class="nn-title">RNN — Information über Zeit behalten</h2>
+      <p class="nn-subtitle">Recurrent Neural Network · Verarbeitung einer Folge Schritt für Schritt</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
+<defs>
+  <marker id="tip-rnn-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
+  <marker id="tip-rnn-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c2a3fa"/></marker>
+  <marker id="tip-rnn-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#73baff"/></marker>
+  <marker id="tip-rnn-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ffc17a"/></marker>
+  <marker id="tip-rnn-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#75ded9"/></marker>
+  <marker id="tip-rnn-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8ee1a8"/></marker>
+</defs>
+<text class="v-label" x="400" y="38" text-anchor="middle">Die gleiche Recheneinheit wird für alle Zeitpunkte verwendet</text>
+<rect x="66" y="71" width="129" height="72" rx="13" fill="#1a2a3d" stroke="#52677b" stroke-width="1.7"/>
+<text class="v-mini" x="130" y="97" text-anchor="middle">t − 3</text>
+<text class="v-label" x="130" y="125" text-anchor="middle">0,8 mg/dL</text>
+<line x1="130" y1="146" x2="130" y2="195" stroke="#ffc17a" stroke-width="2.5" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<rect x="76" y="204" width="109" height="97" rx="15" fill="#453521" stroke="#ffc17a" stroke-width="2.3"/>
+<text class="v-label" x="130" y="240" text-anchor="middle">RNN</text>
+<text class="v-mini" x="130" y="266" text-anchor="middle">h1</text>
+<rect x="245" y="71" width="129" height="72" rx="13" fill="#1a2a3d" stroke="#52677b" stroke-width="1.7"/>
+<text class="v-mini" x="309" y="97" text-anchor="middle">t − 2</text>
+<text class="v-label" x="309" y="125" text-anchor="middle">1,0 mg/dL</text>
+<line x1="309" y1="146" x2="309" y2="195" stroke="#ffc17a" stroke-width="2.5" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<rect x="255" y="204" width="109" height="97" rx="15" fill="#453521" stroke="#ffc17a" stroke-width="2.3"/>
+<text class="v-label" x="309" y="240" text-anchor="middle">RNN</text>
+<text class="v-mini" x="309" y="266" text-anchor="middle">h2</text>
+<rect x="424" y="71" width="129" height="72" rx="13" fill="#1a2a3d" stroke="#52677b" stroke-width="1.7"/>
+<text class="v-mini" x="488" y="97" text-anchor="middle">t − 1</text>
+<text class="v-label" x="488" y="125" text-anchor="middle">1,4 mg/dL</text>
+<line x1="488" y1="146" x2="488" y2="195" stroke="#ffc17a" stroke-width="2.5" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<rect x="434" y="204" width="109" height="97" rx="15" fill="#453521" stroke="#ffc17a" stroke-width="2.3"/>
+<text class="v-label" x="488" y="240" text-anchor="middle">RNN</text>
+<text class="v-mini" x="488" y="266" text-anchor="middle">h3</text>
+<rect x="603" y="71" width="129" height="72" rx="13" fill="#1a2a3d" stroke="#52677b" stroke-width="1.7"/>
+<text class="v-mini" x="667" y="97" text-anchor="middle">t = 0</text>
+<text class="v-label" x="667" y="125" text-anchor="middle">1,9 mg/dL</text>
+<line x1="667" y1="146" x2="667" y2="195" stroke="#ffc17a" stroke-width="2.5" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<rect x="613" y="204" width="109" height="97" rx="15" fill="#453521" stroke="#ffc17a" stroke-width="2.3"/>
+<text class="v-label" x="667" y="240" text-anchor="middle">RNN</text>
+<text class="v-mini" x="667" y="266" text-anchor="middle">h4</text>
+<line x1="191" y1="251" x2="249" y2="251" stroke="#ffc17a" stroke-width="4" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<line x1="370" y1="251" x2="428" y2="251" stroke="#ffc17a" stroke-width="4" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<line x1="549" y1="251" x2="607" y2="251" stroke="#ffc17a" stroke-width="4" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<line x1="668" y1="306" x2="668" y2="344" stroke="#ffc17a" stroke-width="3" stroke-opacity="1" marker-end="url(#tip-rnn-o)"/>
+<rect x="574" y="357" width="189" height="64" rx="12" fill="#443122" stroke="#ffc17a" stroke-width="2"/>
+<text class="v-label" x="668" y="383" text-anchor="middle">Prognose</text>
+<text class="v-mini" x="668" y="404" text-anchor="middle">aus dem Verlauf</text>
+<text class="v-sub" x="263" y="384" text-anchor="middle">Frühere Information fließt mit</text>
+</svg></div>
+    <div class="nn-explain">
+      <h3>So funktioniert es</h3>
+      <div class="nn-steps"><div class="nn-step"><span class="num">1</span><p>Messwerte werden <strong>zeitlich nacheinander</strong> verarbeitet.</p></div>
+<div class="nn-step"><span class="num">2</span><p>Ein verborgener Zustand trägt <strong>frühere Information</strong> weiter.</p></div>
+<div class="nn-step"><span class="num">3</span><p>Die neue Vorhersage berücksichtigt <strong>Wert und Verlauf</strong>.</p></div></div>
+      <p class="nn-small">LSTM und GRU sind RNN-Varianten für längere Abhängigkeiten.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Ein Kreatinin-Zeitverlauf statt nur des letzten Einzelwerts.</p>
+  </div>
+</section>
+
+<section class="nn-slide nn-transformer" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Grundlagen</div>
+      <h2 class="nn-title">Transformer — Wichtiges gewichten</h2>
+      <p class="nn-subtitle">Self-Attention · Beziehungen auch zwischen weit entfernten Elementen</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
+<defs>
+  <marker id="tip-transformer-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
+  <marker id="tip-transformer-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c2a3fa"/></marker>
+  <marker id="tip-transformer-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#73baff"/></marker>
+  <marker id="tip-transformer-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ffc17a"/></marker>
+  <marker id="tip-transformer-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#75ded9"/></marker>
+  <marker id="tip-transformer-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8ee1a8"/></marker>
+</defs>
+<text class="v-label" x="405" y="35" text-anchor="middle">Jeder Zeitpunkt kann andere Zeitpunkte berücksichtigen</text>
+<text class="v-sub" x="400" y="65" text-anchor="middle">Unterschiedlich starke Beziehungen = Attention-Gewichte</text>
+<rect x="54" y="120" width="110" height="68" rx="13" fill="#1a3040" stroke="#4b6879" stroke-width="1.6"/>
+<text class="v-label" x="109" y="149" text-anchor="middle">t − 4</text>
+<text class="v-mini" x="109" y="171" text-anchor="middle">Laborwerte</text>
+<rect x="191" y="120" width="110" height="68" rx="13" fill="#1a3040" stroke="#4b6879" stroke-width="1.6"/>
+<text class="v-label" x="246" y="149" text-anchor="middle">t − 3</text>
+<text class="v-mini" x="246" y="171" text-anchor="middle">Laborwerte</text>
+<rect x="328" y="120" width="110" height="68" rx="13" fill="#1a3040" stroke="#4b6879" stroke-width="1.6"/>
+<text class="v-label" x="383" y="149" text-anchor="middle">t − 2</text>
+<text class="v-mini" x="383" y="171" text-anchor="middle">Laborwerte</text>
+<rect x="465" y="120" width="110" height="68" rx="13" fill="#1a3040" stroke="#4b6879" stroke-width="1.6"/>
+<text class="v-label" x="520" y="149" text-anchor="middle">t − 1</text>
+<text class="v-mini" x="520" y="171" text-anchor="middle">Laborwerte</text>
+<rect x="602" y="120" width="110" height="68" rx="13" fill="#1c474a" stroke="#75ded9" stroke-width="2"/>
+<text class="v-label" x="657" y="149" text-anchor="middle">t = 0</text>
+<text class="v-mini" x="657" y="171" text-anchor="middle">Laborwerte</text>
+<path d="M 109 190 Q 383.0 295 657 190" fill="none" stroke="#75ded9" stroke-width="3.7" stroke-opacity="0.85"/>
+<circle cx="109" cy="190" r="3" fill="#75ded9" stroke="#75ded9" stroke-width="0.5"/>
+<path d="M 246 190 Q 451.5 284 657 190" fill="none" stroke="#75ded9" stroke-width="2.0" stroke-opacity="0.22"/>
+<circle cx="246" cy="190" r="3" fill="#75ded9" stroke="#75ded9" stroke-width="0.5"/>
+<path d="M 383 190 Q 520.0 273 657 190" fill="none" stroke="#75ded9" stroke-width="3.5" stroke-opacity="0.7"/>
+<circle cx="383" cy="190" r="3" fill="#75ded9" stroke="#75ded9" stroke-width="0.5"/>
+<path d="M 520 190 Q 588.5 262 657 190" fill="none" stroke="#75ded9" stroke-width="2.3" stroke-opacity="0.34"/>
+<circle cx="520" cy="190" r="3" fill="#75ded9" stroke="#75ded9" stroke-width="0.5"/>
+<circle cx="657" cy="190" r="5" fill="#75ded9" stroke="#75ded9" stroke-width="1"/>
+<line x1="657" y1="231" x2="657" y2="288" stroke="#75ded9" stroke-width="2.5" stroke-opacity="1" marker-end="url(#tip-transformer-t)"/>
+<rect x="151" y="295" width="357" height="115" rx="12" fill="#192f42" stroke="#4a7781" stroke-width="1.6"/>
+<text class="v-mini" x="174" y="317">Attention-Matrix</text>
+<rect x="276" y="310" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.65"/>
+<rect x="313" y="310" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.23"/>
+<rect x="350" y="310" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.42"/>
+<rect x="387" y="310" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.27"/>
+<rect x="424" y="310" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.84"/>
+<rect x="276" y="328" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.27"/>
+<rect x="313" y="328" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.69"/>
+<rect x="350" y="328" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.23"/>
+<rect x="387" y="328" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.50"/>
+<rect x="424" y="328" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.38"/>
+<rect x="276" y="346" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.46"/>
+<rect x="313" y="346" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.27"/>
+<rect x="350" y="346" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.77"/>
+<rect x="387" y="346" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.30"/>
+<rect x="424" y="346" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.65"/>
+<rect x="276" y="364" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.23"/>
+<rect x="313" y="364" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.61"/>
+<rect x="350" y="364" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.42"/>
+<rect x="387" y="364" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.80"/>
+<rect x="424" y="364" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.27"/>
+<rect x="276" y="382" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.80"/>
+<rect x="313" y="382" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.30"/>
+<rect x="350" y="382" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.69"/>
+<rect x="387" y="382" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.42"/>
+<rect x="424" y="382" width="30" height="14" rx="3" fill="#75ded9" fill-opacity="0.92"/>
+<rect x="558" y="310" width="196" height="95" rx="14" fill="#1c4548" stroke="#75ded9" stroke-width="2"/>
+<text class="v-label" x="656" y="343" text-anchor="middle">Kontext</text>
+<text class="v-mini" x="656" y="364" text-anchor="middle">aus allen Elementen</text>
+<text class="v-mini" x="656" y="387" text-anchor="middle">→ Prognose</text>
+<line x1="515" y1="352" x2="551" y2="352" stroke="#75ded9" stroke-width="2.6" stroke-opacity="1" marker-end="url(#tip-transformer-t)"/>
+</svg></div>
+    <div class="nn-explain">
+      <h3>So funktioniert es</h3>
+      <div class="nn-steps"><div class="nn-step"><span class="num">1</span><p>Jedes Element bewertet die <strong>Relevanz anderer</strong> Elemente.</p></div>
+<div class="nn-step"><span class="num">2</span><p><strong>Attention</strong> gewichtet diese Beziehungen unterschiedlich.</p></div>
+<div class="nn-step"><span class="num">3</span><p>Die gewichtete Information bildet einen <strong>gemeinsamen Kontext</strong>.</p></div></div>
+      <p class="nn-small">Zeitliche Reihenfolge muss über Positionsinformationen einfließen.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Relevante Zeitpunkte in langen Labor- oder klinischen Verlaufsdaten finden.</p>
+  </div>
+</section>
+
+
+
+<section class="nn-slide nn-gnn" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Grundlagen</div>
+      <h2 class="nn-title">GNN — aus Beziehungen lernen</h2>
+      <p class="nn-subtitle">Graph Neural Network · Daten als Knoten und Kanten</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
+<defs>
+  <marker id="tip-gnn-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
+  <marker id="tip-gnn-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#c2a3fa"/></marker>
+  <marker id="tip-gnn-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#73baff"/></marker>
+  <marker id="tip-gnn-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#ffc17a"/></marker>
+  <marker id="tip-gnn-t" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#75ded9"/></marker>
+  <marker id="tip-gnn-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#8ee1a8"/></marker>
+</defs>
+<text class="v-label" x="211" y="39" text-anchor="middle">Graph: Knoten + Verbindungen</text>
+<text class="v-label" x="525" y="39" text-anchor="middle">Aggregation</text>
+<text class="v-label" x="708" y="39" text-anchor="middle">Aktualisierung</text>
+<line x1="87" y1="125" x2="205" y2="212" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="259" y1="92" x2="205" y2="212" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="90" y1="320" x2="205" y2="212" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="300" y1="322" x2="205" y2="212" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="357" y1="195" x2="205" y2="212" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="87" y1="125" x2="259" y2="92" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="90" y1="320" x2="300" y2="322" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<line x1="259" y1="92" x2="357" y2="195" stroke="#617e82" stroke-width="2.5" stroke-opacity="0.8"/>
+<circle cx="87" cy="125" r="25" fill="#1d3741" stroke="#8ee1a8" stroke-width="2.8"/>
+<text class="v-label" x="87" y="131" text-anchor="middle">A</text>
+<circle cx="259" cy="92" r="25" fill="#1d3741" stroke="#8ee1a8" stroke-width="2.8"/>
+<text class="v-label" x="259" y="98" text-anchor="middle">B</text>
+<circle cx="90" cy="320" r="25" fill="#1d3741" stroke="#8ee1a8" stroke-width="2.8"/>
+<text class="v-label" x="90" y="326" text-anchor="middle">C</text>
+<circle cx="300" cy="322" r="25" fill="#1d3741" stroke="#8ee1a8" stroke-width="2.8"/>
+<text class="v-label" x="300" y="328" text-anchor="middle">D</text>
+<circle cx="357" cy="195" r="25" fill="#1d3741" stroke="#8ee1a8" stroke-width="2.8"/>
+<text class="v-label" x="357" y="201" text-anchor="middle">E</text>
+<line x1="137.7" y1="162.4" x2="174.3" y2="189.4" stroke="#8ee1a8" stroke-width="3.3" stroke-opacity="0.96" marker-end="url(#tip-gnn-g)"/>
+<line x1="235.8" y1="143.6" x2="219.0" y2="180.8" stroke="#8ee1a8" stroke-width="3.3" stroke-opacity="0.96" marker-end="url(#tip-gnn-g)"/>
+<line x1="139.4" y1="273.6" x2="175.1" y2="240.1" stroke="#8ee1a8" stroke-width="3.3" stroke-opacity="0.96" marker-end="url(#tip-gnn-g)"/>
+<line x1="259.1" y1="274.7" x2="229.7" y2="240.6" stroke="#8ee1a8" stroke-width="3.3" stroke-opacity="0.96" marker-end="url(#tip-gnn-g)"/>
+<line x1="291.6" y1="202.3" x2="244.5" y2="207.6" stroke="#8ee1a8" stroke-width="3.3" stroke-opacity="0.96" marker-end="url(#tip-gnn-g)"/>
+<circle cx="205" cy="212" r="35" fill="#356049" stroke="#a7ecc0" stroke-width="3.2"/>
+<text class="v-label" x="205" y="219" text-anchor="middle">Z</text>
+<text class="v-sub" x="205" y="395" text-anchor="middle">Nachbarn senden Informationen</text>
+<line x1="397" y1="212" x2="432" y2="212" stroke="#94b5c8" stroke-width="3" stroke-opacity="1" marker-end="url(#tip-gnn-s)"/>
+<rect x="438" y="148" width="171" height="129" rx="15" fill="#204333" stroke="#8ee1a8" stroke-width="2.2"/>
+<text class="v-label" x="524" y="182" text-anchor="middle">Nachrichten</text>
+<text class="v-label" x="524" y="207" text-anchor="middle">kombinieren</text>
+<text class="v-mini" x="524" y="241" text-anchor="middle">(Aggregation)</text>
+<line x1="613" y1="212" x2="645" y2="212" stroke="#94b5c8" stroke-width="3" stroke-opacity="1" marker-end="url(#tip-gnn-s)"/>
+<circle cx="716" cy="212" r="52" fill="#306349" stroke="#8ee1a8" stroke-width="3.2"/>
+<text class="v-label" x="716" y="216" text-anchor="middle" font-size="25">Z′</text>
+<text class="v-mini" x="716" y="245" text-anchor="middle">aktualisiert</text>
+<text class="v-sub" x="700" y="323" text-anchor="middle">Neues Wissen</text>
+<text class="v-sub" x="700" y="344" text-anchor="middle">über Knoten Z</text>
+</svg></div>
+    <div class="nn-explain">
+      <h3>So funktioniert es</h3>
+      <div class="nn-steps"><div class="nn-step"><span class="num">1</span><p>Die Daten bilden ein <strong>Netzwerk</strong> aus Knoten und Kanten.</p></div>
+<div class="nn-step"><span class="num">2</span><p>Jeder Knoten empfängt Informationen von <strong>Nachbarn</strong>.</p></div>
+<div class="nn-step"><span class="num">3</span><p>Durch <strong>Message Passing</strong> entstehen neue Knotenmerkmale.</p></div></div>
+      <p class="nn-small">Kanten beschreiben modellierte Beziehungen, nicht automatisch Ursachen.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Protein-Interaktionsnetzwerke oder medizinische Wissensgraphen analysieren.</p>
+  </div>
+</section>
+
+
+
+
+<section class="nn-slide algo-flow daisy-system daisy-hub" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <h2 class="nn-title">Digitales Alarm- und Informationssystem (DAISY)</h2>
+      <p class="nn-subtitle">Die Integration von digitalen Unterstützungssystemen in die Klinik zur frühzeitigen Unterstützung des Diagnoseprozesses</p>
+    </div>
+
+    
+  </div>
+  <p class="daisy-lead">DAISY a) sammelt Daten, b) lässt Algorithmen laufen und c) informiert das medizinische Personal</p>
+
+
+  <p class="daisy-lead">DAISY ist ein unabhängiges Hardware-System, das in die Klinik-IT-Struktur eingebettet ist</p>
+
+
+  <img class="figure-width-80" src="img/daisy_aufgaben.png">
+  
+</section>
+
+
+
+
+<section class="nn-slide algo-flow daisy-system daisy-cdss show-daisy-logo" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <h2 class="nn-title">Digitale Unterstützungssysteme klinischer Entscheidungen</h2>
+      <p class="nn-subtitle">Engl.: Clinical decision support systems - CDSS</p>
+    </div>
+  </div>
+  <img class="figure-width-60" src="img/daisy_alg.png">
+</section>
 
 
 
 
 
-      
-      
-   
-      <section>
-	<h3>Nierenversagen</h3>
-	<img style="width:100%;" src="img/kreatinin_grenzbedingungen.png">
+
+
+
+
+<section >
+      <h3>DAISY – Funktionsebenen</h3>
+      <img class="figure-width-70" src="img/daisy_gefahr.png">
+</section>
+
+<section class="nn-slide algo-flow daisy-system daisy-klinik" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <h2 class="nn-title">Integration in frühe Phase klinischer Diagnostik</h2>
+    </div>
+  </div>
+  <ul class="k-notes">
+    <li>DAISY schaltet gelbe/rote Ampel im SAP</li>
+    <li>Click auf Symbol öffnet Alarmseite</li>
+  </ul>
+  <img class="figure-width-100" src="img/daisy_fluss.png">
+</section>
+
+
+
+
+<section class="nn-slide daisy-system daisy-alarm" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <h2 class="nn-title">Alarmseite</h2>
+    </div>
+  </div>
+  <div class="alarm-layout">
+    <img src="img/alarmseite.png" alt="Alarmseite mit Alarmübersicht">
+    <ul class="alarm-notes">
+      <li>Alarmübersicht
+        <ul><li>Es können mehrere erscheinen</li></ul>
+      </li>
+      <li>Was ist wichtig zu beachten?
+        <ul><li>Links zu SimplifyU und DAISY-Sepsis Anleitung</li></ul>
+      </li>
+      <li>Ihre Rückmeldung ist wichtig:
+        <ul>
+          <li>Medizinisch plausibel?</li>
+          <li>Alarm hilfreich?</li>
+          <li>Jede Art von Rückmeldung</li>
+          <li>Spätere Revidierung/Neubewertung möglich</li>
+          <li>Gäbe es weitere wichtige Wege der Alarmierung?</li>
+        </ul>
+      </li>
+      <li>Alarm quittieren
+        <ul>
+          <li>Ampel wird grün</li>
+          <li>Für alle Nutzer!</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="nn-slide algo-flow daisy-system daisy-infra" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <h2 class="nn-title">Integration in die klinische Dateninfrastruktur</h2>
+    </div>
+  </div>
+  <img class="figure-width-100" src="img/daisy_integration.png">
+
+  <div class="nn-footer">
+    <span class="nn-ex-label">Ablauf</span>
+    <p>DAISY erkennt Problem, setzt Alarmsymbol in KIS/LIS, schreibt entsprechende Webseite mit relevanten Informationen. Durch Anklicken des Alarmsymbols in der Benutzeroberfläche (KIS/LIS) öffnet sich die erzeugte Webseite.</p>
+  </div>
+</section>
+
+
+
+
+
+<!-- Folien-Stile stehen gesammelt in style.css. -->
+
+<section class="daisy-algos-v2" data-transition="fade">
+
+  <header class="da-header">
+    <h2>DAISY – Algorithmen</h2>
+  </header>
+
+  <div class="da-columns">
+
+    <!-- LINKS: LERNALGORITHMEN -->
+    <div class="da-column da-column--ml">
+
+      <article class="da-card">
+        <h3>Sepsis</h3>
+        <div class="da-facts">
+          <p>Erkennung aus <strong class="da-underlined">kleinem Blutbild</strong>, Alter, Geschlecht</p>
+          <p>Rote Ampel im SAP</p>
+          <p>Pilotstudie mit Gastroenterologie und ZNA</p>
+          <p class="da-emphasis">50 erkannte Fälle in 19 Tagen</p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>Probenverwechslung</h3>
+        <div class="da-facts">
+          <p>Erkennung aus kleinem Blutbild</p>
+        </div>
+      </article>
+
+      <div class="da-category">Lernalgorithmen</div>
+    </div>
+
+    <!-- RECHTS: REGELWERKE -->
+    <div class="da-column da-column--rules">
+
+      <article class="da-card">
+        <h3>Nierenversagen</h3>
+        <div class="da-facts">
+          <p>Erkennung aus Kreatinin-Verlauf</p>
+          <p>Auf Befund und gelbe Ampel im SAP</p>
+          <p class="da-emphasis">
+            Durchschnittlich 33 erkannte Fälle pro Tag
+          </p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>Hypokaliämie-Monitor</h3>
+        <div class="da-facts">
+          <p>Erkennung anhand des Kaliumwerts</p>
+          <p class="da-emphasis">
+            Kalium &lt; 2,5 mmol/L:
+            neue Anforderung nach 6 Stunden
+          </p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>Leberfibrose-Score</h3>
+        <div class="da-facts">
+          <p>Berechnung aus PLT, GOT, GPT, Alter</p>
+          <p>Etablierter Score</p>
+          <p>Auf Anforderung</p>
+        </div>
+      </article>
+
+      <div class="da-category">Regelwerke</div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="nn-slide algo algo-akin" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">AKIN · Kreatinin</div>
+      <h2 class="nn-title">Die höhere Stufe gilt</h2>
+      <p class="nn-subtitle">Von oben nach unten: die erste erfüllte Stufe bleibt</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AKIN-Stufen von drei nach eins">
+      <rect x="28" y="16" width="744" height="148" rx="16" fill="#20334a"/>
+      <rect x="28" y="16" width="8" height="148" rx="4" fill="#ff9b91"/>
+      <circle cx="86" cy="90" r="24" fill="#101e30" stroke="#ff9b91" stroke-width="2.5"/>
+      <text class="v-rule" x="86" y="97" text-anchor="middle" fill="#ff9b91">3</text>
+      <text class="v-strong" x="132" y="62" fill="#ff9b91">Stufe 3</text>
+      <text class="v-rule" x="132" y="102">mindestens 3-fach in 7 Tagen</text>
+      <text class="v-rule" x="132" y="134">oder ≥ 4,0 mg/dl und +0,5 in 48 Stunden</text>
+      <rect x="28" y="180" width="744" height="112" rx="16" fill="#20334a"/>
+      <rect x="28" y="180" width="8" height="112" rx="4" fill="#ffc178"/>
+      <circle cx="86" cy="236" r="24" fill="#101e30" stroke="#ffc178" stroke-width="2.5"/>
+      <text class="v-rule" x="86" y="243" text-anchor="middle" fill="#ffc178">2</text>
+      <text class="v-strong" x="132" y="222" fill="#ffc178">Stufe 2</text>
+      <text class="v-rule" x="132" y="262">mindestens 2-fach in 7 Tagen</text>
+      <rect x="28" y="308" width="744" height="112" rx="16" fill="#20334a"/>
+      <rect x="28" y="308" width="8" height="112" rx="4" fill="#83d9a5"/>
+      <circle cx="86" cy="364" r="24" fill="#101e30" stroke="#83d9a5" stroke-width="2.5"/>
+      <text class="v-rule" x="86" y="371" text-anchor="middle" fill="#83d9a5">1</text>
+      <text class="v-strong" x="132" y="350" fill="#83d9a5">Stufe 1</text>
+      <text class="v-rule" x="132" y="390">+0,3 mg/dl in 48 h oder mindestens 1,5-fach in 7 Tagen</text>
+    </svg></div>
+    <div class="nn-explain">
+      <h3>So wird entschieden</h3>
+      <div class="nn-steps">
+        <div class="nn-step"><span class="num">1</span><p>Zuerst prüfen, ob <strong>Stufe 3</strong> erfüllt ist.</p></div>
+        <div class="nn-step"><span class="num">2</span><p>Sonst <strong>Stufe 2</strong>, sonst <strong>Stufe 1</strong>.</p></div>
+        <div class="nn-step"><span class="num">3</span><p>Ein kleinerer Treffer darunter wird <strong>nicht zusätzlich</strong> gezählt.</p></div>
+      </div>
+      <p class="nn-small">4,0 mg/dl allein genügt nicht. Es braucht zugleich +0,5 in 48 Stunden.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Das Zweifache ist Stufe 2. Die +0,40 mg/dl wären nur Stufe 1.</p>
+  </div>
+</section>
+
+
+
+
+
+     <section>
+	<h4>Nierenversagen</h4>
+	<img class="figure-width-80" src="img/kreatinin_grenzbedingungen.png">
       </section>
 
 
 
+
+
+<section class="nn-slide algo algo-kalium algo-flow" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Kalium · Monitor</div>
+      <h2 class="nn-title">Überwachung bei Elektrolytentgleisung</h2>
+      <p class="nn-subtitle">Unter 2,5 mmol/l startet der Monitor · Kontrolle alle 6 Stunden</p>
+    </div>
+  </div>
+  <div class="flow-board"><svg viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fließschema der Kaliumüberwachung">
+    <defs>
+      <marker id="tip-k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+        <path d="M0 0 L10 5 L0 10 Z" fill="#1c8f62"/>
+      </marker>
+      <marker id="tip-k-alarm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+        <path d="M0 0 L10 5 L0 10 Z" fill="#c44745"/>
+      </marker>
+    </defs>
+    <rect x="150" y="16" width="470" height="108" rx="16" fill="none" stroke="#1c8f62" stroke-width="2.5"/>
+    <circle cx="196" cy="70" r="18" fill="none" stroke="#1c8f62" stroke-width="2"/>
+    <text class="v-rule" x="196" y="76" text-anchor="middle" fill="#1c8f62">1</text>
+    <text class="v-rule" x="232" y="58">Elektrolytentgleisung?</text>
+    <text class="v-strong" x="232" y="96">K &lt; 2,5 mmol/l?</text>
+    <line x1="620" y1="70" x2="748" y2="70" stroke="#1c8f62" stroke-width="2" marker-end="url(#tip-k)"/>
+    <text class="v-mini" x="684" y="58" text-anchor="middle">Nein</text>
+    <rect x="756" y="32" width="230" height="76" rx="16" fill="none" stroke="#1c8f62" stroke-width="2"/>
+    <text class="v-strong" x="871" y="78" text-anchor="middle">Ende</text>
+    <line x1="385" y1="124" x2="385" y2="158" stroke="#1c8f62" stroke-width="2" marker-end="url(#tip-k)"/>
+    <text class="v-mini" x="404" y="148">Ja</text>
+    <rect x="250" y="166" width="270" height="70" rx="16" fill="none" stroke="#1c8f62" stroke-width="2.5"/>
+    <text class="v-strong" x="385" y="208" text-anchor="middle">Monitor</text>
+    <line x1="385" y1="236" x2="385" y2="268" stroke="#1c8f62" stroke-width="2" marker-end="url(#tip-k)"/>
+    <rect x="150" y="276" width="470" height="108" rx="16" fill="none" stroke="#1c8f62" stroke-width="2.5"/>
+    <circle cx="196" cy="330" r="18" fill="none" stroke="#1c8f62" stroke-width="2"/>
+    <text class="v-rule" x="196" y="336" text-anchor="middle" fill="#1c8f62">2</text>
+    <text class="v-rule" x="232" y="316">Nach 6 Stunden</text>
+    <text class="v-strong" x="232" y="354">Neue Probe eingetroffen?</text>
+    <line x1="620" y1="330" x2="748" y2="330" stroke="#c44745" stroke-width="2" marker-end="url(#tip-k-alarm)"/>
+    <text class="v-mini" x="684" y="318" text-anchor="middle">Nein</text>
+    <rect x="756" y="292" width="230" height="76" rx="16" fill="none" stroke="#c44745" stroke-width="2"/>
+    <text class="v-strong" x="871" y="338" text-anchor="middle" fill="#c44745">Alarm</text>
+    <line x1="385" y1="384" x2="385" y2="418" stroke="#1c8f62" stroke-width="2" marker-end="url(#tip-k)"/>
+    <text class="v-mini" x="404" y="408">Ja</text>
+    <rect x="150" y="426" width="470" height="108" rx="16" fill="none" stroke="#1c8f62" stroke-width="2.5"/>
+    <circle cx="196" cy="480" r="18" fill="none" stroke="#1c8f62" stroke-width="2"/>
+    <text class="v-rule" x="196" y="486" text-anchor="middle" fill="#1c8f62">3</text>
+    <text class="v-strong" x="232" y="488">Wert &gt; 2,5 mmol/l?</text>
+    <line x1="620" y1="480" x2="748" y2="480" stroke="#1c8f62" stroke-width="2" marker-end="url(#tip-k)"/>
+    <text class="v-mini" x="684" y="468" text-anchor="middle">Ja</text>
+    <rect x="756" y="442" width="230" height="76" rx="16" fill="none" stroke="#1c8f62" stroke-width="2"/>
+    <text class="v-strong" x="871" y="488" text-anchor="middle">Beenden</text>
+    <path d="M150 480 H78 V330 H150" fill="none" stroke="#1c8f62" stroke-width="2" marker-end="url(#tip-k)"/>
+    <text class="v-mini" x="46" y="412" text-anchor="middle" transform="rotate(-90 46 412)">Nein · zurück zu 2</text>
+  </svg></div>
+  <div class="nn-footer kalium-study-note">
+    <span class="nn-ex-label">Vorstudie</span>
+    <p>In einer Vorstudie konnte die mediane Zeit bis zur Einsendung einer Kaliumkontrollprobe von
+      <strong>32,9 auf 4,9 Stunden</strong> reduziert werden.
+      <span class="kalium-citation">(Eckelt et al., 2020; n = 10; p = 0,011)</span>
+    </p>
+  </div>
+</section>
+
+<section class="nn-slide algo algo-fib4" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">FIB-4 · Leberfibrose</div>
+      <h2 class="nn-title">Vier Zahlen, drei Risiken</h2>
+      <p class="nn-subtitle">Alter, GOT, GPT und Thrombozyten · Screening, keine Diagnose<br>Fortschreitende Vernarbung; frühe Stadien teils umkehrbar – Vorstufe der Leberzirrhose.</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FIB-4-Formel und drei Risikobereiche">
+      <text class="v-strong" x="400" y="58" text-anchor="middle">Alter × GOT</text>
+      <line x1="250" y1="78" x2="550" y2="78" stroke="#ffc17a" stroke-width="2"/>
+      <text class="v-strong" x="400" y="116" text-anchor="middle">Thrombozyten × √GPT</text>
+      <rect x="28" y="176" width="236" height="230" rx="16" fill="#20334a" stroke="#8ee1a8" stroke-width="1.5"/>
+      <rect x="282" y="176" width="236" height="230" rx="16" fill="#20334a" stroke="#ffc17a" stroke-width="1.5"/>
+      <rect x="536" y="176" width="236" height="230" rx="16" fill="#20334a" stroke="#ff9b91" stroke-width="1.5"/>
+      <text class="v-rule" x="146" y="230" text-anchor="middle" fill="#8ee1a8">niedrig</text>
+      <text class="v-mini" x="146" y="276" text-anchor="middle">unter 65 Jahren</text>
+      <text class="v-strong" x="146" y="314" text-anchor="middle">unter 1,3</text>
+      <text class="v-mini" x="146" y="358" text-anchor="middle">ab 65 Jahren</text>
+      <text class="v-rule" x="146" y="386" text-anchor="middle">unter 2,0</text>
+      <text class="v-rule" x="400" y="230" text-anchor="middle" fill="#ffc17a">intermediär</text>
+      <text class="v-rule" x="400" y="286" text-anchor="middle">unter 65: 1,3–2,67</text>
+      <text class="v-rule" x="400" y="330" text-anchor="middle">ab 65: 2,0–2,67</text>
+      <text class="v-rule" x="654" y="230" text-anchor="middle" fill="#ff9b91">erhöht</text>
+      <text class="v-mini" x="654" y="286" text-anchor="middle">weitere Abklärung</text>
+      <text class="v-strong" x="654" y="330" text-anchor="middle">&gt; 2,67</text>
+    </svg></div>
+    <div class="nn-explain">
+      <h3 class="fib4-heading-first">So wird es gelesen</h3>
+      <div class="nn-steps">
+        <div class="nn-step"><span class="num">1</span><p>Alter und GOT stehen <strong>oben</strong>, Thrombozyten und die Wurzel aus GPT <strong>unten</strong>.</p></div>
+        <div class="nn-step"><span class="num">2</span><p>Die Grenze für <strong>niedrig</strong> liegt vor 65 bei 1,3 und ab 65 bei 2,0.</p></div>
+        <div class="nn-step"><span class="num">3</span><p>Bei <strong>FIB-4 &gt; 2,67</strong> ist das Risiko erhöht.</p></div>
+      </div>
+
+      <h3 class="fib4-heading-followup">Laborwerte</h3>
+      <div class="nn-steps">
+        <div class="nn-step"><span class="num">1</span><p>GOT (AST, Aspartat-Aminotransferase): Enzym des Aminosäurestoffwechsels; kommt in Leber, Herz- und Skelettmuskulatur vor. Erhöhte Blutwerte weisen auf Zellschädigungen hin</p></div>
+        <div class="nn-step"><span class="num">2</span><p>GPT (ALT, Alanin-Aminotransferase): Enzym des Aminosäurestoffwechsels; kommt vor allem in der Leber vor. Erhöhte Blutwerte sind ein relativ spezifischer Hinweis auf eine Schädigung von Leberzellen.</p></div>
+      </div>
+      </div>
+      <div class="nn-footer">
+	<span class="nn-ex-label">Beispiel</span>
+	<p>1,1 bei 50 Jahren: niedrig. 1,6 bei 70 Jahren: ebenfalls niedrig. 2,9: erhöht.</p>
+      </div>
+</section>
+
+<section class="nn-slide algo algo-sepsis" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Sepsis · Random Forest</div>
+      <h2 class="nn-title">Ein Blutbild, eine Wahrscheinlichkeit</h2>
+      <p class="nn-subtitle">Fünf Blutwerte, Alter und Geschlecht · viele Bäume, eine Zahl</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blutbild wird von vielen Bäumen zu einer Wahrscheinlichkeit">
+      <rect x="28" y="28" width="250" height="384" rx="16" fill="#20334a"/>
+      <text class="v-sub" x="153" y="68" text-anchor="middle">ein Blutbild</text>
+      <text class="v-rule" x="56" y="118">Hämoglobin</text>
+      <text class="v-rule" x="56" y="162">Leukozyten</text>
+      <text class="v-rule" x="56" y="206">Erythrozyten</text>
+      <text class="v-rule" x="56" y="250">MCV</text>
+      <text class="v-rule" x="56" y="294">Thrombozyten</text>
+      <line x1="56" y1="322" x2="250" y2="322" stroke="#3d5670" stroke-width="1.5"/>
+      <text class="v-rule" x="56" y="366">Alter</text>
+      <text class="v-rule" x="56" y="404">Geschlecht</text>
+      <line x1="290" y1="220" x2="352" y2="220" stroke="#ff9d92" stroke-width="1.6"/>
+      <path d="M360 228 L396 156 L432 228 Z" fill="none" stroke="#ff9d92" stroke-width="2"/>
+      <line x1="396" y1="228" x2="396" y2="268" stroke="#ff9d92" stroke-width="2"/>
+      <path d="M448 228 L484 146 L520 228 Z" fill="none" stroke="#ff9d92" stroke-width="2"/>
+      <line x1="484" y1="228" x2="484" y2="276" stroke="#ff9d92" stroke-width="2"/>
+      <path d="M536 228 L572 164 L608 228 Z" fill="none" stroke="#ff9d92" stroke-width="2"/>
+      <line x1="572" y1="228" x2="572" y2="268" stroke="#ff9d92" stroke-width="2"/>
+      <text class="v-sub" x="484" y="328" text-anchor="middle">viele Bäume</text>
+      <line x1="624" y1="220" x2="658" y2="220" stroke="#ff9d92" stroke-width="1.6"/>
+      <polygon points="654,214 668,220 654,226" fill="#ff9d92"/>
+      <circle cx="730" cy="220" r="54" fill="#20334a" stroke="#ff9d92" stroke-width="2.5"/>
+      <text class="v-sub" x="730" y="208" text-anchor="middle">eine Zahl</text>
+      <text class="v-strong" x="730" y="242" text-anchor="middle">0–1</text>
+    </svg></div>
+    <div class="nn-explain">
+      <h3>So entsteht der Wert</h3>
+      <div class="nn-steps">
+        <div class="nn-step"><span class="num">1</span><p>Die fünf Blutwerte gehen <strong>zusammen</strong> mit Alter und Geschlecht hinein.</p></div>
+        <div class="nn-step"><span class="num">2</span><p>Viele Entscheidungsbäume bewerten <strong>dasselbe</strong> Blutbild.</p></div>
+        <div class="nn-step"><span class="num">3</span><p>Heraus kommt eine <strong>Wahrscheinlichkeit</strong> zwischen 0 und 1.</p></div>
+      </div>
+      <p class="nn-small">Bewertet wird das aktuelle Blutbild, nicht ein Verlauf.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>0,20 liegt nahe bei „eher nicht“. 0,80 liegt nahe bei „eher doch“.</p>
+  </div>
+</section>
+
+<section class="nn-slide algo algo-sepsis pub-slide" data-transition="fade">
+  <div class="nn-head"><div>
+    <div class="nn-eyebrow">Sepsis &middot; Methodenentwicklung &middot; 2024</div>
+    <h2 class="nn-title">Sepsis aus dem kleinen Blutbild vorhersagen</h2>
+    <p class="nn-subtitle">Steinbach et al. &middot; Ziel: Sepsis mit anschlie&szlig;ender ICU-Aufnahme aus Nicht-ICU-Daten erkennen</p>
+  </div></div>
+  <div class="pub-content">
+    <div class="pub-steps">
+      <article class="pub-step"><span class="pub-index">1</span><h3>Datenbasis</h3>
+        <p>1,38 Mio. Laboranforderungen (2014&ndash;2021) aus einem Klinikum, darunter 2.016 Anforderungen aus Sepsisf&auml;llen.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">2</span><h3>Sieben Eingangsmerkmale</h3>
+        <p>Hb, Leukozyten, Erythrozyten, MCV, Thrombozyten sowie Alter und Geschlecht.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">3</span><h3>Modellentwicklung</h3>
+        <p>Training eines <strong>Boosted Random Forest</strong> zur Pr&auml;diktion des Sepsisendpunkts.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">4</span><h3>Unabh&auml;ngige Pr&uuml;fung</h3>
+        <p>Externe Validierung an der Universit&auml;tsmedizin Greifswald und mit <strong>MIMIC-IV</strong>.</p>
+      </article>
+    </div>
+    <aside class="pub-highlight">
+      <h3>Modellleistung &middot; AUROC</h3>
+      <div class="pub-score"><strong>0,872</strong><span>Interne Evaluation</span></div>
+      <div class="pub-score pub-score-secondary"><strong>0,805</strong><span>Greifswald</span></div>
+      <div class="pub-score pub-score-secondary"><strong>0,845</strong><span>MIMIC-IV</span></div>
+      <p class="pub-insight">Methodischer Kern: Vorhersage allein aus routinem&auml;&szlig;ig erhobenen Blutbilddaten und Basisangaben.</p>
+    </aside>
+  </div>
+  <div class="nn-footer pub-footer"><span class="nn-ex-label">Quelle</span>
+    <p>Steinbach et al., <em>Clin Chem</em> 2024;70:506&ndash;515 &middot;
+      <a href="https://pubmed.ncbi.nlm.nih.gov/38431275/" target="_blank" rel="noopener noreferrer">PMID 38431275 &ndash; Publikation</a></p>
+  </div>
+</section>
+
+
+      <!-- Added: SBC-SHAP paper and web application -->
+<section class="nn-slide algo algo-sepsis pub-slide pub-sbc" data-transition="fade">
+  <div class="nn-head"><div>
+    <div class="nn-eyebrow">Sepsis &middot; Modellinterpretation &middot; 2025</div>
+    <h2 class="nn-title">SBC-SHAP: Vorhersagen erkl&auml;rbar machen</h2>
+    <p class="nn-subtitle">Walke et al. &middot; Blutbild-Zeitreihen analysieren und individuelle Merkmalseinfl&uuml;sse sichtbar machen</p>
+  </div></div>
+  <div class="pub-content">
+    <div class="pub-steps">
+      <article class="pub-step"><span class="pub-index">1</span><h3>Blutbild-Zeitreihen</h3>
+        <p>Mehrere Blutbilder pro Patient werden zeitlich verbunden und gemeinsam betrachtet.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">2</span><h3>Graphbasierte Merkmale</h3>
+        <p>Differenzen bzw. Quotienten zu fr&uuml;heren Messungen; optional ein gesunder Referenzknoten.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">3</span><h3>Mehrere Klassifikatoren</h3>
+        <p>Unter anderem XGBoost, Random Forest, Entscheidungsbaum und logistische Regression.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">4</span><h3>Erkl&auml;rbarkeit</h3>
+        <p><strong>SHAP</strong> zeigt f&uuml;r jede Vorhersage, welche Werte das Sepsisrisiko erh&ouml;hen oder senken.</p>
+      </article>
+    </div>
+    <aside class="pub-highlight">
+      <h3>Sensitivit&auml;t bei 80 % Spezifit&auml;t</h3>
+      <div class="pub-score"><strong>82,9 %</strong><span>Intern (vorher bis 78,2 %)</span></div>
+      <div class="pub-score pub-score-secondary"><strong>73,4 %</strong><span>Extern (vorher bis 65,4 %)</span></div>
+      <p class="pub-insight">Die Webanwendung stellt Risikowerte und SHAP-Erkl&auml;rungen ohne eigene Programmierung bereit.</p>
+    </aside>
+  </div>
+  <div class="nn-footer pub-footer pub-footer-link">
+    <span class="nn-ex-label">SBC-SHAP</span>
+    <div class="pub-footer-text"><span>Walke et al., <em>J Appl Lab Med</em> 2025;10:1226&ndash;1240 &middot; <a href="https://pubmed.ncbi.nlm.nih.gov/40643035/" target="_blank" rel="noopener noreferrer">Publikation</a></span>
+      <a class="pub-app-link" href="https://mdoa-tools.bi.denbi.de/sbc-shap" target="_blank" rel="noopener noreferrer">Webanwendung: https://mdoa-tools.bi.denbi.de/sbc-shap</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="nn-slide algo algo-wbit" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">WBIT · Probenverwechslung</div>
+      <h2 class="nn-title">Passt die Probe zum Verlauf?</h2>
+      <p class="nn-subtitle">Die letzten zwei bis vier Blutbilder aus 30 Tagen</p>
+    </div>
+  </div>
+  <div class="nn-stage">
+    <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zeitfenster der letzten Blutbilder">
+      <line x1="60" y1="176" x2="740" y2="176" stroke="#4e657c" stroke-width="2"/>
+      <line x1="210" y1="176" x2="720" y2="176" stroke="#75ded9" stroke-width="3"/>
+      <circle cx="110" cy="176" r="8" fill="#101e30" stroke="#4e657c" stroke-width="2.5"/>
+      <circle cx="280" cy="176" r="8" fill="#101e30" stroke="#75ded9" stroke-width="3"/>
+      <circle cx="430" cy="176" r="8" fill="#101e30" stroke="#75ded9" stroke-width="3"/>
+      <circle cx="570" cy="176" r="8" fill="#101e30" stroke="#75ded9" stroke-width="3"/>
+      <circle cx="700" cy="176" r="11" fill="#75ded9"/>
+      <text class="v-mini" x="110" y="128" text-anchor="middle">älter</text>
+      <text class="v-sub" x="110" y="224" text-anchor="middle">außerhalb</text>
+      <text class="v-mini" x="280" y="128" text-anchor="middle">−18 Tage</text>
+      <text class="v-mini" x="430" y="128" text-anchor="middle">−9 Tage</text>
+      <text class="v-mini" x="570" y="128" text-anchor="middle">−3 Tage</text>
+      <text class="v-mini" x="700" y="128" text-anchor="middle">heute</text>
+      <text class="v-sub" x="490" y="224" text-anchor="middle">diese Proben sieht das Modell</text>
+      <rect x="48" y="286" width="704" height="112" rx="16" fill="#20334a"/>
+      <text class="v-rule" x="400" y="332" text-anchor="middle">mindestens zwei vollständige Blutbilder</text>
+      <text class="v-sub" x="400" y="368" text-anchor="middle">genutzt werden höchstens die letzten vier innerhalb von 30 Tagen</text>
+    </svg></div>
+    <div class="nn-explain">
+      <h3>So wird ausgewählt</h3>
+      <div class="nn-steps">
+        <div class="nn-step"><span class="num">1</span><p>Jede Probe bringt <strong>neun Werte</strong> des Blutbilds mit.</p></div>
+        <div class="nn-step"><span class="num">2</span><p>Es zählen nur Proben der <strong>letzten 30 Tage</strong>, die aktuelle eingeschlossen.</p></div>
+        <div class="nn-step"><span class="num">3</span><p>Das Modell sieht die <strong>letzten zwei, drei oder vier</strong>.</p></div>
+      </div>
+      <p class="nn-small">Liegt die aktuelle Probe nicht im Verlauf, wird nicht gerechnet.</p>
+    </div>
+  </div>
+  <div class="nn-footer">
+    <span class="nn-ex-label">Beispiel</span>
+    <p>Vier Blutbilder in drei Wochen: alle vier gehen ein. Ein fünftes, älter als 30 Tage, bleibt draußen.</p>
+  </div>
+</section>
+
+<section class="nn-slide algo algo-wbit pub-slide" data-transition="fade">
+  <div class="nn-head"><div>
+    <div class="nn-eyebrow">WBIT &middot; Analytenbedeutung &middot; 2025</div>
+    <h2 class="nn-title">Welche Blutbildwerte erkennen Verwechslungen?</h2>
+    <p class="nn-subtitle">S&uuml;rmeli et al. &middot; Random-Forest-Modelle zur Erkennung von Wrong-Blood-in-Tube-Fehlern</p>
+  </div></div>
+  <div class="pub-content">
+    <div class="pub-steps">
+      <article class="pub-step"><span class="pub-index">1</span><h3>Datengrundlage</h3>
+        <p><strong>799.721 Blutbilder</strong> aus der klinischen Routine, neun h&auml;matologische Parameter.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">2</span><h3>WBIT simulieren</h3>
+        <p>Probenpaare desselben Patienten vs. gezielt vertauschte Proben unterschiedlicher Patienten.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">3</span><h3>Eingangsmerkmale</h3>
+        <p>F&uuml;r jeden Analyten wird die <strong>Differenz zweier Blutbilder</strong> gebildet.</p>
+      </article>
+      <article class="pub-step"><span class="pub-index">4</span><h3>Bedeutung der Analyten</h3>
+        <p>Alle Kombinationen der neun Werte getestet; Bewertung mit <strong>SHAP</strong>, Permutation und Impurity.</p>
+      </article>
+    </div>
+    <aside class="pub-highlight">
+      <h3>Wichtigstes Ergebnis</h3>
+      <div class="pub-score"><strong>F1 &gt; 90 %</strong><span>Bereits mit drei Analyten</span></div>
+      <div class="pub-analyte-list"><span>MCV</span><span>RDW</span><span>MCH</span></div>
+      <p class="pub-insight">MCV und RDW haben durchgehend besonders hohe Bedeutung. Die Leistung wurde an simulierten Verwechslungen ermittelt.</p>
+    </aside>
+  </div>
+  <div class="nn-footer pub-footer"><span class="nn-ex-label">Quelle</span>
+    <p>S&uuml;rmeli et al., <em>J Pers Med</em> 2025;15:404 &middot;
+      <a href="https://pubmed.ncbi.nlm.nih.gov/41003107/" target="_blank" rel="noopener noreferrer">PMID 41003107 &ndash; Publikation</a></p>
+  </div>
+</section>
+
+<section class="nn-slide algo algo-mibi algo-flow" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">MIBI · Monitor</div>
+      <h2 class="nn-title">Blutkultur als Sepsis-Indikator</h2>
+      <p class="nn-subtitle">Nach 24 Stunden wird geprüft, ob eine neue Kultur da ist und ob ein Keim vorliegt</p>
+    </div>
+  </div>
+  <div class="flow-board"><svg viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fließschema des Blutkultur-Monitors">
+    <defs>
+      <marker id="tip-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+        <path d="M0 0 L10 5 L0 10 Z" fill="#6a45b0"/>
+      </marker>
+      <marker id="tip-m-alarm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+        <path d="M0 0 L10 5 L0 10 Z" fill="#c44745"/>
+      </marker>
+    </defs>
+    <!-- Organism trigger, newly inserted before step 1 -->
+    <rect class="mibi-trigger-box" x="143" y="6" width="460" height="96" rx="14" fill="none" stroke="#6a45b0" stroke-width="2.5"/>
+    <text class="mibi-trigger-title" x="373" y="38" text-anchor="middle">Keim gefunden</text>
+    <text class="mibi-trigger-desc" x="373" y="66" text-anchor="middle">(Multiresistenter) Staphylococcus aureus</text>
+    <text class="mibi-trigger-desc" x="373" y="86" text-anchor="middle">oder Pilze (Candida)</text>
+    <path d="M373 102 V126" fill="none" stroke="#6a45b0" stroke-width="2.5" marker-end="url(#tip-m)"/>
+    <g class="mibi-compact-flow" transform="translate(45 112) scale(0.82)">
+    <rect x="150" y="24" width="500" height="112" rx="16" fill="none" stroke="#6a45b0" stroke-width="2.5"/>
+    <circle cx="198" cy="80" r="18" fill="none" stroke="#6a45b0" stroke-width="2"/>
+    <text class="v-rule" x="198" y="86" text-anchor="middle" fill="#6a45b0">1</text>
+    <text class="v-rule" x="236" y="66">Nach 24 Stunden</text>
+    <text class="v-strong" x="236" y="106">Neue Blutkultur eingetroffen?</text>
+    <line x1="650" y1="80" x2="768" y2="80" stroke="#c44745" stroke-width="2" marker-end="url(#tip-m-alarm)"/>
+    <text class="v-mini" x="708" y="68" text-anchor="middle">Nein</text>
+    <rect x="776" y="42" width="230" height="76" rx="16" fill="none" stroke="#c44745" stroke-width="2"/>
+    <text class="v-strong" x="891" y="88" text-anchor="middle" fill="#c44745">Alarm</text>
+    <line x1="400" y1="136" x2="400" y2="176" stroke="#6a45b0" stroke-width="2" marker-end="url(#tip-m)"/>
+    <text class="v-mini" x="418" y="164">Ja</text>
+    <rect x="230" y="184" width="340" height="86" rx="16" fill="none" stroke="#6a45b0" stroke-width="2.5"/>
+    <text class="v-strong" x="400" y="220" text-anchor="middle">Warten auf Ergebnis</text>
+    <text class="v-sub" x="400" y="250" text-anchor="middle">24 Stunden</text>
+    <line x1="400" y1="270" x2="400" y2="312" stroke="#6a45b0" stroke-width="2" marker-end="url(#tip-m)"/>
+    <rect x="150" y="320" width="500" height="112" rx="16" fill="none" stroke="#6a45b0" stroke-width="2.5"/>
+    <circle cx="198" cy="376" r="18" fill="none" stroke="#6a45b0" stroke-width="2"/>
+    <text class="v-rule" x="198" y="382" text-anchor="middle" fill="#6a45b0">2</text>
+    <text class="v-strong" x="236" y="384">Keim?</text>
+    <line x1="650" y1="376" x2="768" y2="376" stroke="#6a45b0" stroke-width="2" marker-end="url(#tip-m)"/>
+    <text class="v-mini" x="708" y="364" text-anchor="middle">Nein</text>
+    <rect x="776" y="338" width="280" height="76" rx="16" fill="none" stroke="#6a45b0" stroke-width="2"/>
+    <text class="v-strong" x="916" y="384" text-anchor="middle">Monitor beenden</text>
+    <path d="M150 376 H70 V80 H150" fill="none" stroke="#6a45b0" stroke-width="2" marker-end="url(#tip-m)"/>
+    <text class="v-mini" x="40" y="236" text-anchor="middle" transform="rotate(-90 40 236)">Ja · zurück zu 1</text>
+    </g>
+  </svg></div>
+</section>
+
+ 
 
       <section  class="show-daisy-logo">
 	<h3>Online Folien</h3>
@@ -729,16 +2126,16 @@
 	  <span>Physik</span>
 	  <span>Raman</span>
 	  <span>DAISY</span> 
-	  <img style="width:50%;" src="img/qr_physik.png">
-	  <img style="width:50%;" src="img/qr_raman.png">
-	  <img style="width:50%;" src="img/qr_daisy.png">
+	  <img src="img/qr_physik.png">
+	  <img src="img/qr_raman.png">
+	  <img src="img/qr_daisy.png">
 	</div>
-	<ul style="list-style:none;font-size:20pt;margin-top:2em;">
+	<ul class="online-links">
 	  <li> https://renedominik.github.io/lehre/physik_labormedizin/ </li>
 	  <li> https://renedominik.github.io/lehre/raman_spektroskopie/ </li>
 	  <li> https://renedominik.github.io/lehre/daisy/ </li>
 
-	  <li style="margin-top:0.5em;">PDF generieren:</li>
+	  <li class="pdf-entry">PDF generieren:</li>
 	  <li> https://renedominik.github.io/lehre/daisy/?print-pdf </li>
 	  <li> Strg-P: Querformat, als PDF speichern</li>
 	</ul>
@@ -752,40 +2149,23 @@
 	    
     </div>
   </div>
-  <!--
-      <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
-      <script src="https://unpkg.com/reveal.js/dist/plugin/math.js"></script>
-      -->
-  <script src="src/reveal.js"></script>
-  <script src="src/math.js"></script>
-
+  <!-- Scripts are loaded once; the original img/ references are retained. -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
   <script>
     Reveal.initialize({
-	plugins: [RevealMath.KaTeX],
-	slideNumber: 'c/t',
-	controls: false
+      width: 1280,
+      height: 720,
+      margin: 0,
+      minScale: 0.2,
+      maxScale: 1.5,
+      center: false,
+      controls: false,
+      slideNumber: 'c/t',
+      hash: true,
+      transition: 'fade',
+      plugins: (typeof RevealMath !== 'undefined') ? [RevealMath.KaTeX] : []
     });
   </script>
-
-  
-  <script>
-    const logo = document.querySelector('.deck-logo');
-
-    function updateLogo(event) {
-	logo.hidden = !event.currentSlide.hasAttribute('data-show-logo');
-    }
-
-    Reveal.on('ready', updateLogo);
-    Reveal.on('slidechanged', updateLogo);
-  </script>
-
-  
-  <script>
-    Reveal.initialize();
-  </script>
-
-
-  
 </body>
 </html>
-

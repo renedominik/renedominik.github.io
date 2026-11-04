@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>AKIN</title>
+
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/moon.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .bildwechsel {
+      display: grid;
+      place-items: center;
+    }
+
+    .bildwechsel img {
+      grid-area: 1 / 1;
+      width: 100%;
+      max-height: 70vh;
+      object-fit: contain;
+    }
+
+    /* Vorherige Bilder ausblenden,
+       sobald das nächste sichtbar ist */
+    .bildwechsel img:has(~ img.fragment.visible) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+
+
+
+<section class="aki-rules">
+  <h3>AKIN – KDIGO </h3>
+
+  <p class="aki-subtitle">
+    Akute Nierenschädigung – Ein erfülltes Kriterium genügt;
+    maßgeblich ist die höchste Stufe.
+  </p>
+
+  <div class="aki-diagnosis">
+    <span class="aki-label">AKI-Definition (KDIGO)</span>
+    <br>
+    Kreatinin <strong>+0,3 mg/dL innerhalb 48 h</strong>
+    oder <strong>≥ 1,5 × Ausgangswert innerhalb 7 d</strong>
+  </div>
+
+  <div class="aki-table-header">
+    <div>Stadium</div>
+    <div>Serum-Kreatinin</div>
+  </div>
+
+  <div class="aki-stage aki-stage--1">
+    <div class="aki-level">Stufe 1</div>
+    <div>
+      ≥ 0,3 mg/dL Anstieg <strong>(48 h)</strong>
+      <br>
+      oder 1,5–1,9 × Ausgangswert <strong>(7 d)</strong>
+    </div>
+  </div>
+
+  <div class="aki-stage aki-stage--2">
+    <div class="aki-level">Stufe 2</div>
+    <div>
+      2,0–2,9 × Ausgangswert <strong>(7 d)</strong>
+    </div>
+  </div>
+
+  <div class="aki-stage aki-stage--3">
+    <div class="aki-level">Stufe 3</div>
+    <div>
+      ≥ 3,0 × Ausgangswert <strong>(7 d)</strong>
+      <br>
+      oder Anstieg auf ≥ 4,0 mg/dL (KDIGO)
+      <br>
+      oder Beginn einer Nierenersatztherapie
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+      
+      <section>
+        <h3>AKIN / KDIGO</h3>
+        <img src="kreatinin_grenzbedingungen_1.png"
+             style="width:100%;">
+      </section>
+
+
+      <section>
+        <h3>AKIN / KDIGO</h3>
+
+        <div class="bildwechsel">
+
+          <img src="kreatinin_grenzbedingungen_2.png">
+
+          <img class="fragment"
+               data-fragment-index="1"
+               src="kreatinin_grenzbedingungen_3.png">
+
+          <img class="fragment"
+               data-fragment-index="2"
+               src="kreatinin_grenzbedingungen_4.png">
+
+          <img class="fragment"
+               data-fragment-index="3"
+               src="kreatinin_grenzbedingungen_5.png">
+
+          <img class="fragment"
+               data-fragment-index="4"
+               src="kreatinin_grenzbedingungen_6.png">
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+      slideNumber: 'c/t',
+      controls: false,
+      hash: true
+    });
+  </script>
+
+</body>
+</html>

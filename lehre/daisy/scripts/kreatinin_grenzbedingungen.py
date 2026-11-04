@@ -24,17 +24,27 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
+STEP = 6
 
 # Konfiguration -----------------------------------------------------------
 NORMAL_MIN = 0.6  # mg/dL; rein schematischer Normalbereich
 NORMAL_MAX = 1.2  # mg/dL
 m_k = (NORMAL_MIN + NORMAL_MAX) / 2.0  # aktueller Messwert bei x=0
 
+shift = 4.0
+if STEP >= 5:
+    m_k = 3
+if STEP > 1:
+    shift = m_k
+
 ANSTIEG_STUFE1_48H = 0.3  # mg/dL
 ANSTIEG_STUFE3_48H = 0.5  # mg/dL
 RATIO_STUFE1_7D = 1.5
 RATIO_STUFE2_7D = 2.0  # Ergaenzung: im gezeigten Code nicht enthalten!
 RATIO_STUFE3_7D = 3.0
+ABS_STUFE1_9D = (1 - 1/1.5) * m_k / 7.0 * 9.0
+ABS_STUFE2_9D = (1 - 1/2.0) * m_k / 7.0 * 9.0
+ABS_STUFE3_9D = (1 - 1/3.0) * m_k / 7.0 * 9.0
 ABSOLUT_STUFE3_AKTUELL = 4.0  # mg/dL, zusaetzlich zum 48-h-Anstieg
 
 FARBEN = {
@@ -68,34 +78,90 @@ def main():
     # Format: (Stufe, Variablenname, Tag des Fensterrands, Grenzwert am Fensterrand,
     #          Linienstil, Text fuer die Legende, Beschriftung am Startpunkt,
     #          Transparenz)
+
+    text = "Stufe 3: Anstieg >= 0,5 in 48 h UND Krea >= 4,0"
+    if STEP > 1:
+        text = "Stufe 3: Anstieg >= 0,5 in 48 h"
+
+    
     bedingungen = [
         (
-            1, "is_stage1_diff", -2, m_k - ANSTIEG_STUFE1_48H, m_k - ANSTIEG_STUFE1_48H,
+            1, "is_stage1_diff", -2, 0, m_k - ANSTIEG_STUFE1_48H, m_k - ANSTIEG_STUFE1_48H,
             ":", "Stufe 1: Anstieg >= 0,3 mg/dL in 48 h", "+0,3", 1.0,
         ),
         (
-            1, "is_stage1_ratio", -7, m_k / RATIO_STUFE1_7D, m_k, 
+            1, "is_stage1_ratio", -7, 0, m_k / RATIO_STUFE1_7D, m_k, 
             "--", "Stufe 1: Quotient >= 1,5 in 7 Tagen", "1,5 x", 1.0,
         ),
         (
-            2, "is_stage2_ratio", -7, m_k / RATIO_STUFE2_7D, m_k,
+            2, "is_stage2_ratio", -7, 0, m_k / RATIO_STUFE2_7D, m_k,
             "--", "Stufe 2: Quotient >= 2,0 in 7 Tagen", "2,0 x", 1.0,
         ),
         (
-            3, "is_stage3_ratio", -7, m_k / RATIO_STUFE3_7D, m_k,
+            3, "is_stage3_ratio", -7, 0, m_k / RATIO_STUFE3_7D, m_k,
             "--", "Stufe 3: Quotient >= 3,0 in 7 Tagen", "3,0 x", 1.0,
-        ),
-        (
-            3, "is_stage3_abs", -2, 4.0 - ANSTIEG_STUFE3_48H, 4.0 - ANSTIEG_STUFE3_48H,
-            ":", "Stufe 3: Anstieg >= 0,5 in 48 h UND Krea >= 4,0",
-            "+0,5", 0.85,
         ),
     ]
 
-    for stufe, code_name, x_start, y_start, m, stil, legend_text, punkt_text, alpha in bedingungen:
+    if STEP == 1:
+        bedingungen.appen( (
+            3, "is_stage3_abs", -2, 0, shift - ANSTIEG_STUFE3_48H, shift - ANSTIEG_STUFE3_48H,
+            ":", text,
+            "+0,5", 0.85,
+        ))
+
+
+    if STEP > 2:
+        bedingungen.append( (
+            1, "is_stage1_diff", -2, 0, m_k - ANSTIEG_STUFE1_48H, m_k,
+            "-", "", "", 1.0,
+        ))
+
+    if STEP > 3:
+        bedingungen.append( (
+            1, "is_stage1_ratio", -7, -2, m_k / RATIO_STUFE1_7D, m_k / RATIO_STUFE1_7D, 
+            "--", "", "", 1.0,
+        ))
+        bedingungen.append( (
+            2, "is_stage2_ratio", -7, -2, m_k / RATIO_STUFE2_7D, m_k / RATIO_STUFE2_7D,
+            "--", "", "", 1.0,
+        ) )
+        bedingungen.append( (
+            3, "is_stage3_ratio", -7, -2, m_k / RATIO_STUFE3_7D, m_k / RATIO_STUFE3_7D,
+            "--", "", "", 1.0,
+        ))
+    if STEP > 5:
+        bedingungen.append( (
+            1, "is_stage1_ratio", -9, -7, m_k - ABS_STUFE1_9D, m_k / RATIO_STUFE1_7D, 
+            "--", "", "", 1.0,                  
+        ))                                      
+        bedingungen.append( (                   
+            2, "is_stage2_ratio", -9, -7, m_k - ABS_STUFE2_9D, m_k / RATIO_STUFE2_7D,
+            "--", "", "", 1.0,                
+        ) )                                     
+        bedingungen.append( (                   
+            3, "is_stage3_ratio", -9, -7, m_k - ABS_STUFE3_9D, m_k / RATIO_STUFE3_7D,
+            "--", "", "", 1.0,
+        ))
+        bedingungen.append( (
+            1, "is_stage1_ratio", -9, -7, m_k - ABS_STUFE1_9D,  m_k - ABS_STUFE1_9D,
+            "--", "", "", 1.0,                  
+        ))                                      
+        bedingungen.append( (                   
+            2, "is_stage2_ratio", -9, -7, m_k - ABS_STUFE2_9D,  m_k - ABS_STUFE2_9D,
+            "--", "", "", 1.0,                
+        ) )                                     
+        bedingungen.append( (                   
+            3, "is_stage3_ratio", -9, -7, m_k - ABS_STUFE3_9D,  m_k - ABS_STUFE3_9D,
+            "--", "", "", 1.0,
+        ))
+        
+    
+
+    for stufe, code_name, x_start, x_end, y_start, y_end, stil, legend_text, punkt_text, alpha in bedingungen:
         farbe = FARBEN[stufe]
         ax.plot(
-            [x_start, 0], [y_start, m],
+            [x_start, x_end], [y_start, y_end],
             label=legend_text, color=farbe,
             linewidth=2.8, linestyle=stil, alpha=alpha,
             marker="o", markersize=9, markeredgewidth=1.25,
@@ -114,14 +180,20 @@ def main():
     ax.scatter([0], [m_k], s=150, color="#273844", edgecolor="white",
                linewidth=1.7, zorder=20)
 
-    ax.scatter([0], [4.0], s=150, color=FARBEN[3], edgecolor="white",
-               linewidth=1.7, zorder=20)
+    if STEP == 1:
+        ax.scatter([0], [4.0], s=150, color=FARBEN[3], edgecolor="white",
+                   linewidth=1.7, zorder=20)
 
     ax.set_xlim(-7.55, 0.42)
-    ax.set_ylim(0, 4.1)
+    ax.set_ylim(0, shift + 0.5)
     ax.set_xticks([-7, -6, -5, -4, -3, -2, -1, 0])
     ax.set_xticklabels(["-7 d", "-6 d", "-5 d", "-4 d", "-3 d",
                         "-2 d", "-1 d", "0 (jetzt)"])
+    if STEP > 5:
+        ax.set_xlim( -9.5, 0.5)
+        ax.set_xticks([-9, -8, -7, -6, -5, -4, -3, -2, -1, 0])
+        ax.set_xticklabels(["-9 d", "-8 d", "-7 d", "-6 d", "-5 d", "-4 d", "-3 d",
+                            "-2 d", "-1 d", "0 (jetzt)"])
     ax.set_xlabel("Zeit relativ zur aktuellen Messung", fontsize=11, labelpad=10)
     ax.set_ylabel("Kreatinin (mg/dL)", fontsize=11, labelpad=9)
     ax.set_title("Kreatinin: Grenzen der AKIN-Alarmstufen",
@@ -143,17 +215,18 @@ def main():
     )
     legende._legend_box.align = "left"
 
-    # Wichtige Einschraenkung der Bedingung is_stage3_abs.
-    ax.text(
-        1.025, 0.49,
-        "Um keine Alarme zu chronischen Patienten zu versenden,\n haben wir AKIN/KDIGO modifiziert\n und verlangen ZWEI Bedingungen:\n"
-        "  Krea(0) >= 4,0 mg/dL UND Δ48 h >= 0,5.\n\n",
-        transform=ax.transAxes, fontsize=9.2, color="#6c2730",
-        va="top", ha="left", linespacing=1.5,
-        bbox=dict(boxstyle="round,pad=0.8", facecolor="#fbf2f2",
-                  edgecolor="#e7d5d7", linewidth=0.8),
-    )
-
+    if STEP <= 1:
+        # Wichtige Einschraenkung der Bedingung is_stage3_abs.
+        ax.text(
+            1.025, 0.49,
+            "Um keine Alarme zu chronischen Patienten zu versenden,\n haben wir AKIN/KDIGO modifiziert\n und verlangen ZWEI Bedingungen:\n"
+            "  Krea(0) >= 4,0 mg/dL UND Δ48 h >= 0,5.\n\n",
+            transform=ax.transAxes, fontsize=9.2, color="#6c2730",
+            va="top", ha="left", linespacing=1.5,
+            bbox=dict(boxstyle="round,pad=0.8", facecolor="#fbf2f2",
+                      edgecolor="#e7d5d7", linewidth=0.8),
+        )
+        
     fig.text(
         0.085, 0.095,
         "Die Linien sind nur schematisch: Der Code vergleicht den aktuellen Wert "
@@ -163,6 +236,7 @@ def main():
     )
 
     output = Path(__file__).resolve().with_suffix(".png")
+    output = output.with_name(f"{output.stem}_{STEP}{output.suffix}")
     fig.savefig(output, dpi=210, bbox_inches="tight", facecolor="white")
     print(f"Grafik gespeichert unter: {output}")
     plt.show()

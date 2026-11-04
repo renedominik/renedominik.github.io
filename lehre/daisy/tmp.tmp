@@ -1,0 +1,165 @@
+<!-- Gemeinsames Lernprinzip: nach MLP -->
+<section class="nn-slide nn-train" data-transition="fade">
+  <div class="nn-head">
+    <div>
+      <div class="nn-eyebrow">Neuronale Netze · Training</div>
+      <h2 class="nn-title">Forward- und Backpropagation</h2>
+      <p class="nn-subtitle">Vorhersage berechnen · Fehler messen · Gewichte verbessern</p>
+    </div>
+  </div>
+
+  <div class="nn-stage">
+    <div class="nn-visual">
+      <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Vorwärtsberechnung von Eingaben über verborgene Neuronen zur Vorhersage und Cost-Funktion, dann Rückwärtsberechnung der Ableitungen">
+        <defs>
+          <marker id="fwp-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#73baff"/></marker>
+          <marker id="bp-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#ffc17a"/></marker>
+          <marker id="muted-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#a9bdd2"/></marker>
+        </defs>
+        <text x="30" y="30" class="train-label-forward">FORWARD  →</text>
+        <path d="M200 23 H728" fill="none" stroke="#73baff" stroke-width="2.7" stroke-opacity="0.75" marker-end="url(#fwp-head)"/>
+
+        <text x="96" y="100" text-anchor="middle" class="v-label">Eingaben</text>
+        <text x="310" y="100" text-anchor="middle" class="v-label">Schichten</text>
+        <text x="537" y="100" text-anchor="middle" class="v-label">Prognose</text>
+        <text x="703" y="100" text-anchor="middle" class="v-label">Cost</text>
+
+        <g fill="none" stroke="#77baff" stroke-width="2" opacity="0.32">
+          <line x1="117" y1="170" x2="289" y2="159"/>
+          <line x1="117" y1="170" x2="289" y2="245"/>
+          <line x1="117" y1="170" x2="289" y2="330"/>
+          <line x1="117" y1="255" x2="289" y2="159"/>
+          <line x1="117" y1="255" x2="289" y2="245"/>
+          <line x1="117" y1="255" x2="289" y2="330"/>
+          <line x1="117" y1="340" x2="289" y2="159"/>
+          <line x1="117" y1="340" x2="289" y2="245"/>
+          <line x1="117" y1="340" x2="289" y2="330"/>
+          <line x1="333" y1="159" x2="512" y2="247"/>
+          <line x1="333" y1="245" x2="512" y2="247"/>
+          <line x1="333" y1="330" x2="512" y2="247"/>
+        </g>
+        <g fill="none" stroke="#73baff" stroke-width="3" stroke-opacity="0.95">
+          <line x1="333" y1="245" x2="506" y2="247" marker-end="url(#fwp-head)"/>
+          <path d="M561 247 H647" marker-end="url(#fwp-head)"/>
+        </g>
+        <g>
+          <circle cx="96" cy="170" r="23" fill="#1d3a52" stroke="#73baff" stroke-width="2.8"/>
+          <circle cx="96" cy="255" r="23" fill="#1d3a52" stroke="#73baff" stroke-width="2.8"/>
+          <circle cx="96" cy="340" r="23" fill="#1d3a52" stroke="#73baff" stroke-width="2.8"/>
+          <text x="96" y="176" text-anchor="middle" class="v-label">x₁</text>
+          <text x="96" y="261" text-anchor="middle" class="v-label">x₂</text>
+          <text x="96" y="346" text-anchor="middle" class="v-label">x₃</text>
+          <circle cx="311" cy="159" r="23" fill="#3b365d" stroke="#c2a3fa" stroke-width="2.8"/>
+          <circle cx="311" cy="245" r="23" fill="#3b365d" stroke="#c2a3fa" stroke-width="2.8"/>
+          <circle cx="311" cy="330" r="23" fill="#3b365d" stroke="#c2a3fa" stroke-width="2.8"/>
+          <text x="311" y="165" text-anchor="middle" class="v-label">h₁</text>
+          <text x="311" y="251" text-anchor="middle" class="v-label">h₂</text>
+          <text x="311" y="336" text-anchor="middle" class="v-label">h₃</text>
+          <circle cx="536" cy="247" r="29" fill="#164c52" stroke="#75ded9" stroke-width="3"/>
+          <text x="536" y="254" text-anchor="middle" class="v-label" style="font-size:24px">ŷ</text>
+        </g>
+
+        <rect x="651" y="202" width="112" height="89" rx="16" fill="#40352c" stroke="#ffc17a" stroke-width="2.8"/>
+        <text x="707" y="238" text-anchor="middle" class="v-label" style="font-size:22px">L</text>
+        <text x="707" y="264" text-anchor="middle" class="v-sub">Fehler</text>
+        <text x="707" y="144" text-anchor="middle" class="v-mini">Zielwert y</text>
+        <line x1="707" y1="153" x2="707" y2="190" fill="none" stroke="#a9bdd2" stroke-width="2.5" marker-end="url(#muted-head)"/>
+
+        <path d="M707 297 V389 H103" fill="none" stroke="#ffc17a" stroke-width="3.2" stroke-linejoin="round" marker-end="url(#bp-head)"/>
+        <text x="406" y="376" text-anchor="middle" class="train-label-back">← BACKPROP: Gradienten / Ableitungen</text>
+        <text x="405" y="418" text-anchor="middle" class="v-sub">Rückwärts mit der Kettenregel</text>
+      </svg>
+    </div>
+
+
+<div class="nn-explain train-explain-grid">
+
+  <!-- LINKE SPALTE: TRAININGSSCHRITTE -->
+  <div class="train-steps-col">
+    <h3>Training in 3 Schritten</h3>
+
+    <div class="nn-steps">
+      <div class="nn-step">
+        <span class="num">1</span>
+        <p><strong>Forward:</strong> Eingaben x und Gewichte w
+          erzeugen eine Vorhersage ŷ.</p>
+      </div>
+
+      <div class="nn-step">
+        <span class="num">2</span>
+        <p><strong>Cost-Funktion:</strong> Der Unterschied zwischen
+          Vorhersage ŷ und Zielwert y wird gemessen.</p>
+      </div>
+
+      <div class="nn-step">
+        <span class="num">3</span>
+        <p><strong>Backprop:</strong> Die Kettenregel bestimmt
+          den Gradienten ∂L/∂w für jedes Gewicht.
+          Die Gewichte werden angepasst.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECHTE SPALTE: MATHEMATISCHE DEFINITIONEN -->
+  <div class="train-defs-col">
+    <h3>Funktionen &amp; Begriffe</h3>
+
+    <div class="train-def">
+      <div class="train-def-title">Gewichtete Summe</div>
+      <div class="train-formula">z = Σᵢ wᵢ xᵢ + b</div>
+      <div class="train-def-text">
+        xᵢ: Eingaben · wᵢ: Gewichte · b: Bias
+      </div>
+    </div>
+
+    <div class="train-def">
+      <div class="train-def-title">Aktivierungsfunktion</div>
+      <div class="train-formula">a = f(z)</div>
+      <div class="train-def-text">
+        Transformiert die gewichtete Summe.
+        Am Ausgang: ŷ = f(z).
+      </div>
+      <div class="train-examples">
+        <div><b>ReLU:</b> f(z) = max(0, z)</div>
+        <div><b>Sigmoid:</b> f(z) = 1/(1 + e<sup>−z</sup>)</div>
+        <div><b>tanh:</b> f(z) = tanh(z)</div>
+        <div><b>Linear:</b> f(z) = z</div>
+      </div>
+    </div>
+
+    <div class="train-def">
+      <div class="train-def-title">Cost / Fehlerfunktion</div>
+      <div class="train-formula">L = ½ (ŷ − y)²</div>
+      <div class="train-def-text">
+        Misst die Abweichung vom Zielwert.
+      </div>
+    </div>
+
+    <div class="train-def">
+      <div class="train-def-title">Gradient &amp; Lernrate</div>
+      <div class="train-def-text">
+        f′(z): lokale Ableitung der Aktivierung<br>
+        ∂L/∂w: Fehlergradient<br>
+        η: Lernrate (Schrittweite)
+      </div>
+    </div>
+
+    <div class="train-footnote">
+      Die Ableitung unten gilt unmittelbar für ein
+      einzelnes Neuron; bei mehreren Schichten
+      wird die Kettenregel wiederholt angewendet.
+    </div>
+  </div>
+
+</div>
+
+  <div class="nn-footer train-footer">
+    <span class="nn-ex-label">Ableitung &amp; Update</span>
+    <div class="train-equations">
+      <span>∂L/∂w = (ŷ − y) · f′(z) · x</span>
+      <span>w<sub>neu</sub> = w − η · ∂L/∂w</span>
+    </div>
+  </div>
+</section>
+

@@ -1,119 +1,1413 @@
-.slides section p, .slides section ul {
-    max-width: 96%;
-}
-.slides section h1, .slides section h2, .slides section h3 {
-    max-width: 105%;
-}
-
-.bildwechsel {
-    display: grid;
-    place-items: center;
-}
-
-.bildwechsel img {
-    grid-area: 1 / 1;
-    max-width: 100%;
-    max-height: 70vh;
-}
-
-.deck-logo {
-    position: fixed;
-    top: 10px;
-    right: 24px;
-    width: 180px;
-    height: auto;
-    z-index: 1000;
+/* =======================================================================
+   DAISY · gemeinsame Präsentationsgestaltung
+   Die 5 NN-Architekturfolien teilen einen Satz von Layout-Komponenten.
+   Beibehaltung der vorhandenen Folientexte, Diagramme und Bildpfade.
+   ======================================================================= */
+:root {
+  --panel: #172538;
+  --panel-deep: #142031;
+  --muted: #a9b8c9;
+  --text: #e7edf5;
+  --heading: #f4f8ff;
+  --blue: #7bbcff;
+  --green: #83d9a5;
+  --orange: #ffc178;
+  --radius: 13px;
 }
 
-.zeilen {
-    display: grid;
-    grid-template-columns: 1fr 2em 1fr;
-    gap: 0.3em;
-    align-items: center;
-}
+html, body { margin: 0; }
+.reveal { font-family: "Aptos", "Segoe UI", Arial, sans-serif; color: var(--text); }
+.reveal .slides section h1,
+.reveal .slides section h2,
+.reveal .slides section h3,
+.reveal .slides section h4 { text-transform: none; }
+.reveal .slides section p, .reveal .slides section ul { max-width: 96%; }
+.reveal .slides section h1,
+.reveal .slides section h2,
+.reveal .slides section h3 { max-width: 105%; }
 
+/* Einheitliche Präsentationsnummer unten links (Reveal.js: c/t). */
 .reveal .slide-number {
-    left: 8px;
-    right: auto;
-    bottom: 8px;
-    background-color: transparent;
+  left: 9px;
+  right: auto;
+  bottom: 7px;
+  background-color: transparent;
+  font-size: 14px;
+  z-index: 1100;
 }
 
-
-
-.buchstaben {
-    list-style-type: lower-alpha;
+/* Sichtbarkeit des KLG- bzw. DAISY-Logos wird pro Folie gesteuert. */
+.reveal .deck-logo {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 24px;
+  width: 180px;
+  height: auto;
+  z-index: 1000;
 }
-
-
-.reveal .slides section .image-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-}
-
-.reveal .slides section .image-row img {
-  display: block;
-  width: 0;
-  flex: 1 1 0;
-  height: 300px;
-  object-fit: contain;
-  margin: 0;
-}
-
-
 .reveal .logo-balken {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  box-sizing: border-box;
   padding: 12px 24px;
+  box-sizing: border-box;
   background: #fff;
   z-index: 1000;
   justify-content: flex-end;
 }
+.reveal .logo-balken img { width: 650px; height: auto; margin: 0; display: block; }
+.reveal:has(.slides > section.show-klg-logo.present) .logo-balken.klg-logo { display: flex; }
+.reveal:has(.slides > section.show-daisy-logo.present) .deck-logo.daisy-logo { display: block; }
 
-.reveal .logo-balken img {
-  display: block;
-  width: 650px;
-  height: auto;
-  margin: 0;
-}
+/* Bestehende einfache Layout- und Bildklassen. */
+.bildwechsel { display:grid; place-items:center; }
+.bildwechsel img { grid-area:1 / 1; max-width:100%; max-height:70vh; }
+.zeilen { display:grid; grid-template-columns:1fr 2em 1fr; gap:.3em; align-items:center; }
+.buchstaben { list-style-type:lower-alpha; }
+.reveal .slides section .image-row { display:flex; justify-content:space-between; align-items:center; width:100%; gap:1rem; }
+.reveal .slides section .image-row img { display:block; width:0; flex:1 1 0; height:300px; object-fit:contain; margin:0; }
+.grid { display:flex; flex-wrap:wrap; gap:1rem; }
+.grid > span, .grid > img { box-sizing:border-box; flex:0 0 calc((100% - 2rem)/3); height:150px; margin:0; }
+.grid > span { display:flex; justify-content:center; align-items:center; text-align:center; }
+.grid > img { object-fit:contain; }
+.deck-title { margin-top: 1.5em !important; }
+.title-illustration { width:20%; margin-left:0; }
+.rf-illustration { width:70%; max-height:590px; object-fit:contain; }
+.aki-figure { width:100%; max-height:590px; object-fit:contain; }
+.online-links { list-style:none; font-size:20pt; margin-top:2em; }
+.online-links .pdf-entry { margin-top:.5em; }
 
-.reveal:has(section.show-klg-logo.present) .logo-balken.klg-logo {
-  display: flex;
-}
-
-.reveal:has(.slides section.show-daisy-logo.present) .daisy-logo {
-  display: block;
-}
-
-
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.grid > span,
-.grid > img {
+/* Gemeinsame Basiseigenschaften der didaktischen Inhaltsfolien. */
+.reveal .slides section:is(.rf-method,.xgb-vs-rf,.nn-compare,.nn-slide) {
   box-sizing: border-box;
-  flex: 0 0 calc((100% - 2rem) / 3); /* 3 Spalten */
-  height: 150px;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  padding: 18px 26px 28px;
+  color: var(--text);
+  text-align: left;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+.reveal .slides section:is(.rf-method,.xgb-vs-rf,.nn-compare) > h3 {
+  margin: 0 0 7px;
+  color: var(--heading);
+  font-size: 27px;
+  font-weight: 650;
+  line-height: 1.15;
+}
+.reveal .slides section:is(.rf-method,.xgb-vs-rf,.nn-compare) > .subtitle {
+  font-size: 15px;
+  line-height: 1.25;
+  color: var(--muted);
+  margin-bottom: 13px;
+}
+.reveal .slides section:is(.rf-method,.xgb-vs-rf) .card {
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
+  background: var(--panel);
+  border: 2px solid;
+  border-radius: var(--radius);
+  padding: 15px 19px;
+}
+.reveal .slides section:is(.rf-method,.xgb-vs-rf) .card h4 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 650;
+}
+.reveal .slides section:is(.rf-method,.xgb-vs-rf) .card ul {
+  max-width: none;
+  margin: 0;
+  padding-left: 22px;
+  line-height: 1.28;
+}
+.reveal .slides section:is(.rf-method,.xgb-vs-rf) .card li { margin: 0 0 9px; }
+
+/* Random Forest: Bootstrap und zufällige Merkmale. */
+.rf-method { --method-blue: #4c9ce4; --method-green: #64b98b; }
+.rf-method .cards { display:flex; gap:20px; align-items:stretch; }
+.rf-method .bootstrap { border-color:var(--method-blue) !important; }
+.rf-method .features { border-color:var(--method-green) !important; }
+.rf-method .bootstrap h4 { color:var(--blue); }
+.rf-method .features h4 { color:var(--green); }
+.reveal .slides section.rf-method .card ul { font-size:19px; line-height:1.32; }
+.reveal .slides section.rf-method .card li { margin-bottom:13px; }
+.rf-method .example {
+  margin-top:17px;
+  padding:12px 15px;
+  border-radius:10px;
+  background:#23354b;
+  font-size:17px;
+  line-height:1.35;
+}
+.rf-method .conclusion {
+  margin-top:20px;
+  padding:16px 21px;
+  border-radius:12px;
+  background:#243b49;
+  border-left:5px solid #e4a34a;
+  font-size:20px;
+  line-height:1.32;
+  color:#f2f5f9;
 }
 
-.grid > span {
+/* Random Forest vs. XGBoost: reuse .card and one comparison grid. */
+.xgb-vs-rf .top-row { display:flex; gap:16px; margin-bottom:12px; }
+.xgb-vs-rf .rf { border-color:#64b98b !important; }
+.xgb-vs-rf .xgb { border-color:#f0a44b !important; }
+.xgb-vs-rf .rf h4 { color:#84d7a3; }
+.xgb-vs-rf .xgb h4 { color:#ffc56a; }
+.reveal .slides section.xgb-vs-rf .card { padding:12px 16px; }
+.reveal .slides section.xgb-vs-rf .card ul { font-size:16px; line-height:1.22; }
+.reveal .slides section.xgb-vs-rf .card li { margin-bottom:6px; }
+.xgb-vs-rf .card .tag {
+  display:inline-block;
+  margin-top:3px;
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+}
+.xgb-vs-rf .rf .tag { background:rgba(100,185,139,.18); color:#9be3b5; }
+.xgb-vs-rf .xgb .tag { background:rgba(240,164,75,.16); color:#ffd08b; }
+.xgb-vs-rf .compare-box {
+  background:var(--panel-deep);
+  border:2px solid #30465f;
+  border-radius:var(--radius);
+  padding:10px 14px;
+}
+.xgb-vs-rf .compare-box h4 {
+  margin:0 0 8px;
+  font-size:19px;
+  line-height:1.15;
+  color:#dbe7f5;
+  font-weight:650;
+}
+.xgb-vs-rf .compare-grid {
+  display:grid;
+  grid-template-columns:2.1fr 1.4fr 1.4fr;
+  gap:5px 7px;
+  align-items:stretch;
+  font-size:14px;
+  line-height:1.17;
+}
+.xgb-vs-rf .cell { padding:6px 9px; border-radius:7px; }
+.xgb-vs-rf .head { background:#243549; color:#f0f4fa; font-weight:650; }
+.xgb-vs-rf .left { background:#1c2a3b; color:#d5deea; font-weight:600; }
+.xgb-vs-rf .rf-cell { background:rgba(100,185,139,.14); color:#e8f5ec; }
+.xgb-vs-rf .xgb-cell { background:rgba(240,164,75,.14); color:#fff4e6; }
+.xgb-vs-rf .footer-note,
+.nn-compare .nn-note {
+  background:#213646;
+  border-left:4px solid #77b6ff;
+  font-size:16px;
+  color:#edf3fa;
+}
+.xgb-vs-rf .footer-note {
+  margin-top:10px;
+  padding:9px 13px;
+  border-radius:10px;
+  line-height:1.24;
+}
+
+/* Modell-Übersicht: fünf gleich gestaltete Zeilen. */
+.nn-compare .nn-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.6fr 1.35fr 1.65fr 1.55fr;
+  gap:7px;
+  margin-bottom:7px;
+  align-items:stretch;
+}
+.nn-compare .nn-head > div {
+  padding:10px 12px;
+  background:#26384e;
+  color:#e9f2ff;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:650;
+}
+.nn-compare .nn-row > div {
+  background:var(--panel);
+  padding:11px 12px;
+  border-radius:8px;
+  font-size:14.5px;
+  line-height:1.24;
+  min-width:0;
+  overflow-wrap:break-word;
+}
+.nn-compare .nn-row strong { color:#f4f7fc; font-weight:650; }
+.nn-compare .nn-row .model {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border-left:4px solid var(--accent);
+  background:#1c2c40;
+  padding-left:15px;
+}
+.nn-compare .model .name { color:var(--accent); font-size:23px; font-weight:700; line-height:1.15; }
+.nn-compare .model .full { margin-top:5px; font-size:12px; line-height:1.2; color:#aebdd0; }
+.nn-compare .mlp { --accent:#bd9bf4; }
+.nn-compare .cnn { --accent:#7bbcff; }
+.nn-compare .rnn { --accent:#ffc178; }
+.nn-compare .transformer { --accent:#70d6d0; }
+.nn-compare .gnn { --accent:#83d9a5; }
+.nn-compare .transformer .name { font-size:17px; white-space:nowrap; }
+.nn-compare .nn-note {
+  margin-top:17px;
+  padding:12px 17px;
+  border-radius:11px;
+  line-height:1.35;
+}
+.nn-compare .nn-note strong { color:white; }
+
+/* Fünf Einzel-Architekturen: gemeinsames Layout, nur Akzentfarbe je Modell. */
+/* Fünf Reveal.js-Folien: ausgelegt für 1280 × 720 (16:9). */
+.reveal .slides section.nn-slide {
+  --accent: #a995ff;
+  --accent-rgb: 169,149,255;
+  /* Geometrie, Schrift und Textausrichtung erbt .nn-slide von der gemeinsamen Basis. */
+  padding: 24px 29px 23px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  color: #e9f1fc;
+  text-transform: none;
+}
+.reveal .slides section.nn-slide * { box-sizing: border-box; }
+.reveal .slides section.nn-mlp {
+  --accent:#c2a3fa; --accent-rgb:194,163,250;
+}
+.reveal .slides section.nn-cnn {
+  --accent:#73baff; --accent-rgb:115,186,255;
+}
+.reveal .slides section.nn-rnn {
+  --accent:#ffc17a; --accent-rgb:255,193,122;
+}
+.reveal .slides section.nn-transformer {
+  --accent:#75ded9; --accent-rgb:117,222,217;
+}
+.reveal .slides section.nn-gnn {
+  --accent:#8ee1a8; --accent-rgb:142,225,168;
+}
+.nn-slide .nn-head {
+  flex: 0 0 99px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 0;
+}
+.nn-slide .nn-eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: .13em;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+.nn-slide h2.nn-title {
+  margin: 0;
+  color: #f7f9ff;
+  font-size: 32px;
+  font-weight: 720;
+  letter-spacing: -.02em;
+  line-height: 1.11;
+  text-transform: none;
+}
+.nn-slide .nn-subtitle {
+  margin: 7px 0 0;
+  color: #aebdd0;
+  font-size: 16px;
+  line-height: 1.23;
+}
+.nn-slide .nn-stage {
+  min-height: 0;
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: minmax(0,1.84fr) minmax(0,1fr);
+  gap: 16px;
+}
+.nn-slide .nn-visual {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 19px;
+  border: 1px solid rgba(var(--accent-rgb),.28);
+}
+.nn-slide .nn-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.nn-slide .nn-explain {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 21px 18px;
+  background: #17273a;
+  border: 1px solid #304257;
+  border-radius: 19px;
+}
+.reveal .slides section.nn-slide .nn-explain h3 {
+  margin: 0 0 18px;
+  text-transform: none;
+  color: var(--accent);
+  font-size: 21px;
+  font-weight: 720;
+  line-height: 1.12;
+}
+.nn-slide .nn-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nn-slide .nn-step {
+  display: grid;
+  grid-template-columns: 25px minmax(0,1fr);
+  gap: 11px;
+  align-items: start;
+  margin: 0;
+  padding: 0;
+}
+.nn-slide .nn-step .num {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(var(--accent-rgb),.16);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 750;
+}
+.nn-slide .nn-step p {
+  margin: 0;
+  color: #e8eef7;
+  font-size: 17px;
+  line-height: 1.31;
+}
+.nn-slide .nn-step strong { color: #fff; font-weight: 720; }
+.nn-slide .nn-small {
+  margin: auto 0 0;
+  padding-top: 16px;
+  color: #9fb0c6;
+  font-size: 14px;
+  line-height: 1.28;
+}
+.nn-slide .nn-footer {
+  flex: 0 0 66px;
+  min-height: 0;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  border-left: 5px solid var(--accent);
+  background: #203147;
+}
+.nn-slide .nn-footer .nn-ex-label {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: .065em;
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.nn-slide .nn-footer p {
+  color: #edf4fc;
+  font-size: 17px;
+  line-height: 1.24;
+  margin: 0;
+  min-width: 0;
+}
+.nn-slide .nn-visual :is(.v-label, .v-sub, .v-mini, .v-strong, .v-rule) {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+.nn-slide .nn-visual .v-label {
+  fill: #d8e5f5;
+  font-size: 17px;
+  font-weight: 640;
+}
+.nn-slide .nn-visual .v-sub {
+  fill: #a9bdd2;
+  font-size: 15px;
+}
+.nn-slide .nn-visual .v-mini {
+  fill: #d4e0ef;
+  font-size: 14px;
+}
+
+/* Global p/ul limits from the original deck must not narrow the NN panels. */
+.reveal .slides section.nn-slide p { max-width: none; }
+
+
+/* Allgemeines NN-Trainingsprinzip: vorhandene nn-slide-Komponenten verwenden. */
+.reveal .slides section.nn-train {
+  --accent: #ffc17a;
+  --accent-rgb: 255, 193, 122;
+}
+.nn-train .nn-explain { padding: 20px 21px 17px; }
+.nn-train .nn-explain h3 { margin-bottom: 21px; }
+.nn-train .nn-steps { gap: 24px; }
+.nn-train .nn-step p { font-size: 17px; line-height: 1.30; }
+.nn-train .nn-small { padding-top: 13px; font-size: 13.5px; }
+.nn-train .nn-visual .train-label-forward,
+.nn-train .nn-visual .train-label-back {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 760;
+  letter-spacing: .06em;
+}
+.nn-train .nn-visual .train-label-forward { fill: #73baff; }
+.nn-train .nn-visual .train-label-back { fill: #ffc17a; }
+.nn-train .train-footer { flex: 0 0 76px; gap: 20px; }
+.nn-train .train-equations {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 0;
+  color: #f6f8ff;
+  font-size: 21px;
+  font-family: Cambria, "Times New Roman", serif;
+  white-space: nowrap;
+}
+.nn-train .train-equations sub { font-size: .65em; }
+
+
+
+
+
+
+
+/* Overfitting-Folie: gemeinsame NN-Komponenten nutzen */
+
+.reveal .slides section.nn-overfit {
+  --accent: #ffc178;
+  --accent-rgb: 255, 193, 122;
+}
+
+.nn-overfit .nn-visual {
+  padding: 8px 11px;
+}
+
+.nn-overfit .nn-visual .v-label {
+  font-size: 22px;
+}
+
+.nn-overfit .nn-visual .v-mini {
+  font-size: 18px;
+}
+
+.nn-overfit .nn-explain {
+  padding: 17px 19px 16px;
+}
+
+.nn-overfit .nn-explain h3 {
+  margin-bottom: 14px;
+}
+
+.nn-overfit .nn-steps {
+  gap: 17px;
+}
+
+.nn-overfit .nn-step p {
+  font-size: 16px;
+  line-height: 1.28;
+}
+
+.nn-overfit .nn-small {
+  padding-top: 13px;
+  font-size: 13px;
+}
+
+.nn-overfit .nn-footer p {
+  font-size: 16px;
+}
+
+/* Akzentfarbe je Algorithmus. Die Folie selbst bleibt ohne eigene Fläche. */
+.reveal .slides section.algo-akin {
+  --accent: #1d6fbf;
+  --accent-rgb: 29, 111, 191;
+}
+.reveal .slides section.algo-kalium {
+  --accent: #1c8f62;
+  --accent-rgb: 28, 143, 98;
+}
+.reveal .slides section.algo-fib4 {
+  --accent: #c47d12;
+  --accent-rgb: 196, 125, 18;
+}
+.reveal .slides section.algo-sepsis {
+  --accent: #c44b45;
+  --accent-rgb: 196, 75, 69;
+}
+.reveal .slides section.algo-wbit {
+  --accent: #0e8a86;
+  --accent-rgb: 14, 138, 134;
+}
+.reveal .slides section.algo-mibi {
+  --accent: #6a45b0;
+  --accent-rgb: 106, 69, 176;
+}
+.nn-slide .nn-visual .v-strong {
+  fill: #f7fbff;
+  font-size: 26px;
+  font-weight: 720;
+}
+.nn-slide .nn-visual .v-rule {
+  fill: #d5e2f0;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+/* Grosses Fließschema für die Monitor-Folien. */
+.reveal .slides section.algo-flow {
+  gap: 8px;
+}
+.reveal .slides section.algo-flow .nn-head { flex-basis: 78px; }
+.reveal .slides section.algo-flow .flow-board {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+}
+.reveal .slides section.algo-flow .flow-board svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.reveal .slides section.algo-flow .flow-board .v-strong,
+.reveal .slides section.algo-flow .flow-board .v-rule,
+.reveal .slides section.algo-flow .flow-board .v-sub,
+.reveal .slides section.algo-flow .flow-board .v-mini {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+.reveal .slides section.algo-flow .flow-board .v-strong:not([fill]) { fill: #f7fbff; }
+.reveal .slides section.algo-flow .flow-board .v-rule:not([fill]) { fill: #d5e2f0; }
+.reveal .slides section.algo-flow .flow-board .v-sub:not([fill]),
+.reveal .slides section.algo-flow .flow-board .v-mini:not([fill]) { fill: #d4e0ef; }
+.reveal .slides section.algo-flow .flow-board .v-strong { font-size: 26px; font-weight: 720; }
+.reveal .slides section.algo-flow .flow-board .v-rule { font-size: 22px; font-weight: 650; }
+.reveal .slides section.algo-flow .flow-board .v-sub { font-size: 18px; }
+.reveal .slides section.algo-flow .flow-board .v-mini { font-size: 16px; }
+
+/* DAISY-Systemfolien: nach den Lernalgorithmen, vor den Einzelalgorithmen. */
+.reveal .slides section.daisy-system {
+  --accent: #c5d86a;
+  --accent-rgb: 197, 216, 106;
+  display: flex !important;
+  flex-direction: column;
+  overflow: hidden;
+}
+.reveal .slides section.daisy-system .nn-head { flex: 0 0 auto; }
+.reveal .slides section.daisy-system.show-daisy-logo .nn-head { padding-right: 200px; }
+.reveal .slides section.daisy-system h2.nn-title { font-size: 28px; }
+.daisy-system .daisy-lead {
+  margin: 0;
+  color: #f4f7fb;
+  font-size: 18px;
+  line-height: 1.3;
+}
+.daisy-system .daisy-board {
+  flex: 1 1 auto;
+  min-height: 0;
+  border-radius: 16px;
+  background: #f6f7f4;
+  overflow: hidden;
+  position: relative;
+}
+.daisy-system .daisy-board > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .slides section.daisy-system img {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.reveal .slides section.daisy-system svg text {
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+}
+.daisy-hub svg text { font-size: 20px; }
+.daisy-cdss svg text.tiny { font-size: 11px; }
+.daisy-regeln svg text { font-size: 15px; }
+.daisy-infra svg text { font-size: 14px; }
+.reveal .slides section.daisy-system svg text.on-blue { fill: #fff; font-weight: 700; }
+.reveal .slides section.daisy-system svg text.on-green { fill: #243018; font-weight: 700; }
+.reveal .slides section.daisy-system svg text.ink { fill: #1c2430; font-weight: 700; }
+.reveal .slides section.daisy-system svg text.muted { fill: #5c6770; font-weight: 650; }
+.reveal .slides section.daisy-system svg text.alert { fill: #c4161b; font-size: 28px; font-weight: 800; }
+.reveal .slides section.daisy-system svg text.oder { fill: #3d7a28; font-size: 26px; font-weight: 800; }
+.reveal .slides section.daisy-system svg text.tiny { fill: #243018; font-weight: 700; }
+.reveal .slides section.daisy-hub { padding-bottom: 12px; gap: 8px; }
+.daisy-hub .nn-footer { flex: 0 0 auto; }
+
+.daisy-ebenen .ebenen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 12% 8px;
+}
+.daisy-ebenen .ebenen img { width: 210px; height: auto; }
+.daisy-ebenen .ebene,
+.daisy-klinik :is(.k-station, .k-labor, .k-sap) {
+  background: #c9dc8e;
+  color: #243018;
+  border: 2px solid #5f7340;
+}
+.daisy-ebenen .ebene {
+  width: 100%;
+  text-align: center;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 22px;
+  font-weight: 700;
+}
+.daisy-ebenen .alarm-muedigkeit {
+  margin: 8px 0 0;
+  color: #c4161b;
+  font-size: 28px;
+  font-weight: 800;
   text-align: center;
 }
 
-.grid > img {
+.daisy-regeln .nn-stage { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); }
+.daisy-regeln .nn-visual { position: relative; }
+.daisy-regeln .nn-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.reveal .slides section.daisy-regeln svg text.ink { fill: #f4f7fb; }
+.daisy-regeln .rules {
+  min-height: 0;
+  overflow: auto;
+  padding: 8px 8px 8px 4px;
+  color: #e8eef6;
+}
+.daisy-regeln .rules .scheme {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: #f7fbff;
+}
+.daisy-regeln .rules h3 {
+  margin: 14px 0 4px;
+  color: var(--accent);
+  font-size: 22px;
+  text-transform: none;
+}
+.daisy-regeln .rules p { margin: 0 0 2px; font-size: 18px; line-height: 1.35; color: #e8eef6; }
+
+.daisy-alarm .alarm-layout {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 16px;
+}
+.daisy-alarm .alarm-layout img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  object-position: left center;
+  background: #eef2f4;
+  border-radius: 10px;
+}
+.daisy-alarm .alarm-notes {
+  min-width: 0;
+  margin: 0;
+  padding: 4px 8px 4px 18px;
+  color: #e8eef6;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.daisy-alarm .alarm-notes ul { margin: 2px 0 6px; padding-left: 18px; font-size: 15px; }
+.daisy-alarm .alarm-notes li { margin: 0 0 4px; }
+.daisy-alarm .nn-head { position: relative; z-index: 2; background: #111827; flex: 0 0 auto; }
+
+.daisy-klinik .daisy-board { display: flex; }
+.daisy-klinik .klinik {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  gap: 8px;
+  padding: 6px 10px 4px;
+}
+.daisy-klinik .k-station {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+.daisy-klinik .k-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+  margin: 0;
+  padding-left: 18px;
+  color: #e8eef6;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 650;
+}
+.daisy-klinik .k-canvas {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 84px minmax(0, 1.15fr) 118px;
+  grid-template-rows: 40px 14px minmax(0, 0.9fr) minmax(0, 1.1fr) 22px;
+  gap: 4px 8px;
+}
+.daisy-klinik .k-to-lab,
+.daisy-klinik .k-link .arrow {
+  position: relative;
+  height: 8px;
+  background: #c9dc8e;
+}
+.daisy-klinik .k-to-lab { grid-column: 1 / 3; grid-row: 1; align-self: center; }
+.daisy-klinik .k-labor {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: start;
+  align-self: center;
+  width: 128px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+}
+.daisy-klinik .k-down {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: start;
+  margin-left: 58px;
+  width: 10px;
+  height: 14px;
+  background: #c9dc8e;
+  position: relative;
+}
+.daisy-klinik .k-to-lab::after,
+.daisy-klinik .k-link .arrow::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -5px;
+  border-left: 11px solid #5f7340;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+.daisy-klinik .k-labor,
+.daisy-klinik .k-sap {
+  border-radius: 12px;
+  font-weight: 800;
+}
+.daisy-klinik .k-down::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  bottom: -1px;
+  border-top: 9px solid #5f7340;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.daisy-klinik .k-sap {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: start;
+  min-width: 0;
+  padding: 6px 8px 8px;
+  text-align: center;
+}
+.daisy-klinik .k-sap-name { font-size: 15px; margin-bottom: 3px; }
+.daisy-klinik .k-sap table { width: 100%; border-collapse: collapse; background: #f4f7f8; color: #1c2430; font-size: 11px; font-weight: 650; }
+.daisy-klinik .k-sap th, .daisy-klinik .k-sap td { border: 1px solid #9aa7b2; padding: 2px; text-align: center; height: 16px; }
+.daisy-klinik .k-sap th { background: #e7eef2; }
+.daisy-klinik .sym { display: inline-block; vertical-align: middle; margin: 0 1px; }
+.daisy-klinik .sym.tri { width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 9px solid #e0a825; }
+.daisy-klinik .sym.ring { width: 9px; height: 9px; border-radius: 50%; border: 2px solid #e0a825; }
+.daisy-klinik .sym.dot { width: 9px; height: 9px; border-radius: 50%; background: #d21f1f; }
+.daisy-klinik .sym.ring.red { border-color: #d21f1f; }
+.daisy-klinik .k-sap td.mark { background: #d7f3fb; font-weight: 800; }
+.daisy-klinik .k-alarm { grid-column: 2; grid-row: 3; align-self: start; margin-top: 36px; color: #c4161b; }
+.daisy-klinik .k-daisy {
+  grid-column: 3;
+  grid-row: 3;
+  align-self: start;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: #fffdf6;
+  border: 2px solid #e0b15a;
+  border-radius: 12px;
+  color: #1c2430;
+}
+.daisy-klinik .k-daisy img { width: 92px; height: auto; }
+.daisy-klinik .k-daisy ul { margin: 0; padding-left: 16px; font-size: 13px; font-weight: 750; line-height: 1.25; }
+.daisy-klinik .k-befund {
+  grid-column: 4;
+  grid-row: 1 / 5;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.daisy-klinik .k-befund .path-label { color: #5f7340; font-size: 12px; font-weight: 750; text-align: center; line-height: 1.15; }
+.daisy-klinik .k-befund .sheet {
+  width: 68px;
+  height: 78px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #6a737a;
+  border: 2px solid #5f7340;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 750;
+  position: relative;
+}
+.daisy-klinik .k-befund .sheet::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-width: 9px;
+  border-style: solid;
+  border-color: #c5d0c0 #c5d0c0 #fff #fff;
+}
+.daisy-klinik .k-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+  line-height: 1.15;
+}
+.daisy-klinik .k-link .arrow { width: 64px; }
+.daisy-klinik .k-link .arrow.left::after {
+  right: auto;
+  left: -1px;
+  border-left: 0;
+  border-right: 11px solid #5f7340;
+}
+.daisy-klinik .k-click {
+  grid-column: 1 / 3;
+  grid-row: 4;
+  align-self: center;
+  justify-self: end;
+  flex-direction: row;
+  color: #646b70;
+}
+.daisy-klinik .k-page {
+  grid-column: 3;
+  grid-row: 4;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+.daisy-klinik .k-page img { height: 100%; max-height: 100%; width: auto; max-width: calc(100% - 22px); object-fit: contain; object-position: left center; background: #fff; }
+.daisy-klinik .k-page figcaption { writing-mode: vertical-rl; color: #646b70; font-size: 14px; font-weight: 750; align-self: center; }
+.daisy-klinik .k-return { grid-column: 1 / -1; grid-row: 5; width: 100%; height: 22px; }
+.daisy-infra .nn-footer { flex: 0 0 auto; align-items: flex-start; }
+
+
+
+/* Hauptbereich: etwas mehr Platz rechts */
+.nn-train .nn-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 12px;
+  height: auto !important;
+  min-height: 0 !important;
+  align-items: stretch;
+}
+
+/* Zweispaltigkeit der rechten Box erzwingen */
+.nn-train .nn-explain.train-explain-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) !important;
+  align-items: start;
+  gap: 14px;
+  padding: 15px 17px;
+  height: auto !important;
+  min-height: 0 !important;
+  box-sizing: border-box;
+}
+
+.nn-train .train-steps-col,
+.nn-train .train-defs-col {
+  min-width: 0;
+}
+
+.nn-train .train-explain-grid h3 {
+  font-size: 17px;
+  margin: 0 0 15px;
+  line-height: 1.15;
+}
+
+/* Drei Trainingsschritte */
+.nn-train .train-steps-col .nn-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nn-train .train-steps-col .nn-step p {
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Definitionen kompakt darstellen */
+.nn-train .train-defs-col {
+  padding-left: 13px;
+  border-left: 1px solid rgba(169,189,210,0.3);
+}
+
+.nn-train .train-compact-row {
+  color: #e2eaf4;
+  font-size: 12px;
+  line-height: 1.35;
+  margin-bottom: 11px;
+}
+
+.nn-train .train-compact-row b {
+  color: #9bd6ff;
+}
+
+.nn-train .train-compact-row span {
+  display: block;
+  color: #abbdd1;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* Aktivierungsfunktionen: 2 x 2 */
+.nn-train .train-activation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 8px;
+  padding: 8px;
+  margin: 0 0 12px;
+  background: rgba(115,186,255,0.08);
+  border-radius: 7px;
+  font-size: 11px;
+  line-height: 1.25;
+  color: #d9e8f5;
+}
+
+.nn-train .train-activation-grid b {
+  color: #9bd6ff;
+}
+
+.nn-train .train-compact-note {
+  border-top: 1px solid rgba(169,189,210,0.2);
+  padding-top: 7px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #91a8bf;
+}
+
+/* Grafik nicht unnötig in die Höhe ziehen */
+.nn-train .nn-visual {
+  min-height: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nn-train .nn-visual svg {
+  width: 100%;
+  height: auto !important;
+  max-height: 100%;
+}
+
+/* Unterer Formel-Balken */
+.nn-train .nn-footer.train-footer {
+  margin-top: 10px !important;
+  flex-shrink: 0;
+}
+
+
+/* DAISY – Algorithmen (aus index.html ausgelagert; originales Layout). */
+/* Nur diese Folie */
+.reveal .slides section.daisy-algos-v2 {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 18px 26px 14px;
+  display: grid !important;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+  overflow: hidden;
+  background: transparent;
+  color: #1c2b30;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  text-align: left;
+}
+
+.daisy-algos-v2 * {
+  box-sizing: border-box;
+}
+
+.reveal .slides .daisy-algos-v2 h2,
+.reveal .slides .daisy-algos-v2 h3,
+.reveal .slides .daisy-algos-v2 p {
+  margin: 0;
+  text-transform: none;
+  text-shadow: none;
+}
+
+/* Überschrift */
+.daisy-algos-v2 .da-header {
+  background: #f9fbf6;
+  border: 1px solid #cdd9be;
+  border-left: 6px solid #85a83c;
+  border-radius: 10px;
+  padding: 9px 15px 10px;
+}
+
+.reveal .slides .daisy-algos-v2 .da-header h2 {
+  color: #446a27;
+  font-size: 30px;
+  font-weight: 750;
+  line-height: 1.08;
+}
+
+/* Zweispaltige Anordnung */
+.daisy-algos-v2 .da-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 17px;
+  min-height: 0;
+}
+
+.daisy-algos-v2 .da-column {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Einzelne Karten */
+.daisy-algos-v2 .da-card {
+  background: #fbfcf9;
+  border: 1px solid #cbd7cb;
+  border-left: 4px solid #7ca34c;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 2px 3px rgba(20, 38, 48, 0.10);
+  min-width: 0;
+}
+
+.daisy-algos-v2 .da-column--rules .da-card {
+  border-color: #c8d6df;
+  border-left: 4px solid #497c9a;
+}
+
+.reveal .slides .daisy-algos-v2 .da-card h3 {
+  color: #426b2c;
+  font-size: 20px;
+  font-weight: 750;
+  line-height: 1.13;
+  margin-bottom: 6px;
+}
+
+.reveal .slides .daisy-algos-v2
+.da-column--rules h3 {
+  color: #285c7c;
+}
+
+/* Inhalt */
+.daisy-algos-v2 .da-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 16px;
+  line-height: 1.22;
+  color: #22313a;
+}
+
+.daisy-algos-v2 .da-emphasis {
+  font-weight: 750;
+  color: #273f26;
+}
+
+.daisy-algos-v2 .da-code {
+  margin-top: 4px !important;
+  color: #536b59;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.daisy-algos-v2 .da-column--rules .da-code {
+  color: #476878;
+}
+
+/* Kategorien am unteren Spaltenrand */
+.daisy-algos-v2 .da-category {
+margin-top: auto;
+margin-bottom: 25px;
+  padding: 7px 10px 6px;
+  border-radius: 8px;
+  background: #eef4eb;
+  border: 1px solid #cbdaca;
+  color: #3c5b35;
+  font-size: 14px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-align: center;
+}
+
+.daisy-algos-v2 .da-column--rules .da-category {
+  background: #ecf5fa;
+  border-color: #cadde5;
+  color: #285c7c;
+}
+
+/* Zusätzliche Komprimierung bei geringer Höhe */
+@media (max-height: 650px) {
+  .reveal .slides section.daisy-algos-v2 {
+    padding: 13px 22px 10px;
+    gap: 9px;
+  }
+
+  .daisy-algos-v2 .da-header {
+    padding: 7px 12px 8px;
+  }
+
+  .reveal .slides .daisy-algos-v2
+  .da-header h2 {
+    font-size: 27px;
+  }
+
+  .daisy-algos-v2 .da-card {
+    padding: 8px 12px;
+  }
+
+  .reveal .slides .daisy-algos-v2
+  .da-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .daisy-algos-v2 .da-facts {
+    font-size: 15px;
+    line-height: 1.18;
+    gap: 2px;
+  }
+
+  .daisy-algos-v2 .da-code {
+    font-size: 12px;
+  }
+
+  .daisy-algos-v2 .da-category {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+}
+
+/* Früher eingebettete HTML-Styles: semantische / wiederverwendbare Klassen. */
+.reveal .slides section.learning-goals-slide > ul { font-size: 28px; }
+.reveal .slides section .was-bin-ich-caption { font-size: 26px; }
+.reveal .slides section img.figure-width-60 { width: 60%; }
+.reveal .slides section img.figure-width-70 { width: 70%; }
+.reveal .slides section img.figure-width-80 { width: 80%; }
+.reveal .slides section img.figure-width-85 { width: 85%; }
+.reveal .slides section img.figure-width-100 { width: 100%; }
+.nn-slide .nn-visual .v-label.svg-text-24 { font-size: 24px; }
+.nn-slide .nn-visual .v-label.svg-text-22 { font-size: 22px; }
+.daisy-algos-v2 .da-underlined { text-decoration: underline; }
+.reveal .slides section.algo-fib4 .nn-explain h3.fib4-heading-first { margin-top: -2px; }
+.reveal .slides section.algo-fib4 .nn-explain h3.fib4-heading-followup { margin-top: 8px; }
+
+/* Kalium: reduzierte Flussschema-Größe und Anmerkung auf gleicher Folie. */
+.reveal .slides section.algo-kalium .flow-board {
+  justify-content: center;
+  align-items: center;
+}
+.reveal .slides section.algo-kalium .flow-board svg {
+  width: 85%;
+  height: 85%;
+}
+.reveal .slides section.algo-kalium .nn-footer {
+  flex: 0 0 70px;
+}
+.algo-kalium .kalium-study-note p {
+  font-size: 16px;
+  line-height: 1.24;
+}
+.algo-kalium .kalium-citation {
+  color: #aebdd0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+
+/* Literaturfolien: eine gemeinsame Gestaltung fuer Sepsis 2024, SBC-SHAP und WBIT 2025. */
+.reveal .slides section.pub-slide { gap: 12px; }
+.pub-slide .nn-head { flex: 0 0 98px; }
+.pub-slide .nn-head .nn-subtitle { max-width: none; }
+.pub-slide .pub-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.76fr) minmax(0, 0.94fr);
+  gap: 17px;
+}
+.pub-slide .pub-steps {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.pub-slide .pub-step, .pub-slide .pub-highlight {
+  min-width: 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 1px solid rgba(var(--accent-rgb), 0.34);
+  background: #17273a;
+}
+.pub-slide .pub-step {
+  padding: 17px 18px 13px;
+  position: relative;
+}
+.pub-slide .pub-index {
+  display: inline-grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(var(--accent-rgb), .15);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 760;
+  margin-bottom: 10px;
+}
+.reveal .slides section.pub-slide .pub-step h3,
+.reveal .slides section.pub-slide .pub-highlight h3 {
+  margin: 0 0 9px;
+  color: var(--accent);
+  font-size: 19px;
+  line-height: 1.16;
+  font-weight: 720;
+}
+.reveal .slides section.pub-slide .pub-step p {
+  margin: 0;
+  max-width: none;
+  font-size: 16px;
+  line-height: 1.32;
+  color: #e8eef7;
+}
+.pub-slide .pub-step strong { color: #fff; }
+.pub-slide .pub-highlight {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 18px;
+  border-color: #304257;
+  background: #1b2d43;
+}
+.pub-slide .pub-highlight h3 { margin-bottom: 19px; }
+.pub-slide .pub-score {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border-bottom: 1px solid rgba(169,189,210,.20);
+  padding: 8px 0 11px;
+}
+.pub-slide .pub-score strong {
+  color: #f6f9ff;
+  font-size: 37px;
+  font-weight: 720;
+  line-height: 1.1;
+}
+.pub-slide .pub-score span { color: #b3c2d5; font-size: 14px; line-height: 1.2; }
+.pub-slide .pub-score-secondary strong { font-size: 27px; }
+.reveal .slides section.pub-slide .pub-insight {
+  margin: auto 0 0;
+  padding-top: 13px;
+  max-width: none;
+  font-size: 15px;
+  line-height: 1.31;
+  color: #d8e4f2;
+}
+.pub-slide .pub-analyte-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
+.pub-slide .pub-analyte-list span {
+  padding: 8px 14px;
+  border-radius: 9px;
+  border: 1px solid rgba(var(--accent-rgb), .55);
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 740;
+}
+.reveal .slides section.pub-slide .nn-footer.pub-footer { flex: 0 0 70px; min-height: 0; }
+.reveal .slides section.pub-slide .pub-footer p,
+.reveal .slides section.pub-slide .pub-footer-text { font-size: 14px; line-height: 1.27; }
+.pub-slide .pub-footer a {
+  color: #b7daff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.pub-slide .pub-footer-text { display: flex; flex-direction: column; gap: 4px; }
+.pub-slide .pub-footer-link { flex-basis: 79px !important; }
+.pub-slide .pub-app-link { color: #c9e9ff !important; font-size: 16px; font-weight: 680; }
+
+/* Folie 26: zweite Untertitelzeile fuer die Fibrose-Definition. */
+.reveal .slides section.algo-fib4 .nn-head { flex-basis: 120px; }
+ .reveal .slides section.algo-fib4 .nn-subtitle { line-height: 1.34; }
+.reveal .slides section.algo-fib4 .nn-explain { padding: 15px 18px 12px; }
+.reveal .slides section.algo-fib4 .nn-explain .nn-steps { gap: 6px; }
+.reveal .slides section.algo-fib4 .nn-explain .nn-step p { font-size: 15px; line-height: 1.25; }
+.reveal .slides section.algo-fib4 .nn-explain h3 { font-size: 20px; margin-bottom: 8px; }
+
+/* Folie 31 (alte Indexierung): kompakter Monitor mit vorgeschaltetem Erregerkasten. */
+.algo-mibi .mibi-trigger-title {
+  fill: #f7fbff;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 720;
+}
+.algo-mibi .mibi-trigger-desc {
+  fill: #d5e2f0;
+  font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 650;
 }
