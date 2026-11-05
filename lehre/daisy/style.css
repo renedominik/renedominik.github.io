@@ -217,7 +217,7 @@ html, body { margin: 0; }
 /* Modell-Übersicht: fünf gleich gestaltete Zeilen. */
 .nn-compare .nn-grid {
   display:grid;
-  grid-template-columns:.85fr 1.6fr 1.35fr 1.65fr 1.55fr;
+  grid-template-columns:.85fr 1.65fr 1.65fr 1.55fr;
   gap:7px;
   margin-bottom:7px;
   align-items:stretch;

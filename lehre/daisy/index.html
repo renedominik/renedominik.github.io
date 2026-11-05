@@ -42,6 +42,7 @@
 	<ul>
 	  <li>Maschinelles Lernen
 	    <ul>
+	      <li> Datenvorbereitung </li>
 	      <li> Entscheidungsbäume </li>
 	      <li> Neuronale Netze </li>
 	    </ul>
@@ -67,6 +68,118 @@
 
 
 
+
+      <section class="daisy-algos-v2" data-transition="fade">
+
+  <header class="da-header">
+    <h2>Datenvorbereitung beim maschinellen Lernen</h2>
+  </header>
+
+  <div class="da-columns">
+
+    <!-- Linke Spalte -->
+    <div class="da-column">
+
+      <article class="da-card">
+        <h3>1. Säubern</h3>
+        <div class="da-facts">
+          <p>
+            Beschädigte Messungen, Dubletten und falsche Labels
+            prüfen, korrigieren oder entfernen.
+          </p>
+          <p class="da-emphasis">
+            Echte Extremwerte nicht pauschal löschen!
+          </p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>2. Daten aufteilen</h3>
+        <div class="da-facts">
+          <p><strong>Training · Validierung · Test</strong></p>
+          <p>
+            Für die Vorhersage bei neuen Patienten:
+            patientenweise trennen.
+          </p>
+          <p>Zeitliche Abhängigkeiten beachten.</p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>3. Fehlende Werte &amp; Skalierung</h3>
+        <div class="da-facts">
+          <p>
+            Fehlende Werte gezielt behandeln,
+            z. B. ergänzen (Imputation).
+          </p>
+          <p>
+            Merkmale bei Bedarf auf vergleichbare Skalen bringen,
+            z. B. standardisieren.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Rechte Spalte -->
+    <div class="da-column da-column--rules">
+
+      <article class="da-card">
+        <h3>4. Transformieren</h3>
+        <div class="da-facts">
+          <p>
+            Eine geeignete Darstellung kann das Lernen vereinfachen.
+          </p>
+          <p>
+            <strong>Fourier:</strong> Frequenzanteile eines Signals.
+          </p>
+          <p>
+            <strong>PCA:</strong> Verdichtung auf Hauptkomponenten;
+            Informationsverlust möglich.
+          </p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>5. Balancieren – bei Bedarf</h3>
+        <div class="da-facts">
+          <p>
+            Klassen gewichten oder Trainingsfälle
+            über-/unterabtasten.
+          </p>
+          <p>
+            <strong>Pro:</strong>
+            Seltene Klasse stärker berücksichtigen.
+          </p>
+          <p>
+            <strong>Contra:</strong>
+            Unterabtasten verliert Daten;
+            Duplizieren kann Overfitting fördern.
+          </p>
+        </div>
+      </article>
+
+      <article class="da-card">
+        <h3>Beispiel: 98 % der Daten sind negativ</h3>
+        <div class="da-facts">
+          <p>Immer „negativ“ vorhersagen ergibt:</p>
+          <p class="da-emphasis">
+            98 % Genauigkeit – aber 0 % Sensitivität!
+          </p>
+          <p>
+            Auch Sensitivität, Präzision (PPV) und F1 bewerten.
+          </p>
+        </div>
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+      
+      
       
 
 <section class="nn-slide" data-transition="fade">
@@ -86,7 +199,7 @@
     </div>
   </div>
 
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:1em;">
 
     <div class="nn-visual">
       <svg viewBox="0 0 800 440"
@@ -374,32 +487,22 @@
 
   </div>
 
-  <div class="nn-footer">
-    <span class="nn-ex-label">Merksatz</span>
-    <p>
-      <strong>Lernform</strong> ≠
-      <strong>Aufgabe</strong> ≠
-      <strong>Methode</strong>:
-      Bäume und neuronale Netze eignen sich für
-      Klassifikation <em>und</em> Regression.
-    </p>
-  </div>
 
 </section>
 
 
       
       <section>
-	<h3> Heiteres Beruferaten - Entscheidungsbäume à la 70'er</h3>
-	<p class="was-bin-ich-caption"> Welches Schweinderl hätten's denn gern?
-	  337 Sendungen 1955 - 1989 </p>
+	<h3> Heiteres Beruferaten - Entscheidungsbäume</h3>
+	<p class="was-bin-ich-caption"> 
+	  337 Sendungen 1955 - 1989 mit ca. 10-14 Millionen Zuschauer pro Sendung </p>
 	<img class="figure-width-85" src="img/was_bin_ich.png">	
       </section>
 
 
 
       
-      <section class="show-daisy-logo">
+      <section>
 	<h3> Extrem robust: Random Forest</h3>
 	<img class="rf-illustration" src="img/random_forest.png">
       </section>
@@ -407,8 +510,8 @@
 
 
       
-      <section class="rf-method show-daisy-logo">
-	<h3>Random Forest – Zufallswälder</h3>
+      <section class="rf-method">
+	<h3 style="margin-top:2em;">Random Forest – Zufallswälder</h3>
 	<div class="subtitle">
 	  Warum entstehen viele unterschiedliche Entscheidungsbäume?
 	</div>
@@ -552,152 +655,124 @@
 
 
 
-
-
-
-
 <section class="nn-compare">
-<h3>Neuronale Netze – Architekturen im Vergleich</h3>
+  <h3>Neuronale Netze – Architekturen im Vergleich</h3>
 
-<div class="subtitle">
-  Gleiche Grundidee – unterschiedliche Verarbeitung und Verknüpfung von Informationen
-</div>
+  <div class="subtitle">
+    Gleiche Grundidee – unterschiedliche Verarbeitung und Verknüpfung von Informationen
+  </div>
 
-<div class="nn-grid nn-head">
-  <div>Modell</div>
-  <div>Funktionsprinzip</div>
-  <div>Geeignete Daten</div>
-  <div>Anwendungen / Beispiele</div>
-  <div>Stärken und Grenzen</div>
-</div>
+  <div class="nn-grid nn-head">
+    <div>Modell</div>
+    <div>Funktionsprinzip</div>
+    <div>Daten / Beispiele</div>
+    <div>Stärken und Grenzen</div>
+  </div>
 
-<div class="nn-grid nn-row mlp">
-  <div class="model">
-    <span class="name">MLP</span>
-    <span class="full">Multi-Layer Perceptron</span>
+  <div class="nn-grid nn-row mlp">
+    <div class="model">
+      <span class="name">MLP</span>
+      <span class="full">Multi-Layer Perceptron</span>
+    </div>
+    <div>
+      <strong>Vollständig verbundene Schichten</strong>
+      verknüpfen die Eingabemerkmale.
+    </div>
+    <div>
+      <strong>Tabellendaten</strong><br>
+      z. B. Alter, Geschlecht und Laborwerte
+    </div>
+    <div>
+      Einfach und flexibel;<br>
+      berücksichtigt keine Datenstruktur explizit
+    </div>
   </div>
-  <div>
-    <strong>Vollständig verbundene Schichten</strong>
-    verknüpfen die Eingabemerkmale.
-  </div>
-  <div>
-    Tabellen, feste Merkmalsvektoren
-  </div>
-  <div>
-    Risikovorhersage aus Alter, Geschlecht
-    und Laborwerten
-  </div>
-  <div>
-    Einfach und flexibel;<br>
-    berücksichtigt keine Datenstruktur explizit
-  </div>
-</div>
 
-<div class="nn-grid nn-row cnn">
-  <div class="model">
-    <span class="name">CNN</span>
-    <span class="full">Convolutional Neural Network</span>
+  <div class="nn-grid nn-row cnn">
+    <div class="model">
+      <span class="name">CNN</span>
+      <span class="full">Convolutional Neural Network</span>
+    </div>
+    <div>
+      <strong>Filter</strong> erkennen lokale
+      Muster und Strukturen.
+    </div>
+    <div>
+      <strong>Bilder und Spektren</strong><br>
+      z. B. Mikroskopie, Raman und IR
+    </div>
+    <div>
+      Sehr gut für lokale Muster;<br>
+      globale Beziehungen weniger direkt
+    </div>
   </div>
-  <div>
-    <strong>Filter</strong> erkennen lokale
-    Muster und Strukturen.
-  </div>
-  <div>
-    Bilder, Spektren, räumlich geordnete Daten
-  </div>
-  <div>
-    Mikroskopische Bilder, Raman- und
-    IR-Spektren
-  </div>
-  <div>
-    Sehr gut für lokale Muster;<br>
-    globale Beziehungen weniger direkt
-  </div>
-</div>
 
-<div class="nn-grid nn-row rnn">
-  <div class="model">
-    <span class="name">RNN</span>
-    <span class="full">Recurrent Neural Network</span>
+  <div class="nn-grid nn-row rnn">
+    <div class="model">
+      <span class="name">RNN</span>
+      <span class="full">Recurrent Neural Network</span>
+    </div>
+    <div>
+      <strong>Rückkopplung:</strong> Informationen
+      früherer Schritte beeinflussen spätere.
+    </div>
+    <div>
+      <strong>Zeitreihen</strong><br>
+      z. B. zeitliche Verläufe von Laborwerten
+    </div>
+    <div>
+      Berücksichtigt die Reihenfolge;<br>
+      lange Abhängigkeiten oft schwierig
+    </div>
   </div>
-  <div>
-    <strong>Rückkopplung:</strong> Informationen
-    früherer Schritte beeinflussen spätere.
-  </div>
-  <div>
-    Zeitreihen, geordnete Sequenzen
-  </div>
-  <div>
-    Zeitliche Verläufe von Kreatinin,
-    Laktat oder Entzündungsmarkern
-  </div>
-  <div>
-    Berücksichtigt die Reihenfolge;<br>
-    lange Abhängigkeiten oft schwierig
-  </div>
-</div>
 
-<div class="nn-grid nn-row transformer">
-  <div class="model">
-    <span class="name">
-      Transformer
-    </span>
-    <span class="full">Attention-basiert</span>
+  <div class="nn-grid nn-row transformer">
+    <div class="model">
+      <span class="name">Transformer</span>
+      <span class="full">Attention-basiert</span>
+    </div>
+    <div>
+      <strong>Attention:</strong> relevante
+      Beziehungen zwischen Elementen
+      werden gewichtet.
+    </div>
+    <div>
+      <strong>Texte und Zeitreihen</strong><br>
+      z. B. Arztbriefe und Laborwertverläufe
+    </div>
+    <div>
+      Erfasst weitreichende Beziehungen;<br>
+      oft hoher Daten- und Rechenbedarf
+    </div>
   </div>
-  <div>
-    <strong>Attention:</strong> relevante
-    Beziehungen zwischen Elementen
-    werden gewichtet.
-  </div>
-  <div>
-    Texte, lange Sequenzen,
-    Zeitreihen
-  </div>
-  <div>
-    Klinische Texte, Arztbriefe,
-    komplexe Laborwertverläufe
-  </div>
-  <div>
-    Erfasst weitreichende Beziehungen;<br>
-    oft hoher Daten- und Rechenbedarf
-  </div>
-</div>
 
-<div class="nn-grid nn-row gnn">
-  <div class="model">
-    <span class="name">GNN</span>
-    <span class="full">Graph Neural Network</span>
+  <div class="nn-grid nn-row gnn">
+    <div class="model">
+      <span class="name">GNN</span>
+      <span class="full">Graph Neural Network</span>
+    </div>
+    <div>
+      <strong>Message Passing:</strong> Knoten
+      tauschen Informationen entlang
+      ihrer Verbindungen aus.
+    </div>
+    <div>
+      <strong>Netzwerke</strong><br>
+      z. B. Proteininteraktionen und Wissensgraphen
+    </div>
+    <div>
+      Nutzt explizite Beziehungen;<br>
+      sinnvoller Graph erforderlich
+    </div>
   </div>
-  <div>
-    <strong>Message Passing:</strong> Knoten
-    tauschen Informationen entlang
-    ihrer Verbindungen aus.
-  </div>
-  <div>
-    Netzwerke aus Knoten
-    und Kanten
-  </div>
-  <div>
-    Proteininteraktionen,
-    molekulare Netzwerke,
-    medizinische Wissensgraphen
-  </div>
-  <div>
-    Nutzt explizite Beziehungen;<br>
-    sinnvoller Graph erforderlich
-  </div>
-</div>
-
-<div class="nn-note">
-  <strong>Merksatz:</strong>
-  MLP = Merkmalskombination &nbsp;·&nbsp;
-  CNN = lokale Muster &nbsp;·&nbsp;
-  RNN = zeitliche Abfolge &nbsp;·&nbsp;
-  Transformer = Attention &nbsp;·&nbsp;
-  GNN = Beziehungen im Netzwerk
-</div>
 
 </section>
+
+
+
+
+
+
 
 <!-- Architektur-Folien: nach der Vergleichsübersicht -->
 <section class="nn-slide nn-mlp" data-transition="fade">
@@ -809,8 +884,8 @@
     </div>
   </div>
   <div class="nn-footer">
-    <span class="nn-ex-label">Beispiel</span>
-    <p>Aus Alter, Kreatinin, CRP und Laktat wird ein Risikoscore berechnet.</p>
+    <span class="nn-ex-label">Beispiel:</span>
+    <p>  <a href="https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.39743&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false">https://playground.tensorflow.org</a></p>
   </div>
 </section>
 
@@ -829,7 +904,7 @@
     </div>
   </div>
 
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:1em;">
     <div class="nn-visual">
       <svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img"
            aria-label="Vorwärtsberechnung von Eingaben über verborgene Neuronen zur Vorhersage und Cost-Funktion, dann Rückwärtsberechnung der Ableitungen">
@@ -892,7 +967,7 @@
         <text x="405" y="418" text-anchor="middle" class="v-sub">Rückwärts mit der Kettenregel</text>
       </svg>
     </div>
-
+    
     <div class="nn-explain train-explain-grid">
       <div class="train-steps-col">
         <h3>Training in 3 Schritten</h3>
@@ -967,7 +1042,7 @@
     </div>
   </div>
 
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:1em;">
 
     <!-- Grafik: Datenaufteilung und Fehlerkurven -->
     <div class="nn-visual">
@@ -1176,7 +1251,7 @@
       <p class="nn-subtitle">Convolutional Neural Network · Faltungsfilter für räumlich geordnete Daten</p>
     </div>
   </div>
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:0.5em;">
     <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
 <defs>
   <marker id="tip-cnn-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
@@ -1261,6 +1336,9 @@
   </div>
 </section>
 
+
+
+
 <section class="nn-slide nn-rnn" data-transition="fade">
   <div class="nn-head">
     <div>
@@ -1269,7 +1347,7 @@
       <p class="nn-subtitle">Recurrent Neural Network · Verarbeitung einer Folge Schritt für Schritt</p>
     </div>
   </div>
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:0.5em;">
     <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
 <defs>
   <marker id="tip-rnn-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
@@ -1331,6 +1409,11 @@
   </div>
 </section>
 
+
+
+
+
+
 <section class="nn-slide nn-transformer" data-transition="fade">
   <div class="nn-head">
     <div>
@@ -1339,7 +1422,7 @@
       <p class="nn-subtitle">Self-Attention · Beziehungen auch zwischen weit entfernten Elementen</p>
     </div>
   </div>
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:0.5em;">
     <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
 <defs>
   <marker id="tip-transformer-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
@@ -1433,7 +1516,7 @@
       <p class="nn-subtitle">Graph Neural Network · Daten als Knoten und Kanten</p>
     </div>
   </div>
-  <div class="nn-stage">
+  <div class="nn-stage" style="margin-top:0.5em;">
     <div class="nn-visual"><svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Darstellung des Algorithmus">
 <defs>
   <marker id="tip-gnn-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z" fill="#a9bfd4"/></marker>
@@ -1530,7 +1613,7 @@
       <p class="nn-subtitle">Engl.: Clinical decision support systems - CDSS</p>
     </div>
   </div>
-  <img class="figure-width-60" src="img/daisy_alg.png">
+  <img class="figure-width-60" style="margin-top:0.5em;" src="img/daisy_alg.png">
 </section>
 
 
@@ -1541,10 +1624,13 @@
 
 
 
-<section >
-      <h3>DAISY – Funktionsebenen</h3>
-      <img class="figure-width-70" src="img/daisy_gefahr.png">
+<section class="show-daisy-logo">
+      <h4 style="margin-top:1em;">DAISY – Funktionsebenen</h4>
+      <img class="figure-width-70" style="margin-top:2em;" src="img/daisy_gefahr.png">
 </section>
+
+
+
 
 <section class="nn-slide algo-flow daisy-system daisy-klinik" data-transition="fade">
   <div class="nn-head">
@@ -1556,7 +1642,7 @@
     <li>DAISY schaltet gelbe/rote Ampel im SAP</li>
     <li>Click auf Symbol öffnet Alarmseite</li>
   </ul>
-  <img class="figure-width-100" src="img/daisy_fluss.png">
+  <img class="figure-width-100" style="margin-top:1em;" src="img/daisy_fluss.png">
 </section>
 
 
@@ -1602,7 +1688,7 @@
       <h2 class="nn-title">Integration in die klinische Dateninfrastruktur</h2>
     </div>
   </div>
-  <img class="figure-width-100" src="img/daisy_integration.png">
+  <img class="figure-width-100" style="margin-top:1em;" src="img/daisy_integration.png">
 
   <div class="nn-footer">
     <span class="nn-ex-label">Ablauf</span>
@@ -1651,7 +1737,7 @@
     <div class="da-column da-column--rules">
 
       <article class="da-card">
-        <h3>Nierenversagen</h3>
+        <h3 style="margin-top:1em;">Nierenversagen</h3>
         <div class="da-facts">
           <p>Erkennung aus Kreatinin-Verlauf</p>
           <p>Auf Befund und gelbe Ampel im SAP</p>
